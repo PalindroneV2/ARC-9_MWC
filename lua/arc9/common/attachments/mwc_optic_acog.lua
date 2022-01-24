@@ -1,6 +1,6 @@
 ATT.PrintName = "Trijicon ACOG TA31 (4x)"
 ATT.CompactName = [[ACOG 4x]]
-ATT.Icon = Material("entities/acwatt_optic_mw3_acog.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_atts/optics/mw3_acog.png", "mips smooth")
 ATT.Description = [[
     Medium range combat scope for improved precision at longer ranges.
 
@@ -37,6 +37,6 @@ ATT.RTScopeSubmatIndex = 2
 ATT.RTScopeFOV = 8
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
-ATT.RTScopeReticle = Material("hud/arc9_bo1/scopes/mw3_acog_chevron.png", "mips smooth")
+ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mw3_acog_chevron.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false

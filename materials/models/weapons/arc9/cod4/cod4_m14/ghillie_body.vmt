@@ -1,0 +1,15 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\cod4\cod4_m14\ghillie_body"
+	$bumpmap		"models\weapons\arc9\cod4\cod4_m14\ghillie_body_n"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$nocull" "0"
+	"$translucent" "1"
+}

@@ -1,6 +1,6 @@
 ATT.PrintName = "EOTech 553"
 ATT.CompactName = [[HOLO MW3]]
-ATT.Icon = Material("entities/acwatt_optic_mw3_holo.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_atts/optics/mw3_holo.png", "mips smooth")
 ATT.Description = [[
     Typical holograpic sight which uses a holographic reticle for faster sight acquisition.
 

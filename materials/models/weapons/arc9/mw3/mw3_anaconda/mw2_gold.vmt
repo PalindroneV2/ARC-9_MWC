@@ -1,0 +1,26 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\mw2\mw2_anaconda\anaconda"
+	//$color2 "[0.5 0.5 0.5]"
+	$bumpmap	"models\weapons\arc9\mw2\mw2_anaconda\anaconda_n"
+
+	$detail "models\weapons\arc9\colors\gold_s"
+	$detailblendfactor 1
+	$detailblendmode 0
+
+	$phong "1"
+//	$phongexponent	"100"
+	$phongboost "2.5"
+	$phongfresnelranges "[0.5 1.5 1.5]"
+	$phongtint "[1 .65 .2]"
+	$phongalbedotint "1"
+	$blendtintbybasealpha  "1"
+	$normalmapalphaenvmapmask "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[1 .75 .25]"
+	$envmapfresnel "[1 1 1]"
+
+	"$nocull" "1"
+
+}

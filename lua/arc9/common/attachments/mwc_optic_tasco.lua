@@ -1,6 +1,6 @@
 ATT.PrintName = "Tasco Red Dot"
 ATT.CompactName = [[TASCO]]
-ATT.Icon = Material("entities/acwatt_optic_mw3_reflex.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_atts/optics/mw3_reflex.png", "mips smooth")
 ATT.Description = [[
     Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 
@@ -31,6 +31,6 @@ ATT.Sights = {
 }
 
 ATT.HoloSight = true
-ATT.HoloSightReticle = Material("hud/arc9_bo1/reticles/mwc_reddot.png", "mips smooth")
+ATT.HoloSightReticle = Material("hud/arc9_mwc/reticles/mwc_reddot.png", "mips smooth")
 ATT.HoloSightSize = 200
 ATT.HoloSightColor = Color(255, 0, 0)

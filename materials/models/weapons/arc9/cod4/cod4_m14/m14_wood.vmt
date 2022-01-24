@@ -1,0 +1,25 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\cod4\cod4_m14\m14"
+	$bumpmap	"models\weapons\arc9\cod4\cod4_m14\m14_n"
+
+	$detail "models\weapons\arc9\colors\ak_wood"
+	$detailblendmode 3
+	"$detailblendfactor" "0.45"
+    "$detailscale" "6"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m14\m14_s"
+//	$envmapmask "models\weapons\arc9\cod4\cod4_m14\m14_s"
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .005 .005 .005 ]"					
+	"$envmapFresnel" "1"
+	"$nocull" "1"
+}

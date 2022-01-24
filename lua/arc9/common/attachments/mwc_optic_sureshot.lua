@@ -1,6 +1,6 @@
 ATT.PrintName = "Sightmark Sure Shot"
 ATT.CompactName = [[RDS MW3]]
-ATT.Icon = Material("entities/acwatt_optic_mw3_rds.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_atts/optics/mw3_rds.png", "mips smooth")
 ATT.Description = [[
     Typical red dot sight which uses a holographic reticle for faster sight acquisition.
 
@@ -31,6 +31,6 @@ ATT.Sights = {
 }
 
 ATT.HoloSight = true
-ATT.HoloSightReticle = Material("hud/arc9_bo1/reticles/mwc_reddot.png", "mips smooth")
+ATT.HoloSightReticle = Material("hud/arc9_mwc/reticles/mwc_reddot.png", "mips smooth")
 ATT.HoloSightSize = 200
 ATT.HoloSightColor = Color(255, 0, 0)

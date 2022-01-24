@@ -1,0 +1,25 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\cod4\cod4_deagle\deagle"
+	"$bumpmap" "models\weapons\arc9\cod4\cod4_deagle\deagle_n"
+
+	$detail "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
+	$detailblendmode 0
+	"$detailblendfactor" "0.5"
+	"$detailscale" "1"
+
+	$phongexponenttexture "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
+//	$envmapmask "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.1 0.5 0.5]"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ .001 .001 .001 ]"					
+	"$envmapFresnel" "1"
+	"$nocull" "1"
+}

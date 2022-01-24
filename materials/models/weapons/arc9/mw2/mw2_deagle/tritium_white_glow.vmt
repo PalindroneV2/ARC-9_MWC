@@ -1,0 +1,10 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/mw2/mw2_deagle/tritium_white"
+//	"$bumpmap" "models/weapons/arc9/mw2/mw2_deagle/tritium_n"
+
+//	$color2 "[0 255 0]"
+//	"$selfillum" "1"
+//	"$selfillummask" "models/weapons/arc9/mw2/mw2_deagle/tritium_white"
+	"$translucent" "1"
+}

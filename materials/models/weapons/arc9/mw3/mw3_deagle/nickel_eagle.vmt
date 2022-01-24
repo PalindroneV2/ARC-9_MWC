@@ -1,0 +1,23 @@
+VertexlitGeneric
+{
+	$basetexture	"models\weapons\arc9\mw3\mw3_deagle\desert_eagle"
+	$bumpmap	"models\weapons\arc9\mw3\mw3_deagle\desert_eagle_n"
+	$detail		"models\weapons\arc9\colors\gunmetal"
+	$detailblendmode 1
+	$detailblendfactor 0.65
+
+	$phong                      		1
+//	$phongexponent                      "20"
+	$phongboost                         "0.5"
+	$phongfresnelranges         "[0.5 0.5 0.5]"
+	$phongtint "[.2 .65 1]"
+	$phongalbedotint "1"
+	$phongalbedotint             "1"
+	$normalmapalphaphongmask    	1
+
+	"$envmap" "env_cubemap"					
+	"$envmaptint" "[ 0.1 0.1 0.1 ]"
+	"$envmapFresnel" "1"
+
+	"$nocull" "1"
+}
