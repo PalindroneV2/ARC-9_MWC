@@ -1,6 +1,6 @@
 ATT.PrintName = "Aimpoint Comp M4"
 ATT.CompactName = [[COMP M4]]
-ATT.Icon = Material("entities/mw3_atts/optics/mw3_reflex.png", "mips smooth")
+ATT.Icon = Material("entities/mwc_atts/optics/mw3_reflex.png", "mips smooth")
 ATT.Description = [[
     Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 

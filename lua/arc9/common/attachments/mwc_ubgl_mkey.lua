@@ -1,6 +1,6 @@
 ATT.PrintName = [[Masterkey Underbarrel Shotgun]]
 ATT.CompactName = [[MKEY]]
-ATT.Icon = Material("entities/mw3_atts/ubs/masterkey.png")
+ATT.Icon = Material("entities/mwc_atts/ubs/masterkey.png")
 ATT.Description = [[
     Underbarrel shotgun that holds 4 12 gauge shells.
     Reduced handling.
