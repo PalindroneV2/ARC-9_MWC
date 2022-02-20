@@ -8,5 +8,5 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 
-ATT.Category = {"bo1_alt_irons"}
-ATT.ActivateElements = {"bo1_alt_irons"}
+ATT.Category = {"mwc_alt_irons"}
+ATT.ActivateElements = {"mwc_alt_irons"}
