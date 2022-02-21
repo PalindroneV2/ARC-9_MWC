@@ -110,8 +110,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.2
+SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -553,10 +553,10 @@ SWEP.Animations = {
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltBack", t = 8 / 35},
-            {s = "ARC9_BO1.MP5_MagOut", t = 28 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 61 / 35},
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 72 / 35},
+            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
+            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
+            {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
+            {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
         },
         IKTimeLine = {
             {
