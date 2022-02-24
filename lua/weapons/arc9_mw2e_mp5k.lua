@@ -67,7 +67,7 @@ SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 30 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
-SWEP.DrawCrosshair = true
+SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
 SWEP.Recoil = 0.4
