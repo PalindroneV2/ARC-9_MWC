@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - Modern Warfare 3" -- edit this if you like
+SWEP.Category = "ARC-9 - Modern Warfare 2" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M79 \"Thumper\""
@@ -76,7 +76,7 @@ SWEP.RecoilUp = 1
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.3
 
-SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
+SWEP.RecoilDissipationRate = 10 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
@@ -91,7 +91,7 @@ SWEP.SpreadAddMidAir = 0.05
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
+SWEP.VisualRecoilUp = 1
 SWEP.VisualRecoilSide = 0
 SWEP.VisualRecoilRoll = 0
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)

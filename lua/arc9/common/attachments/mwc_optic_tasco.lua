@@ -26,7 +26,7 @@ ATT.Sights = {
         Pos = Vector(0, 9, -0.75),
         Ang = Angle(0, 0, 0),
         Magnification = 1.1,
-        IgnoreExtra = true
+        IgnoreExtra = false
     },
 }
 
