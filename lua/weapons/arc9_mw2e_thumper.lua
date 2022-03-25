@@ -42,7 +42,7 @@ SWEP.DamageMin = 15 -- damage done at maximum range
 SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
--- SWEP.DamageType = nil
+SWEP.DamageType = nil
 SWEP.ShootEntity = "arc9_mw3_m203_he" -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
@@ -57,10 +57,57 @@ SWEP.BodyDamageMults = {
     [HITGROUP_RIGHTLEG] = 1,
 }
 
-SWEP.TracerNum = 1 -- Tracer every X
-SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
-SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
-SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
+SWEP.DamageMax = 100 -- Damage done at point blank range
+SWEP.DamageMin = 100 -- Damage done at maximum range
+
+SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
+
+SWEP.RangeMin = 1000 -- How far bullets retain their maximum damage for.
+SWEP.RangeMax = 10000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
+
+SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
+
+SWEP.ImpactDecal = "Scorch"
+
+SWEP.SuppressSmokeTrail = false
+
+SWEP.ExplosionDamage = 95
+SWEP.ExplosionRadius = 256
+SWEP.ExplosionEffect = "Explosion"
+
+SWEP.PhysBulletModel = "models/weapons/arc9/item/mw3_40mm.mdl"
+
+SWEP.RicochetChance = 0
+
+SWEP.HookC_DrawBullet = function(swep, bullet)
+    if swep:GetValue("SuppressSmokeTrail") then return end
+    if bullet.Imaginary then return end
+
+    local emitter = ParticleEmitter(bullet.Pos)
+    if !IsValid(emitter) then return end
+    local smoke = emitter:Add("particle/particle_smokegrenade", bullet.Pos)
+    smoke:SetVelocity(VectorRand() * 25)
+    smoke:SetGravity(Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)))
+    smoke:SetDieTime(math.Rand(0.25, 0.5))
+    smoke:SetStartAlpha(255)
+    smoke:SetEndAlpha(0)
+    smoke:SetStartSize(0)
+    smoke:SetEndSize(50)
+    smoke:SetRoll(math.Rand(-180, 180))
+    smoke:SetRollDelta(math.Rand(-0.2, 0.2))
+    smoke:SetColor(20, 20, 20)
+    smoke:SetAirResistance(5)
+    smoke:SetPos(bullet.Pos)
+    smoke:SetLighting(false)
+    emitter:Finish()
+end
+
+-------------------------- PHYS BULLET BALLISTICS
+
+SWEP.AlwaysPhysBullet = true
+SWEP.PhysBulletMuzzleVelocity = 5000
+SWEP.PhysBulletDrag = 3
+SWEP.FancyBullets = true
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 1 -- DefaultClip is automatically set.
@@ -69,18 +116,18 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
+SWEP.Recoil = 2
 SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 1
+SWEP.RecoilUp = 2
 
-SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomSide = 0.25
 
-SWEP.RecoilDissipationRate = 10 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
+SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
+SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 1
+SWEP.RecoilKick = 0
 
 SWEP.Spread = 0.0015
 SWEP.SpreadAddRecoil = 0.0015
@@ -112,7 +159,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 30
+SWEP.RPM = 80
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
