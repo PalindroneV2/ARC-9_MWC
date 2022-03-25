@@ -183,14 +183,17 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.CrouchPos = Vector(0, 0, -1)
+SWEP.CrouchAng = Angle(0, 0, -5)
+
+SWEP.SprintPos = Vector(0, 0, -1)
+SWEP.SprintAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
-SWEP.HolsterPos = Vector(0, 0, 0)
-SWEP.HolsterAng = Angle(0, 0, 0)
+SWEP.RestPos = Vector(0, 0, 0)
+SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 25
 
