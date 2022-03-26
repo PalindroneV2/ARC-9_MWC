@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/cod4/cod4_optics/reflex_sight"
-	$blendtintbybasealpha  "1"
+	
 	"$bumpmap" "models/weapons/arc9/wcolorsaw/normalmap"
 
 	$detail "models\weapons\arc9\colors\black_detail"

@@ -11,18 +11,18 @@ VertexlitGeneric
 	$phongexponenttexture "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
 //	$envmapmask "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
 
-	$phong "1"
-//	$phongexponent	"100"
-	$phongboost "2.5"
-	$phongfresnelranges "[0.5 1.5 1.5]"
-	$phongtint "[.2 .65 1]"
-	$phongalbedotint "1"
-	$blendtintbybasealpha  "1"
-	$normalmapalphaenvmapmask "1"
+	$normalmapalphaenvmapmask 1
 	
-	$envmap "env_cubemap"
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	$phongtint "[.2 .65 1]"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
 	$envmaptint "[.9 .9 1]"
-	$envmapfresnel "[1]"
 
 	"$nocull" "1"
 }

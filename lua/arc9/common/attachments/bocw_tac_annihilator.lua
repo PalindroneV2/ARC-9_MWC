@@ -19,7 +19,7 @@ ATT.Category = {"mw3e_deagle_tactical"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_handcannon_laser.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-6, 0, -3.7)
+ATT.ModelOffset = Vector(0,0,0)
 
 ATT.Laser = true
 ATT.LaserStrength = 3
