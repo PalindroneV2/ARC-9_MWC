@@ -9,7 +9,7 @@ VertexlitGeneric
 	$phong "1"
 //	$phongexponent	"15"
 	$phongboost "2.5"
-	$phongfresnelranges "[0.5 2.5 2.5]"
+	$phongfresnelranges "[2 5 4]"
 	$phongalbedotint "1"
 	
 	$normalmapalphaenvmapmask "1"

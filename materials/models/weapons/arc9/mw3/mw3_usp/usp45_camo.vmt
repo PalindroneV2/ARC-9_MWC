@@ -3,17 +3,16 @@ VertexlitGeneric
 	$basetexture	"models\weapons\arc9\mw3\mw3_usp\usp"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\mw3\mw3_usp\usp_n"
-
-	$phong                      		1
-//	$phongexponent                      "20"
-	$phongboost                         "0.5"
-	$phongfresnelranges         "[0.1 0.5 0.5]"
-	$phongalbedotint             "1"
-	$normalmapalphaphongmask    	1
-
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .01 .01 .01 ]"					
-	"$envmapFresnel" "1"
+	
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
 
 	"$nocull" "1"
 }
