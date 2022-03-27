@@ -1,10 +1,10 @@
-ATT.PrintName = "P-2000 Maxx Laser"
-ATT.CompactName = [[P-2000]]
+ATT.PrintName = "1mws Laser Pointer"
+ATT.CompactName = [[1mw]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[
     Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
 
-    Belongs to Black Ops Cold War.
+    Belongs to Modern Warfare 3.
 ]]
 ATT.Pros = {
     "+ Clearer sight picture"
@@ -15,25 +15,17 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 -- ATT.Folder = "RDS"
 
-ATT.Category = {"mw3e_deagle_tactical"}
+ATT.Category = {"bo1_tactical", "bo1_tactical_top"}
 
-ATT.Model = "models/weapons/arc9/atts/bocw_handcannon_laser.mdl"
+ATT.Model = "models/weapons/arc9/atts/mw3_laser_1mw.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0,0,0)
+ATT.ModelOffset = Vector(0, 0, 0.25)
+ATT.ModelAngleOffset = Angle(0,0,180)
 
 ATT.Laser = true
 ATT.LaserStrength = 3
-ATT.LaserColor = Color(0, 255, 34)
+ATT.LaserColor = Color(255, 0, 0)
 ATT.LaserAttachment = 1
 
 ATT.SpreadMult = 0.8
 ATT.SpreadMultMove = 0.8
-
-ATT.Sights = {
-    {
-        Pos = Vector(-0.005, 18, -1.8),
-        Ang = Angle(0, 0.3, 0),
-        Magnification = 1.1,
-        IgnoreExtra = false
-    },
-}

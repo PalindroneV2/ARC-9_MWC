@@ -18,7 +18,7 @@ ATT.Attachments = {
         PrintName = "Underbarrel",
         Category = "bo1_tactical",
         Bone = "j_gun",
-        Pos = Vector(-4.75, 0.35, 1.5),
+        Pos = Vector(4.75, -0.35, -1.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -0.5),
     },

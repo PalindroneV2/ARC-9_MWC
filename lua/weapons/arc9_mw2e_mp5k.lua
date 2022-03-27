@@ -278,7 +278,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(12, 0, 2.05),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
     },
     [4] = {
         PrintName = "Underbarrel",
@@ -449,7 +449,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -457,7 +457,7 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
+        Time = 1,
     },
 
     -- MP5K --
@@ -586,7 +586,7 @@ SWEP.Animations = {
     },
     ["enter_sprint_grip"] = {
         Source = "sprint_in_grip",
-        Time = 1
+        Time = 1,
     },
     ["idle_sprint_grip"] = {
         Source = "sprint_loop_grip",
@@ -594,6 +594,6 @@ SWEP.Animations = {
     },
     ["exit_sprint_grip"] = {
         Source = "sprint_out_grip",
-        Time = 1
+        Time = 1,
     },
 }
