@@ -10,7 +10,7 @@
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
-	"$envmapfresnel" "0.1"
+	"$envmapfresnel" "1"
 	"$envmaptint" "[ .08 .08 .1 ]"
 
 	$nocull 1

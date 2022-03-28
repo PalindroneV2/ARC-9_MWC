@@ -13,5 +13,5 @@
 
 	"$envmap" "env_cubemap"					
 	"$envmaptint" "[ .01 .01 .01 ]"					
-	"$envmapFresnel" "1"
+	"$envmapfresnel" "0.01"
 }
