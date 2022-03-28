@@ -1,6 +1,6 @@
 ATT.PrintName = "Elite"
 ATT.CompactName = "ELITE"
-ATT.Icon = Material("materials/entities/bo1_generic.png")
+ATT.Icon = Material("materials/entities/cs_generic.png")
 ATT.Description = [[
     Imposing nickel plated finish.
 ]]

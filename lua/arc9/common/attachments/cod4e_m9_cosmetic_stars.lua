@@ -1,6 +1,6 @@
 ATT.PrintName = "Samurai Edge"
 ATT.CompactName = "EDGE"
-ATT.Icon = Material("materials/entities/bo1_generic.png")
+ATT.Icon = Material("materials/entities/re_stars_generic.png")
 ATT.Description = [[
     Custom made for a SWAT team from a midwestern town.
 ]]

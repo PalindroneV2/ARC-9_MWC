@@ -25,7 +25,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.Sights = {
     {
         Pos = Vector(-0.005, 7, -1.2575),
-        Ang = Angle(0, 0, 0),
+        Ang = Angle(-0.05, 0.1, 0),
         Magnification = 1,
         IgnoreExtra = true
     },
@@ -38,6 +38,7 @@ ATT.RTScopeFOV = 8
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
 ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mwc_acog_realism.png", "mips smooth")
+ATT.RTScopeReticleScale = 0.85
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false
 ATT.RTScopeColor = Color(255, 0, 0)
