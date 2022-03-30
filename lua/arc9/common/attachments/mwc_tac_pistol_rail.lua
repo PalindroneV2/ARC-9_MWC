@@ -3,7 +3,7 @@ ATT.CompactName = [[PRF]]
 ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Optic rail system for pistols including a small low powered flashlight in the bottom.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MW3 Attachments"
+ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_pistol_rail"}

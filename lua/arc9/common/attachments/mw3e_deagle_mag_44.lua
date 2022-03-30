@@ -10,7 +10,7 @@ Slight improvement to penetration and accuracy due to the better ballistics of .
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
-ATT.MenuCategory = "ARC-9 - MW3 Attachments"
+ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mw3_deagle_mag"}

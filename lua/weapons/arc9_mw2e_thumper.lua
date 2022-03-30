@@ -191,7 +191,7 @@ SWEP.ShootPitchVariation = 0
 SWEP.ShootSound = "ARC9_MW2E.M79_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
-SWEP.MuzzleParticle = "muzzleflash_shotgun" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellScale = 1.5
@@ -211,10 +211,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.9, 3, -7.1),
-    Ang = Angle(-0.05, 18.75, 0),
-    Magnification = 1.1,
-    AssociatedSlot = 9,
+    Pos = Vector(-2.875, 0, -5.6),
+    Ang = Angle(0, 18.25, 0),
+    Magnification = 1.25,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }

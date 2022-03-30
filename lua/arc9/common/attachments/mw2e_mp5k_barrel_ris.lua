@@ -3,7 +3,7 @@ ATT.CompactName = [[RAS]]
 ATT.Icon = Material("entities/mw2_generic.png")
 ATT.Description = [[Rail Attachment System with 4 rails allows for attachment of several accessories.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MW3 Attachments"
+ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mp5k_mw2_rail"}
