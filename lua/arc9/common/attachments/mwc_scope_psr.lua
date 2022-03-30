@@ -21,6 +21,7 @@ ATT.Category = {"bo1_optic", "bo1_optic_alt"}
 ATT.Model = "models/weapons/arc9/atts/mw3_rsass_scope.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(-2.95, 0, -2.75)
+ATT.ActivateElements = {"mw3_psrscope"}
 
 ATT.Sights = {
     {
@@ -38,4 +39,5 @@ ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/spr_scope")
 ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mw3_scope.png", "mips smooth")
 ATT.RTScopeShadowIntensity = 0.1
+ATT.RTScopeColorable = true
 ATT.RTScopeNoPP = false

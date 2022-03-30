@@ -33,6 +33,6 @@ ATT.Sights = {
 ATT.HoloSight = true
 ATT.HoloSightReticle = Material("hud/arc9_mwc/reticles/mwc_holo.png", "mips smooth")
 ATT.HoloSightSize = 350
-ATT.HoloSightColor = Color(255, 0, 0)
+ATT.HoloSightColorable = true
 
 --TEST 

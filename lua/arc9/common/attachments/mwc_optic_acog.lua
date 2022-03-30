@@ -30,7 +30,6 @@ ATT.Sights = {
         IgnoreExtra = true
     },
 }
-ATT.HoloSightColor = Color(255, 0, 0)
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 2
@@ -41,4 +40,4 @@ ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mwc_acog_realism.png", "mips 
 ATT.RTScopeReticleScale = 0.85
 ATT.RTScopeShadowIntensity = 0.1
 ATT.RTScopeNoPP = false
-ATT.RTScopeColor = Color(255, 0, 0)
+ATT.RTScopeColorable = true

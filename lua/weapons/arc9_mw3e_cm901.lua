@@ -240,6 +240,13 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["mw3_magnifier"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(6, 0, 3.85)
+            },
+        }
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -345,6 +352,7 @@ SWEP.Attachments = {
         Pos = Vector(12, 0, 3.5),
         Ang = Angle(0, 0, 180),
         Category = {"bo1_tactical_top"},
+        ExcludeElements = {"mw3_psrscope"},
     },
     {
         PrintName = "Magazine",
