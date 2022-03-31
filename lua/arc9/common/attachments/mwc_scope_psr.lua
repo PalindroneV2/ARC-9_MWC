@@ -34,7 +34,11 @@ ATT.Sights = {
 
 ATT.RTScope = true
 ATT.RTScopeSubmatIndex = 3
-ATT.RTScopeFOV = 3
+ATT.RTScopeFOV = 2
+ATT.RTScopeFOVMax = 2
+ATT.RTScopeFOVMin = 8
+ATT.RTScopeAdjustable = true
+ATT.RTScopeAdjustmentLevels = 4
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/spr_scope")
 ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mw3_scope.png", "mips smooth")
