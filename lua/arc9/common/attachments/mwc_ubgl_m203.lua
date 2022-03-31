@@ -11,8 +11,8 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
-ATT.Category = {"mwc_ubgls"}
-ATT.ActivateElements = {"bo1_m203"}
+ATT.Category = {"mwc_m203"}
+ATT.ActivateElements = {"mwc_m203"}
 ATT.ExcludeElements = {"handguard_patriot", "100_mag", "handguard_607"}
 
 ATT.AimDownSightsTimeMult = 1.1
