@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Roller-Delayed Blowback",
     Country = "Germany",
     Year = 1958,
-    Games = [[Modern Warfare 3]]
+    Games = [[Call of Duty 4: Modern Warfare]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -35,7 +35,7 @@ SWEP.WorldModelOffset = {
 }
 SWEP.DesiredViewModelFOV = 60
 
-SWEP.DefaultBodygroups = "00003000000000"
+SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 50
 SWEP.DamageMin = 35 -- damage done at maximum range
@@ -116,10 +116,10 @@ SWEP.RPM = 800
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
     },
     {
-        Mode = 1,
+        Mode = -1,
     },
 }
 SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
@@ -178,6 +178,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
+-- SWEP.Bipod = true
+
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
@@ -200,7 +202,12 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mwc_m203"] = {
         Bodygroups = {
-            {4,2}
+            {4,1}
+        },
+    },
+    ["mwc_bipod"] = {
+        Bodygroups = {
+            {5,1}
         },
     },
     ["ext_mag"] = {
@@ -230,6 +237,14 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    -- ["psg1_scope"] = {
+    --     AttPosMods = {
+    --         [2] = {
+    --             Pos = Vector(2.2, 0, 3.75),
+    --         },
+    --     },
+    --     ExcludeElements = {"bo1_rail_riser"}
+    -- },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -250,10 +265,34 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(2,4)
     end
     if attached["mount"] then
+        irons = 1
+    end
+    if attached["psg1_scope"] then
         irons = 2
+        if attached["bo1_rail_riser"] then
+            irons = 1
+        end
     end
 
     vm:SetBodygroup(1, irons)
+
+    if wep:GetBipod() then
+        vm:SetBodygroup(5, 2)
+    end
+
+    local color = 0
+    if attached["mwc_cosmetic_wood"] then
+        color = 4
+    elseif attached["mwc_cosmetic_tan"] then
+        color = 8
+    elseif attached["mwc_cosmetic_od"] then
+        color = 12
+    elseif attached["mwc_cosmetic_blue"] then
+        color = 16
+    end
+    if attached["bo1_pap"] then
+        vm:SetSkin(color + 1)
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -282,10 +321,11 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(2.35, 0, 3.125),
+        Pos = Vector(2.2, 0, 4.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_riser"},
+        Category = {"bo1_optic","bo1_rail_riser"},
         InstalledElements = {"mount"},
+        MergeSlots = {8}
     },
     {
         PrintName = "Muzzle",
@@ -319,7 +359,41 @@ SWEP.Attachments = {
         Category = {"mwc_m203"},
         ExcludeElements = {"barrel_sd", "barrel_ris", "barrel_kris"}
     },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, 3),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_cosmetic_g3"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(1, 0, 3.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_psg1_scope"},
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Bipod",
+        Bone = "j_gun",
+        Pos = Vector(20, 0, 2.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_bipod"},
+        ExcludeElements = {"newbarrel"}
+    },
 }
+
+-- SWEP.RejectAttachments = {
+--     ["mwc_cosmetic_black"] = true,
+-- }
 
 SWEP.Animations = {
     ["idle"] = {

@@ -3,7 +3,7 @@
 	"$basetexture" "models/weapons/arc9/mw3/mw3_mp5/mp5_mw3_c"
 	
 	"$bumpmap" "models/weapons/arc9/mw3/mw3_mp5/mp5_mw3_n"
-	$detail "models/weapons/arc9/colors/tan"
+	$detail "models/weapons/arc9/colors/kaki_02"
 	$detailblendmode 3
 	$detailblendfactor 1
 

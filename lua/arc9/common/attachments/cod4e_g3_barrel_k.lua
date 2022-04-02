@@ -11,5 +11,5 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"cod4e_g3_barrel"}
-ATT.ActivateElements = {"barrel_k", "kbarrel"}
+ATT.ActivateElements = {"barrel_k", "kbarrel", "newbarrel"}
 ATT.ExcludeElements = {}
