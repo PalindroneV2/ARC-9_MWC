@@ -198,16 +198,25 @@ SWEP.BarrelLength = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
-    ["nickel"] = {
-        Skin = 4
-    }
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
-    -- local vm = data.model
-    -- local attached = data.elements
+    local vm = data.model
+    local attached = data.elements
 
+    local finish = 0
+    if attached["nickel"] then
+        finish = 4
+    end
+    if attached["bo1_pap"] then
+        finish = finish + 2
+        if finish == 6 then
+            finish = finish - 1
+        end
+    end
+
+    vm:SetSkin(finish)
 end
 
 
@@ -252,6 +261,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
 }
 

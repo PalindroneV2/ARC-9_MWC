@@ -206,10 +206,14 @@ SWEP.AttachmentElements = {
     },
 }
 
--- SWEP.Hook_ModifyBodygroups = function(self, data)
---     local vm = data.model
---     local attached = data.elements
--- end
+SWEP.Hook_ModifyBodygroups = function(self, data)
+    local vm = data.model
+    local attached = data.elements
+
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
+    end
+end
 
 
 -- SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -273,6 +277,14 @@ SWEP.Attachments = {
         Pos = Vector(1, 0.75, 1.55),
         Ang = Angle(0, 0, -90),
         Category = "bo1_tactical",
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(.5, 0, -6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

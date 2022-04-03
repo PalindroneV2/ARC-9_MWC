@@ -159,7 +159,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 80
+SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -248,32 +248,31 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
 }
 
--- SWEP.Hook_ModifyBodygroups = function(self, data)
---     local vm = data.model
---     local attached = data.elements
--- end
+SWEP.Hook_ModifyBodygroups = function(self, data)
+    local vm = data.model
+    local attached = data.elements
 
-
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
-
---     local final = ""
-
---     if attached["mwc_igrip"] then final = "_grip" end
-
---     return anim .. final
--- end
-
---TEST 3
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
+    end
+end
 
 SWEP.Attachments = {
     [1] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-7, 0, -7),
+        Pos = Vector(-3, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
+    },
+    [2] = {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "j_gun",
+        Pos = Vector(3, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_pap_launcher"},
     },
 }
 

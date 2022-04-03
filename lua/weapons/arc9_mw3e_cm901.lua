@@ -266,6 +266,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     vm:SetBodygroup(2, irons)
+
+    if attached["bo1_pap"] then
+        vm:SetSkin(1)
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -361,6 +365,14 @@ SWEP.Attachments = {
         Pos = Vector(0.5, 0, -3),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_mag"},
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(1, 0, -5.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

@@ -64,7 +64,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ClipSize = 25 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -252,6 +252,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         CrosshairInSights = false,
     }
 
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
+    end
+
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -325,6 +329,14 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_fcg_bst", "mwc_fcg_semi"},
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

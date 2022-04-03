@@ -242,6 +242,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     vm:SetBodygroup(0, model)
+
+    if attached["bo1_pap"] then
+        camo = 3
+        if attached["hybrid_eagle"] then
+            camo = 4
+        end
+    end
+
     vm:SetSkin(camo)
 
     self.IronSights = {
@@ -304,6 +312,14 @@ SWEP.Attachments = {
         Category = {"bo1_rail_tactical"},
         ExcludeElements = {"no_tac_rail"},
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(1, 0, -2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 

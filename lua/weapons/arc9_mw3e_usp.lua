@@ -199,6 +199,14 @@ SWEP.ExtraSightDist = 15
 SWEP.AttachmentElements = {
 }
 
+SWEP.Hook_ModifyBodygroups = function(self, data)
+    local vm = data.model
+    local attached = data.elements
+
+    if attached["bo1_pap"] then
+        vm:SetSkin(2)
+    end
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     -- local attached = self:GetElements()
@@ -219,7 +227,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "MUZZ",
         Bone = "j_gun",
-        Pos = Vector(4.7, 0.225, 1),
+        Pos = Vector(4.7, 0.25, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo1_muzzle_pistol",
     },
@@ -233,6 +241,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail", "mw3_usp_lams"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
+    },
+    {
+        PrintName = "Ammunition",
+        DefaultCompactName = "AMMO",
+        Bone = "tag_clip",
+        Pos = Vector(0, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
 }
 

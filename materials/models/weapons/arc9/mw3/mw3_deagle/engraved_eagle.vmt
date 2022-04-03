@@ -9,7 +9,7 @@ VertexlitGeneric
 	$phong "1"
 //	$phongexponent	"100"
 	$phongboost "2.5"
-	$phongfresnelranges "[0.5 1.5 1.5]"
+	$phongfresnelranges "[2 5 4]"
 	$phongtint "[1 .65 .2]"
 	$phongalbedotint "1"
 	
@@ -17,7 +17,7 @@ VertexlitGeneric
 	
 	$envmap "env_cubemap"
 	$envmaptint "[1 .75 .25]"
-	$envmapfresnel "1"
+	$envmapfresnel "0.1"
 	
 	"$nocull" "1"
 }
