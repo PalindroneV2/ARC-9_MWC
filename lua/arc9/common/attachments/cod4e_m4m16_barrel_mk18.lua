@@ -30,3 +30,24 @@ ATT.SprintToFireTimeMult = 0.95
 ATT.RangeMaxMult = 0.9
 ATT.RangeMinMult = 0.9
 ATT.PhysBulletMuzzleVelocityMult = 0.9
+
+ATT.Attachments = {
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0.6, 0.3),
+        Ang = Angle(0, 0, -90),
+        Category = {"bo1_tactical"},
+        RequireElements = {"grip_cover"},
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(-4, -0.6, 0.3),
+        Ang = Angle(0, 0, 90),
+        Category = {"bo1_tactical"},
+        RequireElements = {"grip_cover"},
+    },
+}

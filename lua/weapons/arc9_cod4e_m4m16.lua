@@ -380,7 +380,7 @@ SWEP.Attachments = {
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stocks"},
-        Installed = "mwc_stock_medium",
+        Installed = "mwc_stock_heavy",
     },
     {
         PrintName = "Underbarrel",
