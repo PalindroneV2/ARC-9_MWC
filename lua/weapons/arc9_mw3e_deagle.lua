@@ -197,6 +197,13 @@ SWEP.BarrelLength = 10
 SWEP.ExtraSightDist = 20
 
 SWEP.AttachmentElements = {
+    ["maxx_lazer"] = {
+        AttPosMods = {
+            [4] = {
+                Pos = Vector(4.5, 0.3, 1.8),
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -297,7 +304,7 @@ SWEP.Attachments = {
         DefaultCompactName = "Irons",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(4, 0.3, 1.6),
+        Pos = Vector(4, 0.3, 1.7),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "mw3e_deagle_tactical"},
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),

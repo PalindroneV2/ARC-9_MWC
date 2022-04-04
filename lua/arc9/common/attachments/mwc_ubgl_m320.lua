@@ -1,6 +1,6 @@
 ATT.PrintName = [[M320 Grenade Launcher]]
 ATT.CompactName = [[M320]]
-ATT.Icon = Material("materials/entities/mwc_atts/ubs/m203.png")
+ATT.Icon = Material("materials/entities/mwc_atts/ubs/m320.png")
 ATT.Description = [[
     Underbarrel grenade launcher that fires 40mm High Explosive rounds.
     Reduced handling.

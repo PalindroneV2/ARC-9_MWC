@@ -16,6 +16,7 @@ ATT.Free = false
 -- ATT.Folder = "RDS"
 
 ATT.Category = {"mw3e_deagle_tactical"}
+ATT.ActivateElements = {"maxx_lazer"}
 
 ATT.Model = "models/weapons/arc9/atts/bocw_handcannon_laser.mdl"
 ATT.Scale = 1
