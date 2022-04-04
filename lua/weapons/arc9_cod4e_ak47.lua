@@ -262,6 +262,9 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["mwc_gp25"] then
         suffix = "_gp25"
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
     else
         suffix = ""
     end
@@ -493,30 +496,22 @@ SWEP.Animations = {
 -- UBGL IN ANIMS -----------------------------------------------------------------
 
     ["enter_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30,
+        Source = "glsetup_in",
+        Time = 0.5,
     },
     ["exit_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30
+        Source = "glsetup_out",
+        Time = 0.5,
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
     },
-    ["in_glsetup"] = {
-        Source = "glsetup_in",
-        Time = 0.5,
-    },
-    ["out_glsetup"] = {
-        Source = "glsetup_out",
-        Time = 0.5,
-    },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.7,
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {

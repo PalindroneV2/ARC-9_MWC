@@ -279,6 +279,9 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     if attached["mwc_ubgl_m320"] then
         suffix = "_m203"
+        if self:GetUBGL() then
+            suffix = "_glsetup"
+        end
     else
         suffix = ""
     end
@@ -554,23 +557,15 @@ SWEP.Animations = {
 
     ["enter_ubgl"] = {
         Source = "glsetup_in",
-        Time = 0 / 30,
+        Time = 0.5,
     },
     ["exit_ubgl"] = {
         Source = "glsetup_out",
-        Time = 0 / 30
+        Time = 0.5,
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
-    },
-    ["in_glsetup"] = {
-        Source = "glsetup_in",
-        Time = 0.5,
-    },
-    ["out_glsetup"] = {
-        Source = "glsetup_out",
-        Time = 0.5,
     },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
@@ -578,7 +573,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER,
         TPAnimStartTime = 0,
     },
-    ["reload_glsetup"] = {
+    ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
@@ -588,7 +583,7 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.M320_Close", t = 60 / 30},
         }
     },
-    ["reload_glsetup_soh"] = {
+    ["reload_ubgl_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 3 / 2,
         EventTable = {
