@@ -215,6 +215,17 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+
+    local suffix = ""
+
+    if attached["tactical"] then
+        suffix = "_mw3"
+    end
+    return anim .. suffix
+end
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
@@ -271,14 +282,14 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(23.5, 0, 2.35),
+        Pos = Vector(13.5, 0, 1.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(-3, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_l"},
         Installed = "mwc_stock_light",
@@ -287,7 +298,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.55),
+        Pos = Vector(10, 0, 0.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
     },
@@ -354,12 +365,12 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.85,
+                t = 0.8,
                 lhik = 0,
                 rhik = 0
             },
             {
-                t = 0.95,
+                t = 0.9,
                 lhik = 1,
                 rhik = 1
             },

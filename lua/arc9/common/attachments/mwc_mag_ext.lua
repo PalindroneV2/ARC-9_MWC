@@ -12,5 +12,6 @@ ATT.Free = false
 
 ATT.Category = {"mwc_mag"}
 ATT.ClipSizeMult = 1.5
+ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"ext_mag"}
