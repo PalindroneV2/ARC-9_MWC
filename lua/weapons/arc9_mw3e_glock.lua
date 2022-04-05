@@ -21,7 +21,7 @@ SWEP.Credits = {
     Author = "Palindrone"
 }
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 SWEP.UseHands = true
 
@@ -205,17 +205,30 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    local newpos = Vector(-3, 3, 0.8)
+    local newpos = Vector(-3, 0, 0.8)
     local newang = Angle(0.075, -0.45, 0)
 
-    if attached["bo1_pap"] then
-        vm:SetSkin(1)
+    local camo = 0
+    if attached["mwc_cosmetic_tan"] then
+        camo = 2
     end
+    if attached["mwc_cosmetic_od"] then
+        camo = 4
+    end
+    if attached["mwc_cosmetic_red"] then
+        camo = 6
+    end
+
+    if attached["bo1_pap"] then
+        camo = camo + 1
+    end
+
+    vm:SetSkin(camo)
 
     if attached["g17"] then
         vm:SetBodygroup(0,1)
-        newpos = Vector(-3, 3, 0.8)
-        newang = Angle(0.075, -0.45, 0)
+        newpos = Vector(-3, 0, 0.65)
+        newang = Angle(0.075, 0, 0)
     end
 
     local fmgpose = Vector(0, 0, -1)
@@ -287,6 +300,14 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "Black",
+        Bone = "j_gun",
+        Pos = Vector(2.5, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_cosmetic_glock"},
     },
 }
 

@@ -29,7 +29,7 @@ ATT.Sights = {
         Pos = Vector(-0.025, 6, -4.13),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
-        IgnoreExtra = true
+        IgnoreExtra = true 
     },
 }
 
@@ -43,6 +43,6 @@ ATT.RTScopeAdjustmentLevels = 4
 ATT.RTScopeRes = 1024
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/spr_scope")
 ATT.RTScopeReticle = Material("hud/arc9_mwc/scopes/mw3_scope.png", "mips smooth")
-ATT.RTScopeShadowIntensity = 0.1
+ATT.RTScopeShadowIntensity = 5
 ATT.RTScopeColorable = true
 ATT.RTScopeNoPP = false

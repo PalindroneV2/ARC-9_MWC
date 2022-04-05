@@ -12,4 +12,5 @@ ATT.Free = true
 
 ATT.Category = {
     "mwc_cosmetic",
+    "mwc_cosmetic_glock",
 }
