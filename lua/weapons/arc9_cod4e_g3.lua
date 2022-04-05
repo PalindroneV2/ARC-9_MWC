@@ -37,8 +37,8 @@ SWEP.DesiredViewModelFOV = 60
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 50
-SWEP.DamageMin = 35 -- damage done at maximum range
+SWEP.DamageMax = 42
+SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
@@ -112,7 +112,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 800
+SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
