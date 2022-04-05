@@ -18,6 +18,7 @@ ATT.Folder = "SCOPE"
 
 ATT.Category = {"bo1_optic", "bo1_optic_alt"}
 
+
 ATT.Model = "models/weapons/arc9/atts/mw3_acog.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)

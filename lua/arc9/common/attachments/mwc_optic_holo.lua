@@ -17,6 +17,7 @@ ATT.Folder = "HOLO"
 
 ATT.Category = {"bo1_optic", "bo1_optic_alt"}
 
+
 ATT.Model = "models/weapons/arc9/atts/mw3_eotech.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0.5, 0, -0.15)
