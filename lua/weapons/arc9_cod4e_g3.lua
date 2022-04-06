@@ -141,6 +141,11 @@ SWEP.ShootPitchVariation = 0
 SWEP.ShootSound = "ARC9_COD4E.G3_Fire"
 SWEP.ShootSoundSilenced = "ARC9_COD4E.M4M16_Sil"
 
+SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
+SWEP.DoFireAnimationUBGL = true
+SWEP.NoShellEjectUBGL = true
+SWEP.MuzzleEffectQCAUBGL = 1
+
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_4" -- Used for some muzzle effects.
 
