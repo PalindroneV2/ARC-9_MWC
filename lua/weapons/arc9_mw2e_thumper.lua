@@ -43,8 +43,9 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEntity = "arc9_mw3_m203_he" -- entity to fire, if any
-SWEP.EntityMuzzleVelocity = 10000
+SWEP.ShootEnt = "arc9_mwc_m203_he" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEntForce = 12500
+SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -56,58 +57,6 @@ SWEP.BodyDamageMults = {
     [HITGROUP_LEFTLEG] = 1,
     [HITGROUP_RIGHTLEG] = 1,
 }
-
-SWEP.DamageMax = 100 -- Damage done at point blank range
-SWEP.DamageMin = 100 -- Damage done at maximum range
-
-SWEP.DamageRand = 0 -- Damage varies randomly per shot by this fraction. 0.1 = +- 10% damage per shot.
-
-SWEP.RangeMin = 1000 -- How far bullets retain their maximum damage for.
-SWEP.RangeMax = 10000 -- In Hammer units, how far bullets can travel before dealing DamageMin.
-
-SWEP.Penetration = 0 -- Units of wood that can be penetrated by this gun.
-
-SWEP.ImpactDecal = "Scorch"
-
-SWEP.SuppressSmokeTrail = false
-
-SWEP.ExplosionDamage = 95
-SWEP.ExplosionRadius = 256
-SWEP.ExplosionEffect = "Explosion"
-
-SWEP.PhysBulletModel = "models/weapons/arc9/item/mw3_40mm.mdl"
-
-SWEP.RicochetChance = 0
-
-SWEP.HookC_DrawBullet = function(swep, bullet)
-    if swep:GetValue("SuppressSmokeTrail") then return end
-    if bullet.Imaginary then return end
-
-    local emitter = ParticleEmitter(bullet.Pos)
-    if !IsValid(emitter) then return end
-    local smoke = emitter:Add("particle/particle_smokegrenade", bullet.Pos)
-    smoke:SetVelocity(VectorRand() * 25)
-    smoke:SetGravity(Vector(math.Rand(-5, 5), math.Rand(-5, 5), math.Rand(-20, -25)))
-    smoke:SetDieTime(math.Rand(0.25, 0.5))
-    smoke:SetStartAlpha(255)
-    smoke:SetEndAlpha(0)
-    smoke:SetStartSize(0)
-    smoke:SetEndSize(50)
-    smoke:SetRoll(math.Rand(-180, 180))
-    smoke:SetRollDelta(math.Rand(-0.2, 0.2))
-    smoke:SetColor(20, 20, 20)
-    smoke:SetAirResistance(5)
-    smoke:SetPos(bullet.Pos)
-    smoke:SetLighting(false)
-    emitter:Finish()
-end
-
--------------------------- PHYS BULLET BALLISTICS
-
-SWEP.AlwaysPhysBullet = true
-SWEP.PhysBulletMuzzleVelocity = 5000
-SWEP.PhysBulletDrag = 3
-SWEP.FancyBullets = true
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 1 -- DefaultClip is automatically set.

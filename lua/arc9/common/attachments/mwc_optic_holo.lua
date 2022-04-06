@@ -15,7 +15,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "HOLO"
 
-ATT.Category = {"bo1_optic", "bo1_optic_alt"}
+ATT.Category = {"bo1_optic", "bo1_optic_alt", "bo1_optic_lp"}
 
 
 ATT.Model = "models/weapons/arc9/atts/mw3_eotech.mdl"

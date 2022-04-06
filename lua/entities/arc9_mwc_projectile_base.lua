@@ -9,7 +9,7 @@ ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
 ENT.Model = "models/weapons/arc9/item/mw3_40mm.mdl"
 ENT.Ticks = 0
-ENT.FuseTime = 0.05
+ENT.FuseTime = 0
 ENT.Defused = false
 ENT.BoxSize = Vector(2, 2, 2)
 ENT.SmokeTrail = true
@@ -25,6 +25,9 @@ ENT.HelicopterWorkaround = true
 ENT.Damage = 150
 ENT.Radius = 300
 ENT.ImpactDamage = nil
+
+ENT.Dead = false
+ENT.DieTime = 0
 
 if SERVER then
     local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
@@ -103,7 +106,12 @@ if SERVER then
             })
         end
         self.Defused = true
-        self:Remove()
+        -- self:Remove()
+
+        SafeRemoveEntityDelayed(self, 0.5)
+        self:SetRenderMode(RENDERMODE_NONE)
+        self:SetMoveType(MOVETYPE_NONE)
+        self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
     end
 
     function ENT:PhysicsCollide(colData, physobj)
@@ -166,7 +174,7 @@ if SERVER then
     end
 
     -- Combine Helicopters are hard-coded to only take DMG_AIRBOAT damage
-    hook.Add("EntityTakeDamage", "arc9_HelicopterWorkaround", function(ent, dmginfo)
+    hook.Add("EntityTakeDamage", "ARC9_HelicopterWorkaround", function(ent, dmginfo)
         if IsValid(ent:GetOwner()) and ent:GetOwner():GetClass() == "npc_helicopter" then ent = ent:GetOwner() end
         if ent:GetClass() == "npc_helicopter" and dmginfo:GetInflictor().HelicopterWorkaround then
             dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_AIRBOAT))

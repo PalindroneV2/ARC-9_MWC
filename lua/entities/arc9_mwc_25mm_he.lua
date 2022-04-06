@@ -9,6 +9,7 @@ ENT.Model = "models/Items/AR2_Grenade.mdl"
 ENT.DragCoefficient = 1
 
 ENT.Radius = 250
+ENT.FuseTime = 0.05
 ENT.DamageOverride = 150
 
 if CLIENT then

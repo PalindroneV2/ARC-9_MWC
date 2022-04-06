@@ -8,7 +8,7 @@ ATT.Description = [[
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - mwc Attachments"
+ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_gp25"}

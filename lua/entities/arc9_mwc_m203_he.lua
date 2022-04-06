@@ -8,6 +8,7 @@ ENT.Model = "models/weapons/arc9/item/mw3_40mm.mdl"
 
 ENT.Radius = 300
 ENT.DamageOverride = 200
+ENT.FuseTime = 0.05
 
 if CLIENT then
     killicon.Add( "arc9_mwc_m203_he", "arc9/weaponicons/mw3_ubs/m203", Color( 255, 255, 255, 255 ) )
