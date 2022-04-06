@@ -100,6 +100,7 @@ SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
 SWEP.Speed = 0.95
+SWEP.Bipod = true
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -243,6 +244,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newpos = Vector(-3.306, 0, 1.2)
             newang = Angle(0.025, 0.4, 0)
         end
+    end
+    if self:GetBipod() then
+        vm:SetBodygroup(3,1)
     end
 
     self.IronSights = {

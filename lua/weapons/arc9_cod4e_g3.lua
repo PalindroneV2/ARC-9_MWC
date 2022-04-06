@@ -276,7 +276,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     vm:SetBodygroup(1, irons)
 
-    if wep:GetBipod() then
+    if self:GetBipod() then
         vm:SetBodygroup(5, 2)
     end
 
