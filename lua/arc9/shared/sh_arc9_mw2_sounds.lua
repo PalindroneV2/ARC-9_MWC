@@ -366,3 +366,101 @@ sound.Add( {
         "^weapons/ARC9/MWC_MK/lift.wav",
     }
 } )
+
+-- MWC Javelin --
+
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_Ignition",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/ignition.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_FireDist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/fire_dist.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_IgnitionDist",
+    channel = CHAN_WEAPON,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/ignition_dist.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_PickupLift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/pickup_lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_ReloadLift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/reload_lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_CapRemove",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/removecap.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Javelin_Tube",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_javelin/tube.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.Rocket_LockOn_Start",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/mw2e_javelin/lockon_start.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Rocket_LockOn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    --pitch = {95, 110},
+    sound = {
+        "^weapons/arc9/mw2e_javelin/lockon.wav",
+    }
+} )

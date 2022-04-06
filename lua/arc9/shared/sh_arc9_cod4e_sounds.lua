@@ -975,3 +975,33 @@ sound.Add( {
         "^weapons/ARC9/cod4_M9/cs/out.wav",
     }
 } )
+
+-- AT4 --
+
+sound.Add( {
+    name = "ARC9_COD4E.AT4_Drop",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_at4/drop.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.AT4_Raise",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_at4/raise.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.AT4_RaiseFirst",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_at4/raise_first.wav",
+    }
+} )

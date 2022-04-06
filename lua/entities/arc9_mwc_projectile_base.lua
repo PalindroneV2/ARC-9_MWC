@@ -13,6 +13,10 @@ ENT.FuseTime = 0
 ENT.Defused = false
 ENT.BoxSize = Vector(2, 2, 2)
 ENT.SmokeTrail = true
+ENT.SmokeTrailSize = 6
+ENT.SmokeTrailTime = 0.5
+ENT.Flare = false
+ENT.LifeTime = 10
 
 ENT.Drag = true
 ENT.Gravity = true
@@ -28,6 +32,16 @@ ENT.ImpactDamage = nil
 
 ENT.Dead = false
 ENT.DieTime = 0
+
+ENT.SteerSpeed = 60 -- The maximum amount of degrees per second the missile can steer.
+ENT.SeekerAngle = math.cos(35) -- The missile will lose tracking outside of this angle.
+ENT.SACLOS = false -- This missile is manually guided by its shooter.
+ENT.SemiActive = false -- This missile needs to be locked on to the target at all times.
+ENT.FireAndForget = false -- This missile automatically tracks its target.
+
+ENT.ShootEntData = {}
+
+ENT.IsProjectile = true
 
 if SERVER then
     local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
@@ -51,12 +65,54 @@ if SERVER then
         self.SpawnTime = CurTime()
 
         if self.SmokeTrail then
-            util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, 6, 6, 0.5, 1 / (6 + 6) * 0.5, "particle/particle_smokegrenade")
+            util.SpriteTrail(self, 0, Color( 255 , 255 , 255 ), false, self.SmokeTrailSize, 0, self.SmokeTrailTime, 1 / self.SmokeTrailSize * 0.5, "particle/particle_smokegrenade")
         end
     end
 
     function ENT:Think()
-        if self.Defused or self:WaterLevel() > 0 then return end
+        if self.Defused then return end
+
+        if self.SpawnTime + self.LifeTime < CurTime() then
+            self:Detonate()
+            return
+        end
+
+        if self:WaterLevel() > 0 then
+            self:Detonate()
+            return
+        end
+
+        if self.FireAndForget or self.SemiActive then
+            if self.SemiActive then
+                if IsValid(self.Weapon) then
+                    self.ShootEntData = self.Weapon:RunHook("Hook_GetShootEntData", {})
+                end
+            end
+
+            if self.ShootEntData.Target and IsValid(self.ShootEntData.Target) then
+                local target = self.ShootEntData.Target
+                if target.UnTrackable then self.ShootEntData.Target = nil end
+
+                local dir = (target:GetPos() - self:GetPos()):GetNormalized()
+                local dot = dir:Dot(self:GetAngles():Forward())
+                local ang = dir:Angle()
+
+                if dot >= self.SeekerAngle then
+                    local p = self:GetAngles().p
+                    local y = self:GetAngles().y
+
+                    p = math.ApproachAngle(p, ang.p, FrameTime() * self.SteerSpeed)
+                    y = math.ApproachAngle(y, ang.y, FrameTime() * self.SteerSpeed)
+
+                    self:SetAngles(Angle(p, y, 0))
+                    -- self:SetVelocity(dir * 15000)
+                else
+                    self.ShootEntData.Target = nil
+                end
+            else
+                self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
+            end
+        end
 
         self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost)
 
@@ -65,7 +121,7 @@ if SERVER then
             self.GunshipCheck = CurTime() + 0.33
             local tr = util.TraceLine({
                 start = self:GetPos(),
-                endpos = self:GetPos() + self:GetVelocity(),
+                endpos = self:GetPos() + (self:GetVelocity() * 4 * engine.TickInterval()),
                 filter = self,
                 mask = MASK_SHOT
             })
@@ -108,7 +164,7 @@ if SERVER then
         self.Defused = true
         -- self:Remove()
 
-        SafeRemoveEntityDelayed(self, 0.5)
+        SafeRemoveEntityDelayed(self, self.SmokeTrailTime)
         self:SetRenderMode(RENDERMODE_NONE)
         self:SetMoveType(MOVETYPE_NONE)
         self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
@@ -187,6 +243,12 @@ function ENT:Defuse()
     SafeRemoveEntityDelayed(self, 5)
 end
 
+local flaremat = Material("effects/arc9_lensflare")
 function ENT:Draw()
-    self:DrawModel()
+    if self.Flare and !self.Defused then
+        render.SetMaterial(flaremat)
+        render.DrawSprite(self:GetPos(), math.Rand(90, 110), math.Rand(90, 110), Color(255, 250, 240))
+    else
+        self:DrawModel()
+    end
 end
