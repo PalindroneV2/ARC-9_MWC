@@ -120,19 +120,19 @@ SWEP.Hook_Think = function(self)
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
             if dot > bestang then
-                -- local tr = util.TraceLine({
-                --     start = self:GetShootPos(),
-                --     endpos = ent:GetPos(),
-                --     filter = self:GetOwner(),
-                --     mask = MASK_VISIBLE_AND_NPCS
-                -- })
+                local tr = util.TraceLine({
+                    start = self:GetShootPos(),
+                    endpos = ent:GetPos(),
+                    filter = self:GetOwner(),
+                    mask = MASK_NPCSOLID_BRUSHONLY
+                })
 
                 -- PrintTable(tr)
 
-                -- if tr.Entity == ent then
-                best = ent
-                bestang = dot
-                -- end
+                if !tr.HitWorld then
+                    best = ent
+                    bestang = dot
+                end
             end
         end
 
