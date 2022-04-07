@@ -121,7 +121,7 @@ if SERVER then
                 --         self.TopAttackReached = true
                 --     end
                 -- else
-                local tpos = target:GetPos()
+                local tpos = target:EyePos()
                 if self.TopAttack and !self.TopAttackReached then
                     tpos = tpos + Vector(0, 0, self.TopAttackHeight)
 

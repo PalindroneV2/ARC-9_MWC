@@ -9,6 +9,8 @@ SWEP.Description = [[
     American-made portable anti-tank missile system.
 
     Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
+
+    Will not reliably hit moving aircraft.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon/Lockheed Martin",
@@ -121,6 +123,7 @@ SWEP.Hook_Think = function(self)
 
         local best = nil
         local bestang = -1000
+        local targetscore = 0
 
         for _, ent in ipairs(targets) do
             -- if ent:Health() <= 0 then continue end
@@ -131,20 +134,32 @@ SWEP.Hook_Think = function(self)
             if ent.UnTrackable then continue end
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
-            if dot > bestang then
-                local tr = util.TraceLine({
-                    start = self:GetShootPos(),
-                    endpos = ent:GetPos(),
-                    filter = self:GetOwner(),
-                    mask = MASK_NPCSOLID_BRUSHONLY
-                })
+            local entscore = 1
+
+            if ent:IsPlayer() then entscore = entscore + 5 end
+            if ent:IsNPC() then entscore = entscore + 2 end
+            if ent:IsVehicle() then entscore = entscore + 10 end
+            if ent:Health() > 0 then entscore = entscore + 5 end
+
+            entscore = entscore + dot * 5
+
+            entscore = entscore + (ent.ARC9TrackingScore or 0)
+
+            if dot > bestang and entscore > targetscore then
+                -- local tr = util.TraceLine({
+                --     start = self:GetShootPos(),
+                --     endpos = ent:GetPos(),
+                --     filter = self:GetOwner(),
+                --     mask = MASK_VISIBLE_AND_NPCS
+                -- })
 
                 -- PrintTable(tr)
 
-                if !tr.HitWorld then
-                    best = ent
-                    bestang = dot
-                end
+                -- if tr.Entity == ent then
+                best = ent
+                bestang = dot
+                targetscore = entscore
+                -- end
             end
         end
 
