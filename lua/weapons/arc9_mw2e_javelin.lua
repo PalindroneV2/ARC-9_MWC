@@ -122,7 +122,6 @@ SWEP.Hook_Think = function(self)
         local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
 
         local best = nil
-        local bestang = -1000
         local targetscore = 0
 
         for _, ent in ipairs(targets) do
@@ -132,6 +131,12 @@ SWEP.Hook_Think = function(self)
             if ent == self:GetOwner() then continue end
             if ent.IsProjectile then continue end
             if ent.UnTrackable then continue end
+
+            local aa, bb = ent:GetRotatedAABB(ent:OBBMins(), ent:OBBMaxs())
+            local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
+
+            if vol <= 100000 then continue end
+
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
             local entscore = 1
@@ -145,7 +150,7 @@ SWEP.Hook_Think = function(self)
 
             entscore = entscore + (ent.ARC9TrackingScore or 0)
 
-            if dot > bestang and entscore > targetscore then
+            if entscore > targetscore then
                 -- local tr = util.TraceLine({
                 --     start = self:GetShootPos(),
                 --     endpos = ent:GetPos(),
