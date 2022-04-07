@@ -7,6 +7,10 @@ SWEP.PrintName = "FGM-148 Javelin"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
     American-made portable anti-tank missile system.
+
+    Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
+
+    Will not reliably hit moving aircraft.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon/Lockheed Martin",
@@ -51,7 +55,7 @@ SWEP.ShootEntForce = 10000
 SWEP.NextBeepTime = 0
 SWEP.TargetEntity = nil
 SWEP.StartTrackTime = 0
-SWEP.LockTime = 1
+SWEP.LockTime = 3
 
 SWEP.HookP_BlockFire = function(self)
     return self:GetSightAmount() < 1
@@ -65,8 +69,37 @@ SWEP.Hook_GetShootEntData = function(self, data)
     end
 end
 
+SWEP.Hook_HUDPaintBackground = function(self)
+    if self:GetSightAmount() >= 0.75 then
+        if !self:GetCurrentFiremodeTable().TopAttack then
+            surface.SetDrawColor(255, 255, 255)
+
+            local x = ScrW() / 2
+            local y = ScrH() / 2
+
+            surface.DrawLine(0, y, ScrW(), y)
+            surface.DrawLine(x, 0, x, ScrH())
+        else
+            if self.TargetEntity and IsValid(self.TargetEntity) and self:Clip1() > 0 then
+                local toscreen = self.TargetEntity:GetPos():ToScreen()
+
+                local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
+
+                surface.SetDrawColor(255, 255, 255)
+
+                if tracktime >= 1 then
+                    surface.SetDrawColor(255, 0, 0)
+                end
+
+                surface.DrawLine(0, toscreen.y, ScrW(), toscreen.y)
+                surface.DrawLine(toscreen.x, 0, toscreen.x, ScrH())
+            end
+        end
+    end
+end
+
 SWEP.Hook_Think = function(self)
-    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
+    if self:GetSightAmount() >= 0.75 and self:Clip1() > 0 and self:GetCurrentFiremodeTable().TopAttack then
 
         if self.NextBeepTime > CurTime() then return end
 
@@ -75,7 +108,7 @@ SWEP.Hook_Think = function(self)
         -- if CLIENT then
         if tracktime >= 1 and self.TargetEntity then
             if CLIENT then
-                self:EmitSound("ARC9_MW2E.Rocket_LockOn", 75, 125)
+                self:EmitSound("ARC9_MW2E.Rocket_LockOn", 75, 100)
             end
             self.NextBeepTime = CurTime() + 0.1
         else
@@ -86,10 +119,11 @@ SWEP.Hook_Think = function(self)
         end
         -- end
 
-        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(5)))
+        local targets = ents.FindInCone(self:GetShootPos() + (self:GetShootDir():Forward() * 32), self:GetShootDir():Forward(), 30000, math.cos(math.rad(10)))
 
         local best = nil
         local bestang = -1000
+        local targetscore = 0
 
         for _, ent in ipairs(targets) do
             -- if ent:Health() <= 0 then continue end
@@ -100,7 +134,18 @@ SWEP.Hook_Think = function(self)
             if ent.UnTrackable then continue end
             local dot = (ent:GetPos() - self:GetShootPos()):GetNormalized():Dot(self:GetShootDir():Forward())
 
-            if dot > bestang then
+            local entscore = 1
+
+            if ent:IsPlayer() then entscore = entscore + 5 end
+            if ent:IsNPC() then entscore = entscore + 2 end
+            if ent:IsVehicle() then entscore = entscore + 10 end
+            if ent:Health() > 0 then entscore = entscore + 5 end
+
+            entscore = entscore + dot * 5
+
+            entscore = entscore + (ent.ARC9TrackingScore or 0)
+
+            if dot > bestang and entscore > targetscore then
                 -- local tr = util.TraceLine({
                 --     start = self:GetShootPos(),
                 --     endpos = ent:GetPos(),
@@ -113,45 +158,12 @@ SWEP.Hook_Think = function(self)
                 -- if tr.Entity == ent then
                 best = ent
                 bestang = dot
+                targetscore = entscore
                 -- end
             end
         end
 
         if !best then self.TargetEntity = nil return end
-
-        local aa, bb = best:WorldSpaceAABB()
-        local vol = math.abs(bb.x - aa.x) * math.abs(bb.y - aa.y) * math.abs(bb.z - aa.z)
-        -- local dimx = (bb.x - aa.x) / 2
-        -- local dimy = (bb.y - aa.y) / 2
-        -- local dimz = (bb.z - aa.z) / 2
-
-        clutter = math.max(1000 - (vol / 1000), 0)
-
-        local dimx = clutter / 50
-        local dimy = clutter / 50
-        local dimz = clutter / 100
-
-        local tr2 = util.TraceHull({
-            start = self:GetShootPos(),
-            endpos = best:GetPos() + (self:GetShootDir():Forward() * clutter),
-            filter = self:GetOwner(),
-            mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
-        })
-
-        local tr3 = util.TraceHull({
-            start = self:GetShootPos(),
-            endpos = best:GetPos() + Vector(0, 0, -clutter * 0.25),
-            filter = self:GetOwner(),
-            mask = MASK_NPCWORLDSTATIC,
-            maxs = Vector(-dimx, -dimy, -dimz),
-            mins = Vector(dimx, dimy, dimz),
-        })
-
-        -- -- Too much ground clutter
-        if tr2.HitWorld and !tr2.HitSky then return end
-        if tr3.HitWorld and !tr3.HitSky then return end
 
         if !self.TargetEntity then
             self.StartTrackTime = CurTime()
@@ -245,12 +257,14 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
+        PrintName = "TOP",
+        TopAttack = true
     },
     {
-        Mode = 3,
-    },
-    {
-        Mode = 1,
+        Mode = -1,
+        PrintName = "SACLOS",
+        TopAttack = false,
+        ShootEnt = "arc9_mwc_missile_javelin_saclos"
     },
 }
 SWEP.NPCWeaponType = {"weapon_shotgun"}
@@ -296,9 +310,23 @@ SWEP.CaseBones = {}
 SWEP.IronSights = {
     Pos = Vector(0, 0, 0),
     Ang = Angle(0, 0, 0),
-    Magnification = 1.25,
+    Magnification = 5,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+    FlatScope = true,
+    FlatScopeOverlay = Material("arc9/javelin.png", "smooth"), -- Material()
+    FlatScopeBlackBox = false,
+    FlatScopeCC = {
+        [ "$pp_colour_addr" ] = 0,
+        [ "$pp_colour_addg" ] = 0,
+        [ "$pp_colour_addb" ] = 0,
+        [ "$pp_colour_brightness" ] = 0.05,
+        [ "$pp_colour_contrast" ] = 0.95,
+        [ "$pp_colour_colour" ] = 0,
+        [ "$pp_colour_mulr" ] = 0,
+        [ "$pp_colour_mulg" ] = 0,
+        [ "$pp_colour_mulb" ] = 0
+    } -- Color correction table, see default.lua
 }
 
 SWEP.HoldtypeHolstered = "passive"

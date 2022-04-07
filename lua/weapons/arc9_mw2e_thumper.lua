@@ -114,12 +114,7 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
-    },
-    {
-        Mode = 3,
-    },
-    {
-        Mode = 1,
+        PrintName = "SINGLE"
     },
 }
 SWEP.NPCWeaponType = {"weapon_shotgun"}
@@ -167,6 +162,8 @@ SWEP.IronSights = {
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
+
+SWEP.NoShellEject = true
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "crossbow"
