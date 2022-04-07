@@ -7,6 +7,8 @@ SWEP.PrintName = "FGM-148 Javelin"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[
     American-made portable anti-tank missile system.
+
+    Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
 ]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon/Lockheed Martin",
@@ -51,7 +53,7 @@ SWEP.ShootEntForce = 10000
 SWEP.NextBeepTime = 0
 SWEP.TargetEntity = nil
 SWEP.StartTrackTime = 0
-SWEP.LockTime = 2
+SWEP.LockTime = 3
 
 SWEP.HookP_BlockFire = function(self)
     return self:GetSightAmount() < 1
@@ -66,26 +68,36 @@ SWEP.Hook_GetShootEntData = function(self, data)
 end
 
 SWEP.Hook_HUDPaintBackground = function(self)
-    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
-        if self.TargetEntity and IsValid(self.TargetEntity) then
-            local toscreen = self.TargetEntity:GetPos():ToScreen()
-
-            local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
-
+    if self:GetSightAmount() >= 0.75 then
+        if !self:GetCurrentFiremodeTable().TopAttack then
             surface.SetDrawColor(255, 255, 255)
 
-            if tracktime >= 1 then
-                surface.SetDrawColor(255, 0, 0)
-            end
+            local x = ScrW() / 2
+            local y = ScrH() / 2
 
-            surface.DrawLine(0, toscreen.y, ScrW(), toscreen.y)
-            surface.DrawLine(toscreen.x, 0, toscreen.x, ScrH())
+            surface.DrawLine(0, y, ScrW(), y)
+            surface.DrawLine(x, 0, x, ScrH())
+        else
+            if self.TargetEntity and IsValid(self.TargetEntity) and self:Clip1() > 0 then
+                local toscreen = self.TargetEntity:GetPos():ToScreen()
+
+                local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
+
+                surface.SetDrawColor(255, 255, 255)
+
+                if tracktime >= 1 then
+                    surface.SetDrawColor(255, 0, 0)
+                end
+
+                surface.DrawLine(0, toscreen.y, ScrW(), toscreen.y)
+                surface.DrawLine(toscreen.x, 0, toscreen.x, ScrH())
+            end
         end
     end
 end
 
 SWEP.Hook_Think = function(self)
-    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
+    if self:GetSightAmount() >= 0.75 and self:Clip1() > 0 and self:GetCurrentFiremodeTable().TopAttack then
 
         if self.NextBeepTime > CurTime() then return end
 
@@ -230,7 +242,14 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
-        PrintName = "SINGLE"
+        PrintName = "TOP",
+        TopAttack = true
+    },
+    {
+        Mode = -1,
+        PrintName = "SACLOS",
+        TopAttack = false,
+        ShootEnt = "arc9_mwc_missile_javelin_saclos"
     },
 }
 SWEP.NPCWeaponType = {"weapon_shotgun"}

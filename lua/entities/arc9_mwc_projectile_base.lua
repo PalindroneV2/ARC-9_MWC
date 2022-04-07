@@ -87,6 +87,8 @@ if SERVER then
             return
         end
 
+        local drunk = false
+
         if self.FireAndForget or self.SemiActive then
             if self.SemiActive then
                 if IsValid(self.Weapon) then
@@ -145,11 +147,37 @@ if SERVER then
                     -- self:SetVelocity(dir * 15000)
                 elseif self.NoReacquire then
                     self.ShootEntData.Target = nil
+                    drunk = true
                 end
                 -- end
             else
-                self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
+                drunk = true
             end
+        elseif self.SACLOS then
+            if self:GetOwner():IsValid() then
+                local tpos = self:GetOwner():GetEyeTrace().HitPos
+                local dir = (tpos - self:GetPos()):GetNormalized()
+                local dot = dir:Dot(self:GetAngles():Forward())
+                local ang = dir:Angle()
+
+                if dot >= self.SeekerAngle then
+                    local p = self:GetAngles().p
+                    local y = self:GetAngles().y
+
+                    p = math.ApproachAngle(p, ang.p, FrameTime() * self.SteerSpeed)
+                    y = math.ApproachAngle(y, ang.y, FrameTime() * self.SteerSpeed)
+
+                    self:SetAngles(Angle(p, y, 0))
+                else
+                    drunk = true
+                end
+            else
+                drunk = true
+            end
+        end
+
+        if drunk then
+            self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
         end
 
         self:GetPhysicsObject():AddVelocity(Vector(0, 0, self.Lift) + self:GetForward() * self.Boost)
