@@ -7,7 +7,7 @@ ENT.PrintName 			= "Base Projectile"
 ENT.Spawnable 			= false
 ENT.CollisionGroup = COLLISION_GROUP_PROJECTILE
 
-ENT.Model = "models/weapons/arc9/item/mw3_40mm.mdl"
+ENT.Model = "models/weapons/arc9/item/bo1_40mm.mdl"
 ENT.Ticks = 0
 ENT.FuseTime = 0
 ENT.Defused = false
@@ -35,9 +35,14 @@ ENT.DieTime = 0
 
 ENT.SteerSpeed = 60 -- The maximum amount of degrees per second the missile can steer.
 ENT.SeekerAngle = math.cos(35) -- The missile will lose tracking outside of this angle.
+ENT.SuperSeeker = false
 ENT.SACLOS = false -- This missile is manually guided by its shooter.
 ENT.SemiActive = false -- This missile needs to be locked on to the target at all times.
 ENT.FireAndForget = false -- This missile automatically tracks its target.
+ENT.TopAttack = false -- This missile flies up above its target before going down in a top-attack trajectory.
+ENT.TopAttackHeight = 5000
+ENT.SuperSteerBoostTime = 5 -- Time given for this projectile to adjust its trajectory from top attack to direct
+ENT.NoReacquire = false -- F&F target is permanently lost if it cannot reacquire
 
 ENT.ShootEntData = {}
 
@@ -93,11 +98,43 @@ if SERVER then
                 local target = self.ShootEntData.Target
                 if target.UnTrackable then self.ShootEntData.Target = nil end
 
-                local dir = (target:GetPos() - self:GetPos()):GetNormalized()
+                -- if self.TopAttack then
+                --     local tpos = target:GetPos() + Vector(0, 0, 5000)
+                --     if self.SpawnTime + self.TopAttackTime - 1 < CurTime() or self.TopAttackReached then
+                --         tpos = target:GetPos()
+                --     end
+                --     local dir = (tpos - self:GetPos()):GetNormalized()
+                --     local dist = (tpos - self:GetPos()):Length()
+                --     local ang = dir:Angle()
+
+                --     local p = self:GetAngles().p
+                --     local y = self:GetAngles().y
+
+                --     p = math.ApproachAngle(p, ang.p, FrameTime() * self.SteerSpeed)
+                --     y = math.ApproachAngle(y, ang.y, FrameTime() * self.SteerSpeed)
+
+                --     self:SetAngles(Angle(p, y, 0))
+
+                --     if dist <= 1024 then
+                --         self.TopAttackReached = true
+                --     end
+                -- else
+                local tpos = target:GetPos()
+                if self.TopAttack and !self.TopAttackReached then
+                    tpos = tpos + Vector(0, 0, self.TopAttackHeight)
+
+                    local dist = (tpos - self:GetPos()):Length()
+
+                    if dist <= 2000 then
+                        self.TopAttackReached = true
+                        self.SuperSteerTime = CurTime() + self.SuperSteerBoostTime
+                    end
+                end
+                local dir = (tpos - self:GetPos()):GetNormalized()
                 local dot = dir:Dot(self:GetAngles():Forward())
                 local ang = dir:Angle()
 
-                if dot >= self.SeekerAngle then
+                if self.SuperSeeker or dot >= self.SeekerAngle or !self.TopAttackReached or (self.SuperSteerTime and self.SuperSteerTime >= CurTime()) then
                     local p = self:GetAngles().p
                     local y = self:GetAngles().y
 
@@ -106,9 +143,10 @@ if SERVER then
 
                     self:SetAngles(Angle(p, y, 0))
                     -- self:SetVelocity(dir * 15000)
-                else
+                elseif self.NoReacquire then
                     self.ShootEntData.Target = nil
                 end
+                -- end
             else
                 self:SetAngles(self:GetAngles() + (AngleRand() * FrameTime() * 1000 / 360))
             end
