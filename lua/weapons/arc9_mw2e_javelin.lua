@@ -65,6 +65,25 @@ SWEP.Hook_GetShootEntData = function(self, data)
     end
 end
 
+SWEP.Hook_HUDPaintBackground = function(self)
+    if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
+        if self.TargetEntity and IsValid(self.TargetEntity) then
+            local toscreen = self.TargetEntity:GetPos():ToScreen()
+
+            local tracktime = math.Clamp((CurTime() - self.StartTrackTime) / self.LockTime, 0, 2)
+
+            surface.SetDrawColor(255, 255, 255)
+
+            if tracktime >= 1 then
+                surface.SetDrawColor(255, 0, 0)
+            end
+
+            surface.DrawLine(0, toscreen.y, ScrW(), toscreen.y)
+            surface.DrawLine(toscreen.x, 0, toscreen.x, ScrH())
+        end
+    end
+end
+
 SWEP.Hook_Think = function(self)
     if self:GetSightAmount() >= 1 and self:Clip1() > 0 then
 
