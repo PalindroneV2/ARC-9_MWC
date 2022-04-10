@@ -1,12 +1,9 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_rsass\rsass"
+	$basetexture	"models\weapons\arc9\mw3\mw3_cm901\cm901"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_rsass\rsass_n"
-
-	$detail "models\weapons\arc9\bo1\black_detail"
-	$detailblendmode 4
-	"$detailblendfactor" "1"
+	$bumpmap	"models\weapons\arc9\mw3\mw3_cm901\cm901_n"
+	$phongexponenttexture	"models\weapons\arc9\mw3\mw3_cm901\cm901_s"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -17,7 +14,6 @@ VertexlitGeneric
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
-
 	"$nocull" "1"
 
 	$detailblendmode 4
@@ -29,4 +25,5 @@ VertexlitGeneric
             blend $detailblendfactor
 		}
 	}
+
 }
