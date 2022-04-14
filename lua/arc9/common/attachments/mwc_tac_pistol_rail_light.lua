@@ -12,6 +12,7 @@ ATT.ActivateElements = {"pistol_rail"}
 ATT.Model = "models/weapons/arc9/atts/mw3_pistolrail.mdl"
 ATT.Scale = 1.1
 ATT.ModelOffset = Vector(-3.5,0,-0.25)
+ATT.Bonemerge = false
 
 ATT.Attachments = {
     {
