@@ -210,9 +210,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
+    local tmp = 0
+    local tmps = 0
+    local stk = 0
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+    if attached["tmp"] then
+        tmp = 1
+        tmps = 2
+    end
+    if attached["stock_l"] then
+        stk = 1
+    end
+    vm:SetBodygroup(0,tmp)
+    vm:SetBodygroup(1, tmps + stk)
 end
 
 
@@ -285,6 +297,14 @@ SWEP.Attachments = {
         Pos = Vector(.5, 0, -6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "MP9",
+        DefaultCompactName = "MP9",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"mw3_tmp_cosmetic"},
     },
 }
 
