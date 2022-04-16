@@ -18,5 +18,6 @@ VertexlitGeneric
 	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
+
 	"$nocull" "1"
 }

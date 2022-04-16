@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Calibre = "5.56x45mm NATO",
     Mechanism = "Direct Impingement",
     Country = "USA",
-    Year = 1959,
+    Year = 1994,
     Games = [[COD4, MW2, BO1, MW3, BO2, AW, BO3, MW19, BOCW]]
 }
 SWEP.Credits = {
