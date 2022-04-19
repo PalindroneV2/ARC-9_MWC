@@ -1,3 +1,26 @@
+
+-- COD 4 M4/M16
+
+sound.Add( {
+    name = "ARC9_MW2E.M4M16_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_m4m16/fire_mw2.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.M4M16_Sil",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_m4m16/sil_mw2.wav",
+    }
+} )
+
 --MW2E FAMAS--
 
 sound.Add( {
