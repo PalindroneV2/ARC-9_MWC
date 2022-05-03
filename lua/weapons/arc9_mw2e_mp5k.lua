@@ -142,8 +142,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_BO1.MP5_Fire"
-SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
+SWEP.ShootSound = "ARC9_COD4E.MP5_Fire"
+SWEP.ShootSoundSilenced = "ARC9_COD4E.MP5_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_smg" -- Used for some muzzle effects.
@@ -191,8 +191,9 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(15.5, 40, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotFOV = 70
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
@@ -222,6 +223,16 @@ SWEP.AttachmentElements = {
             {3,3}
         },
     },
+    ["barrel_std"] = {
+        AttPosMods = {
+            [3] = {
+                Pos = Vector(14.5, 0, 2.04),
+            },
+            [5] = {
+                Pos = Vector(9.25, 0, 1.3),
+            },
+        },
+    },
     ["mwc_igrip"] = {
         Bodygroups = {
             {4,1}
@@ -235,17 +246,37 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local isoptic = "bo1_optic" or "bo1_rail_riser"
 
+    local body = 0
+    local rail = 0
+    local sight = 0
+    if attached["barrel_std"] then
+        body = 1
+        sight = 1
+    end
     if attached["mp5k"] then
-        vm:SetBodygroup(1,1)
-        vm:SetBodygroup(2,0)
+        if body == 1 then
+            rail = 2
+            sight = 1
+        else
+            rail = 1
+            sight = 0
+        end
     end
     if attached[isoptic] then
-        vm:SetBodygroup(2,1)
+        sight = 2
     end
+    vm:SetBodygroup(0, body)
+    vm:SetBodygroup(1, rail)
+    vm:SetBodygroup(2, sight)
 
-    if attached["bo1_pap"] then
-        vm:SetSkin(1)
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 end
 
 
@@ -280,11 +311,19 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(12, 0, 2.05),
+        Pos = Vector(12, 0, 2.04),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
     },
     [4] = {
+        PrintName = "Barrel",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(6, 0, 2.05),
+        Ang = Angle(0, 0, 0),
+        Category = {"mw2e_mp5k_barrel"},
+    },
+    [5] = {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -293,7 +332,7 @@ SWEP.Attachments = {
         Category = {"bo1_rail_underbarrel"},
         ExcludeElements = {"mp5k"},
     },
-    [5] = {
+    [6] = {
         PrintName = "Firing Group",
         DefaultCompactName = "S-1-3-F",
         Bone = "j_gun",
@@ -301,7 +340,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
-    [6] = {
+    [7] = {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -309,13 +348,20 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
-    [7] = {
+    [8] = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    [9] = {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-8.5, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
     },
 }
 
@@ -365,7 +411,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1.5,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_COD4E.MP5_BoltFwd", t = 15 / 30},
         },
         IKTimeLine = {
             {
@@ -400,8 +446,8 @@ SWEP.Animations = {
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
+            {s = "ARC9_COD4E.MP5_MagOut", t = 16 / 35},
+            {s = "ARC9_COD4E.MP5_MagIn", t = 47 / 35}
         },
         IKTimeLine = {
             {
@@ -431,10 +477,9 @@ SWEP.Animations = {
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
-            {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
+            {s = "ARC9_COD4E.MP5_MagOut", t = 16 / 35},
+            {s = "ARC9_COD4E.MP5_MagIn", t = 47 / 35},
+            {s = "ARC9_COD4E.MP5_Chamber", t = 63 / 35},
         },
         IKTimeLine = {
             {
@@ -519,7 +564,7 @@ SWEP.Animations = {
         Source = "first_draw_grip",
         Time = 40 / 30,
         EventTable = {
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_COD4E.MP5_BoltFwd", t = 15 / 30},
         },
     },
     ["fire_grip"] = {
@@ -537,8 +582,8 @@ SWEP.Animations = {
         Time = 77 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35}
+            {s = "ARC9_COD4E.MP5_MagOut", t = 16 / 35},
+            {s = "ARC9_COD4E.MP5_MagIn", t = 47 / 35}
         },
         IKTimeLine = {
             {
@@ -568,10 +613,9 @@ SWEP.Animations = {
         Time = 93 / 35,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         EventTable = {
-            {s = "ARC9_BO1.MP5_MagOut", t = 16 / 35},
-            {s = "ARC9_BO1.MP5_MagIn", t = 47 / 35},
-            {s = "ARC9_BO1.MP5_BoltBack", t = 67 / 35},
-            {s = "ARC9_BO1.MP5_BoltFwd", t = 73 / 35},
+            {s = "ARC9_COD4E.MP5_MagOut", t = 16 / 35},
+            {s = "ARC9_COD4E.MP5_MagIn", t = 47 / 35},
+            {s = "ARC9_COD4E.MP5_Chamber", t = 63 / 35},
         },
         IKTimeLine = {
             {

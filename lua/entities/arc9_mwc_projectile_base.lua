@@ -187,7 +187,7 @@ if SERVER then
             self.GunshipCheck = CurTime() + 0.33
             local tr = util.TraceLine({
                 start = self:GetPos(),
-                endpos = self:GetPos() + (self:GetVelocity() * 4 * engine.TickInterval()),
+                endpos = self:GetPos() + (self:GetVelocity() * 6 * engine.TickInterval()),
                 filter = self,
                 mask = MASK_SHOT
             })
@@ -255,6 +255,17 @@ if SERVER then
             self:Defuse()
             return
         end
+
+        timer.Simple(0, function()  -- to prevent "Changing collision rules within a callback is likely to cause crashes!" errors
+            if !self:IsValid() then return end
+            self:EmitSound("")
+
+            self:GetPhysicsObject():EnableMotion(false)
+
+            if self:IsValid() then
+                self:SetCollisionGroup(COLLISION_GROUP_WEAPON)
+            end
+        end)
 
         local effectdata = EffectData()
             effectdata:SetOrigin( self:GetPos() )
