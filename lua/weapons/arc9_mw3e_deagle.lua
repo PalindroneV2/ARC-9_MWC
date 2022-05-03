@@ -189,8 +189,9 @@ SWEP.RestAng = Angle(-4.633, 36.881, 0)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(15, 15, 4)
+SWEP.CustomizePos = Vector(17.5, 25, 4.5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotFOV = 70
 
 SWEP.BarrelLength = 10
 
@@ -267,6 +268,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Desert Eagle Mk XIX"
+
+    if attached["bo1_pap"] then
+        gunname = "Thunderbird Mk CXV"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     -- local attached = self:GetElements()
