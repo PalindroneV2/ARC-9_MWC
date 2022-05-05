@@ -26,5 +26,5 @@ ATT.LaserStrength = 3
 ATT.LaserColor = Color(255, 0, 0)
 ATT.LaserAttachment = 1
 
-ATT.SpreadMult = 0.8
+ATT.SpreadMultHipFire = 0.8
 ATT.SpreadMultMove = 0.8

@@ -28,5 +28,5 @@ ATT.FlashlightDistance = 1024
 ATT.FlashlightFOV = 50
 ATT.FlashlightAttachment = 1
 
-ATT.SpreadMult = 0.8
-ATT.SpreadMultMove = 0.8
+ATT.SpreadMultHipFire = 0.95
+ATT.SpreadMultMove = 0.95
