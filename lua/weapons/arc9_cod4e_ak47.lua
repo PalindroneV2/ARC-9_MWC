@@ -74,20 +74,20 @@ SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilAutoControl = 0.5
+SWEP.RecoilKick = 1
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.UseVisualRecoil = false
 
-SWEP.Spread = 0.00085 -- accuracy in Minutes of Angle. There are 60 MOA in a degree.
+SWEP.Spread = math.rad(1.75 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(75 / 37.5)
 
-SWEP.SpreadAddMove = 0.025 -- Applied when speed is equal to walking speed.
-SWEP.SpreadAddMidAir = 0.025 -- Applied when not touching the ground.
-SWEP.SpreadAddHipFire = 0.025 -- Applied when not sighted.
-SWEP.SpreadAddSighted = 0 -- Applied when sighted. Can be negative.
-SWEP.SpreadAddBlindFire = 0.05 -- Applied when blind firing.
-SWEP.SpreadAddCrouch = 0 -- Applied when crouching.
+SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
+SWEP.SpreadAddMove = math.rad(125 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(100 / 37.5)
 
 SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
 SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.

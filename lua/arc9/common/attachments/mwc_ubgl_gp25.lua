@@ -26,6 +26,8 @@ ATT.UBGLFiremodeName = "GP25"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
 
+ATT.SpreadUBGL = -0.2
+
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = "ARC9_COD4E.GP25_Fire"
 ATT.DistantShootSoundUBGL = false

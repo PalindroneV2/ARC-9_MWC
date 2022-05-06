@@ -34,7 +34,7 @@ ATT.ExitUBGLSound = "ARC9_MWC.MK_Lift"
 
 ATT.MuzzleParticleUBGL = "muzzleflash_m3"
 
-ATT.SpreadUBGL = 0.05
+ATT.SpreadUBGL = math.rad(39 / 37.5)
 ATT.NumUBGL = 8
 
 ATT.RecoilUBGL = 2

@@ -26,6 +26,8 @@ ATT.UBGLFiremodeName = "M320"
 ATT.UBGLChamberSize = 0
 ATT.ShootVolumeUBGL = 110
 
+ATT.SpreadUBGL = -0.2
+
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = "ARC9_MW3E.M320_Fire"
 ATT.DistantShootSoundUBGL = false

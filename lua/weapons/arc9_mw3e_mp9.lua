@@ -83,12 +83,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = 0.0015
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = math.rad(3.45 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(65 / 37.5)
 
-SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddHipFire = math.rad(210 / 37.5)
+SWEP.SpreadAddMove = math.rad(110 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 

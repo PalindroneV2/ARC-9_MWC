@@ -3,7 +3,7 @@ SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC-9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1014"
+SWEP.PrintName = "W1200"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[
     Semi-automatic shotgun used by the US military in close-quarter encounters. Also serves as a door breaching tool.
@@ -24,8 +24,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_cod4_m1014.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_cod4_m1014.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_cod4_w1200.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_cod4_w1200.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-1, 4, -6.2),
@@ -74,9 +74,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.9
 SWEP.RecoilSide = 0.75
-SWEP.RecoilUp = 2
+SWEP.RecoilUp = 0.9
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.5
@@ -87,7 +87,7 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
-SWEP.Spread = math.rad(41.5 / 37.5)
+SWEP.Spread = math.rad(39 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
@@ -117,8 +117,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.33
 
 SWEP.RPM = 312
 SWEP.Num = 8
@@ -128,6 +128,12 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
+SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
+SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.SlamFire = true
+SWEP.CycleTime = 1
+
 SWEP.NPCWeaponType = {"weapon_shotgun"}
 SWEP.NPCWeight = 100
 
@@ -144,7 +150,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_COD4E.M1014_Fire"
+SWEP.ShootSound = "ARC9_COD4E.W1200_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.Striker_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
@@ -168,8 +174,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.0675, 0, 1.7),
-    Ang = Angle(0, .15, 0),
+    Pos = Vector(-3.065, -2, 1.1),
+    Ang = Angle(0.025, 0.65, 0),
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -188,8 +194,8 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = Vector(0, 0, -1)
+SWEP.SprintAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -202,19 +208,9 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["stock_l"] = {
+    ["mount"] = {
         Bodygroups = {
-            {2,1}
-        },
-    },
-    ["stock_m"] = {
-        Bodygroups = {
-            {2,2}
-        },
-    },
-    ["stock_h"] = {
-        Bodygroups = {
-            {2,3}
+            {1,1}
         },
     },
 }
@@ -239,26 +235,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 end
 
 SWEP.Attachments = {
-    [1] = {
+    {
         PrintName = "Optic",
         DefaultCompactName = "IRONS",
         Bone = "j_gun",
-        Pos = Vector(0, 0, 1.65),
+        Pos = Vector(1.25, -0.025, 2.05),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic"},
         Icon_Offset = Vector(0, 0, 1),
         -- ExcludeElements = {"stock_l"},
-        -- InstalledElements = {"mount"},
+        InstalledElements = {"mount"},
     },
-    [2] = {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_lm"},
-        Installed = "mwc_stock_medium",
-    },
-    [3] = {
+    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -266,14 +254,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_shotty"},
     },
-    [4] = {
+    {
         PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(7.5, 0, -1.5),
+        Bone = "j_pump",
+        Pos = Vector(-0.5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
-    [5] = {
+    {
         PrintName = "Firing Group",
         DefaultCompactName = "SEMI",
         Bone = "j_gun",
@@ -281,7 +269,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
-    [6] = {
+    {
         PrintName = "Perk-a-Cola",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -289,13 +277,13 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "bo1_perkacola",
     },
-    [7] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+        Category = {"bo1_ammo", "bo1_pap"},
     },
 }
 
@@ -309,6 +297,13 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     return anim .. suffix
 end
+
+SWEP.HideBones = {
+    "tag_clip",
+}
+SWEP.ReloadHideBoneTables = {
+    [1] = {"tag_clip"},
+}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -327,69 +322,84 @@ SWEP.Animations = {
         Source = {
             "fire",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 9 / 35,
     },
     ["fire_iron"] = {
         Source = {
             "fire_ads",
         },
-        Time = 9 / 30,
-        ShellEjectAt = 0,
+        Time = 9 / 35,
+    },
+    ["cycle"] = {
+        Source = {
+            "cycle",
+        },
+        ShellEjectAt = 8 / 35,
+        MinProgress = 0.7,
+        EventTable = {
+            {s = "ARC9_COD4E.W1200_Pump", t = 1 / 35},
+        },
+    },
+    ["cycle_iron"] = {
+        Source = {
+            "cycle",
+        },
+        ShellEjectAt = 8 / 35,
+        MinProgress = 0.7,
+        EventTable = {
+            {s = "ARC9_COD4E.W1200_Pump", t = 1 / 35},
+        },
     },
     ["reload_start"] = {
         Source = "reload_in",
         Time = 40 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 1,
-        MinProgress = 1,
         EventTable = {
-            {s = "ARC9_COD4E.M1014_Lift", t = 1 / 30},
-            {s = "ARC9_COD4E.M1014_Shell", t = 21 / 30},
+            {s = "ARC9_COD4E.W1200_Lift", t = 1 / 30},
+            {s = "ARC9_COD4E.W1200_Shell", t = 20 / 30},
         },
     },
     ["reload_start_pap"] = {
         Source = "reload_in",
         Time = 40 / 30,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         RestoreAmmo = 12,
-        MinProgress = 1,
         EventTable = {
-            {s = "ARC9_COD4E.M1014_Lift", t = 1 / 30},
-            {s = "ARC9_COD4E.M1014_Shell", t = 21 / 30},
+            {s = "ARC9_COD4E.W1200_Lift", t = 1 / 30},
+            {s = "ARC9_COD4E.W1200_Shell", t = 20 / 30},
         },
     },
     ["reload_insert"] = {
         Source = "reload_loop",
-        Time = 0.75,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.3,
-        MinProgress = 15 / 30,
+        Time = 0.74,
         EventTable = {
-            {s = "ARC9_COD4E.M1014_Shell", t = 10 / 30},
+            {s = "ARC9_COD4E.W1200_Shell", t = 10 / 30},
         },
     },
     ["reload_insert_pap"] = {
         Source = "reload_loop",
-        Time = 0.9,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
-        TPAnimStartTime = 0.3,
-        MinProgress = 15 / 30,
-        RestoreAmmo = 12,
+        Time = 0.75,
+        RestoreAmmo = 11,
         EventTable = {
-            {s = "ARC9_COD4E.M1014_Shell", t = 10 / 30},
+            {s = "ARC9_COD4E.W1200_Shell", t = 10 / 30},
         },
     },
     ["reload_finish"] = {
         Source = "reload_out",
-        Time = 0.54,
+        Time = 30 / 30,
         EventTable = {
-            {s = "ARC9_COD4E.M1014_End", t = 1 / 30},
+            {s = "ARC9_COD4E.W1200_Pump", t = 8 / 30},
+        },
+    },
+    ["reload_finish_empty"] = {
+        Source = "reload_out",
+        Time = 24 / 30,
+        EventTable = {
+            {s = "ARC9_COD4E.W1200_Pump", t = 8 / 30},
         },
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 1
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -397,6 +407,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 1
+        Time = 1,
     },
 }

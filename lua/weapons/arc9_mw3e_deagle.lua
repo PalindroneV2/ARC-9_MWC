@@ -83,12 +83,12 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = 0.0015
-SWEP.SpreadAddRecoil = 0.0015
+SWEP.Spread = math.rad(2.8 / 37.5)
+SWEP.SpreadAddRecoil = math.rad(125 / 37.5)
 
-SWEP.SpreadAddHipFire = 0.03
-SWEP.SpreadAddMove = 0.015
-SWEP.SpreadAddMidAir = 0.05
+SWEP.SpreadAddHipFire = math.rad(200 / 37.5)
+SWEP.SpreadAddMove = math.rad(100 / 37.5)
+SWEP.SpreadAddMidAir = 0 -- = math.rad(130 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -170,8 +170,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "pistol"
+SWEP.HoldtypeActive = "revolver"
+SWEP.HoldtypeSights = "revolver"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
@@ -219,6 +219,12 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["gold_eagle"] then camo = 2 end
     if attached["silver_eagle"] then camo = 1 end
     if attached["classic_eagle"] then
+        model = 1
+        newpos = Vector(-2.0125, 3, 0.85)
+        newang = Angle(0.0125, 0, 0)
+        camo = 0
+    end
+    if attached["classic_2tone"] then
         model = 1
         newpos = Vector(-2.0125, 3, 0.85)
         newang = Angle(0.0125, 0, 0)
