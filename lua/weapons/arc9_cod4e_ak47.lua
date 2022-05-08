@@ -207,11 +207,13 @@ SWEP.AttachmentElements = {
             {1,2}
         },
     },
-    -- ["stock_h"] = {
-    --     Bodygroups = {
-    --         {2,1}
-    --     },
-    -- },
+    ["tactical"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(21.5, 0, 1.55),
+            },
+        },
+    },
     ["mwc_gp25"] = {
         Bodygroups = {
             {3,1},
@@ -292,7 +294,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultName = "Default",
         Bone = "j_gun",
-        Pos = Vector(22.1, 0, 1),
+        Pos = Vector(24, 0, 1.3),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
     },
