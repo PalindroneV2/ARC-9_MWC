@@ -1715,6 +1715,74 @@ sound.Add( {
     }
 } )
 
+-- MW3E PKP Pecheneg
+
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.PKP_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.PKP_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_PKP/lift.wav",
+    }
+} )
+
 -- MW3E M320
 
 sound.Add( {
