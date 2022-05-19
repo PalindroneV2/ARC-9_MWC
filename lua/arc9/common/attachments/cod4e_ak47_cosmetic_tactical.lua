@@ -23,7 +23,7 @@ ATT.Attachments = {
         Pos = Vector(-16, 0, 3.65),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_gp25","bo1_grips"},
-        InstalledElements = {"nobottom_cover"}
+        InstalledElements = {"nobottom_cover"},
     },
     {
         PrintName = "Optic LP",
@@ -33,5 +33,6 @@ ATT.Attachments = {
         Pos = Vector(-16.5, 0, 0.75),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1),
+        InstalledElements = {"dontuserear"},
     },
 }

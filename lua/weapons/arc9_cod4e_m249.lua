@@ -234,9 +234,9 @@ SWEP.AttachmentElements = {
             {3,3},
         },
     },
-    ["mount"] = {
+    ["mwc_bipod"] = {
         Bodygroups = {
-            {1,1},
+            {4,0},
         },
     },
 }
@@ -259,19 +259,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetSkin(camo)
 
     if self:GetBipod() then
-        vm:SetBodygroup(3,2)
+        vm:SetBodygroup(4,1)
     end
 
 end
 
 
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
 
---     local suffix = ""
-
---     return anim .. suffix
--- end
+    if attached["mount"] and anim == "reload" then
+        return anim .. "_optic"
+    end
+end
 
 SWEP.Attachments = {
     {
@@ -294,9 +294,9 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_ammocover",
-        Pos = Vector(0, -5, 0.375),
+        Pos = Vector(0, -5, 0.15),
         Ang = Angle(0, -90, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"bo1_rail_optic"},
         InstalledElements = {"mount"},
     },
     {
@@ -305,14 +305,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(9.15, 0, -0.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
-    },
-    {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-7, 0, 5),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
+        Category = {"bo1_grips", "mwc_bipod"},
     },
     {
         PrintName = "Ammunition",
@@ -328,7 +321,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_lm", "bo1_stock_h"},
+        Category = {"mwc_stock_h"},
     },
 }
 
@@ -380,10 +373,6 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         Time = 5.16,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = nil,
-        LHIKOut = 1,
         LastClip1OutTime = 2.5,
         EventTable = {
             {s = "ARC9_COD4E.M249_Chamber", t = 0.25},
@@ -392,14 +381,32 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M249_In", t = 3.25},
             {s = "ARC9_COD4E.M249_Close", t = 4.25},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["reload_optic"] = {
         Source = "reload_optic",
         Time = 5.16,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        LHIK = true,
-        LHIKIn = nil,
-        LHIKOut = 1,
         LastClip1OutTime = 2.5,
         EventTable = {
             {s = "ARC9_COD4E.M249_Chamber", t = 0.25},
@@ -407,6 +414,28 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M249_Out", t = 2},
             {s = "ARC9_COD4E.M249_In", t = 3.25},
             {s = "ARC9_COD4E.M249_Close", t = 4.25},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
         },
     },
     ["enter_sprint"] = {

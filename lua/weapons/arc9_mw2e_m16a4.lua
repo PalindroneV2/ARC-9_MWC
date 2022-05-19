@@ -249,7 +249,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0,0)
     end
 
-    if attached["bo1_optic"] and !attached["bo1_ar15_toprail"] then
+    if (attached["bo1_optic"] or attached["bo1_rail_riser"]) and !attached["bo1_ar15_toprail"] then
         vm:SetBodygroup(1,2)
         if attached["tmm4_riser"] then
             vm:SetBodygroup(1, 4)
@@ -319,7 +319,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw2_m4_toprail"},
+        Category = {"bo1_optic", "mw2_m4_toprail", "bo1_rail_riser"},
         InstalledElements = {"mainoptic"},
     },
     {
@@ -354,7 +354,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, -90),
         Category = {"bo1_tactical"},
         InstalledElements = {"right_cover"},
-        ExcludeElements = {"barrel_m4", "barrel_m203", "barrel_mk18", "mwc_m203"},
     },
     {
         PrintName = "Tactical Left",
@@ -364,7 +363,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 90),
         Category = {"bo1_tactical"},
         InstalledElements = {"left_cover"},
-        ExcludeElements = {"barrel_m4", "barrel_m203", "barrel_mk18", "mwc_m203"},
     },
     {
         PrintName = "Tactical Top",
@@ -374,7 +372,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 180),
         Category = {"bo1_tactical_top"},
         InstalledElements = {"top_cover"},
-        ExcludeElements = {"mw3_psrscope", "mwc_m203", "barrel_m203" },
+        ExcludeElements = {"mw3_psrscope"},
     },
     {
         PrintName = "Carry Handle",

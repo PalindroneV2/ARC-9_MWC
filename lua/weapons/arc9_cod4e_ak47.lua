@@ -240,6 +240,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1,2)
         newpos = Vector(-2.55, -2, 0.8)
         newang = Angle(0.025, -0.1, 0)
+        if attached["bo1_optic_ak"] then
+            vm:SetBodygroup(1,0)
+        end
     end
     if attached["bo1_pap"] then
         camo = camo + 3
@@ -289,6 +292,7 @@ SWEP.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
         MergeSlots = {4},
+        ExcludeElements = {"dontuserear"},
     },
     {
         PrintName = "Muzzle",
@@ -312,7 +316,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak"}
+        Category = {"bo1_optic_ak"},
+        ExcludeElements = {"dontuserear"},
     },
     {
         PrintName = "Cosmetic",

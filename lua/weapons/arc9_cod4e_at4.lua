@@ -271,8 +271,9 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {
-            "fire",
+            "fire_ads",
         },
+        Time = 15 / 35,
     },
     ["idle_iron"] = {
         Source = {"idle_ads"},
@@ -282,6 +283,7 @@ SWEP.Animations = {
         Source = {
             "fire_ads",
         },
+        Time = 15 / 35,
     },
     ["reload"] = {
         Source = "reload",

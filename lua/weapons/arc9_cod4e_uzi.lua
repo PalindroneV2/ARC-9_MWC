@@ -164,7 +164,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.49, 3, 0.5),
+    Pos = Vector(-3.49, -3, 0.5),
     Ang = Angle(0.025, -0.075, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
