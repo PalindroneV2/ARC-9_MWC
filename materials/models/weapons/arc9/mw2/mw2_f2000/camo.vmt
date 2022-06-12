@@ -16,4 +16,14 @@ VertexlitGeneric
 
 	"$nocull" "1"
 
+	$detailblendmode 4
+	"$detailblendfactor" ""
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
+
 }

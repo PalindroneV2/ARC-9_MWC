@@ -4,10 +4,6 @@ VertexlitGeneric
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\mw2\mw2_f2000\f2000_n"
 	
-	$detail "models\weapons\arc9\colors\black_detail"
-	$detailblendfactor 1
-	$detailblendmode 0
-	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"
