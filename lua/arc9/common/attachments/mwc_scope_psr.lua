@@ -26,7 +26,7 @@ ATT.ActivateElements = {"mw3_psrscope"}
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.025, 6, -4.13),
+        Pos = Vector(-0.025, 5, -4.13),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true

@@ -36,13 +36,13 @@ end
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 7.5, -1.4525),
+        Pos = Vector(0, 6, -1.4525),
         Ang = Angle(0, 0, 0),
         Magnification = 1,
         IgnoreExtra = true,
     },
     {
-        Pos = Vector(0, 9.5, -1.45),
+        Pos = Vector(0, 7.5, -1.45),
         Ang = Angle(0, 0, 0),
         Magnification = 1.25,
         IgnoreExtra = false,
