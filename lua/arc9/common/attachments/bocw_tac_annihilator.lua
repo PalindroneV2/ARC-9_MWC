@@ -32,7 +32,7 @@ ATT.SpreadMultMove = 0.8
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.005, 18, -1.8),
+        Pos = Vector(-0.005, 12, -1.8),
         Ang = Angle(0, 0.3, 0),
         Magnification = 1.1,
         IgnoreExtra = false
