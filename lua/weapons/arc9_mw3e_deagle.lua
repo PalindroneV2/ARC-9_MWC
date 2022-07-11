@@ -311,9 +311,9 @@ SWEP.Attachments = {
     {
         PrintName = "Variant",
         DefaultCompactName = "Black Steel",
-        Bone = "j_bolt",
+        Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"mw3e_deagle_skin"},
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
