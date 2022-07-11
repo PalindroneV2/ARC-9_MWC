@@ -2,12 +2,13 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\cod4\cod4_m249\saw"
 	$bumpmap	"models\weapons\arc9\colors\normalmap"
+	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m249\saw_s"
+	$envmapmask "models\weapons\arc9\cod4\cod4_m249\saw_s"
 
 	$detail "models\weapons\arc9\colors\black_detail"
 	$detailblendmode 0
 	"$detailblendfactor" "1"
 
-	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m249\saw_s"
 	"$nocull" "1"
 	
 	"$blendtintbybasealpha" "1"
@@ -17,6 +18,7 @@ VertexlitGeneric
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
+	$normalmapalphaenvmapmask "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 }

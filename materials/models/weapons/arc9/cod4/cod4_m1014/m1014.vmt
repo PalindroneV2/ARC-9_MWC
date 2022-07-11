@@ -1,13 +1,14 @@
 VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\cod4\cod4_m1014\m1014"
-	"$bumpmap" "models\weapons\arc9\cod4\cod4_m1014\m1014_n"
+	"$bumpmap" "models\weapons\arc9\cod4\normalmap"
+	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m1014\m1014_s"
+	$envmapmask "models\weapons\arc9\cod4\cod4_m1014\m1014_s"
 
 	$detail "models\weapons\arc9\colors\black_detail"
 	$detailblendmode 0
 	"$detailblendfactor" "0.75"
 
-	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m1014\m1014_s"
 	"$nocull" "1"
 	
 	"$blendtintbybasealpha" "1"
@@ -17,6 +18,7 @@ VertexlitGeneric
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
 	"$basemapalphaenvmapmask" "1"
+	$normalmapalphaenvmapmask "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 }

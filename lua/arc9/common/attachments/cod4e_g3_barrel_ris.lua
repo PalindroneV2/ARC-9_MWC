@@ -29,7 +29,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-11 , 0.7, 0.4),
         Ang = Angle(0, 0, -90),
-        Category = {"mwc_m203", "bo1_grips"},
+        Category = {"bo1_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -37,6 +37,14 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-11, -0.7, 0.4),
         Ang = Angle(0, 0, 90),
+        Category = {"bo1_tactical"},
+    },
+    {
+        PrintName = "Tactical Bottom",
+        DefaultCompactName = "TAC B",
+        Bone = "j_gun",
+        Pos = Vector(-11, 0, 1.1),
+        Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical"},
     },
 }

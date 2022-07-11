@@ -2,17 +2,16 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\cod4\cod4_ak47\gold"
 	"$bumpmap" "models\weapons\arc9\colors\normalmap"
+	$phongexponenttexture "models\weapons\arc9\cod4\cod4_ak47\gold_s"
+	$envmapmask "models\weapons\arc9\cod4\cod4_ak47\ak47_s"
 
 	$detail "models\weapons\arc9\cod4\cod4_ak47\gold_s"
 	$detailblendmode 0
 	"$detailblendfactor" "1"
 	"$detailscale" "1"
 
-	$phongexponenttexture "models\weapons\arc9\cod4\cod4_ak47\gold_s"
-//	$envmapmask "models\weapons\arc9\cod4\cod4_ak47\ak47_s"
-
 	$phong "1"
-//	$phongexponent	"100"
+	// $phongexponent	"1"
 	$phongboost "2.5"
 	$phongfresnelranges "[2 5 4]"
 	$phongtint "[1 .65 .2]"

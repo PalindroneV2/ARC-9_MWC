@@ -126,11 +126,11 @@ ARC9.LoadAttachment(ATT, "mw3e_deagle_skin_handcannon")
 
 ATT = {}
 
-ATT.PrintName = "Annihilator Handcannon"
-ATT.CompactName = "Handcannon"
+ATT.PrintName = "Hybrid Handcannon"
+ATT.CompactName = "Hybrid"
 ATT.Icon = Material("materials/entities/from_bo1/bo1_generic.png", "mips smooth")
 ATT.Description = [[
-    Heavily modified Desert Eagle with an integral compensator and custom explosive frangible rounds that offer no penetration.
+    Modified Desert Eagle with an integral compensator.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -139,8 +139,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {"mw3e_deagle_skin"}
-ATT.ActivateElements = {"annihilator"}
-ATT.DamageTypeOverride = DMG_BLAST
+ATT.ActivateElements = {"hybrid_eagle"}
 
 ARC9.LoadAttachment(ATT, "mw3e_deagle_skin_hybrid")
 

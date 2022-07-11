@@ -2,10 +2,10 @@ VertexlitGeneric
 {
 	$basetexture	"models\weapons\arc9\cod4\cod4_deagle\deagle"
 	"$bumpmap" "models\weapons\arc9\cod4\normalmap"
-
 	$phongexponenttexture "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
-
-	$normalmapalphaenvmapmask 1
+	$envmapmask "models\weapons\arc9\cod4\cod4_deagle\deagle_s"
+	
+	$normalmapalphaenvmapmask "1"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

@@ -211,8 +211,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.0125, 3, 0.75)
-    local newang = Angle(0.025, 0.7, 0)
+    local newpos = Vector(-2.0125, 0, 0.87)
+    local newang = Angle(0.025, 0, 0)
     local model = 0
     local camo = 0
 
@@ -220,38 +220,38 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["silver_eagle"] then camo = 1 end
     if attached["classic_eagle"] then
         model = 1
-        newpos = Vector(-2.0125, 3, 0.85)
+        newpos = Vector(-2.0125, 0, 0.85)
         newang = Angle(0.0125, 0, 0)
         camo = 0
     end
     if attached["classic_2tone"] then
         model = 1
-        newpos = Vector(-2.0125, 3, 0.85)
+        newpos = Vector(-2.0125, 0, 0.85)
         newang = Angle(0.0125, 0, 0)
         camo = 1
     end
     if attached["classic_gold_eagle"] then
         model = 1
         camo = 2
-        newpos = Vector(-2.0125, 3, 0.85)
+        newpos = Vector(-2.0125, 0, 0.85)
         newang = Angle(0.0125, 0, 0)
     end
     if attached["tactical_eagle"] then
         model = 2
-        newpos = Vector(-2.0125, 3, 0.85)
+        newpos = Vector(-2.0125, 0, 0.85)
         newang = Angle(0.0125, 0, 0)
         camo = 1
     end
     if attached["annihilator"] then
         model = 3
-        newpos = Vector(-2, 3, 0.525)
+        newpos = Vector(-2, 0, 0.58)
         newang = Angle(0.05, 0.95, 0)
         camo = 1
     end
     if attached["hybrid_eagle"] then
         model = 4
-        newpos = Vector(-2.0125, 3, 0.9)
-        newang = Angle(0, 0.1, 0)
+        newpos = Vector(-2.0125, 0, 0.85)
+        newang = Angle(0.0125, 0.1, 0)
         camo = 1
     end
 
