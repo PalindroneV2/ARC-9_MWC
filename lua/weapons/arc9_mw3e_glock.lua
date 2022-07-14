@@ -87,7 +87,7 @@ SWEP.Spread = math.rad(3.8 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(85 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(220 / 37.5)
-SWEP.SpreadAddMove = math.rad(100 / 37.5)
+--SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = 0 -- = math.rad(108 / 37.5)
 
 SWEP.RecoilPatternDrift = 20

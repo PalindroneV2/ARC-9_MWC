@@ -84,7 +84,7 @@ SWEP.Spread = 0
 SWEP.SpreadAddRecoil = 0
 
 SWEP.SpreadAddHipFire = 0
-SWEP.SpreadAddMove = 0
+--SWEP.SpreadAddMove = 0
 SWEP.SpreadAddMidAir = 0 -- = 0
 
 SWEP.RecoilPatternDrift = 20
