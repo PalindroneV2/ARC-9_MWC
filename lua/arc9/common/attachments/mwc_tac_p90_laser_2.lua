@@ -28,4 +28,4 @@ ATT.LaserColor = Color(0, 255, 34)
 ATT.LaserAttachment = 1
 
 ATT.SpreadMultHipFire = 0.8
-ATT.SpreadMultMove = 0.8
+--ATT.SpreadMultMove = 0.8
