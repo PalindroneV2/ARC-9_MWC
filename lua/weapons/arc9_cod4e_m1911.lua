@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - COD4: Modern Warfare" -- edit this if you like
+SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911A1"

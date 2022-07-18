@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC-9 - COD4: Modern Warfare" -- edit this if you like
+SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M249 SAW"
@@ -136,7 +136,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Ammo = "smg1" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
