@@ -404,7 +404,75 @@ SWEP.Animations = {
             },
         },
     },
+    ["reload_empty"] = {
+        Source = "reload",
+        Time = 5.16,
+        LastClip1OutTime = 2.5,
+        EventTable = {
+            {s = "ARC9_COD4E.M249_Chamber", t = 0.25},
+            {s = "ARC9_COD4E.M249_Open", t = 1},
+            {s = "ARC9_COD4E.M249_Out", t = 2},
+            {s = "ARC9_COD4E.M249_In", t = 3.25},
+            {s = "ARC9_COD4E.M249_Close", t = 4.25},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
     ["reload_optic"] = {
+        Source = "reload_optic",
+        Time = 5.16,
+        LastClip1OutTime = 2.5,
+        EventTable = {
+            {s = "ARC9_COD4E.M249_Chamber", t = 0.25},
+            {s = "ARC9_COD4E.M249_Open", t = 1},
+            {s = "ARC9_COD4E.M249_Out", t = 2},
+            {s = "ARC9_COD4E.M249_In", t = 3.25},
+            {s = "ARC9_COD4E.M249_Close", t = 4.25},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.5,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 0
+            },
+        },
+    },
+    ["reload_empty_optic"] = {
         Source = "reload_optic",
         Time = 5.16,
         LastClip1OutTime = 2.5,
