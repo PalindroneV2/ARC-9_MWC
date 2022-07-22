@@ -92,7 +92,8 @@ SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
 
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 --SWEP.SpreadAddMove = math.rad(110 / 37.5)
-SWEP.SpreadAddMidAir = 0 -- = math.rad(110 / 37.5)
+SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
 
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
 SWEP.PelletSpread = 0.2
