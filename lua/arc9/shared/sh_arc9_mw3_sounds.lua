@@ -94,6 +94,56 @@ sound.Add( {
     }
 } )
 
+-- MW3E MG36 -- 
+
+sound.Add( {
+    name = "ARC9_MW3E.MG36_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    pitch = {120,130},
+    sound = {
+        "^weapons/ARC9/mw3e_mg36/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.MG36_Charge",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_mg36/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MG36_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_mg36/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MG36_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_mg36/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MG36_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_mg36/lift.wav",
+    }
+} )
+
 --MW3E GLOCK--
 
 sound.Add( {

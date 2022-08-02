@@ -88,7 +88,7 @@ SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
 SWEP.SpreadAddHipFire = math.rad(240 / 37.5)
 --SWEP.SpreadAddMove = math.rad(115 / 37.5)
 SWEP.SpreadAddMidAir = 0
-SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(120 / 37.5)
+-- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(120 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -286,19 +286,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(5, 2)
     end
 
-    local color = 0
-    if attached["mwc_cosmetic_wood"] then
-        color = 4
-    elseif attached["mwc_cosmetic_tan"] then
-        color = 8
-    elseif attached["mwc_cosmetic_od"] then
-        color = 12
-    elseif attached["mwc_cosmetic_blue"] then
-        color = 16
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
     if attached["bo1_pap"] then
-        vm:SetSkin(color + 1)
+        camo = camo + 2
     end
+    vm:SetSkin(camo)
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

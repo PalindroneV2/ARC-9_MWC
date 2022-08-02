@@ -93,7 +93,7 @@ SWEP.SpreadAddRecoil = math.rad(60 / 37.5)
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 --SWEP.SpreadAddMove = math.rad(125 / 37.5)
 SWEP.SpreadAddMidAir = 0
-SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
+-- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -441,7 +441,7 @@ SWEP.Animations = {
             {
                 t = 1,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
         },
         EventTable = {
@@ -461,17 +461,17 @@ SWEP.Animations = {
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.85,
                 lhik = 0,
-                rhik = 0
+                rhik = 1
             },
             {
                 t = 0.95,
                 lhik = 1,
-                rhik = 0
+                rhik = 1
             },
         },
         EventTable = {

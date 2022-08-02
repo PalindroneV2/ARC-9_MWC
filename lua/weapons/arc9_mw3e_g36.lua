@@ -94,7 +94,7 @@ SWEP.SpreadAddRecoil = math.rad(60 / 37.5)
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 --SWEP.SpreadAddMove = math.rad(125 / 37.5)
 SWEP.SpreadAddMidAir = 0
-SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
+-- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(110 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -269,6 +269,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["stock_m"] then
         stock = stock + 1
     end
+    if attached["mount"] then
+       iron = 2
+    end
     if attached["barrel_k"] then
         vm:SetBodygroup(3,1)
         if attached["mount"] then
@@ -298,6 +301,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["mwc_m320"] then
         vm:SetBodygroup(5,1)
     end
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
 end
 
@@ -436,7 +448,7 @@ SWEP.Animations = {
     },
     ["ready"] = {
         Source = "first_draw",
-        Time = 1,
+        Time = 1.46,
         EventTable = {
             {s = "ARC9_MW3E.G36_Charge", t = 22 / 35}
         },
@@ -464,6 +476,28 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.G36_MagOut", t = 11 / 35},
             {s = "ARC9_MW3E.G36_MagIn", t = 30 / 35},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -472,6 +506,28 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.G36_MagOut", t = 11 / 35},
             {s = "ARC9_MW3E.G36_MagIn", t = 30 / 35},
             {s = "ARC9_MW3E.G36_Charge", t = 55 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint"] = {
@@ -494,23 +550,14 @@ SWEP.Animations = {
     ["draw_m203"] = {
         Source = "draw_gl",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
     },
     ["holster_m203"] = {
         Source = "holster_gl",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
     },
     ["ready_m203"] = {
         Source = "first_draw_gl",
-        Time = 2,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 0.25,
+        Time = 1.46,
         EventTable = {
             {s = "ARC9_MW3E.G36_Charge", t = 22 / 35}
         },
@@ -534,11 +581,6 @@ SWEP.Animations = {
     ["reload_m203"] = {
         Source = "reload_gl",
         Time = 73 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.75,
         EventTable = {
             {s = "ARC9_MW3E.G36_MagOut", t = 11 / 35},
             {s = "ARC9_MW3E.G36_MagIn", t = 30 / 35},
@@ -547,16 +589,10 @@ SWEP.Animations = {
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
         Time = 97 / 35,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 35,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.75,
         EventTable = {
             {s = "ARC9_MW3E.G36_MagOut", t = 11 / 35},
             {s = "ARC9_MW3E.G36_MagIn", t = 30 / 35},
             {s = "ARC9_MW3E.G36_Charge", t = 55 / 35},
-            --{s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
         },
     },
     ["enter_sprint_m203"] = {
@@ -574,14 +610,6 @@ SWEP.Animations = {
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
 
-    /*["enter_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30,
-    },
-    ["exit_ubgl"] = {
-        Source = "idle_glsetup",
-        Time = 0 / 30
-    },*/
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
@@ -664,6 +692,28 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.MG36_MagOut", t = 30 / 35},
             {s = "ARC9_MW3E.MG36_MagIn", t = 90 / 35},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.85,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.95,
+                lhik = 1,
+                rhik = 1
+            },
+        },
     },
     ["reload_empty_mg"] = {
         Source = "reload_empty_mg",
@@ -673,6 +723,28 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.MG36_MagIn", t = 90 / 35},
             {s = "ARC9_MW3E.MG36_Charge", t = 120 / 35},
             --{s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.65,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.75,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["enter_sprint_mg"] = {
