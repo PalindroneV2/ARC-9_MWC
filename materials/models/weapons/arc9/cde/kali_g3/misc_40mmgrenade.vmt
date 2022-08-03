@@ -1,0 +1,25 @@
+"VertexlitGeneric"
+{
+
+	"$basetexture" "models/weapons/arc9/cde/kali_g3/Misc_40mmGrenade_C"
+	"$bumpmap" "models/weapons/arc9/cde/kali_g3/Misc_40mmGrenade_N"
+	"$halflambert" "1"				
+	"$nocull" 1		
+	"$phongexponenttexture" "models/weapons/arc9/cde/kali_g3/Misc_40mmGrenade_Exp"
+	
+	//"$color2" "[ .4 .4 .4 ]"
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+//	"$phongexponent" "1"
+	"$phongboost" "10"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+//	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
+
+}
+
+
+
