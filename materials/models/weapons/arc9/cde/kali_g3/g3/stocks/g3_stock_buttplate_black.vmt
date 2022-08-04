@@ -1,25 +1,22 @@
 "VertexlitGeneric"
 {
 
-	"$basetexture" "models\weapons\arc9\cde\kali_g3\G3\Stocks\G3_Stock_Buttplate_Black_C"
-	"$bumpmap" "models\weapons\arc9\cde\kali_g3\G3\Stocks\G3_Stock_Buttplate_N"
-	"$halflambert" "1"				
-	"$nocull" 1		
+	"$basetexture" "models\weapons\arc9\cde\kali_g3\G3\stocks\G3_Stock_Buttplate_Black_C"
+	"$bumpmap" "models\weapons\arc9\cde\kali_g3\G3\stocks\G3_Stock_Buttplate_N"
+	"$halflambert" "1"
+	"$nocull" 1
+	"$phongexponenttexture" "models\weapons\arc9\cde\kali_g3\G3\stocks\G3_Stock_Buttplate_Exp"
+	$envmapmask "models\weapons\arc9\cde\kali_g3\G3\stocks\G3_Stock_Buttplate_Exp"
+	"$normalmapalphaenvmapmask" "1"
 
-	"$normalmapalphaenvmapmask" 1				
-	"$envmap" "env_cubemap"					
-	"$envmaptint" "[ .02 .02 .02 ]"					
- 	"$envmapFresnel" "0.2"					
-
-	"$phong" "1"						
-	"$phongexponenttexture" "models\weapons\arc9\cde\kali_g3\G3\Stocks\G3_Stock_Buttplate_Exp"
-	"$phongboost" "1.5"						
-	"$phongfresnelranges"	"[ .2 1.2 8]"	
-
-	"$PhongAlbedoTint" "1"		
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+//	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
 
 }
-
-
-
-

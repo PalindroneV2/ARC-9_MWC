@@ -191,6 +191,9 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
+SWEP.BipodPos = Vector(-2.335, 2, -2)
+SWEP.BipodAng = Angle(0.05, 0.4, 0)
+
 SWEP.CrouchPos = Vector(0, 0, -1)
 SWEP.CrouchAng = Angle(0, 0, -5)
 
@@ -210,7 +213,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mwc_m203"] = {
         Bodygroups = {
-            {5,1}
+            {5,2}
         },
     },
     ["ext_mag"] = {
@@ -220,7 +223,7 @@ SWEP.AttachmentElements = {
     },
     ["stock_l"] = {
         Bodygroups = {
-            {4,1}
+            {4,2}
         },
     },
     ["stock_m"] = {
@@ -230,46 +233,78 @@ SWEP.AttachmentElements = {
     },
     ["stock_h"] = {
         Bodygroups = {
-            {4,2}
+            {4,4}
         },
     },
     ["kbarrel"] = {
         AttPosMods = {
             [3] = {
-                Pos = Vector(18, 0, 2.4)
+                Pos = Vector(21.75, 0, 2.4)
             },
         },
     },
+    ["hk51barrel"] = {
+        AttPosMods = {
+            [3] = {
+                Pos = Vector(17, 0, 2.4)
+            },
+            [4] = {
+                Pos = Vector(15, 0, 2.4)
+            },
+        },
+    },
+    -- ["psg1_scope"] = {
+    --     AttPosMods = {
+    --         [2] = {
+    --             Pos = Vector(1, 0, 3.75),
+    --         },
+    --     },
+    -- },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local irons = 0
+    local barrel = 0
+    local hand = 0
 
+    if attached["kbarrel"] then
+        vm:SetBodygroup(2,1)
+    end
+    if attached["hk51barrel"] then
+        vm:SetBodygroup(0,1)
+        barrel = 3
+        hand = hand + 6
+    end
     if attached["hand_slim"] then
-        vm:SetBodygroup(3,1)
+        hand = hand + 1
     end
     if attached["hand_wide"] then
-        vm:SetBodygroup(3,2)
+        hand = hand + 2
         if attached["mwc_bipod"] then
-            vm:SetBodygroup(3, 3)
+            hand = 3
         end
         if self:GetBipod() then
-            vm:SetBodygroup(3, 4)
+            hand = 4
         end
     end
     if attached["hand_ris"] then
-        vm:SetBodygroup(3,5)
+        hand = 5
+        if attached["hk51barrel"] then
+            hand = 9
+        end
     end
     if attached["mount"] then
         irons = 2
     end
     if attached["psg1_scope"] then
-        irons = 0
+        irons = 1
     end
 
     vm:SetBodygroup(1, irons)
+    vm:SetBodygroup(2, barrel)
+    vm:SetBodygroup(3, hand)
 
     local camo = 0
     if attached["universal_camo"] then
@@ -324,16 +359,26 @@ SWEP.Attachments = {
         Category = {"bo1_muzzle"},
     },
     {
-        PrintName = "Handguard",
+        PrintName = "Barrel",
         Bone = "j_gun",
-        Pos = Vector(7, 0, 2.6),
+        Pos = Vector(20, 0, 2.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwe_g3_barrel"},
+    },
+    {
+        PrintName = "Handguard",
+        DefaultCompactName = "Wood",
+        Bone = "j_gun",
+        Pos = Vector(7, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"mwe_g3_handguard"},
+        ExcludeElements = {"hk51barrel"}
     },
     {
         PrintName = "Stock",
+        DefaultCompactName = "Cut",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(-4.6, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stocks"},
         Installed = "mwc_stock_heavy",
@@ -344,20 +389,13 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.55),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203"},
+        Category = {"mwe_g3_ubrail"},
         ExcludeElements = {"hand_ris"}
-    },
-    {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 3),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
     },
     {
         Hidden = true,
         Bone = "j_gun",
-        Pos = Vector(1, 0, 3.75),
+        Pos = Vector(1.25, 0, 4.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_psg1_scope"},
     },
@@ -370,12 +408,11 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Barrel",
+        PrintName = "Cosmetic",
         Bone = "j_gun",
-        Pos = Vector(20, 0, 2.4),
+        Pos = Vector(-7.5, 0, 3),
         Ang = Angle(0, 0, 0),
-        Category = {"mwe_g3_barrel"},
-        -- ExcludeElements = {"newbarrel"}
+        Category = {"universal_camo"},
     },
 }
 
@@ -447,7 +484,7 @@ SWEP.Animations = {
                 rhik = 0
             },
             {
-                t = 0.2,
+                t = 0.1,
                 lhik = 0,
                 rhik = 0
             },
