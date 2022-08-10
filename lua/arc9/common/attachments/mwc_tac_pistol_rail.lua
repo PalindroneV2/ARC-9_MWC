@@ -26,12 +26,12 @@ ATT.Attachments = {
         Category = {"bo1_optic", "bo1_rail_riser"},
         -- InstalledElements = {"mount"},
     },
-    {
-        PrintName = "Tactical",
-        DefaultCompactName = "TAC",
-        Bone = "j_gun",
-        Pos = Vector(-1, 0, 0.2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
-    },
+    -- {
+    --     PrintName = "Tactical",
+    --     DefaultCompactName = "TAC",
+    --     Bone = "j_gun",
+    --     Pos = Vector(-1, 0, 0.2),
+    --     Ang = Angle(0, 0, 0),
+    --     Category = {"bo1_tactical"},
+    -- },
 }
