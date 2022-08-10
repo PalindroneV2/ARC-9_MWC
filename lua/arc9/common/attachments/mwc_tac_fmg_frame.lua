@@ -11,7 +11,7 @@ ATT.ActivateElements = {"fmg_frame"}
 
 ATT.Model = "models/weapons/arc9/atts/fmg_parts/mw3_frame.mdl"
 ATT.Scale = 1.1
-ATT.ModelOffset = Vector(-12.5, -3.6, 4.5)
+ATT.ModelOffset = Vector(-12.5, -3.35, 4.5)
 
 ATT.LHIK = true
 ATT.LHIK_Priority = 5

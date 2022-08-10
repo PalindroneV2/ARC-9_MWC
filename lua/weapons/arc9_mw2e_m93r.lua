@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Beretta M9"
@@ -256,6 +256,26 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Beretta M92FS"
+
+    if attached["raffica"] then
+        gunname = "Beretta M93 Raffica"
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "Woo WonderNine"
+
+        if attached["raffica"] then
+            gunname = "Die-A-Lotti"
+        end
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
@@ -341,6 +361,7 @@ SWEP.Attachments = {
         Pos = Vector(-4, 0, -2.75),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_l"},
+        Installed = "mwc_stock_light",
     },
 }
 

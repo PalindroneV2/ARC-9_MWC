@@ -210,24 +210,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(0.075, -0.45, 0)
 
     local camo = 0
-    if attached["mwc_cosmetic_tan"] then
-        camo = 2
+    if attached["universal_camo"] then
+        camo = 1
     end
-    if attached["mwc_cosmetic_od"] then
-        camo = 4
-    end
-    if attached["mwc_cosmetic_red"] then
-        camo = 6
-    end
-
     if attached["bo1_pap"] then
-        camo = camo + 1
+        camo = camo + 2
     end
 
     vm:SetSkin(camo)
 
+    vm:SetBodygroup(2,1)
     if attached["g17"] then
         vm:SetBodygroup(0,1)
+        vm:SetBodygroup(2,0)
         newpos = Vector(-3, 0, 0.65)
         newang = Angle(0.075, 0, 0)
     end
@@ -290,7 +285,7 @@ SWEP.Attachments = {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Pos = Vector(2.5, 0.26, 0.4),
+        Pos = Vector(2.5, 0, 0.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail", "mwc_fmg_frame"},
     },
@@ -308,7 +303,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.5, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_cosmetic_glock"},
+        Category = {"universal_camo"},
     },
 }
 
