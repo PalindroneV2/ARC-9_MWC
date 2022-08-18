@@ -17,10 +17,9 @@ ATT.Folder = "REFLEX"
 
 ATT.Category = {"bo1_optic", "bo1_optic_alt"}
 
-
 ATT.Model = "models/weapons/arc9/atts/cod4_tasco.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-0.65, 0, 0)
+ATT.ModelOffset = Vector(0, 0, -0.1)
 
 ATT.Sights = {
     {
