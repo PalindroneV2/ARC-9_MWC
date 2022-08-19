@@ -89,10 +89,11 @@ SWEP.RecoilKick = 1
 SWEP.Spread = math.rad(3.6 / 37.5)
 SWEP.SpreadAddRecoil = math.rad(120 / 37.5)
 
+SWEP.SpreadMultSighted = 0.1
 SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
---SWEP.SpreadAddMove = math.rad(125 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(108 / 37.5)
+--SWEP.SpreadAddMove = math.rad(125 / 37.5)
 
 SWEP.RecoilPatternDrift = 20
 
@@ -240,6 +241,16 @@ SWEP.AttachmentElements = {
             {4,0},
         },
     },
+    ["barrel_stub"] = {
+        Bodygroups = {
+            {2,1},
+        },
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(18, 0, 2.25),
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -276,29 +287,29 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Muzzle",
-        Bone = "j_gun",
-        Scale = Vector(1.5, 1.25, 1.25),
-        Pos = Vector(23, 0, 2.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle"},
-        ExcludeElements = {"newbarrel"},
-    },
-    {
         PrintName = "Optic",
         Bone = "j_ammocover",
         Pos = Vector(0, -5, 0.15),
         Ang = Angle(0, -90, 0),
         Category = {"bo1_rail_optic"},
         InstalledElements = {"mount"},
+    },
+    {
+        PrintName = "Muzzle",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(23, 0, 2.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_muzzle"},
+        ExcludeElements = {"newbarrel"},
+    },
+    {
+        PrintName = "Barrel",
+        DefaultCompactName = "STD",
+        Bone = "j_gun",
+        Pos = Vector(11, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4_lmg_barrel"},
     },
     {
         PrintName = "Underbarrel",
@@ -309,6 +320,15 @@ SWEP.Attachments = {
         Category = {"bo1_grips", "mwc_bipod"},
     },
     {
+        PrintName = "Stock",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_stock_h"},
+        Installed = "mwc_stock_heavy"
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -317,12 +337,12 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "None",
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, 2),
+        Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_h"},
+        Category = "bo1_perkacola",
     },
 }
 
@@ -345,9 +365,6 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "holster",
         Time = 24 / 30,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
     },
     ["ready"] = {
         Source = "draw",
@@ -357,19 +374,11 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        EventTable = {
-            { s = "ARC9_BO1.Mk48_Mech", t = 0 },
-            { s = "ARC9_BO1.Mk48_LFE", t = 0.1 },
-        }
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
         ShellEjectAt = 0,
-        EventTable = {
-            { s = "ARC9_BO1.Mk48_Mech", t = 0 },
-            { s = "ARC9_BO1.Mk48_LFE", t = 0.1 },
-        }
     },
     ["reload"] = {
         Source = "reload",

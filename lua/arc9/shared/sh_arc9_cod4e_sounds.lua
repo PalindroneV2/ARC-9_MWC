@@ -497,6 +497,83 @@ sound.Add( {
     }
 } )
 
+-- COD4 RPD
+
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    pitch = {65, 75},
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Hit",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/hit.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPD_Lift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_RPD/lift.wav",
+    }
+} )
+
 -- COD 4 GP25
 
 sound.Add( {
