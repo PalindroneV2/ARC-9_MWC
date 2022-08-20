@@ -85,11 +85,11 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.1 / 37.5)
-SWEP.SpreadAddRecoil = math.rad(100 / 37.5)
+SWEP.SpreadMultRecoil = 1.25
 
-SWEP.SpreadMultSighted = 0.1
-SWEP.SpreadAddHipFire = math.rad(240 / 37.5)
---SWEP.SpreadAddMove = math.rad(115 / 37.5)
+SWEP.SpreadMultSights = 0.1
+SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(120 / 37.5)
 
@@ -271,7 +271,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local hand = 0
 
     if attached["kbarrel"] then
-        vm:SetBodygroup(2,1)
+        barrel = 1
     end
     if attached["hk51barrel"] then
         vm:SetBodygroup(0,1)
@@ -358,6 +358,7 @@ SWEP.Attachments = {
         Pos = Vector(24.5, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+        Icon_Offset = Vector(2, 0, 0),
     },
     {
         PrintName = "Barrel",
