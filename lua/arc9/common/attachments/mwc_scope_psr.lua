@@ -26,11 +26,25 @@ ATT.ActivateElements = {"mw3_psrscope"}
 
 ATT.Sights = {
     {
-        Pos = Vector(-0.025, 5, -4.13),
+        Pos = Vector(-0.025, 8, -4.13),
         Ang = Angle(0, 0, 0),
+        ViewModelFOV = 35,
         Magnification = 1,
         IgnoreExtra = true
     },
+}
+
+ATT.Attachments = {
+    {
+        PrintName = "CPU",
+        Bone = "j_gun",
+        Scale = Vector(1.2, 1.2, 1.2),
+        Pos = Vector(-0.8, 0, -1.9),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bo2_bcpu"},
+        --ExcludeElements = {"no_tac_rail"},
+    }
 }
 
 ATT.RTScope = true
