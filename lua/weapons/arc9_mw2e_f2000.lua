@@ -43,8 +43,8 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 28
-SWEP.DamageMin = 30 -- damage done at maximum range
+SWEP.DamageMax = 30
+SWEP.DamageMin = 20 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8

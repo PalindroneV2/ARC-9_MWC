@@ -538,6 +538,55 @@ sound.Add( {
     }
 } )
 
+--MW3E FAD--
+
+sound.Add( {
+    name = "ARC9_MW3E.FAD_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FAD/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.FAD_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FAD/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.FAD_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FAD/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.FAD_Hit",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FAD/hit.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.FAD_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FAD/lift.wav",
+    }
+} )
+
 --MW3E MK14--
 
 sound.Add( {
