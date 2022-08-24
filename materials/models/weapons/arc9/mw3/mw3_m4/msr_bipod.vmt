@@ -3,8 +3,8 @@ VertexlitGeneric
 	$basetexture	"models\weapons\arc9\mw3\mw3_rsass\msr_bipod"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\mw3\mw3_rsass\msr_bipod_n"
-	$phongexponenttexture "models\weapons\arc9\cde\mw3_rsass\msr_bipod_s"
-	$envmapmask "models\weapons\arc9\cde\mw3_rsass\msr_bipod_s"
+	$phongexponenttexture "models\weapons\arc9\mw3\mw3_rsass\msr_bipod_s"
+	$envmapmask "models\weapons\arc9\mw3\mw3_rsass\msr_bipod_s"
 	"$normalmapalphaenvmapmask" "1"
 	
 	"$blendtintbybasealpha" "1"

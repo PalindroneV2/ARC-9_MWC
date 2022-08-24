@@ -1,9 +1,9 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M4A1"
+SWEP.PrintName = "Colt M16A4"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[
     The M16A4 was introduced as an improved version of the M16A2 during the mid 1990s.
@@ -25,8 +25,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw2e_m4.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw2e_m4.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw3e_m16a4.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_mw3e_m16a4.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-4.5, 3.5, -5.1),
@@ -42,8 +42,8 @@ SWEP.CustomBlendFactor = 1
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 30
-SWEP.DamageMin = 20 -- damage done at maximum range
+SWEP.DamageMax = 40
+SWEP.DamageMin = 30 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
 SWEP.Penetration = 8
@@ -123,14 +123,14 @@ SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 3,
     },
     {
         Mode = 1,
     },
 }
--- SWEP.RunawayBurst = true
--- SWEP.PostBurstDelay = 0.1
+SWEP.RunawayBurst = true
+SWEP.PostBurstDelay = 0.1
 SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
@@ -165,7 +165,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 3
+SWEP.CamQCA = 4
 
 SWEP.BulletBones = {
 }
@@ -176,8 +176,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.825, -2, 0.2),
-    Ang = Angle(0.025, 0, 0),
+    Pos = Vector(-2.825, -2, -0.125),
+    Ang = Angle(0, 0.7, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -201,8 +201,8 @@ SWEP.CrouchAng = Angle(0, 0, -5)
 SWEP.SprintPos = Vector(0, 0, -1)
 SWEP.SprintAng = Angle(0, 0, -5)
 
-SWEP.BipodPos = Vector(0, 10,-4)
-SWEP.BipodAng = Angle(0, 0, 10)
+SWEP.BipodPos = Vector(-2.825, 0, -2)
+SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -215,26 +215,14 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["classic_irons"] = {
-        Bodygroups = {
-            {1,3},
-            {2,1},
-            {5,1},
-        },
-        AttPosMods = {
-            [8] = {
-                Pos = Vector(11.25, 0, 3),
-            },
-        },
-    },
     ["stock_m"] = {
         Bodygroups = {
-            {4,1},
+            {7,1},
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {4,2},
+            {7,2},
         },
     },
 }
@@ -243,28 +231,61 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-
-    if attached["bo1_optic"] and !attached["bo1_ar15_toprail"] then
-        vm:SetBodygroup(1,1)
-    end
-    if attached["classic_irons"] then
-        vm:SetBodygroup(1,2)
-        vm:SetBodygroup(3,1)
-    end
+    local newpos = Vector(-2.825, -2, 0.125)
+    local newang = Angle(0.05, -0.9, 0)
 
     local ub = 0
-    if attached["bo1_grips"] then
+    local barrel = 0
+    local hand = 0
+    local rear = 0
+    local front = 0
+    local gas = 0
+    if attached["mwc_m203"] then
         ub = 1
     end
-    if attached["mwc_m203"] then
+    if attached["mwc_bipod"] then
         ub = 2
+        if self:GetBipod() then
+            ub = 3
+        end
     end
-    if attached["mwc_mk"] then
-        ub = 3
+    if attached["barrel_mk12"] then
+        barrel = 1
+        hand = 1
+        front = front + 2
     end
-    vm:SetBodygroup(2,ub)
+    if (attached["bo1_optic"] or attached["bo1_rail_riser"]) and !attached["bo1_ar15_toprail"] then
+        rear = 3
+        front = 5
+    end
+    if attached["m4_lowirons"] then
+        rear = rear + 1
+        front = front + 1
+        newpos = Vector(-2.825, -2, 0.7)
+        newang = Angle(0.05, 0, 0)
+    end
+    if attached["usgi_irons"] then
+        rear = rear + 2
+        front = 4
+        if barrel == 0 then gas = 1 end
+        newpos = Vector(-2.825, -2, 0.125)
+        newang = Angle(0.05, -0.2, 0)
+    end
+    vm:SetBodygroup(2, barrel)
+    vm:SetBodygroup(3, hand)
+    vm:SetBodygroup(4, rear)
+    vm:SetBodygroup(5, front)
+    vm:SetBodygroup(6, ub)
+    vm:SetBodygroup(8, gas)
 
-    -- vm:SetBodygroup(2,barrel)
+    self.IronSights = {
+        Pos = newpos,
+        Ang = newang,
+        Magnification = 1.1,
+        -- AssociatedSlot = 9,
+        CrosshairInSights = false,
+        ViewModelFOV = 60,
+    }
 
     if attached["universal_camo"] then
         vm:SetSkin(1)
@@ -303,20 +324,23 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(3, 0, 3.9),
+        Pos = Vector(3, 0, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw2_classic_irons"},
+        Category = {"bo1_optic", "mw3_m4_irons", "bo1_rail_riser"},
         InstalledElements = {"mainoptic"},
+        Icon_Offset = Vector(0, 0, -0.5),
+    },
+    {
+        PrintName = "Barrel",
+        DefaultCompactName = "20\" M16",
+        Bone = "j_gun",
+        Pos = Vector(6.5, 0, 2.45),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"mw3_m16_barrel"},
+        InstalledElements = {"ism16"},
     },
     {
         PrintName = "Muzzle",
@@ -332,50 +356,61 @@ SWEP.Attachments = {
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_mh"},
-        Installed = "mwc_stock_medium",
+        Installed = "mwc_stock_heavy",
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.15),
+        Pos = Vector(11, 0, 1.375),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "mwc_mk", "bo1_grips"},
+        Category = {"mwc_m203", "bo1_rail_underbarrel"},
     },
+    -- {
+    --     PrintName = "Tactical Right",
+    --     DefaultCompactName = "TAC R",
+    --     Bone = "j_gun",
+    --     Pos = Vector(16, 0.6, 2.3),
+    --     Ang = Angle(0, 0, -90),
+    --     Category = {"bo1_tactical"},
+    --     InstalledElements = {"right_cover"},
+    -- },
+    -- {
+    --     PrintName = "Tactical Left",
+    --     DefaultCompactName = "TAC L",
+    --     Bone = "j_gun",
+    --     Pos = Vector(16, -0.6, 2.3),
+    --     Ang = Angle(0, 0, 90),
+    --     Category = {"bo1_tactical"},
+    --     InstalledElements = {"left_cover"},
+    -- },
+    -- {
+    --     PrintName = "Tactical Top",
+    --     DefaultCompactName = "TAC T",
+    --     Bone = "j_gun",
+    --     Pos = Vector(16, 0, 3.05),
+    --     Ang = Angle(0, 0, 180),
+    --     Category = {"bo1_tactical_top"},
+    --     InstalledElements = {"top_cover"},
+    --     ExcludeElements = {"mw3_psrscope"},
+    -- },
     {
-        PrintName = "Tactical Right",
-        DefaultCompactName = "TAC R",
+        PrintName = "Carry Handle",
         Bone = "j_gun",
-        Pos = Vector(11.25, 0.6, 2.3),
-        Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
-        InstalledElements = {"right_cover"},
-    },
-    {
-        PrintName = "Tactical Left",
-        DefaultCompactName = "TAC L",
-        Bone = "j_gun",
-        Pos = Vector(11.25, -0.6, 2.3),
-        Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
-        InstalledElements = {"left_cover"},
-    },
-    {
-        PrintName = "Tactical Top",
-        DefaultCompactName = "TAC T",
-        Bone = "j_gun",
-        Pos = Vector(11.25, 0, 3.55),
-        Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
-        InstalledElements = {"top_cover"},
+        Pos = Vector(3.5, 0, 4.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_ar15_toprail"},
+        InstalledElements = {"ar15_toprail"},
+        ExcludeElements = {"m4_lowirons","mainoptic"},
+        Icon_Offset = Vector(0, 0, 1.5),
     },
     {
         PrintName = "Fire Control Group",
-        DefaultCompactName = "AUTO",
+        DefaultCompactName = "BST",
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_fcg_bst", "mwc_fcg_semi"},
+        Category = {"mwc_fcg_auto", "mwc_fcg_semi"},
     },
     {
         PrintName = "Ammunition",
@@ -391,6 +426,14 @@ SWEP.Attachments = {
         Pos = Vector(-6, 0, 2.65),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
@@ -442,7 +485,7 @@ SWEP.Animations = {
             {
                 t = 1,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
         },
         EventTable = {
@@ -462,17 +505,17 @@ SWEP.Animations = {
             {
                 t = 0.2,
                 lhik = 0,
-                rhik = 1
+                rhik = 0
             },
             {
                 t = 0.85,
                 lhik = 0,
-                rhik = 1
+                rhik = 0
             },
             {
                 t = 0.95,
                 lhik = 1,
-                rhik = 1
+                rhik = 0
             },
         },
         EventTable = {
