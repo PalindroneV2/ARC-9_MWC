@@ -2,7 +2,9 @@ ATT.PrintName = [[11.5" FSS Barrel]]
 ATT.CompactName = [[11.5" FSS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[
-    Short barrel
+    CQB barrel perfect for short range engagements, especially when clearing buildings.
+    The cut-down, low-profile gas block is hidden inside the handguard allowing for lower-profile optics to have clearance.
+    Comes attached by default with G.I. foldable irons.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -14,19 +16,19 @@ ATT.Category = {"mw3_m4_barrel"}
 ATT.ActivateElements = {"barrel_mw19", "usgi_irons"}
 ATT.ExcludeElements = {}
 
-ATT.MuzzleEffectQCA = 5
+ATT.MuzzleEffectQCA = 6
 
-ATT.SpreadMult = 0.75
-ATT.RecoilMult = 0.85
-ATT.SpreadMultHipFire = 1.35
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMult = 1.1
+ATT.RecoilMult = 1.1
+ATT.SpreadMultHipFire = 0.85
+ATT.SpreadMultRecoil = 1.1
 
-ATT.SpeedMult = 0.9
-ATT.SpeedMultSights = 0.85
+ATT.SpeedMult = 1.05
+ATT.SpeedMultSights = 1.1
 
-ATT.AimDownSightsTimeMult = 1.325
-ATT.SprintToFireTimeMult = 1.325
+ATT.AimDownSightsTimeMult = 0.85
+ATT.SprintToFireTimeMult = 0.90
 
-ATT.RangeMaxMult = 1.45
-ATT.RangeMinMult = 1.45
-ATT.PhysBulletMuzzleVelocityMult = 1.45
+ATT.RangeMaxMult = 0.8
+ATT.RangeMinMult = 0.8
+ATT.PhysBulletMuzzleVelocityMult = 0.8

@@ -1139,6 +1139,55 @@ sound.Add( {
     }
 } )
 
+--MW3E MK12SPR--
+
+sound.Add( {
+    name = "ARC9_MW3E.MK12SPR_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MK12SPR/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.MK12SPR_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MK12SPR/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MK12SPR_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MK12SPR/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MK12SPR_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MK12SPR/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MK12SPR_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MK12SPR/lift.wav",
+    }
+} )
+
 -- MW3E DEAGLE SOUND --
 
 sound.Add({

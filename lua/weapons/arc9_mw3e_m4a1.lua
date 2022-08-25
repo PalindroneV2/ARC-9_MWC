@@ -117,7 +117,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 850
+SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -145,7 +145,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_MW2E.M4M16_Fire"
+SWEP.ShootSound = "ARC9_MW3E.M4_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW2E.M4M16_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
@@ -215,6 +215,11 @@ SWEP.ExtraSightDist = 5
 SWEP.DefaultBodygroups = "10000000000000"
 
 SWEP.AttachmentElements = {
+    ["20_mag"] = {
+        Bodygroups = {
+            {1,1},
+        },
+    },
     ["classic_irons"] = {
         Bodygroups = {
             {3,1},
@@ -277,6 +282,16 @@ SWEP.AttachmentElements = {
         },
     },
 }
+SWEP.AttachmentTableOverrides = {
+    ["mw3e_m4_barrel_mk12"] = {
+        FiremodesOverride = {
+            {
+                Mode = 1,
+            },
+        },
+        RPMOverride = 500,
+    }
+}
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
@@ -295,7 +310,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["mwc_mk"] then
         ub = 3
     end
-    vm:SetBodygroup(4,ub)
 
     local barrel = 0
     local hand = 0
@@ -318,12 +332,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         barrel = 0
         hand = 3
     end
-    if attached["bo1_optic"] and !attached["bo1_ar15_toprail"] then
-        rear = 3
-        front = 7
-        gas = 1
-        if barrel == 2 then gas = 2 end
-    end
     if attached["classic_irons"] then
         rear = rear + 1
         front = front + 1
@@ -333,12 +341,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["usgi_irons"] then
         rear = rear + 2
         front = front + 2
-        newpos = Vector(-2.825, -2, 0.125)
+        newpos = Vector(-2.825, -2, 0.1)
         newang = Angle(0.05, -0.2, 0)
         if attached["barrel_mw19"] then
             front = 6
             gas = 0
         end
+    end
+    if (attached["bo1_optic"] or attached["bo1_rail_riser"]) and !attached["bo1_ar15_toprail"] then
+        rear = 3
+        front = 7
+        gas = 1
+        if barrel == 2 then gas = 2 end
     end
     local bipod = 0
     if attached["mwc_bipod"] then
@@ -352,6 +366,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     vm:SetBodygroup(4,rear)
     vm:SetBodygroup(5,front)
     vm:SetBodygroup(6,gas)
+    vm:SetBodygroup(7,ub)
     vm:SetBodygroup(9,bipod)
 
     self.IronSights = {
@@ -409,7 +424,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw3_classic_irons"},
+        Category = {"bo1_optic", "mw3_classic_irons", "bo1_rail_riser"},
         InstalledElements = {"mainoptic"},
     },
     {
@@ -444,6 +459,7 @@ SWEP.Attachments = {
         Pos = Vector(11, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_m203", "bo1_grips"},
+        ExcludeElements = {"barrel_mk12"},
     },
     {
         PrintName = "Tactical Right",
@@ -481,13 +497,22 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_fcg_bst", "mwc_fcg_semi"},
+        Category = {"mwc_fcg_semi"},
+        ExcludeElements = {"barrel_mk12"},
+    },
+    {
+        PrintName = "Magazine",
+        DefaultCompactName = "MAG",
+        Bone = "j_gun",
+        Pos = Vector(5, 0, -1),
+        Ang = Angle(0, 0, 0),
+        Category = {"mw3_ar15_mag"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
+        Pos = Vector(5, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -528,11 +553,17 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload"] = {
         Source = "reload",
@@ -560,8 +591,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1}
         },
     },
     ["reload_empty"] = {
@@ -590,9 +621,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1},
-            {s = "ARC9_COD4E.M4M16_Chamber", t = 1.65}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1},
+            {s = "ARC9_MW3E.M4M16_Chamber", t = 1.65}
         },
     },
     ["enter_sprint"] = {
@@ -629,27 +660,33 @@ SWEP.Animations = {
         Source = {"fire_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload_m203"] = {
         Source = "reload_gl",
         Time = 2,
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1}
         },
     },
     ["reload_empty_m203"] = {
         Source = "reload_empty_gl",
         Time = 2.5,
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1},
-            {s = "ARC9_COD4E.M4M16_Chamber", t = 1.65}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1},
+            {s = "ARC9_MW3E.M4M16_Chamber", t = 1.65}
         },
     },
     ["enter_sprint_m203"] = {
@@ -685,27 +722,33 @@ SWEP.Animations = {
         Source = {"fire_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        SoundTable = {
+            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
     },
     ["reload_mk"] = {
         Source = "reload_mk",
         Time = 2,
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1}
         },
     },
     ["reload_empty_mk"] = {
         Source = "reload_empty_mk",
         Time = 2.5,
         EventTable = {
-            {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
-            {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1},
-            {s = "ARC9_COD4E.M4M16_Chamber", t = 1.65}
+            {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
+            {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1},
+            {s = "ARC9_MW3E.M4M16_Chamber", t = 1.65}
         },
     },
     ["enter_sprint_mk"] = {

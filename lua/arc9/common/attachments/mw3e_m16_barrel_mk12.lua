@@ -1,10 +1,8 @@
-ATT.PrintName = [[20" SPR Barrel]]
-ATT.CompactName = [[20" SPR]]
+ATT.PrintName = [[20" RIS Barrel]]
+ATT.CompactName = [[20" RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
 ATT.Description = [[
-    Long range precision barrel for engagements beyond 500 meters.
-    Used by squad marksmen and snipers.
-    Full-auto is restricted when using this sniper barrels to prevent wear and preserve high precision.
+    Standard 20 inch barrel with a RIS handguard allowing for attachment of tactical laser pointers or weapon lights, grips, etc.
 ]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -12,37 +10,34 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
-ATT.Category = {"mw3_m4_barrel"}
+ATT.Category = {"mw3_m16_barrel"}
 ATT.ActivateElements = {"barrel_mk12"}
 ATT.ExcludeElements = {}
 
 ATT.MuzzleEffectQCA = 5
 
-ATT.SpreadMult = 0.75
-ATT.RecoilMult = 0.85
-ATT.SpreadMultHipFire = 1.35
-ATT.SpreadMultRecoil = 0.8
-ATT.DamageMinAdd = 15
-ATT.DamageMaxAdd = 15
+ATT.SpreadMult = 0.975
+ATT.RecoilMult = 0.975
+ATT.SpreadMultHipFire = 1.025
+ATT.SpreadMultRecoil = 0.975
 
-ATT.SpeedMult = 0.9
-ATT.SpeedMultSights = 0.85
+ATT.SpeedMult = 0.975
+ATT.SpeedMultSights = 0.975
 
-ATT.AimDownSightsTimeMult = 1.325
-ATT.SprintToFireTimeMult = 1.325
+ATT.AimDownSightsTimeMult = 1.025
+ATT.SprintToFireTimeMult = 1.025
 
-ATT.RangeMaxMult = 1.45
-ATT.RangeMinMult = 1.45
-ATT.PhysBulletMuzzleVelocityMult = 1.45
+ATT.RangeMaxMult = 1.025
+ATT.RangeMinMult = 1.025
+ATT.PhysBulletMuzzleVelocityMult = 1.025
 
-ATT.FiremodesOverride = {
-    {
-        Mode = 1,
-    },
-}
+-- ATT.FiremodesOverride = {
+--     {
+--         Mode = 1,
+--     },
+-- }
 
-ATT.RPMOverride = 500
-ATT.ShootSound = "ARC9_MW3E.MK12SPR_Fire"
+-- ATT.RPMOverride = 500
 
 ATT.Attachments = {
     {
@@ -87,6 +82,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.75, 0, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"bo1_grips", "mwc_m203"},
+        RequireElements = {"ism16"},
     },
 }

@@ -181,6 +181,7 @@ SWEP.IronSights = {
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
+    ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
