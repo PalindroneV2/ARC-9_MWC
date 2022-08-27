@@ -71,6 +71,65 @@ sound.Add( {
     }
 } )
 
+--MW3E SCARL--
+
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_Hit",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/hit.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.SCARH_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_scarh/lift.wav",
+    }
+} )
+
 --MW2E M240--
 
 sound.Add( {
