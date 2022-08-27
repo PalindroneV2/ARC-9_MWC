@@ -71,6 +71,68 @@ sound.Add( {
     }
 } )
 
+--MW2E M240--
+
+sound.Add( {
+    name = "ARC9_MW2E.M240_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_M240/fire.wav",
+    }
+} )
+
+--MW2E AUG--
+
+sound.Add( {
+    name = "ARC9_MW2E.AUG_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_AUG/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.AUG_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_AUG/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.AUG_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_AUG/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.AUG_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_AUG/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.AUG_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_AUG/lift.wav",
+    }
+} )
+
 --MW2E F2000--
 
 sound.Add( {
