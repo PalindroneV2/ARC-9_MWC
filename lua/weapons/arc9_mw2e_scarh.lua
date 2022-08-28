@@ -75,9 +75,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 1
+SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.7
-SWEP.RecoilUp = 1
+SWEP.RecoilUp = 0.75
 
 SWEP.RecoilRandomUp = 1
 SWEP.RecoilRandomSide = 0.6
@@ -175,8 +175,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.825, -2, 0.2),
-    Ang = Angle(0.025, 0, 0),
+    Pos = Vector(-2.74, -2, 0.2),
+    Ang = Angle(0.025, 0.1, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -215,28 +215,6 @@ SWEP.BarrelLength = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["classic_irons"] = {
-        Bodygroups = {
-            {1,3},
-            {2,1},
-            {5,1},
-        },
-        AttPosMods = {
-            [8] = {
-                Pos = Vector(11.25, 0, 3),
-            },
-        },
-    },
-    ["stock_m"] = {
-        Bodygroups = {
-            {4,1},
-        },
-    },
-    ["stock_h"] = {
-        Bodygroups = {
-            {4,2},
-        },
-    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -244,17 +222,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bo1_optic"] and !attached["bo1_ar15_toprail"] then
+    if attached["mount"]then
         vm:SetBodygroup(1,1)
-    end
-    if attached["classic_irons"] then
-        vm:SetBodygroup(1,2)
-        vm:SetBodygroup(3,1)
     end
 
     local ub = 0
     if attached["bo1_grips"] then
-        ub = 1
+        ub = 0
     end
     if attached["mwc_m203"] then
         ub = 2
@@ -264,11 +238,18 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(2,ub)
 
-    -- vm:SetBodygroup(2,barrel)
-
-    if attached["universal_camo"] then
-        vm:SetSkin(1)
+    if attached["tacrail"]then
+        vm:SetBodygroup(3,1)
     end
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
 end
 
@@ -277,10 +258,10 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["mwc_ubgl_m203"] then
-        suffix = "_m203"
+    if attached["mwc_m203"] then
+        suffix = "_gl"
         if self:GetUBGL() then
-            suffix = "_m203setup"
+            suffix = "_glsetup"
         end
     elseif attached["mwc_ubgl_mk"] then
         suffix = "_mk"
@@ -305,15 +286,15 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(3, 0, 3.9),
+        Pos = Vector(4, 0, 3.125),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
-        InstalledElements = {"mainoptic"},
+        InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(23.5, 0, 2.2),
+        Pos = Vector(16.25, 0, 1.35),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"bo1_muzzle"},
@@ -331,7 +312,7 @@ SWEP.Attachments = {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.15),
+        Pos = Vector(11, 0, 0.5),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_m203", "mwc_mk", "bo1_grips"},
     },
@@ -339,25 +320,25 @@ SWEP.Attachments = {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(11.25, 0.6, 2.3),
+        Pos = Vector(11, 0.6, 1.5),
         Ang = Angle(0, 0, -90),
         Category = {"bo1_tactical"},
-        InstalledElements = {"right_cover"},
+        InstalledElements = {"tacrail"},
     },
     {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(11.25, -0.6, 2.3),
+        Pos = Vector(11, -0.6, 1.5),
         Ang = Angle(0, 0, 90),
         Category = {"bo1_tactical"},
-        InstalledElements = {"left_cover"},
+        InstalledElements = {"tacrail"},
     },
     {
         PrintName = "Tactical Top",
         DefaultCompactName = "TAC T",
         Bone = "j_gun",
-        Pos = Vector(11.25, 0, 3.55),
+        Pos = Vector(11, 0, 2.9),
         Ang = Angle(0, 0, 180),
         Category = {"bo1_tactical_top"},
         InstalledElements = {"top_cover"},
@@ -374,7 +355,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
+        Pos = Vector(4, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -448,8 +429,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
         },
     },
     ["reload_empty"] = {
@@ -479,8 +460,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
             {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
         },
     },
@@ -499,60 +480,60 @@ SWEP.Animations = {
 
 -- UBGL OUT ANIMS ---------------------------------------------------------------
 
-    ["idle_m203"] = {
-        Source = "idle_m203",
+    ["idle_gl"] = {
+        Source = "idle_gl",
         Time = 1 / 30,
     },
-    ["draw_m203"] = {
-        Source = "draw_m203",
+    ["draw_gl"] = {
+        Source = "draw_gl",
         Time = 0.5,
     },
-    ["ready_m203"] = {
-        Source = "draw_m203",
+    ["ready_gl"] = {
+        Source = "draw_gl",
     },
-    ["holster_m203"] = {
-        Source = "holster_m203",
+    ["holster_gl"] = {
+        Source = "holster_gl",
         Time = 0.5,
     },
-    ["fire_m203"] = {
-        Source = {"fire_m203"},
-        Time = 0.5,
-        ShellEjectAt = 0,
-    },
-    ["fire_iron_m203"] = {
-        Source = {"fire_ads_m203"},
+    ["fire_gl"] = {
+        Source = {"fire_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
     },
-    ["reload_m203"] = {
-        Source = "reload",
+    ["fire_iron_gl"] = {
+        Source = {"fire_ads_gl"},
+        Time = 0.5,
+        ShellEjectAt = 0,
+    },
+    ["reload_gl"] = {
+        Source = "reload_gl",
         Time = 2.63,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
         },
     },
-    ["reload_empty_m203"] = {
-        Source = "reload_empty",
+    ["reload_empty_gl"] = {
+        Source = "reload_empty_gl",
         Time = 3.36,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
             {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
         },
     },
-    ["enter_sprint_m203"] = {
-        Source = "sprint_in_m203",
+    ["enter_sprint_gl"] = {
+        Source = "sprint_in_gl",
         Time = 1,
     },
-    ["idle_sprint_m203"] = {
-        Source = "sprint_loop_m203",
+    ["idle_sprint_gl"] = {
+        Source = "sprint_loop_gl",
         Time = 30 / 40
     },
-    ["exit_sprint_m203"] = {
-        Source = "sprint_out_m203",
+    ["exit_sprint_gl"] = {
+        Source = "sprint_out_gl",
         Time = 1,
     },
 
@@ -583,21 +564,21 @@ SWEP.Animations = {
         ShellEjectAt = 0,
     },
     ["reload_mk"] = {
-        Source = "reload",
+        Source = "reload_mk",
         Time = 2.63,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
         },
     },
     ["reload_empty_mk"] = {
-        Source = "reload_empty",
+        Source = "reload_empty_mk",
         Time = 3.36,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.1},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
             {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
         },
     },
@@ -624,16 +605,16 @@ SWEP.Animations = {
         Source = "glsetup_out",
         Time = 0.5,
     },
-    ["idle_m203setup"] = {
-        Source = "idle_m203setup",
+    ["idle_glsetup"] = {
+        Source = "idle_glsetup",
         Time = 1 / 30,
     },
-    ["fire_m203setup"] = {
-        Source = "fire_m203setup",
+    ["fire_glsetup"] = {
+        Source = "fire_glsetup",
         Time = 0.3,
     },
-    ["reload_ubgl_m203setup"] = {
-        Source = "reload_m203setup",
+    ["reload_ubgl_glsetup"] = {
+        Source = "reload_glsetup",
         Time = 3,
         EventTable = {
             {s = "ARC9_COD4E.M203_Open", t = 0.125},
@@ -641,8 +622,8 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M203_Close", t = 2.25},
         }
     },
-    ["reload_m203setup_soh"] = {
-        Source = "reload_m203setup",
+    ["reload_glsetup_soh"] = {
+        Source = "reload_glsetup",
         Time = 3 / 2,
         EventTable = {
             {s = "ARC9_COD4E.M203_Open", t = 0.125 / 2},
@@ -650,16 +631,16 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M203_Close", t = 2.25 / 2},
         }
     },
-    ["enter_sprint_m203setup"] = {
-        Source = "sprint_in_m203setup",
+    ["enter_sprint_glsetup"] = {
+        Source = "sprint_in_glsetup",
         Time = 1,
     },
-    ["idle_sprint_m203setup"] = {
-        Source = "sprint_loop_m203setup",
+    ["idle_sprint_glsetup"] = {
+        Source = "sprint_loop_glsetup",
         Time = 30 / 40
     },
-    ["exit_sprint_m203setup"] = {
-        Source = "sprint_out_m203setup",
+    ["exit_sprint_glsetup"] = {
+        Source = "sprint_out_glsetup",
         Time = 1,
     },
 

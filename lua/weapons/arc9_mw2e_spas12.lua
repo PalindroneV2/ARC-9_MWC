@@ -115,7 +115,6 @@ SWEP.SpeedMultSights = 0.8
 SWEP.SpeedMultShooting = 0.75
 SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
-SWEP.SpeedMultBlindFire = 1
 
 SWEP.AimDownSightsTime = 0.3
 SWEP.SprintToFireTime = 0.3
@@ -126,15 +125,15 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
-    },
-    {
-        Mode = 1,
         ManualAction = true,
         PrintName = "PUMP",
         EjectDelay = 0.2,
         SpreadMult = 0.8,
         PhysBulletMuzzleVelocityMult = 1.15
-    }
+    },
+    {
+        Mode = 1,
+    },
 }
 
 SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
@@ -172,7 +171,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -183,10 +182,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    -- Pos = Vector(-3.35, -3, 1.525), --MW3
-    -- Ang = Angle(0.0125, 0, 0), --MW3
-    Pos = Vector(-3.35, -3, 1.9),
-    Ang = Angle(0.05, 0.0125, 0),
+    Pos = Vector(-3.65, -6, 1.9),
+    Ang = Angle(0.1, 0.0125, 0),
     ViewModelFOV = 60,
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -200,14 +197,14 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
@@ -226,12 +223,21 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newPos = Vector(-3.75, 0, 1.5)
-    local newAng = Angle(0, 0, 0)
+    local newPos = Vector(-3.75, -6, 1.5)
+    local newAng = Angle(0.05, 0.3, 0)
+
+    if attached["stock_l"] then
+        vm:SetBodygroup(2,1)
+        newPos = Vector(-1, -6, 0.25)
+        newAng = Angle(0, 0, 0)
+    end
 
     if attached["stock_m"] then
-        newPos = Vector(-3.75, 0, 1.5)
-        newAng = Angle(0, 0, 0)
+        vm:SetBodygroup(2,2)
+    end
+
+    if attached["mount"] then
+        vm:SetBodygroup(1,1)
     end
 
     local camo = 0
@@ -257,7 +263,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultCompactName = "IRONS",
         Bone = "j_gun",
-        Pos = Vector(7.5, 0-0.025, 3.7),
+        Pos = Vector(3.5, 0, 2.48),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic"},
         Icon_Offset = Vector(0, 0, 1),
@@ -267,21 +273,21 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(28, 0, 2.5),
+        Pos = Vector(25, 0, 1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_shotty"},
     },
     {
         PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(12.5, 0, 0.45),
+        Bone = "j_pump",
+        Pos = Vector(-2.5, 0, -0.8),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-4, 0, -2.75),
+        Pos = Vector(-7.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_lm"},
         Installed = "mwc_stock_medium",
@@ -290,25 +296,33 @@ SWEP.Attachments = {
         PrintName = "Firing Group",
         DefaultCompactName = "SEMI",
         Bone = "j_gun",
-        Pos = Vector(-3.5, 0, -2),
+        Pos = Vector(-1, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
     {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
+        PrintName = "Shells",
+        DefaultCompactName = "00 BUCK",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -10),
+        Pos = Vector(4, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = "bo1_shot_slug",
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(4, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk-a-Cola",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "bo1_perkacola",
     },
 }
 
