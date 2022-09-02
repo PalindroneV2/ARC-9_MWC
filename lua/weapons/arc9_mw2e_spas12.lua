@@ -40,7 +40,7 @@ SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 SWEP.CustomCamoScale = 2
 SWEP.CustomBlendFactor = 1
 
-SWEP.DefaultBodygroups = "120000000"
+SWEP.DefaultBodygroups = "000000000"
 
 SWEP.DamageMax = 14
 SWEP.DamageMin = 6 -- damage done at maximum range
@@ -61,6 +61,9 @@ SWEP.BodyDamageMults = {
     [HITGROUP_LEFTLEG] = 1,
     [HITGROUP_RIGHTLEG] = 1,
 }
+
+SWEP.Crosshair = true
+SWEP.CanBlindFire = false
 
 SWEP.TracerNum = 1 -- Tracer every X
 SWEP.TracerFinalMag = 0 -- The last X bullets in a magazine are all tracers
