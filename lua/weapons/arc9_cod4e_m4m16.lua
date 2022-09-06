@@ -112,8 +112,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
 
 SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -335,6 +335,41 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt M16A4"
+    if attached["barrel_m4"] then
+        gunname = "Colt M4 Carbine"
+    end
+    if attached["barrel_mk18"] then
+        gunname = "Colt M4 Commando"
+    end
+
+    if attached["fcg_auto"] then
+        gunname = "Colt M16A3"
+        if attached["barrel_m4"] then
+            gunname = "Colt M4A1 Carbine"
+        end
+        if attached["barrel_mk18"] then
+            gunname = "Colt Mk. 18 Mod 0"
+        end
+    end
+
+    if attached["bo1_pap"] then
+        gunname = "Skullpiercer"
+        if attached["mwc_m203"] then
+            gunname = "Skullcrusher"
+        end
+        if attached["barrel_m4"] or attached["barrel_mk18"] then
+            gunname = "Xeno Matter 4K"
+        end
+    end
+
+    return gunname
+end
+
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
@@ -353,14 +388,6 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
     {
         PrintName = "Optic",
         Bone = "j_gun",
@@ -456,6 +483,22 @@ SWEP.Attachments = {
         Pos = Vector(5, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
     },
 }
 

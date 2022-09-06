@@ -295,20 +295,14 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Perk",
-        DefaultCompactName = "PERK",
+        PrintName = "Optic",
+        DefaultCompactName = "Irons",
         Bone = "j_gun",
-        Pos = Vector(-10, 0, -10),
+        Scale = Vector(1,1,1),
+        Pos = Vector(4, 0.3, 1.7),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    {
-        PrintName = "Magazine",
-        DefaultCompactName = ".357 MAG",
-        Bone = "j_gun",
-        Pos = Vector(-1, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = "mw3_deagle_mag",
+        Category = {"bo1_optic", "mw3e_deagle_tactical"},
+        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
     },
     {
         PrintName = "Variant",
@@ -321,17 +315,16 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
     },
     {
-        PrintName = "Optic",
-        DefaultCompactName = "Irons",
+        PrintName = "Magazine",
+        DefaultCompactName = ".357 MAG",
         Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(4, 0.3, 1.7),
+        Pos = Vector(-1, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw3e_deagle_tactical"},
+        Category = "mw3_deagle_mag",
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
     },
     {
-        PrintName = "Underbarrel",
+        PrintName = "Tactical",
         DefaultCompactName = "None",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -348,6 +341,22 @@ SWEP.Attachments = {
         Pos = Vector(1, 0, -2.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
     },
 }
 

@@ -257,8 +257,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.5
-SWEP.SprintToFireTime = 0.5
+SWEP.AimDownSightsTime = 1
+SWEP.SprintToFireTime = 0.4
 
 SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -381,21 +381,29 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 end
 
 SWEP.Attachments = {
-    [1] = {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, -3),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    [2] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
         Pos = Vector(3, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_pap_launcher"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
     },
 }
 

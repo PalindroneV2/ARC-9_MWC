@@ -337,12 +337,20 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Perk-a-Cola",
+        PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
+        Category = "mwc_perk",
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
     },
 }
 

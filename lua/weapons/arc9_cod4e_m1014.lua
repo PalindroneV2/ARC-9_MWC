@@ -241,7 +241,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 end
 
 SWEP.Attachments = {
-    [1] = {
+    {
         PrintName = "Optic",
         DefaultCompactName = "IRONS",
         Bone = "j_gun",
@@ -252,7 +252,7 @@ SWEP.Attachments = {
         -- ExcludeElements = {"stock_l"},
         -- InstalledElements = {"mount"},
     },
-    [2] = {
+    {
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-7.5, 0, 0),
@@ -260,7 +260,7 @@ SWEP.Attachments = {
         Category = {"mwc_stock_lm"},
         Installed = "mwc_stock_medium",
     },
-    [3] = {
+    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -268,14 +268,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_shotty"},
     },
-    [4] = {
+    {
         PrintName = "Underbarrel",
         Bone = "j_gun",
         Pos = Vector(7.5, 0, -1.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_rail_underbarrel"},
     },
-    [5] = {
+    {
         PrintName = "Firing Group",
         DefaultCompactName = "SEMI",
         Bone = "j_gun",
@@ -283,21 +283,29 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_fcg"},
     },
-    [6] = {
-        PrintName = "Perk-a-Cola",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-10, 0, -10),
-        Ang = Angle(0, 0, 0),
-        Category = "bo1_perkacola",
-    },
-    [7] = {
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
+    },
+    {
+        PrintName = "Perk",
+        DefaultCompactName = "PERK",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_perk",
+    },
+    {
+        PrintName = "Proficiency",
+        DefaultCompactName = "PRO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, -5),
+        Ang = Angle(0, 0, 0),
+        Category = "mwc_proficiency",
     },
 }
 
