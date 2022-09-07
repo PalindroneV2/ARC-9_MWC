@@ -398,8 +398,8 @@ ATT.Free = false
 
 ATT.Category = {"mwc_proficiency"}
 ATT.ActivateElements = {"pro_damage"}
-ATT.RecoilMult = 0.9
-ATT.RecoilKickMult = 0.9
+ATT.DamageMinMult = 1.1
+ATT.DamageMaxMult = 1.1
 
 ARC9.LoadAttachment(ATT, "mwc_pro_damage")
 
