@@ -462,6 +462,7 @@ ATT.Free = false
 
 ATT.Category = {"mwc_proficiency"}
 ATT.ActivateElements = {"pro_speed"}
+ATT.SpeedMult = 1.1
 
 ARC9.LoadAttachment(ATT, "mwc_pro_speed")
 
@@ -557,21 +558,45 @@ hook.Add("EntityTakeDamage", "ARC9_MWC_PERK_JUG", function(ent, dmg)
     end
 end)
 
-hook.Add("Move", "ARC9_MWC_PERK_PRO_SPEED", function(ent, mv)
-    if !(ent:IsPlayer() or ent:IsNPC()) then return end
-    local wep = ent:GetActiveWeapon()
-    if !IsValid(wep) or !wep.ARC9 then return end
-    local attached = wep:GetElements()
-    if !attached["conditioning"] or !attached["pro_speed"] then return end
+-- local s = 1
 
-    local max = ent:GetMaxSpeed()
-    local s = 1
+-- hook.Add("Move", "ARC9_MWC_PERK_CONDITIONING", function(ent, mv)
+--     if !(ent:IsPlayer() or ent:IsNPC()) then return end
+--     local wep = ent:GetActiveWeapon()
+--     if !IsValid(wep) or !wep.ARC9 then return end
+--     local attached = wep:GetElements()
+--     if !attached["conditioning"] then return end
 
-    if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+--     local max = ent:GetMaxSpeed()
 
-    mv:SetMaxSpeed(max * s * 1.10)
-    mv:SetMaxClientSpeed(max * s * 1.10)
-end)
+--     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+
+--     mv:SetMaxSpeed(max * s * 1.10)
+--     mv:SetMaxClientSpeed(max * s * 1.10)
+--     if attached["pro_speed"] then
+--         mv:SetMaxSpeed(max * s * 1.10 * 1.10)
+--         mv:SetMaxClientSpeed(max * s * 1.10 * 1.10)
+--     end
+-- end)
+
+-- hook.Add("Move", "ARC9_MWC_PRO_SPEED", function(ent, mv)
+--     if !(ent:IsPlayer() or ent:IsNPC()) then return end
+--     local wep = ent:GetActiveWeapon()
+--     if !IsValid(wep) or !wep.ARC9 then return end
+--     local attached = wep:GetElements()
+--     if !attached["pro_speed"] then return end
+
+--     local max = ent:GetMaxSpeed()
+
+--     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
+
+--     mv:SetMaxSpeed(max * s * 1.10)
+--     mv:SetMaxClientSpeed(max * s * 1.10)
+--     if attached["conditioning"] then
+--         mv:SetMaxSpeed((max * s * 1.10) * 1.10)
+--         mv:SetMaxClientSpeed((max * s * 1.10) * 1.10)
+--     end
+-- end)
 
 local function drop(ent, attacker)
     local wep = IsValid(attacker) and attacker:IsPlayer() and attacker:GetActiveWeapon()

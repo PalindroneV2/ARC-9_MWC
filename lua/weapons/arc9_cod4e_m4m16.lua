@@ -248,27 +248,27 @@ SWEP.AttachmentElements = {
     },
     ["barrel_m4"] = {
         AttPosMods = {
-            [3] = {
+            [2] = {
                 Pos = Vector(19.5, 0, 2.35)
             },
-            [9] = {
+            [8] = {
                 Pos = Vector(11, 0, 3.05),
             },
         },
     },
     ["barrel_mk18"] = {
         AttPosMods = {
-            [3] = {
+            [2] = {
                 Pos = Vector(15, 0, 2.35)
             },
-            [9] = {
+            [8] = {
                 Pos = Vector(11, 0, 3.05),
             },
         },
     },
     ["mw3_psrscope"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(2, 0, 3.3),
             },
         },
