@@ -112,27 +112,27 @@ ATT.ActivateElements = {"blast_shield"}
 
 ARC9.LoadAttachment(ATT, "mwc_perk_blast_shield")
 
-ATT = {}
+-- ATT = {}
 
-ATT.PrintName = [[Sonic Boom]]
-ATT.CompactName = [[BOOM]]
-ATT.Icon = Material("entities/mwc_atts/perks/classic_sonic_boom.png")
-ATT.Description = [[
-    Increased explosives damage.
-]]
-ATT.Pros = {
-    "+ 25% explosive damage."
-}
-ATT.Cons = {}
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
-ATT.Free = false
-ATT.Folder = "TIER 2"
+-- ATT.PrintName = [[Sonic Boom]]
+-- ATT.CompactName = [[BOOM]]
+-- ATT.Icon = Material("entities/mwc_atts/perks/classic_sonic_boom.png")
+-- ATT.Description = [[
+--     Increased explosives damage.
+-- ]]
+-- ATT.Pros = {
+--     "+ 25% explosive damage."
+-- }
+-- ATT.Cons = {}
+-- ATT.SortOrder = 0
+-- ATT.MenuCategory = "ARC-9 - MWC Attachments"
+-- ATT.Free = false
+-- ATT.Folder = "TIER 2"
 
-ATT.Category = {"mwc_perk"}
-ATT.ActivateElements = {"sonic_boom"}
+-- ATT.Category = {"mwc_perk"}
+-- ATT.ActivateElements = {"sonic_boom"}
 
-ARC9.LoadAttachment(ATT, "mwc_perk_sonicboom")
+-- ARC9.LoadAttachment(ATT, "mwc_perk_sonicboom")
 
 ATT = {}
 
@@ -449,7 +449,7 @@ ATT = {}
 
 ATT.PrintName = [[Speed]]
 ATT.CompactName = [[SPEED]]
-ATT.Icon = Material("entities/mwc_atts/proficiencies/kick.png")
+ATT.Icon = Material("entities/mwc_atts/proficiencies/speed.png")
 ATT.Description = [[
     Minor Speed increase.
 ]]
@@ -558,8 +558,6 @@ hook.Add("EntityTakeDamage", "ARC9_MWC_PERK_JUG", function(ent, dmg)
     end
 end)
 
--- local s = 1
-
 -- hook.Add("Move", "ARC9_MWC_PERK_CONDITIONING", function(ent, mv)
 --     if !(ent:IsPlayer() or ent:IsNPC()) then return end
 --     local wep = ent:GetActiveWeapon()
@@ -569,14 +567,14 @@ end)
 
 --     local max = ent:GetMaxSpeed()
 
+--     local s = wep.Speed
 --     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
-
---     mv:SetMaxSpeed(max * s * 1.10)
---     mv:SetMaxClientSpeed(max * s * 1.10)
---     if attached["pro_speed"] then
---         mv:SetMaxSpeed(max * s * 1.10 * 1.10)
---         mv:SetMaxClientSpeed(max * s * 1.10 * 1.10)
+--     if attached["conditioning"] then
+--         s = s * 1.2
 --     end
+
+--     mv:SetMaxSpeed(max * s)
+--     mv:SetMaxClientSpeed(max * s)
 -- end)
 
 -- hook.Add("Move", "ARC9_MWC_PRO_SPEED", function(ent, mv)
@@ -588,14 +586,14 @@ end)
 
 --     local max = ent:GetMaxSpeed()
 
+--     local s = wep.Speed
 --     if ent:Crouching() then s = s * ent:GetCrouchedWalkSpeed() end
-
---     mv:SetMaxSpeed(max * s * 1.10)
---     mv:SetMaxClientSpeed(max * s * 1.10)
---     if attached["conditioning"] then
---         mv:SetMaxSpeed((max * s * 1.10) * 1.10)
---         mv:SetMaxClientSpeed((max * s * 1.10) * 1.10)
+--     if attached["pro_speed"] then
+--         s = s * 1.10
 --     end
+
+--     mv:SetMaxSpeed(max * s)
+--     mv:SetMaxClientSpeed(max * s)
 -- end)
 
 local function drop(ent, attacker)
@@ -621,28 +619,15 @@ end
 hook.Add("OnNPCKilled", "ARC9_MWC_PERK_VULTURE", drop)
 hook.Add("PlayerDeath", "ARC9_MWC_PERK_VULTURE", function(ply, infl, atk) drop(ply, atk) end)
 
--- hook.Add( "ScaleNPCDamage", "ARC9_MWC_PERK_SONIC_NPC", function(ent, ent, dmg, hitgroup )
---     if !(ent:IsPlayer() or ent:IsNPC()) then return end
---     local wep = ent:GetActiveWeapon()
+-- hook.Add( "ScaleNPCDamage", "ARC9_MWC_PERK_SONIC_NPC", function(ply, npc, dmg, hitgroup )
+--     if !ply:IsPlayer() or !ent:IsNPC() then return end
+--     local wep = ply:GetActiveWeapon()
 --     if !IsValid(wep) or !wep.ARC9 then return end
---     local attached = ent:GetElements()
+--     local attached = ply:GetElements()
 --     if !attached["sonic_boom"] then return end
 --     local attacker = dmg:GetAttacker()
 
---     if attacker:IsPlayer() then
---         dmg:ScaleDamage(1.25)
---     end
--- end )
-
--- hook.Add( "ScalePlayerDamage", "ARC9_MWC_PERK_SONIC_PLAYER", function(ent, ent, dmg, hitgroup )
---     if !(ent:IsPlayer() or ent:IsNPC()) then return end
---     local wep = ent:GetActiveWeapon()
---     if !IsValid(wep) or !wep.ARC9 then return end
---     local attached = ent:GetElements()
---     if !attached["sonic_boom"] then return end
---     local attacker = dmg:GetAttacker()
-
---     if attacker:IsPlayer() then
+--     if attacker:IsPlayer() and (dmg:GetDamageType() == DMG_BLAST) then
 --         dmg:ScaleDamage(1.25)
 --     end
 -- end )
