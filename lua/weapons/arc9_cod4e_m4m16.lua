@@ -202,6 +202,8 @@ SWEP.BipodAng = Angle(0, 0, 10)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(4, 0, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
@@ -284,6 +286,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local barrel = 0
+    local snapPos = Vector(4, 0, 0)
+    local snapAng = Angle(0, 0, 0)
 
     if attached["barrel_m203"] then
         vm:SetBodygroup(1,1)
@@ -300,6 +304,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(5,1)
         vm:SetBodygroup(6,1)
         vm:SetBodygroup(7,1)
+        snapPos = Vector(2, 0, 0)
     end
     if attached["barrel_mk18"] then
         vm:SetBodygroup(1,2)
@@ -308,6 +313,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(5,1)
         vm:SetBodygroup(6,1)
         vm:SetBodygroup(7,1)
+        snapPos = Vector(1, 0, 0)
     end
 
     if attached["mwc_m203"] then
@@ -332,6 +338,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(1)
     end
+
+    self.CustomizeSnapshotPos = snapPos
+    self.CustomizeSnapshotAng = snapAng
 
 end
 

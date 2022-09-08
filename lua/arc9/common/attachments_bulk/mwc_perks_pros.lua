@@ -74,10 +74,11 @@ ATT.PrintName = [[Juggernaut]]
 ATT.CompactName = [[JUG]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_juggernaut.png")
 ATT.Description = [[
-    Gain 60% resistance to damage.
+    Gain 60% resistance to conventional damage types i.e. bullets and melee.
+    No resistance against explosions, fall damage or toxins.
 ]]
 ATT.Pros = {
-    "+ 60% Resistance to all damage."
+    "+ 60% Resistance to conventional damage types."
 }
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -296,7 +297,7 @@ ATT.PrintName = [[Commando]]
 ATT.CompactName = [[COMMANDO]]
 ATT.Icon = Material("entities/mwc_atts/perks/commando.png")
 ATT.Description = [[
-    Double Melee Damage.
+    Double Melee Range.
 ]]
 ATT.Pros = {
 }
@@ -341,7 +342,7 @@ ATT.PrintName = [[Deep Impact]]
 ATT.CompactName = [[IMPACT]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_deep_impact.png")
 ATT.Description = [[
-    Reduced sway.
+    Increased penetration.
 ]]
 ATT.Pros = {
 }
@@ -420,7 +421,7 @@ ATT.Free = false
 
 ATT.Category = {"mwc_proficiency"}
 ATT.ActivateElements = {"pro_precision"}
-att.SpreadMult = 0.9
+ATT.SpreadMult = 0.9
 
 ARC9.LoadAttachment(ATT, "mwc_pro_precision")
 
@@ -543,6 +544,9 @@ hook.Add("EntityTakeDamage", "ARC9_MWC_PERK_BLASTSHIELD", function(ent, dmg)
 
     if attached["blast_shield"] and dmg:GetDamageType() == DMG_BLAST then
         dmg:ScaleDamage(0.6)
+        if dmg:GetDamage() > 100 then
+            dmg:SetDamage(50)
+        end
     end
 end)
 
@@ -552,8 +556,9 @@ hook.Add("EntityTakeDamage", "ARC9_MWC_PERK_JUG", function(ent, dmg)
     if !IsValid(wep) or !wep.ARC9 then return end
     local attached = wep:GetElements()
     if !attached["juggernaut"] then return end
+    local damagetypes = (dmg:GetDamageType() == DMG_BLAST) or (dmg:GetDamageType() == DMG_BURN) or (dmg:GetDamageType() == DMG_FALL) or (dmg:GetDamageType() == DMG_DISSOLVE)
 
-    if attached["juggernaut"] then
+    if attached["juggernaut"] and !damagetypes then
         dmg:ScaleDamage(100 / 250)
     end
 end)
