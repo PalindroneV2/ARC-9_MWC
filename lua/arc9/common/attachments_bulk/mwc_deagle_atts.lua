@@ -31,7 +31,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 
-ATT.Category = {"mw3e_deagle_skin"}
+ATT.Category = {"cod4e_deagle_skin", "mw3e_deagle_skin"}
 ATT.ActivateElements = {"classic_2tone"}
 
 ARC9.LoadAttachment(ATT, "mw3e_deagle_skin_classic_tt")
@@ -50,7 +50,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 
-ATT.Category = {"mw3e_deagle_skin"}
+ATT.Category = {"cod4e_deagle_skin", "mw3e_deagle_skin"}
 ATT.ActivateElements = {"classic_gold_eagle"}
 
 ARC9.LoadAttachment(ATT, "mw3e_deagle_skin_classic_gold")
@@ -88,7 +88,7 @@ ATT.SortOrder = 0
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 
-ATT.Category = {"mw3e_deagle_skin"}
+ATT.Category = {"cod4e_deagle_skin", "mw3e_deagle_skin"}
 ATT.ActivateElements = {"tactical_eagle", "no_tac_rail"}
 
 ATT.Attachments = {
@@ -211,7 +211,7 @@ ATT.SortOrder = 5
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
-ATT.Category = {"mw3_deagle_mag"}
+ATT.Category = {"mw3_deagle_mag","cod4_deagle_mag"}
 ATT.ClipSize = 7
 
 ATT.DamageMaxMult = 1.3

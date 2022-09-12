@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
+SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "Desert Eagle Mk XIX"
@@ -35,8 +35,6 @@ SWEP.WorldModelOffset = {
     Scale = 1.1,
 }
 SWEP.ViewModelFOVBase = 75
-
-SWEP.DefaultBodygroups = "00000000000000"
 
 SWEP.DamageMax = 55
 SWEP.DamageMin = 35 -- damage done at maximum range
@@ -209,51 +207,28 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.DefaultBodygroups = "10000000000000"
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-    local newpos = Vector(-2.0125, 0, 0.87)
-    local newang = Angle(0.025, 0, 0)
-    local model = 0
+    local newpos = Vector(-2.0125, 0, 0.85)
+    local newang = Angle(0.0125, 0, 0)
+    local model = 1
     local camo = 0
-
-    if attached["gold_eagle"] then camo = 2 end
-    if attached["silver_eagle"] then camo = 1 end
-    if attached["classic_eagle"] then
-        model = 1
-        newpos = Vector(-2.0125, 0, 0.85)
-        newang = Angle(0.0125, 0, 0)
-        camo = 0
-    end
     if attached["classic_2tone"] then
         model = 1
-        newpos = Vector(-2.0125, 0, 0.85)
-        newang = Angle(0.0125, 0, 0)
         camo = 1
     end
     if attached["classic_gold_eagle"] then
         model = 1
         camo = 2
-        newpos = Vector(-2.0125, 0, 0.85)
-        newang = Angle(0.0125, 0, 0)
     end
     if attached["tactical_eagle"] then
         model = 2
         newpos = Vector(-2.0125, 0, 0.85)
         newang = Angle(0.0125, 0, 0)
-        camo = 1
-    end
-    if attached["annihilator"] then
-        model = 3
-        newpos = Vector(-2, 0, 0.58)
-        newang = Angle(0.05, 0.95, 0)
-        camo = 1
-    end
-    if attached["hybrid_eagle"] then
-        model = 4
-        newpos = Vector(-2.0125, 0, 0.85)
-        newang = Angle(0.0125, 0.1, 0)
         camo = 1
     end
 
@@ -302,7 +277,7 @@ SWEP.Attachments = {
         Pos = Vector(4, 0.3, 1.7),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "mw3e_deagle_tactical"},
-        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
+        DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
     },
     {
         PrintName = "Variant",
@@ -311,8 +286,8 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(-5, 0, 2),
         Ang = Angle(0, 0, 0),
-        Category = {"mw3e_deagle_skin"},
-        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
+        Category = {"cod4e_deagle_skin"},
+        DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
     },
     {
         PrintName = "Magazine",
@@ -320,20 +295,11 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-1, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = "mw3_deagle_mag",
-        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
+        Category = "cod4_deagle_mag",
+        DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
+        Installed = "mw3e_deagle_mag_50",
+        Integral = true,
     },
-    -- {
-    --     PrintName = "Tactical",
-    --     DefaultCompactName = "None",
-    --     Bone = "j_gun",
-    --     Scale = Vector(1,1,1),
-    --     Pos = Vector(3.9, 0.3, 0.2),
-    --     Ang = Angle(0, 0, 0),
-    --     Category = {"bo1_rail_tactical"},
-    --     ExcludeElements = {"no_tac_rail"},
-    --     DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
-    -- },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
