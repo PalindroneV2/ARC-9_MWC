@@ -201,6 +201,14 @@ SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.ActivePos = Vector(1, 0, -1)
 SWEP.ActiveAng = Angle(-10, 10, 10)
 
+SWEP.MovingPos = SWEP.ActivePos
+SWEP.MovingAng = SWEP.ActiveAng
+
+SWEP.MovingMidPoint = {
+    Pos = SWEP.ActivePos,
+    Ang = SWEP.ActiveAng
+}
+
 SWEP.CrouchPos = Vector(1, 0, -1)
 SWEP.CrouchAng = Angle(-10, 10, 10)
 
