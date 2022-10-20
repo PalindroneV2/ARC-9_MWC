@@ -18,8 +18,13 @@ VertexlitGeneric
 
 	"$nocull" "1"
 
-	$detail "models\weapons\arc9\colors\od_3"
 	$detailblendmode 4
-	"$detailblendfactor" "0.5"
-	"$detailscale" "1"
+	$detailblendfactor 0.5
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }

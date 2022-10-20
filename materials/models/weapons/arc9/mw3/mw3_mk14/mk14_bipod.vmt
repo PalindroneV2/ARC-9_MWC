@@ -3,10 +3,9 @@ VertexlitGeneric
 	$basetexture	"models\weapons\arc9\mw3\mw3_mk14\mk14"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\mw3\mw3_mk14\mk14_n"
-
-	$detail "models\weapons\arc9\colors\black_detail"
-	$detailblendmode 0
-	"$detailblendfactor" "1"
+	"$phongexponenttexture" "models\weapons\arc9\mw3\mw3_mk14\mk14_s"
+	"$envmapmask" "models\weapons\arc9\mw3\mw3_mk14\mk14_s"
+	"$normalmapalphaenvmapmask" "1"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -14,7 +13,6 @@ VertexlitGeneric
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
-//	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
