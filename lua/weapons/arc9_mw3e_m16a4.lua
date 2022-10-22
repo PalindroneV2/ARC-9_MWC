@@ -275,7 +275,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         newpos = Vector(-2.825, -2, 0.7)
         newang = Angle(0.05, 0, 0)
     end
-    if attached["usgi_irons"] then
+    if attached["matech_irons"] then
         rear = rear + 2
         front = front + 1
         newpos = Vector(-2.825, -2, -0.125)

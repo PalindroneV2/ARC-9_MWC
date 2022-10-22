@@ -17,4 +17,4 @@ ATT.Free = false
 
 ATT.Category = {"mw3_m4_barrel"}
 ATT.ActivateElements = {"barrel_classic"}
--- ATT.ExcludeElements = {"usgi_irons"}
+-- ATT.ExcludeElements = {"matech_irons"}

@@ -13,7 +13,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mw3_m4_barrel"}
-ATT.ActivateElements = {"barrel_mw19", "usgi_irons"}
+ATT.ActivateElements = {"barrel_mw19", "matech_irons"}
 ATT.ExcludeElements = {}
 
 ATT.MuzzleEffectQCA = 6
