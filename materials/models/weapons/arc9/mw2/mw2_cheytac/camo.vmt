@@ -4,9 +4,9 @@ VertexlitGeneric
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models\weapons\arc9\mw2\mw2_cheytac\cheytac_n"
 	
-	$detail "models\weapons\arc9\colors\black"
+	$detail "models\weapons\arc9\colors\kaki_02"
 	$detailblendmode 0
-	$detailblendfactor 1
+	$detailblendfactor 1.7
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -19,5 +19,15 @@ VertexlitGeneric
 	"$envmaptint" "[ .01 .01 .01 ]"
 
 	"$nocull" "1"
+
+	$detailblendmode 4
+	$detailblendfactor 0.75
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 
 }

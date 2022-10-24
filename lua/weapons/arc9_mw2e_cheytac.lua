@@ -1,21 +1,20 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "L115A2"
+SWEP.PrintName = "Intervention"
 SWEP.Class = "Sniper Rifle"
 SWEP.Description = [[
-    A high-caliber sniper rifle designed for cold-weather police and military units.
-    Known for once holding the record of the longest range sniper shot in history.
+    A high-caliber sniper rifle used by the SAS with some antimateriel capabilities.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Accuracy International",
-    Calibre = ".338 Lapua",
+    Manufacturer = "CheyTac USA",
+    Calibre = ".408 CheyTac",
     Mechanism = "Bolt-Action",
-    Country = "United Kingdom",
-    Year = 1995,
-    Games = [[BO1, MW3, BOCW]]
+    Country = "USA",
+    Year = 2001,
+    Games = [[Call of Duty: Modern Warfare 2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -25,8 +24,8 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw3e_awm.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw3e_awm.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw2e_cheytac.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_mw2e_cheytac.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-6, 4.75, -7),
@@ -36,13 +35,13 @@ SWEP.WorldModelOffset = {
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "000000"
+SWEP.DefaultBodygroups = "00000000"
 
-SWEP.DamageMax = 150
+SWEP.DamageMax = 165
 SWEP.DamageMin = 90 -- damage done at maximum range
 SWEP.RangeMax = 10000
 SWEP.RangeMin = 4000
-SWEP.Penetration = 8
+SWEP.Penetration = 35
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
@@ -237,10 +236,10 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "L115A2"
+    local gunname = "CheyTac M200"
 
     if attached["bo1_pap"] then
-        gunname = "L115A2 Hyperborea"
+        gunname = "Full Stop"
     end
 
     return gunname
@@ -252,17 +251,17 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0.15, 2.7),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"bo1_optic"},
         InstalledElements = {"mount"},
         MergeSlots = {2}
     },
     {
         Hidden = true,
         Bone = "j_gun",
-        Pos = Vector(0, 0, -0.2),
+        Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_awm_scope"},
-        Installed = "mwc_optic_leupold",
+        Category = {"mwc_cheytac_scope"},
+        Installed = "mwc_optic_cheytac",
     },
     {
         PrintName = "Muzzle",
