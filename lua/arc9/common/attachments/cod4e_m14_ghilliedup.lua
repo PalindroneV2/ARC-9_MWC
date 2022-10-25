@@ -12,6 +12,8 @@ ATT.Free = true
 
 ATT.ActivateElements = {"ghillie", "woodland"}
 
+ATT.RequireElements = {"m21_scope"}
+
 ATT.Category = {
     "cod4_m14_camo",
 }

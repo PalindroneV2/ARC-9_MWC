@@ -16,8 +16,6 @@ ATT.Category = {"cod4_m14_barrel"}
 ATT.ActivateElements = {"m21_barrel"}
 ATT.ExcludeElements = {}
 
-ATT.MuzzleEffectQCA = 5
-
 ATT.SpreadMult = 0.75
 ATT.RecoilMult = 0.85
 ATT.SpreadMultHipFire = 1.35

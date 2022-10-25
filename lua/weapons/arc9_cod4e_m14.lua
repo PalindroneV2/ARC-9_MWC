@@ -115,7 +115,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 750
+SWEP.RPM = 700
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -159,7 +159,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -170,11 +170,12 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.73, -3, 1.2),
-    Ang = Angle(0.05, -0.625, 0),
+    Pos = Vector(-4.3, -3, 2.4),
+    Ang = Angle(0.025, -0.6, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
+    ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
@@ -200,7 +201,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-3.73, 0, -1.5)
+SWEP.BipodPos = Vector(-4.3, 0, -2)
 SWEP.BipodAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(0, 0, -1)

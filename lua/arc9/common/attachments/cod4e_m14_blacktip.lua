@@ -15,7 +15,7 @@ ATT.Category = {"cod4_m14_ammo"}
 ATT.ActivateElements = {"mag"}
 -- ATT.RequiresElements = {"fcg_semi"}
 ATT.ReloadTimeMult = 0.95
-ATT.ClipSize = 20
+ATT.ClipSize = 10
 ATT.AimDownSightsTimeMult = 0.975
 ATT.SprintToFireTimeMult = 0.975
 

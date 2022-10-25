@@ -143,7 +143,7 @@ SWEP.ShootVolume = 140
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_MW3E.AWM_Fire"
+SWEP.ShootSound = "ARC9_MW2E.CheyTac_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.RSASS_Sil"
 SWEP.DistantShootSound = "ARC9_MW3E.Mech_Sniper"
 
@@ -168,7 +168,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-4.3, 0, 2.35),
+    Pos = Vector(-4.125, -6, 2),
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
@@ -179,6 +179,8 @@ SWEP.IronSights = {
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
+
+SWEP.Bipod = true
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
@@ -195,7 +197,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-4.3, 1, -2)
+SWEP.BipodPos = Vector(-4.125, 0, -2)
 SWEP.BipodAng = Angle(0,0,0)
 
 SWEP.CrouchPos = Vector(0, 0, -1)
@@ -267,17 +269,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.5, 1.5, 1.5),
-        Pos = Vector(36, 0, 2.1),
+        Pos = Vector(37.5, 0, 1.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-    },
-    {
-        PrintName = "Underbarrel",
-        DefaultCompactName = "UB",
-        Bone = "j_gun",
-        Pos = Vector(12, 0.15, -0.1),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
     },
     {
         PrintName = "Ammunition",
@@ -324,16 +318,10 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1.25,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["fire"] = {
         Source = {"fire"},
@@ -348,15 +336,8 @@ SWEP.Animations = {
         Time = 0.93, -- 45 / 30 ; 30 / 30
         ShellEjectAt = 0.5,
         EventTable = {
-            {s = "ARC9_MW3E.AWM_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_MW3E.AWM_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_MW2E.CheyTac_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
+            {s = "ARC9_MW2E.CheyTac_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
         },
     },
     ["cycle_iron"] = {
@@ -364,77 +345,26 @@ SWEP.Animations = {
         Time = 0.93, -- 45 / 30 ; 30 / 30
         ShellEjectAt = 0.5,
         EventTable = {
-            {s = "ARC9_MW3E.AWM_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_MW3E.AWM_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_MW2E.CheyTac_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
+            {s = "ARC9_MW2E.CheyTac_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
         },
     },
     ["reload"] = {
         Source = "reload",
         Time = 3,
         EventTable = {
-            {s = "ARC9_MW3E.AWM_MagOut", t = 20 / 30},
-            {s = "ARC9_MW3E.AWM_MagIn", t = 60 / 30},
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.2,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.8,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.9,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_MW2E.CheyTac_MagOut", t = 20 / 30},
+            {s = "ARC9_MW2E.CheyTac_MagIn", t = 60 / 30},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 4.26,
         EventTable = {
-            {s = "ARC9_MW3E.AWM_Open", t = 8 / 30},
-            {s = "ARC9_MW3E.AWM_MagOut", t = 40 / 30},
-            {s = "ARC9_MW3E.AWM_MagIn", t = 80 / 30},
-            {s = "ARC9_MW3E.AWM_Close", t = 110 / 30},
-        },
-        IKTimeLine = {
-            {
-                t = 0,
-                lhik = 1,
-                rhik = 1
-            },
-            {
-                t = 0.5,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.75,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.85,
-                lhik = 1,
-                rhik = 1
-            },
+            {s = "ARC9_MW2E.CheyTac_Open", t = 8 / 30},
+            {s = "ARC9_MW2E.CheyTac_MagOut", t = 50 / 30},
+            {s = "ARC9_MW2E.CheyTac_MagIn", t = 85 / 30},
+            {s = "ARC9_MW2E.CheyTac_Close", t = 110 / 30},
         },
     },
     ["enter_sprint"] = {
