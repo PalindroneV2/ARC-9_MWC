@@ -221,6 +221,7 @@ SWEP.MovingMidPoint = {
 SWEP.CrouchPos = SWEP.ActivePos
 SWEP.CrouchAng = SWEP.ActiveAng
 
+SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
