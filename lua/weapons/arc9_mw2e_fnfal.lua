@@ -290,6 +290,13 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. suffix
 end
 
+SWEP.HideBones = {
+    "tag_clip"
+}
+SWEP.ReloadHideBoneTables = {
+    "tag_clip"
+}
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",

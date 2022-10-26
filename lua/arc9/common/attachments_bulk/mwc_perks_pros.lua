@@ -286,7 +286,7 @@ ATT.Folder = "TIER 3"
 
 ATT.Category = {"mwc_perk"}
 ATT.ActivateElements = {"steadyaim"}
-ATT.SpreadMultHipfire = 0.85
+ATT.SpreadMultHipFire = 0.85
 ATT.SpreadMultRecoil = 0.85
 
 ARC9.LoadAttachment(ATT, "mwc_perk_steadyaim")
