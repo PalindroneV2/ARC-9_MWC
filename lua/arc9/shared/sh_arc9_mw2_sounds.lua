@@ -21,6 +21,56 @@ sound.Add( {
     }
 } )
 
+--MW2E FNFAL--
+
+sound.Add( {
+    name = "ARC9_MW2E.FNFAL_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_FNFAL/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.FNFAL_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_FNFAL/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.FNFAL_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_FNFAL/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.FNFAL_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_FNFAL/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.FNFAL_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_FNFAL/lift.wav",
+    }
+} )
+
 --MW2E FAMAS--
 
 sound.Add( {
