@@ -17,9 +17,15 @@ VertexlitGeneric
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 
-	$detail "models/weapons/arc9/colors/tan_mustard"
 	$detailblendmode 4
 	"$detailblendfactor" "0.7"
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }
 
 //test 3
