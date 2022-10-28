@@ -382,27 +382,27 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local NewBipodPos = Vector(-2.765, 0, -1.5)
     local NewBipodAng = Angle(0, 0, 0)
-    local newCustPose = Vector(0, 0, 0)
+    local newCustPose = Vector(3, 0, 0)
     local newCustAng = Angle(0, 0, 0)
 
     if attached["barrel_16"] then
         length = 1
-        newCustPose = Vector(-1.5, 0, 0)
+        newCustPose = Vector(1.5, 0, 0)
     elseif attached["barrel_14"] then
         length = 2
         hand = 4
         gasblock = 1
-        newCustPose = Vector(-1.5, 0, 0)
+        newCustPose = Vector(1.5, 0, 0)
     elseif attached["barrel_11"] then
         length = 3
         hand = 4
         gasblock = 1
-        newCustPose = Vector(-1.5, 0, 0)
+        newCustPose = Vector(1.5, 0, 0)
     elseif attached["barrel_10"] then
         length = 4
         hand = 4
         gasblock = 1
-        newCustPose = Vector(-3, 0, 0)
+        newCustPose = Vector(0, 0, 0)
     elseif attached["barrel_9mm"] then
         length = 8
         hand = 9
@@ -411,7 +411,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         if attached["bo1_optic"] then
             frontsight = 6
         end
-        newCustPose = Vector(-3, 0, 0)
+        newCustPose = Vector(0, 0, 0)
     end
     if attached["barrel_11_sog"] then
         length = 9
@@ -566,7 +566,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if self:GetBipod() then
         ub = 6
     end
-    if CUSTSTATE and ub > 0 then
+    if CUSTSTATE and ub > 0 and ub < 5 then
         ub = ub + 1
     end
     vm:SetBodygroup(4,ub)
@@ -885,7 +885,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(3.5, 0, 5.025),
+        Pos = Vector(3.5, 0, 5.025-0.2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"classicrail"},
@@ -895,7 +895,7 @@ SWEP.Attachments = {
         PrintName = "Upper",
         DefaultCompactName = "A1 TOP",
         Bone = "j_gun",
-        Pos = Vector(2.5, 0, 3),
+        Pos = Vector(2.5, 0, 2.8),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_upper"},
         ExcludeElements = {"handguard_famas", "is_patriot"},
@@ -904,7 +904,7 @@ SWEP.Attachments = {
         PrintName = "Lower",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
-        Pos = Vector(0.15, 0, 1.1),
+        Pos = Vector(0.15, 0, 0.9),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_lower"},
     },
@@ -922,7 +922,7 @@ SWEP.Attachments = {
         DefaultCompactName = "A1",
         DefaultIcon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth"),
         Bone = "j_gun",
-        Pos = Vector(7, 0, 3.75),
+        Pos = Vector(7, 0, 3.55),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_handguard_20"},
         ExcludeElements = {"carbine"}
@@ -930,7 +930,7 @@ SWEP.Attachments = {
     {
         PrintName = "Underbarrel",
         Bone = "j_gun",
-        Pos = Vector(11, 0, 1.35), --(-4, 0, -0.4)
+        Pos = Vector(11, 0, 1.15), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
         Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
         ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
@@ -940,7 +940,7 @@ SWEP.Attachments = {
         PrintName = "Front Sight",
         DefaultCompactName = "G.I.",
         Bone = "j_gun",
-        Pos = Vector(19, 0, 4.15),
+        Pos = Vector(19, 0, 3.95),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_front_cut"},
         ExcludeElements = {"ar15_ris", "carbine"}
@@ -957,7 +957,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Bone = "j_gun",
-        Pos = Vector(-3, 0, 2.65),
+        Pos = Vector(-3, 0, 2.45),
         Ang = Angle(0, 0, 0),
         Category = {"retro_ar15_stock"},
         Installed = "retro_ar15_stock_full",
@@ -967,7 +967,7 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         DefaultCompactName = "STANAG 30",
         Bone = "tag_clip",
-        Pos = Vector(0, 0, -2),
+        Pos = Vector(0, 0, -2.2),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_ar15_mag"},
     },
@@ -975,14 +975,14 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(1, 0, -4.25),
+        Pos = Vector(1, 0, -4.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
         PrintName = "Cosmetic",
         Bone = "j_gun",
-        Pos = Vector(-6, 0, 2.65),
+        Pos = Vector(-6, 0, 2.45),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         InstalledElements = {"unicamo_activate"}
@@ -990,7 +990,7 @@ SWEP.Attachments = {
     {
         PrintName = "Paintjob",
         Bone = "j_gun",
-        Pos = Vector(-9, 0, 2.65),
+        Pos = Vector(-9, 0, 2.45),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_camo_full"},
         RequireElements = {"unicamo_activate"},
@@ -999,7 +999,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-5, 0, -5.2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -1007,7 +1007,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-8, 0, -5.2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
