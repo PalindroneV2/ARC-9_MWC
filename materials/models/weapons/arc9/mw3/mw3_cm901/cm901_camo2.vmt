@@ -19,7 +19,7 @@ VertexlitGeneric
 	"$nocull" "1"
 
 	$detailblendmode 4
-	"$detailblendfactor" "1"
+	"$detailblendfactor" "0.5"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

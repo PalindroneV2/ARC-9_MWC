@@ -272,9 +272,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         CrosshairInSights = false,
     }
 
-    if attached["bo1_pap"] then
-        vm:SetSkin(2)
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
 end
 
@@ -355,6 +360,13 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
     },
     {
         PrintName = "Perk",

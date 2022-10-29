@@ -12,13 +12,12 @@ VertexlitGeneric
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
-//	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
 	"$nocull" "1"
 
 	$detailblendmode 4
-	"$detailblendfactor" "0.7"
+	"$detailblendfactor" "0.5"
 	Proxies {
 		CustomCamo {
 			camoTexture $detail
