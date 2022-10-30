@@ -216,6 +216,9 @@ SWEP.BipodAng = Angle(0, 0, 10)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(2.5,10,0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
+SWEP.CustomizeSnapshotFOV = 75
 
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
