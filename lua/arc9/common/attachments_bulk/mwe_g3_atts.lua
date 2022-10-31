@@ -211,7 +211,7 @@ ATT.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "Wood",
         Bone = "j_gun",
-        Pos = Vector(6.5, 0, 0),
+        Pos = Vector(13, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"mwe_g3_handguard_hk51"},
     },

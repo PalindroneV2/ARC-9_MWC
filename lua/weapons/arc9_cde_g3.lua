@@ -248,18 +248,15 @@ SWEP.AttachmentElements = {
     },
     ["kbarrel"] = {
         AttPosMods = {
-            [3] = {
+            [2] = {
                 Pos = Vector(21.75, 0, 2.4)
             },
         },
     },
     ["hk51barrel"] = {
         AttPosMods = {
-            [3] = {
+            [2] = {
                 Pos = Vector(17, 0, 2.4)
-            },
-            [4] = {
-                Pos = Vector(15, 0, 2.4)
             },
         },
     },
@@ -365,6 +362,7 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         Bone = "j_gun",
         Pos = Vector(20, 0, 2.4),
+        Icon_Offset = Vector(-13,0,3),
         Ang = Angle(0, 0, 0),
         Category = {"mwe_g3_barrel"},
     },
