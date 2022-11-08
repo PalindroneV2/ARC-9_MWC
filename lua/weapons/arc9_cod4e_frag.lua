@@ -10,7 +10,7 @@ SWEP.Description = [[
 ]]
 SWEP.Trivia = {
     Country = "USA",
-    Year = 1967,
+    Year = 1968,
     Games = [[Many CODs]]
 }
 SWEP.Credits = {
@@ -34,15 +34,23 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
-SWEP.RangeMin = 1000
-SWEP.Penetration = 0
-SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_mwc_m203_he" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 12500
-SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
+SWEP.ShootEnt = "arc9_mwc_frag" -- Set to an entity to launch it out of this weapon.
+
+SWEP.BottomlessClip = true
+
+SWEP.Throwable = true -- Set to true to give this weapon throwing capabilities.
+SWEP.Tossable = false -- When grenade is enabled, right click will toss. Set to false to disable, allowing you to aim down sights.
+SWEP.ThrowSpeed = 1
+
+SWEP.FuseTimer = 2 -- Length of time that the grenade will take to explode in your hands. -1 = Won't explode.
+
+SWEP.ThrowForceMin = 500 -- Minimum force that the grenade will be thrown with.
+SWEP.ThrowForceMax = 1000 -- Maximum force that the grenade will be thrown with.
+SWEP.TossForce = 250 -- Force that the grenade will be thrown with when right clicked.
+
+SWEP.ThrowChargeTime = 1 -- How long it takes to charge the grenade to its maximum throw force.
+
+SWEP.ThrowTumble = true -- Grenade tumbles when thrown.
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
 
@@ -60,22 +68,7 @@ SWEP.ClipSize = 1 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
-SWEP.LauncherCrosshair = true
 SWEP.CanBlindFire = false
-
-SWEP.Recoil = 2
-SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 2
-
-SWEP.RecoilRandomUp = 0.5
-SWEP.RecoilRandomSide = 0.25
-
-SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
-SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
-
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0
-SWEP.PushBackForce = 1
 
 SWEP.Spread = 0
 SWEP.SpreadAddRecoil = 0
@@ -127,7 +120,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "SMG1_Grenade" -- what ammo type the gun uses
+SWEP.Ammo = "Grenade" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
@@ -214,83 +207,22 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Ammunition",
-        DefaultCompactName = "AMMO",
-        Bone = "j_gun",
-        Pos = Vector(3, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_pap_launcher"},
-    },
-    {
-        PrintName = "Perk",
-        DefaultCompactName = "PERK",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "mwc_perk",
-    },
-    {
-        PrintName = "Proficiency",
-        DefaultCompactName = "PRO",
-        Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
-        Ang = Angle(0, 0, 0),
-        Category = "mwc_proficiency",
-    },
 }
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 35,
+    },
+    ["idle_primed"] = {
+        Source = "idle"
     },
     ["draw"] = {
-        Source = "draw",
-        Time = 25 / 35,
-        EventTable = {
-            {s = "ARC9_MW2E.M79_Draw", t = 1 / 35},
-        }
+        Source = "idle",
     },
-    ["holster"] = {
-        Source = "holster",
-        Time = 25 / 35,
-        EventTable = {
-            {s = "ARC9_MW2E.M79_Holster", t = 1 / 35},
-        }
+    ["pullpin"] = {
+        Source = "pullpin"
     },
-    ["fire"] = {
-        Source = {
-            "fire",
-        },
-        Time = 15 / 35,
-    },
-    ["fire_iron"] = {
-        Source = {
-            "fire_ads",
-        },
-        Time = 15 / 35,
-    },
-    ["reload"] = {
-        Source = "reload",
-        Time = 93 / 35,
-        EventTable = {
-            {s = "ARC9_MW2E.M79_Open", t = 5 / 35},
-            {s = "ARC9_MW2E.M79_Out", t = 29 / 35},
-            {s = "ARC9_MW2E.M79_In", t = 61 / 35},
-            {s = "ARC9_MW2E.M79_Close", t = 83 / 35},
-        },
-    },
-    ["enter_sprint"] = {
-        Source = "sprint_in",
-        Time = 1,
-    },
-    ["idle_sprint"] = {
-        Source = "sprint_loop",
-        Time = 30 / 30
-    },
-    ["exit_sprint"] = {
-        Source = "sprint_out",
-        Time = 1,
-    },
+    ["throw"] = {
+        Source = "throw"
+    }
 }
