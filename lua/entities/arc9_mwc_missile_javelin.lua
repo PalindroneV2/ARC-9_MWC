@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type 				= "anim"
-ENT.Base 				= "arc9_mwc_projectile_base"
+ENT.Base 				= "arc9_proj_base"
 ENT.PrintName 			= "Javelin Missile (MWC)"
 ENT.Author 				= ""
 ENT.Information 		= ""
