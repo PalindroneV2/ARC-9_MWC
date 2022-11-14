@@ -47,8 +47,8 @@ SWEP.PrimaryBash = true
 SWEP.BashDamage = 50
 SWEP.BashLungeRange = 256
 SWEP.BashRange = 64
-SWEP.PreBashTime = 0.5
-SWEP.PostBashTime = 0.5
+SWEP.PreBashTime = 0.25
+SWEP.PostBashTime = 0.75
 
 SWEP.Ammo = "" -- What ammo type this gun uses.
 
@@ -99,7 +99,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.9
 
 SWEP.ShootWhileSprint = false
 SWEP.ReloadInSights = false
@@ -181,6 +181,8 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
 }
 
+SWEP.ActivateElements = {"riotshield"}
+
 -- SWEP.Hook_ModifyBodygroups = function(self, data)
 -- end
 
@@ -206,6 +208,18 @@ SWEP.Attachments = {
     },
 }
 
+hook.Add("EntityTakeDamage", "ARC9_CODPACKS_RIOTSHIELD", function(ent, dmg)
+    if !(ent:IsPlayer() or ent:IsNPC()) then return end
+    local wep = ent:GetActiveWeapon()
+    if !IsValid(wep) or !wep.ARC9 then return end
+    local attached = wep:GetElements()
+    local damagetypes = (dmg:GetDamageType() == DMG_BLAST) or (dmg:GetDamageType() == DMG_BURN) or (dmg:GetDamageType() == DMG_FALL) or (dmg:GetDamageType() == DMG_DISSOLVE)
+
+    if attached["riotshield"] and !damagetypes then
+        dmg:ScaleDamage(50 / 250)
+    end
+end)
+
 SWEP.HideBones = {
     -- "tag_ammo2",
 }
@@ -227,7 +241,7 @@ SWEP.Animations = {
     ["holster"] = {
         Source = "holster",
     },
-    ["melee"] = {
+    ["bash"] = {
         Source = {"melee"},
         -- Time = 7 / 30,
     },
