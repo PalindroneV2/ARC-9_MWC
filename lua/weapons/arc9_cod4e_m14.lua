@@ -179,9 +179,9 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "rpg"
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/m14_wood"
 SWEP.CustomCamoScale = 1

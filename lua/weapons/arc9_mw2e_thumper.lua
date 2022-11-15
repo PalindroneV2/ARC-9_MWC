@@ -168,9 +168,9 @@ SWEP.IronSights = {
 
 SWEP.NoShellEject = true
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "crossbow"
-SWEP.HoldtypeSights = "crossbow"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "crossbow"
+SWEP.HoldTypeSights = "crossbow"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_CROSSBOW

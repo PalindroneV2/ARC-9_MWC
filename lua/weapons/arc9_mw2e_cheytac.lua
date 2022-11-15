@@ -176,9 +176,9 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "rpg"
 
 SWEP.Bipod = true
 
