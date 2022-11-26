@@ -1,7 +1,7 @@
 AddCSLuaFile()
 
 ENT.Type 				= "anim"
-ENT.Base 				= "arc9_proj_base"
+ENT.Base 				= "arc9_mwc_projectile_base"
 ENT.PrintName 			= "Frag Grenade"
 
 ENT.Model = "models/weapons/arc9/c_cod4_frag.mdl"
