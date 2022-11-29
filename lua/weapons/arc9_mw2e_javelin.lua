@@ -27,13 +27,17 @@ SWEP.Credits = {
 SWEP.Slot = 4
 
 SWEP.UseHands = true
-
+SWEP.NoTPIK = true
+SWEP.HoldType = "rpg"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldTypeActive = "rpg"
+SWEP.HoldTypeSights = "rpg"
 SWEP.ViewModel = "models/weapons/arc9/c_mw2e_javelin.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw2e_javelin.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3, 5, -7.5),
-    Ang        =    Angle(5, 7, 180),
+    Pos        =    Vector(-20, -0, -2),
+    Ang        =    Angle(-35, -15, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
 }

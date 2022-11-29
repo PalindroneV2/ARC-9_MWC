@@ -24,13 +24,18 @@ SWEP.Credits = {
 SWEP.Slot = 1
 
 SWEP.UseHands = true
-
+SWEP.NoTPIK = true
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSprint = "normal"
+SWEP.HoldTypeHolstered = "normal"
+SWEP.HoldTypeActive = "pistol"
+SWEP.HoldTypeSights = "revolver"
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_glock.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_glock.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 4.5, -7.25),
-    Ang        =    Angle(-5, 0.5, 180),
+    Pos        =    Vector(-12, 4.5, -5),
+    Ang        =    Angle(-0, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
 }

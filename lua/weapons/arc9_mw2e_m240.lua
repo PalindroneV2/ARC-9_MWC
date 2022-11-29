@@ -26,13 +26,17 @@ SWEP.Credits = {
 SWEP.Slot = 3
 
 SWEP.UseHands = true
-
+SWEP.NoTPIK = true
+SWEP.HoldType = "shotgun"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldTypeBlindfire = "pistol"
+SWEP.HoldTypeSights = "ar2"
 SWEP.ViewModel = "models/weapons/arc9/c_mw2e_m240.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_mw2e_m240.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_mw2e_m240.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5.6, 4, -7.5),
+    Pos        =    Vector(-8, 5, -8.5),
     Ang        =    Angle(-5, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale   =   1.2

@@ -138,7 +138,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "ar2" -- what ammo type the gun uses
+SWEP.Ammo = "sniperpenetratedround" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 140
 SWEP.ShootPitch = 100

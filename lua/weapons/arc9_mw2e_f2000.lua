@@ -24,14 +24,18 @@ SWEP.Credits = {
 SWEP.Slot = 2
 
 SWEP.UseHands = true
-
+SWEP.NoTPIK = true
+SWEP.HoldType = "shotgun"
+SWEP.HoldTypeHolstered = "passive"
+SWEP.HoldTypeBlindfire = "pistol"
+SWEP.HoldTypeSights = "ar2"
 SWEP.ViewModel = "models/weapons/arc9/c_mw2e_f2000.mdl"
 SWEP.WorldModel = "models/weapons/arc9/w_mw2e_f2000.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_mw2e_f2000.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-7.1, 3.5, -5.5),
-    Ang        =    Angle(-9, -1.5, 180),
+    Pos        =    Vector(-13.5, 5, -5),
+    Ang        =    Angle(-9, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale   =   1.2
 }
@@ -142,7 +146,7 @@ SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.SwayMultSights = 0
 
-SWEP.Ammo = "smg1" -- what ammo type the gun uses
+SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
 SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
