@@ -26,11 +26,12 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(8, 5, -20),
-    Ang        =    Angle(0, 0, 180),
+    Pos        =    Vector(-5, 7.5, -6),
+    Ang        =    Angle(0, 15, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
 }
+SWEP.NoTPIK = true
 SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
@@ -38,6 +39,13 @@ SWEP.DefaultBodygroups = "00000000000000"
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/camos/black_detail"
 SWEP.CustomCamoScale = 1
 SWEP.CustomBlendFactor = 1
+
+-------------------------- SHIELD
+
+SWEP.ShieldModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
+SWEP.ShieldOffset = Vector(-5, 7.5, -6)
+SWEP.ShieldAngle = Angle(0, 15, 180)
+SWEP.ShieldScale = 1
 
 -------------------------- MELEE
 
@@ -139,9 +147,8 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeHolstered = "none"
+SWEP.HoldType = "melee2"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
