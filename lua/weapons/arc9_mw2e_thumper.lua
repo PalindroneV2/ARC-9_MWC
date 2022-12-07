@@ -37,14 +37,14 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 25
-SWEP.DamageMin = 15 -- damage done at maximum range
-SWEP.RangeMax = 6000
+SWEP.DamageMax = 200
+SWEP.DamageMin = 200
+SWEP.RangeMax = 1000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
 SWEP.ShootEnt = "arc9_mwc_m203_he" -- Set to an entity to launch it out of this weapon.
-SWEP.ShootEntForce = 12500
+SWEP.ShootEntForce = 15000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
 SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
@@ -66,7 +66,7 @@ SWEP.Crosshair = true
 SWEP.LauncherCrosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.5
 SWEP.RecoilUp = 2
 
@@ -80,13 +80,13 @@ SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 0
 SWEP.PushBackForce = 1
 
-SWEP.Spread = 0
+SWEP.Spread = 0.005
 SWEP.SpreadAddRecoil = 0
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = 0
+SWEP.SpreadMultSights = 1
+SWEP.SpreadAddHipFire = 0.05
 --SWEP.SpreadAddMove = 0
-SWEP.SpreadAddMidAir = 0
+SWEP.SpreadAddMidAir = 0.1
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = 0
 
 SWEP.RecoilPatternDrift = 20
@@ -116,7 +116,7 @@ SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
-        Mode = -1,
+        Mode = 1,
         PrintName = "SINGLE"
     },
 }
