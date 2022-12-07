@@ -12,9 +12,9 @@ ENT.AdminSpawnable = false
 ENT.Model = "models/weapons/arc9/item/mw2_at4_missile.mdl"
 ENT.BoxSize = Vector(8, 4, 1)
 
-ENT.Damage = 250
+ENT.Damage = 150
 ENT.Radius = 300
-ENT.ImpactDamage = 3000
+ENT.ImpactDamage = 1500
 ENT.SmokeTrailSize = 12
 ENT.SmokeTrailTime = 1
 

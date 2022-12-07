@@ -11,7 +11,7 @@ ENT.DragCoefficient = 0.15
 ENT.ExplodeOnImpact = false
 ENT.Radius = 300
 ENT.DamageOverride = 200
-ENT.ImpactDamage = 100
+ENT.ImpactDamage = 0
 ENT.FuseTime = 5
 ENT.BounceSounds = {""}
 

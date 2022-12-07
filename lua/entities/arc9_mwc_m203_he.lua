@@ -8,7 +8,7 @@ ENT.Model = "models/weapons/arc9/item/mw3_40mm.mdl"
 
 ENT.Radius = 300
 ENT.DamageOverride = 200
-ENT.ImpactDamage = 100
+ENT.ImpactDamage = 0
 ENT.FuseTime = 0.05
 
 if CLIENT then
