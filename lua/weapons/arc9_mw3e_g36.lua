@@ -234,6 +234,9 @@ SWEP.AttachmentElements = {
     },
     ["barrel_c"] = {
         AttPosMods = {
+            [2] = {
+                Pos = Vector(7, 0, 1.15),
+            },
             [3] = {
                 Pos = Vector(14.9, 0, 1.15),
             },
@@ -250,7 +253,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_mg"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(4, -0.035, 2.5),
             },
             [3] = {
@@ -425,6 +428,7 @@ SWEP.Attachments = {
         Pos = Vector(5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_mag"},
+        ExcludeElements = {"barrel_mg"}
     },
     {
         PrintName = "Perk",
