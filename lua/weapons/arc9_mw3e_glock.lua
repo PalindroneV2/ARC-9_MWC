@@ -276,14 +276,6 @@ SWEP.Attachments = {
         ExcludeElements = {"fmg_frame"}
     },
     {
-        PrintName = "Variant",
-        DefaultCompactName = "G18",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"mw3_glock_cosmetic"},
-    },
-    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
@@ -300,14 +292,6 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap", "bo1_pap_1911"},
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "Black",
-        Bone = "j_gun",
-        Pos = Vector(2.5, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -322,6 +306,24 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Variant",
+        DefaultCompactName = "G18",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"mw3_glock_cosmetic"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "Black",
+        Bone = "j_gun",
+        Pos = Vector(2.5, 0, -2),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

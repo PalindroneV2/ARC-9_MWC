@@ -416,6 +416,7 @@ SWEP.Attachments = {
         Pos = Vector(-7.5, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
     {
         PrintName = "Perk",

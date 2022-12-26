@@ -334,13 +334,6 @@ SWEP.Attachments = {
         Integral = true,
     },
     {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-6, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -355,6 +348,14 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

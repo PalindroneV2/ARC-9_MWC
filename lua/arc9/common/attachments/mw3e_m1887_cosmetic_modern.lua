@@ -21,6 +21,7 @@ ATT.Attachments = {
         Pos = Vector(2, 0, 3),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
+        CosmeticOnly = true,
         Icon_Offset = Vector(0, 0, 0),
     },
 }

@@ -320,6 +320,7 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, 4),
         Ang = Angle(0, 0, 0),
         Category = {"cod4e_ak74u_cosmetic"},
+        CosmeticOnly = true,
     },
 }
 

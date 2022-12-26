@@ -326,13 +326,6 @@ SWEP.Attachments = {
         Category = {"bo1_grips"},
     },
     {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-7, 0, 5),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -341,7 +334,7 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Cosmetic",
+        PrintName = "Stock",
         DefaultCompactName = "None",
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2),
@@ -363,6 +356,14 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 5),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

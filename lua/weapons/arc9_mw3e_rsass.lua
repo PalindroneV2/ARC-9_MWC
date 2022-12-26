@@ -318,15 +318,6 @@ SWEP.Attachments = {
         ExcludeElements = {"newbarrel"},
     },
     {
-        PrintName = "Bipod",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(18, 0, -0.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_bipod"},
-        Installed = "mwc_bipod_integrated",
-    },
-    {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
@@ -334,6 +325,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_grips"},
         Icon_Offset = Vector(0,0,-2),
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(18, 0, -0.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_bipod"},
+        Installed = "mwc_bipod_integrated",
     },
     {
         PrintName = "Tactical Left",
@@ -370,13 +370,6 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-12.5, 0, 2.65),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -391,6 +384,14 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-12.5, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

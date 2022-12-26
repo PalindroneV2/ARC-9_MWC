@@ -302,7 +302,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"rail"},
-        MergeSlots = {4},
+        MergeSlots = {2},
+        ExcludeElements = {"dontuserear"},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(1.5, 0, 2.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_optic_ak"},
         ExcludeElements = {"dontuserear"},
     },
     {
@@ -321,22 +329,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_gp25","bo1_grips"},
         ExcludeElements = {"tactical"}
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(1.5, 0, 2.6),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak"},
-        ExcludeElements = {"dontuserear"},
-    },
-    {
-        PrintName = "Cosmetic",
-        DefaultName = "Classic",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 4),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4e_ak47_cosmetic"},
     },
     {
         PrintName = "Stock",
@@ -370,6 +362,15 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultName = "Classic",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4e_ak47_cosmetic"},
+        CosmeticOnly = true,
     },
 }
 

@@ -306,6 +306,14 @@ SWEP.Attachments = {
         ExcludeElements = {"newbarrel"},
     },
     {
+        PrintName = "Barrel",
+        DefaultCompactName = "STD",
+        Bone = "j_gun",
+        Pos = Vector(11, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4_lmg_barrel"},
+    },
+    {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
@@ -321,14 +329,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_bipod"},
         ExcludeElements = {"barrel_stub"},
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "STD",
-        Bone = "j_gun",
-        Pos = Vector(11, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4_lmg_barrel"},
     },
     {
         Hidden = true,

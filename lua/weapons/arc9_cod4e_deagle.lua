@@ -289,16 +289,6 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
     },
     {
-        PrintName = "Variant",
-        DefaultCompactName = "Black Steel",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4e_deagle_skin"},
-        DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
-    },
-    {
         PrintName = "Magazine",
         DefaultCompactName = ".357 MAG",
         Bone = "j_gun",
@@ -332,6 +322,17 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Variant",
+        DefaultCompactName = "Black Steel",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4e_deagle_skin"},
+        DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
+        CosmeticOnly = true,
     },
 }
 

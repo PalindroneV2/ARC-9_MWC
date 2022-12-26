@@ -333,7 +333,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic","bo1_rail_riser"},
         InstalledElements = {"mount"},
-        MergeSlots = {7}
+        MergeSlots = {2}
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(1, 0, 3.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_psg1_scope"},
     },
     {
         PrintName = "Muzzle",
@@ -368,20 +375,6 @@ SWEP.Attachments = {
         ExcludeElements = {"barrel_sd", "barrel_ris", "barrel_kris"}
     },
     {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-7.5, 0, 3),
-        Ang = Angle(0, 0, 0),
-        Category = {"universal_camo"},
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(1, 0, 3.75),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_psg1_scope"},
-    },
-    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -412,6 +405,14 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-7.5, 0, 3),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

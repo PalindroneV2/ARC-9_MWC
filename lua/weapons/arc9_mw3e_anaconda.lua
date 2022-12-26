@@ -296,16 +296,6 @@ SWEP.Attachments = {
         ActivateElement = {"noirons"}
     },
     {
-        PrintName = "Variant",
-        DefaultCompactName = "Black Steel",
-        Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(-5, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_anaconda_skin", "mwc_cosmetic_gold"},
-        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
-    },
-    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
@@ -329,6 +319,17 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Variant",
+        DefaultCompactName = "Black Steel",
+        Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(-5, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_anaconda_skin", "mwc_cosmetic_gold"},
+        DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
+        CosmeticOnly = true,
     },
 }
 

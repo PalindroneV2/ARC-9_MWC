@@ -342,14 +342,6 @@ SWEP.Attachments = {
         -- Installed = "mwc_optic_m21",
     },
     {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
-        Installed = "bo1_stock_heavy",
-    },
-    {
         PrintName = "Barrel",
         Bone = "j_gun",
         Pos = Vector(19, 0, 0.675),
@@ -416,13 +408,6 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "Cosmetic",
-        Bone = "j_gun",
-        Pos = Vector(-4, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4_m14_camo"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -437,6 +422,22 @@ SWEP.Attachments = {
         Pos = Vector(-5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4_m14_camo"},
+        CosmeticOnly = true,
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
+        Pos = Vector(-3, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_stock_mh"},
+        Installed = "bo1_stock_heavy",
     },
 }
 

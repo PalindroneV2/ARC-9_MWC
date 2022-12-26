@@ -322,6 +322,14 @@ SWEP.Attachments = {
         ExcludeElements = {"newbarrel"},
     },
     {
+        PrintName = "Barrel",
+        DefaultCompactName = "STD",
+        Bone = "j_gun",
+        Pos = Vector(11, 0, 2),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4_lmg_barrel"},
+    },
+    {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
@@ -337,14 +345,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_bipod"},
         Installed = "mwc_bipod_integrated",
-    },
-    {
-        PrintName = "Barrel",
-        DefaultCompactName = "STD",
-        Bone = "j_gun",
-        Pos = Vector(11, 0, 2),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4_lmg_barrel"},
     },
     {
         PrintName = "Ammunition",
@@ -366,14 +366,6 @@ SWEP.Attachments = {
         Integral = true,
     },
     {
-        PrintName = "Cosmetic",
-        DefaultCompactName = "CAMO",
-        Bone = "j_gun",
-        Pos = Vector(-8, 0, 4),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_cosmetic_gold"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -388,6 +380,15 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_cosmetic_gold"},
+        CosmeticOnly = true,
     },
 }
 

@@ -297,6 +297,14 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-6, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
 
 SWEP.Animations = {

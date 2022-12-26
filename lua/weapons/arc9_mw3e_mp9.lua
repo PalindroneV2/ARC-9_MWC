@@ -302,14 +302,6 @@ SWEP.Attachments = {
         Category = {"bo1_ammo", "bo1_pap"},
     },
     {
-        PrintName = "MP9",
-        DefaultCompactName = "MP9",
-        Bone = "j_gun",
-        Pos = Vector(-7, 0, 2.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"mw3_tmp_cosmetic"},
-    },
-    {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
@@ -324,6 +316,15 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "MP9",
+        DefaultCompactName = "MP9",
+        Bone = "j_gun",
+        Pos = Vector(-7, 0, 2.5),
+        Ang = Angle(0, 0, 0),
+        Category = {"mw3_tmp_cosmetic"},
+        CosmeticOnly = true,
     },
 }
 
