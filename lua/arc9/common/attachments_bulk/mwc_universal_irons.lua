@@ -10,6 +10,7 @@ ATT.SortOrder = 6
 ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = true
 ATT.Folder = "MWC REARS"
+ATT.Ignore = true
 
 ATT.Category = {"bo1_addon_irons_2"}
 ATT.ActivateElements = {"mw3_fad_irons"}
