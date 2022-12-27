@@ -275,7 +275,7 @@ SWEP.Firemodes = {
         ShootEnt = "arc9_mwc_missile_javelin_saclos"
     },
 }
-SWEP.NPCWeaponType = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
 SWEP.NPCWeight = 10
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

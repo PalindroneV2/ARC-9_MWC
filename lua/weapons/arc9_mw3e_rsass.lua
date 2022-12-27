@@ -122,7 +122,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.NPCWeaponType = {"weapon_ar2", "weapon_smg1"}
+SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -179,7 +179,7 @@ SWEP.IronSights = {
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/m14_wood"
 SWEP.CustomCamoScale = 1

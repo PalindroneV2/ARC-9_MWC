@@ -121,7 +121,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.3
 SWEP.SprintToFireTime = 0.3
 
-SWEP.NPCWeaponType = {"weapon_crowbar"}
+SWEP.ARC9WeaponCategory = {"weapon_crowbar"}
 SWEP.NPCWeight = 100
 
 SWEP.ShootVolume = 125

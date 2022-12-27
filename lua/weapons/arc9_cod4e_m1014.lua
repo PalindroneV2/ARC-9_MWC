@@ -130,7 +130,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.NPCWeaponType = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
