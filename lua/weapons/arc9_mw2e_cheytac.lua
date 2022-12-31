@@ -28,10 +28,10 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw2e_cheytac.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw2e_cheytac.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-6, 4.75, -7),
-    Ang        =    Angle(-6, -2.5, 180),
+    Pos        =    Vector(-6.9, 4.75, -7),
+    Ang        =    Angle(-6, -1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1.1,
+    Scale = 1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -182,7 +182,7 @@ SWEP.HoldTypeSights = "ar2"
 
 SWEP.Bipod = true
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 

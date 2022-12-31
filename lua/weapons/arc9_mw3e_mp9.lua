@@ -29,10 +29,10 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw3e_mp9.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_mp9.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 4.5, -7.25),
+    Pos        =    Vector(-9.5, 4.5, -4.75),
     Ang        =    Angle(-5, 0.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 1,
+    Scale = 1.1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -174,11 +174,11 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "ar2"
+SWEP.HoldType = "smg"
+SWEP.HoldTypeSights = "smg"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_SMG1
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
@@ -324,6 +324,15 @@ SWEP.Attachments = {
         Pos = Vector(-7, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"mw3_tmp_cosmetic"},
+        CosmeticOnly = true,
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
         CosmeticOnly = true,
     },
 }

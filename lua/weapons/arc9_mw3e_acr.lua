@@ -30,10 +30,10 @@ SWEP.WorldModel = "models/weapons/arc9/c_mw3e_acr.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_mw3e_acr.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-7.1, 3.5, -5.5),
+    Pos        =    Vector(-6.2, 3.5, -6),
     Ang        =    Angle(-9, -1.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale   =   1.1
+    Scale   =   1
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -351,6 +351,15 @@ SWEP.Attachments = {
         InstalledElements = {"left_cover"},
     },
     {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-4, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_stock_lm"},
+        Installed = "mwc_stock_medium",
+        Integral = true,
+    },
+    {
         PrintName = "Fire Control Group",
         DefaultCompactName = "AUTO",
         Bone = "j_gun",
@@ -389,15 +398,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
-    },
-    {
-        Hidden = false,
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-4, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_lm"},
-        Installed = "mwc_stock_medium",
     },
 }
 

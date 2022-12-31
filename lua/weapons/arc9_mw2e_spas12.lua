@@ -29,10 +29,10 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw2e_SPAS12.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw2e_SPAS12.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-1, 4, -6.2),
-    Ang        =    Angle(-9, -1, 180),
+    Pos        =    Vector(-5.5, 4.4, -6.4),
+    Ang        =    Angle(-5, -1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale   =   1.05
+    Scale   =   1,
 }
 SWEP.ViewModelFOVBase = 75
 
@@ -196,7 +196,7 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "shotgun"
 SWEP.HoldTypeSights = "ar2"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 

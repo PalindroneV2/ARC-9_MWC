@@ -29,7 +29,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw3e_p90.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_p90.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 4.5, -7.25),
+    Pos        =    Vector(-9, 4.5, -5.25),
     Ang        =    Angle(-5, 0.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
@@ -174,8 +174,8 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "smg1"
-SWEP.HoldTypeSights = "smg1"
+SWEP.HoldType = "smg"
+SWEP.HoldTypeSights = "smg"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2

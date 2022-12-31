@@ -23,11 +23,12 @@ SWEP.Slot = 0
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_mw3e_riotshield.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_mw3e_riotshield.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 7.5, -6),
-    Ang        =    Angle(0, 15, 180),
+    Pos        =    Vector(-4, 10, -6),
+    Ang        =    Angle(10, -20, 170),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
 }
@@ -42,9 +43,9 @@ SWEP.CustomBlendFactor = 1
 
 -------------------------- SHIELD
 
-SWEP.ShieldModel = "models/weapons/arc9/c_mw3e_riotshield.mdl"
-SWEP.ShieldOffset = Vector(-5, 7.5, -6)
-SWEP.ShieldAngle = Angle(0, 15, 180)
+SWEP.ShieldModel = "models/weapons/arc9/w_mw3e_riotshield.mdl"
+SWEP.ShieldOffset = Vector(-4, 10, -6)
+SWEP.ShieldAngle = Angle(-10, -20, 170)
 SWEP.ShieldScale = 1
 
 -------------------------- MELEE
@@ -181,7 +182,7 @@ SWEP.CustomizeSnapshotFOV = 75
 SWEP.RestPos = Vector(0, 0, -1)
 SWEP.RestAng = Angle(0, 0, -5)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0
 
 SWEP.ExtraSightDist = 5
 

@@ -29,7 +29,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw3e_glock.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_glock.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-5, 4.5, -7.25),
+    Pos        =    Vector(-12.5, 4.25, -3.8),
     Ang        =    Angle(-5, 0.5, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
@@ -174,11 +174,11 @@ SWEP.IronSights = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "revolver"
-SWEP.HoldTypeSights = "revolver"
+SWEP.HoldType = "pistol"
+SWEP.HoldTypeSights = "pistol"
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_PISTOL
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)

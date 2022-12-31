@@ -29,7 +29,7 @@ SWEP.ViewModel = "models/weapons/arc9/c_mw3e_pkp.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_pkp.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-4.5, 3.5, -5.1),
+    Pos        =    Vector(-4.5, 4, -6.6),
     Ang        =    Angle(-9.5, -1, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1,
@@ -314,6 +314,7 @@ SWEP.Attachments = {
         Pos = Vector(-4, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_h"},
+        Integral = true,
     },
     {
         PrintName = "Ammunition",
