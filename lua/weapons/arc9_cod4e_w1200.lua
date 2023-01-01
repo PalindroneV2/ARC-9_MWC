@@ -214,7 +214,7 @@ SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.RestPos = Vector(0, 0, 0)
 SWEP.RestAng = Angle(0, 0, 0)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 

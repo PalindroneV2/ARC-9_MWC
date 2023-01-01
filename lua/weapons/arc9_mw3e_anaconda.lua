@@ -205,7 +205,7 @@ SWEP.CustomizeSnapshotPos = Vector(2.5,0,0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 SWEP.CustomizeSnapshotFOV = 70
 
-SWEP.BarrelLength = 10
+SWEP.BarrelLength = 0 -- = 10
 
 SWEP.ExtraSightDist = 20
 

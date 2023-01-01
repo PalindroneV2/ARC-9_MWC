@@ -234,7 +234,7 @@ SWEP.RestAng = Angle(0, 0, -5)
 SWEP.BipodPos = Vector(-3.72, 0, -2)
 SWEP.BipodAng = Angle(0.02, 0, 0)
 
-SWEP.BarrelLength = 25
+SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 
