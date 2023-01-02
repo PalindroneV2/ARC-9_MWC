@@ -120,7 +120,7 @@ ATT.Free = true
 
 ATT.Category = {"mw3e_deagle_skin"}
 ATT.ActivateElements = {"annihilator"}
-ATT.DamageTypeOverride = DMG_BLAST
+ATT.DamageType = DMG_BLAST
 
 ARC9.LoadAttachment(ATT, "mw3e_deagle_skin_handcannon")
 

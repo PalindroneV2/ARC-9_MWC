@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arc9\bocw\bocw_annihilator\laserdot"
+	"$basetexture" "models/weapons/arc9/bocw/bocw_annihilator/laserdot"
 	"$bumpmap" "models/weapons/arc9/bocw/$normal"
 	
 	"$blendtintbybasealpha" "1"

@@ -6,15 +6,15 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "HK G36"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[
-    The M16A4 was introduced as an improved version of the M16A2 during the mid 1990s.
-    The main difference is a flat top upper receiver with an optics rail system.
+    The G36 is the result of Heckler and Koch's time developing the OICW and the XM8 for the US Military.
+    While missing many of the experimental features the rifle still boasts impressive performance and engineering and it has become the standard rifle for the Bundeswehr.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Gas-Operated",
+    Manufacturer = "Heckler & Koch",
     Calibre = "5.56x45mm NATO",
-    Mechanism = "Direct Impingement",
-    Country = "USA",
-    Year = 1994,
+    Mechanism = "Short-Stroke Gas Piston, Closed Rotating Bolt",
+    Country = "Germany",
+    Year = 1996,
     Games = [[COD4, MW3, MW19]]
 }
 SWEP.Credits = {

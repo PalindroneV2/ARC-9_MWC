@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_p99\megatron"
+	$basetexture	"models/weapons/arc9/mw3/mw3_p99/megatron"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_p99\p99_n"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_p99/p99_n"
 
 	$envmapmask "models/weapons/arc9/bo1/gold"
 	

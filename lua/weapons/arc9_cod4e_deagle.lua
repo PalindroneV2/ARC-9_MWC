@@ -294,10 +294,10 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-1, 0, -2),
         Ang = Angle(0, 0, 0),
-        Category = "cod4_deagle_mag",
+        Category = "mw3_deagle_mag",
         DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),
         Installed = "mw3e_deagle_mag_50",
-        Integral = true,
+        -- Integral = true,
     },
     {
         PrintName = "Ammunition",

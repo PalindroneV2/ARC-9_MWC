@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw2\mw2_famas\tape"
+	$basetexture	"models/weapons/arc9/mw2/mw2_famas/tape"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw2\mw2_famas\tape_n"
+	$bumpmap	"models/weapons/arc9/mw2/mw2_famas/tape_n"
 	
-	$detail "models\weapons\arc9\colors\black_detail"
+	$detail "models/weapons/arc9/colors/black_detail"
 	$detailblendfactor 1
 	$detailblendmode 0
 	

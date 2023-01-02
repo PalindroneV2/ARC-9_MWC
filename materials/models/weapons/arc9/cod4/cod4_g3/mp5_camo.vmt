@@ -20,8 +20,8 @@
 
 	"$nocull" "1"
 
-	$detailblendmode 2
-	$detailblendfactor 0.75
+	$detailblendmode 4
+	$detailblendfactor 0.5
 	Proxies {
 		CustomCamo {
 			camoTexture $detail

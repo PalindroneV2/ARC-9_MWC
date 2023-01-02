@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\bo2\bo2_rpd\rpd_c"
+	$basetexture	"models/weapons/arc9/bo2/bo2_rpd/rpd_c"
 	
-	$bumpmap	"models\weapons\arc9\bo2\bo2_rpd\rpd_n"
+	$bumpmap	"models/weapons/arc9/bo2/bo2_rpd/rpd_n"
 	"$detail" "models/weapons/arc9/bo1/ak_wood"
 	$detailblendmode "0"
 	$detailblendfactor 1.5

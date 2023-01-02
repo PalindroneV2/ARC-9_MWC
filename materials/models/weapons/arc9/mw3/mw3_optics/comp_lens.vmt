@@ -1,8 +1,8 @@
 "VertexLitGeneric"
 {
-	$basetexture	"models\weapons\arc9\cod4\cod4_optics\reflex_lens"
+	$basetexture	"models/weapons/arc9/cod4/cod4_optics/reflex_lens"
 	"$translucent" "1"
-	$bumpmap	"models\weapons\arc9\colors\normalmap"
+	$bumpmap	"models/weapons/arc9/colors/normalmap"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -13,5 +13,5 @@
 //	"$basemapalphaenvmapmask" "1"
 	"$envmapfresnel" "0.01"
 	"$envmaptint" "[ .01 .01 .01 ]"
-	"$PhongExponentTexture"		"models\weapons\arc9\cod4\cod4_optics\reflex_lens_s"
+	"$PhongExponentTexture"		"models/weapons/arc9/cod4/cod4_optics/reflex_lens_s"
 }

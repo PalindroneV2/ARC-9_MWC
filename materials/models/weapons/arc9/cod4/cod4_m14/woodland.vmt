@@ -1,13 +1,13 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\cod4\cod4_m14\woodland"
-	$bumpmap	"models\weapons\arc9\cod4\cod4_m14\m14_n"
+	$basetexture	"models/weapons/arc9/cod4/cod4_m14/woodland"
+	$bumpmap	"models/weapons/arc9/cod4/cod4_m14/m14_n"
 
-	$detail "models\weapons\arc9\colors\black_detail"
+	$detail "models/weapons/arc9/colors/black_detail"
 	$detailblendmode 0
 	"$detailblendfactor" "0.2"
 
-	$phongexponenttexture "models\weapons\arc9\cod4\cod4_m14\m14_s"
+	$phongexponenttexture "models/weapons/arc9/cod4/cod4_m14/m14_s"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

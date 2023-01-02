@@ -1,0 +1,30 @@
+VertexlitGeneric
+{
+	$basetexture	"models/weapons/arc9/mw2/mw2_ak47/ak47"
+	$bumpmap	"models/weapons/arc9/mw2/mw2_ak47/ak47_n"
+	"$phongexponenttexture" "models/weapons/arc9/mw2/mw2_ak47/ak47_s"
+	"$envmapmask" "models/weapons/arc9/mw2/mw2_ak47/ak47_s"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$blendtintbybasealpha" "1"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	"$envmap" "env_cubemap"
+//	"$basemapalphaenvmapmask" "1"
+	"$envmapfresnel" "0.01"
+	"$envmaptint" "[ .01 .01 .01 ]"
+
+	"$nocull" "1"
+
+	$detailblendmode 4
+	$detailblendfactor 1
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
+}

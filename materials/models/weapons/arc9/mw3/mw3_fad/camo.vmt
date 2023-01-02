@@ -1,10 +1,9 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_fad\fad"
-	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_fad\fad_n"
-	"$phongexponenttexture" "models\weapons\arc9\mw3\mw3_fad\fad_s"
-	"$envmapmask" "models\weapons\arc9\mw3\mw3_fad\fad_s"
+	$basetexture	"models/weapons/arc9/mw3/mw3_fad/fad"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_fad/fad_n"
+	"$phongexponenttexture" "models/weapons/arc9/mw3/mw3_fad/fad_s"
+	"$envmapmask" "models/weapons/arc9/mw3/mw3_fad/fad_s"
 	"$normalmapalphaenvmapmask" "1"
 	
 	"$blendtintbybasealpha" "1"

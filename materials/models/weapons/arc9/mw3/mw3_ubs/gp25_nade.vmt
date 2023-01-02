@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_ubs\gp25_nade"
+	$basetexture	"models/weapons/arc9/mw3/mw3_ubs/gp25_nade"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_ubs\gp25_nade_n"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_ubs/gp25_nade_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

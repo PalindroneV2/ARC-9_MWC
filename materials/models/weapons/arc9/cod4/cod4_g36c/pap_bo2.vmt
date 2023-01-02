@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	"$basetexture" "models\weapons\arc9\pap\pap_mob"
+	"$basetexture" "models/weapons/arc9/pap/pap_mob"
 	"$basetexturetransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
-	$bumpmap	"models\weapons\arc9\pap\pap_mob_n"
+	$bumpmap	"models/weapons/arc9/pap/pap_mob_n"
 	"$bumptransform" "center .5 .5 scale 4 4 rotate 0 translate 0 0"
 
 	$phong                      		1
@@ -11,7 +11,7 @@ VertexlitGeneric
 	$phongfresnelranges         "[0 .1 0.5]"
 	$phongalbedotint             "1"
     
-	$detail	"models\weapons\arc9\pap\pap_mob_s"
+	$detail	"models/weapons/arc9/pap/pap_mob_s"
 	$detailscale 4
 	$detailblendmode 5
 

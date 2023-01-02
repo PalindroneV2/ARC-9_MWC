@@ -502,7 +502,7 @@ SWEP.Animations = {
         Source = {"fire"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },
@@ -510,7 +510,7 @@ SWEP.Animations = {
         Source = {"fire_ads"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },
@@ -609,7 +609,7 @@ SWEP.Animations = {
         Source = {"fire_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },
@@ -617,7 +617,7 @@ SWEP.Animations = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },
@@ -671,7 +671,7 @@ SWEP.Animations = {
         Source = {"fire_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },
@@ -679,7 +679,7 @@ SWEP.Animations = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
-        SoundTable = {
+        EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
     },

@@ -1,6 +1,6 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
+SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "M40A3"
@@ -65,6 +65,7 @@ SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if trace
 SWEP.ChamberSize = 0 -- dont fucking change this again.
 SWEP.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
+SWEP.ShotgunReload = true
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
@@ -114,7 +115,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.3
 SWEP.SprintToFireTime = 0.3
 
-SWEP.RPM = 45
+SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -143,8 +144,8 @@ SWEP.ShootVolume = 140
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ArcCW_COD4E.M40_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_MW3E.RSASS_Sil"
+SWEP.ShootSound = "ARC9_COD4E.M40_Fire"
+SWEP.ShootSoundSilenced = "ARC9_MW3E.RSASS_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_g3" -- Used for some muzzle effects.
@@ -273,15 +274,24 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.5, 1.5, 1.5),
-        Pos = Vector(37.5, 0, 1.75),
+        Pos = Vector(23, 0, 1.6),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
+    },
+    {
+        PrintName = "Bipod",
+        DefaultCompactName = "None",
+        Bone = "j_gun",
+        Pos = Vector(10.5, 0, -0.25),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_bipod"},
+        ExcludeElements = {"barrel_stub"},
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -4),
+        Pos = Vector(0, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -289,7 +299,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-9, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -297,23 +307,26 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-12, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
     {
         PrintName = "Cosmetic",
         Bone = "j_gun",
-        Pos = Vector(-12.5, 0, 2.65),
+        Pos = Vector(-12.5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"universal_camo"},
         CosmeticOnly = true,
     },
 }
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
 
--- SWEP.RejectAttachments = {
---     ["bo1_cosmetic_black"] = true,
--- }
+    if attached["pap_bo1"] then
+        return anim .. "_pap"
+    end
+end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -322,54 +335,84 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 1.25,
+        Time = 0.75,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
     },
+    ["ready"] = {
+        Source = "draw",
+        Time = 0.75,
+    },
     ["fire"] = {
         Source = {"fire"},
-        Time = 5 / 30,
-    },
-    ["fire_iron"] = {
-        Source = {"fire"},
-        Time = 5 / 30,
+        Time = 7 / 30,
     },
     ["cycle"] = {
-        Source = "cycle",
-        Time = 0.93, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
+        Source = {"cycle"},
+        Time = 28 / 30,
+        ShellEjectAt = 10 / 30,
         EventTable = {
-            {s = "ARC9_MW2E.CheyTac_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_MW2E.CheyTac_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
+            {s = "ARC9_COD4E.M40_Chamber", t = 1 / 30},
         },
+    },
+    ["fire_iron"] = {
+        Source = {"fire_ads"},
+        Time = 7 / 30,
     },
     ["cycle_iron"] = {
-        Source = "cycle_ads",
-        Time = 0.93, -- 45 / 30 ; 30 / 30
-        ShellEjectAt = 0.5,
+        Source = {"cycle"},
+        Time = 28 / 30,
+        ShellEjectAt = 10 / 30,
         EventTable = {
-            {s = "ARC9_MW2E.CheyTac_Open", t = 6 / 30}, -- 9 / 30 ; 6 / 30
-            {s = "ARC9_MW2E.CheyTac_Close", t = 20 / 30}, -- 30 / 30 ; 20 / 30
+            {s = "ARC9_COD4E.M40_Chamber", t = 1 / 30},
         },
     },
-    ["reload"] = {
-        Source = "reload",
-        Time = 3,
+
+    --reload--
+    ["reload_start"] = {
+        Source = "reload_in",
+        Time = 60 / 30,
+        RestoreAmmo = 1,
+        MinProgress = 0.75,
         EventTable = {
-            {s = "ARC9_MW2E.CheyTac_MagOut", t = 20 / 30},
-            {s = "ARC9_MW2E.CheyTac_MagIn", t = 60 / 30},
+            {s = "ARC9_COD4E.M40_Start", t = 5 / 30},
+            {s = "ARC9_COD4E.M40_In", t = 35 / 30},
         },
     },
-    ["reload_empty"] = {
-        Source = "reload_empty",
-        Time = 4.26,
+    ["reload_insert"] = {
+        Source = "reload_loop",
+        Time = 26 / 40,
+        MinProgress = 13 / 30,
         EventTable = {
-            {s = "ARC9_MW2E.CheyTac_Open", t = 8 / 30},
-            {s = "ARC9_MW2E.CheyTac_MagOut", t = 50 / 30},
-            {s = "ARC9_MW2E.CheyTac_MagIn", t = 85 / 30},
-            {s = "ARC9_MW2E.CheyTac_Close", t = 110 / 30},
+            {s = "ARC9_COD4E.M40_In", t = 3 / 30},
+        }
+    },
+    ["reload_start_pap"] = {
+        Source = "reload_in",
+        Time = 60 / 30,
+        RestoreAmmo = 5,
+        MinProgress = 1,
+        EventTable = {
+            {s = "ARC9_COD4E.M40_Start", t = 5 / 30},
+            {s = "ARC9_COD4E.M40_In", t = 35 / 30},
+        },
+    },
+    ["reload_insert_pap"] = {
+        Source = "reload_loop",
+        Time = 26 / 40,
+        MinProgress = 13 / 30,
+        RestoreAmmo = 4,
+        EventTable = {
+            {s = "ARC9_COD4E.M40_In", t = 3 / 30},
+        }
+    },
+    ["reload_finish"] = {
+        Source = "reload_out",
+        Time = 26 / 30,
+        EventTable = {
+            {s = "ARC9_COD4E.M40_End", t = 5 / 30},
         },
     },
     ["enter_sprint"] = {

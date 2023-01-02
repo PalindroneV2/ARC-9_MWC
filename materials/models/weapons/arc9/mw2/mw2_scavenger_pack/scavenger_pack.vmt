@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw2\mw2_scavenger_pack\scavenger_pack"
-	$bumpmap	"models\weapons\arc9\mw2\mw2_scavenger_pack\scavenger_pack_n"
+	$basetexture	"models/weapons/arc9/mw2/mw2_scavenger_pack/scavenger_pack"
+	$bumpmap	"models/weapons/arc9/mw2/mw2_scavenger_pack/scavenger_pack_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

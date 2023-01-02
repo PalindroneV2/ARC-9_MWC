@@ -1,7 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\cod4\cod4_m14\ghillie_mesh"
-	$bumpmap		"models\weapons\arc9\cod4\cod4_m14\ghillie_mesh_n"
+	$basetexture	"models/weapons/arc9/cod4/cod4_m14/ghillie_mesh"
+	$bumpmap		"models/weapons/arc9/cod4/cod4_m14/ghillie_mesh_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"

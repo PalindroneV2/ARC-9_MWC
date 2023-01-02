@@ -1,10 +1,10 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw2\mw2_aug\aug"
+	$basetexture	"models/weapons/arc9/mw2/mw2_aug/aug"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw2\mw2_aug\aug_n"
-	"$phongexponenttexture" "models\weapons\arc9\mw2\mw2_aug\aug_s"
-	"$envmapmask" "models\weapons\arc9\mw2\mw2_aug\aug_s"
+	$bumpmap	"models/weapons/arc9/mw2/mw2_aug/aug_n"
+	"$phongexponenttexture" "models/weapons/arc9/mw2/mw2_aug/aug_s"
+	"$envmapmask" "models/weapons/arc9/mw2/mw2_aug/aug_s"
 	"$normalmapalphaenvmapmask" "1"
 	
 	"$blendtintbybasealpha" "1"

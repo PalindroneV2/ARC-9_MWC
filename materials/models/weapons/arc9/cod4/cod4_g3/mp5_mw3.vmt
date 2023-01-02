@@ -6,8 +6,10 @@
 	"$envmapmask" "models/weapons/arc9/mw3/mw3_mp5/mp5_mw3_s"
 	"$normalmapalphaenvmapmask" "1"
 
+	$detail "models/weapons/arc9/colors/black_detail"
+	$detailblendmode 0
+	"$detailblendfactor" "0.75"
 	
-	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
 	"$phongboost" "1"

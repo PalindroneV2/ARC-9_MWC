@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_acr\acr"
+	$basetexture	"models/weapons/arc9/mw3/mw3_acr/acr"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_acr\acr_n"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_acr/acr_n"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_deagle\desert_eagle"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_deagle\desert_eagle_n"
-	$detail		"models\weapons\arc9\colors\gunmetal"
+	$basetexture	"models/weapons/arc9/mw3/mw3_deagle/desert_eagle"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_deagle/desert_eagle_n"
+	$detail		"models/weapons/arc9/colors/gunmetal"
 	$detailblendmode 1
 	$detailblendfactor 0.65
 

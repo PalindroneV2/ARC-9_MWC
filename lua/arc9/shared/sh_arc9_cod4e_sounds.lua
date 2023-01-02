@@ -266,6 +266,17 @@ sound.Add( {
 
 -- COD 4 MP44
 
+
+sound.Add( {
+    name = "ARC9_COD4E.MP44_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_AK47/fire.wav",
+    }
+} )
+
 sound.Add( {
     name = "ARC9_COD4E.MP44_Chamber",
     channel = CHAN_ITEM,
@@ -746,6 +757,56 @@ sound.Add( {
     }
 } )
 
+--COD4E M82--
+
+sound.Add( {
+    name = "ARC9_COD4E.M82_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_M82/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.M82_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_M82/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.M82_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_M82/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.M82_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_M82/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.M82_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_M82/lift.wav",
+    }
+} )
+
 -- COD4E W1200 --
 
 sound.Add({
@@ -870,6 +931,56 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/ARC9/cod4_MP5/out.wav",
+    }
+} )
+
+--COD4E Skorpion--
+
+sound.Add( {
+    name = "ARC9_COD4E.Skorpion_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_Skorpion/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.Skorpion_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_Skorpion/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.Skorpion_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_Skorpion/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.Skorpion_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_Skorpion/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.Skorpion_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_Skorpion/lift.wav",
     }
 } )
 

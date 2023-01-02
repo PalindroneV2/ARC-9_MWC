@@ -16,6 +16,7 @@ ATT.Free = false
 ATT.Folder = "REFLEX"
 
 ATT.Category = {"bo1_optic", "bo1_optic_alt"}
+ATT.ActivateElements = {"cod4_tasco"}
 
 ATT.Model = "models/weapons/arc9/atts/cod4_tasco.mdl"
 ATT.Scale = 1

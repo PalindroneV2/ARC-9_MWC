@@ -3,7 +3,7 @@
 	"$basetexture" "models/weapons/arc9/bocw/bocw_annihilator/base_s"
 	"$bumpmap" "models/weapons/arc9/bocw/bocw_annihilator/base_n"
 	
-	$detail		"models\weapons\arc9\bo1\black_detail"
+	$detail		"models/weapons/arc9/bo1/black_detail"
 	$detailblendmode 0
 	$detailblendfactor 1
 

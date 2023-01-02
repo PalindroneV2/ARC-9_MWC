@@ -349,7 +349,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_fcg_raffica"},
         CorrectiveAng = Angle(0, 0.25, 0),
-        Installed = "mw2e_fcg_m9_burst",
+        -- Installed = "mw2e_fcg_m9_burst",
     },
     {
         PrintName = "Ammunition",
@@ -365,7 +365,7 @@ SWEP.Attachments = {
         Pos = Vector(-4, 0, -2.75),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_l"},
-        Installed = "mwc_stock_light",
+        -- Installed = "mwc_stock_light",
     },
     {
         PrintName = "Perk",

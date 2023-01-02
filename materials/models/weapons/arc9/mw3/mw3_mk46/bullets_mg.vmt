@@ -1,8 +1,8 @@
 VertexlitGeneric
 {
-	$basetexture	"models\weapons\arc9\mw3\mw3_mk46\bullets_mg"
+	$basetexture	"models/weapons/arc9/mw3/mw3_mk46/bullets_mg"
 	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models\weapons\arc9\mw3\mw3_mk46\bullets_mg_n"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_mk46/bullets_mg_n"
 
 	$phong                      		1
 //	$phongexponent                      "20"
