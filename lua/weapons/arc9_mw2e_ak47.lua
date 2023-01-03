@@ -135,8 +135,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ArcCW_MW3E.AK47_Fire"
-SWEP.ShootSoundSilenced = "ArcCW_MW3E.M4M16_Sil"
+SWEP.ShootSound = "ARC9_MW3E.AK47_Fire"
+SWEP.ShootSoundSilenced = "ARC9_MW3E.M4M16_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true
@@ -330,7 +330,7 @@ SWEP.Attachments = {
         PrintName = "Front Mounted Optic",
         DefaultName = "F. Mount",
         Bone = "j_gun",
-        Pos = Vector(2, 0, 3.35),
+        Pos = Vector(11.5, 0, 3.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic", "bo1_rail_riser"},
         InstalledElements = {"frontmount"},
@@ -433,7 +433,7 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["fire_iron"] = {
@@ -441,7 +441,7 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["reload"] = {
@@ -470,8 +470,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 15 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 59 / 35}
+            {s = "ARC9_MW3E.AK47_MagOut", t = 15 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 59 / 35}
         },
     },
     ["reload_empty"] = {
@@ -500,9 +500,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 15 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 59 / 35},
-            {s = "ARC9_COD4E.AK47_Chamber", t = 85 / 35},
+            {s = "ARC9_MW3E.AK47_MagOut", t = 15 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 59 / 35},
+            {s = "ARC9_MW3E.AK47_Chamber", t = 85 / 35},
         },
     },
     ["enter_sprint"] = {
@@ -537,7 +537,7 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["fire_iron_gp25"] = {
@@ -545,24 +545,24 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["reload_gp25"] = {
         Source = "reload_gl",
         Time = 90 / 35,
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 21 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 63 / 35}
+            {s = "ARC9_MW3E.AK47_MagOut", t = 21 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 63 / 35}
         },
     },
     ["reload_empty_gp25"] = {
         Source = "reload_empty_gl",
         Time = 120 / 35,
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 21 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 63 / 35},
-            {s = "ARC9_COD4E.AK47_Chamber", t = 85 / 35},
+            {s = "ARC9_MW3E.AK47_MagOut", t = 21 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 63 / 35},
+            {s = "ARC9_MW3E.AK47_Chamber", t = 85 / 35},
         },
     },
     ["enter_sprint_gp25"] = {
@@ -644,7 +644,7 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["fire_iron_mk"] = {
@@ -652,24 +652,24 @@ SWEP.Animations = {
         Time = 0.5,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
         },
     },
     ["reload_mk"] = {
         Source = "reload_mk",
         Time = 90 / 35,
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 21 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 63 / 35}
+            {s = "ARC9_MW3E.AK47_MagOut", t = 21 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 63 / 35}
         },
     },
     ["reload_empty_mk"] = {
         Source = "reload_empty_mk",
         Time = 120 / 35,
         EventTable = {
-            {s = "ARC9_COD4E.AK47_MagOut", t = 21 / 35},
-            {s = "ARC9_COD4E.AK47_MagIn", t = 63 / 35},
-            {s = "ARC9_COD4E.AK47_Chamber", t = 85 / 35},
+            {s = "ARC9_MW3E.AK47_MagOut", t = 21 / 35},
+            {s = "ARC9_MW3E.AK47_MagIn", t = 63 / 35},
+            {s = "ARC9_MW3E.AK47_Chamber", t = 85 / 35},
         },
     },
     ["enter_sprint_mk"] = {
@@ -718,7 +718,7 @@ SWEP.Animations = {
         RestoreAmmo = 1,
         MinProgress = 30 / 30,
         EventTable = {
-            --{s = "ARC9_COD4E.M203_Open", t = 0.125},
+            --{s = "ARC9_MW3E.M203_Open", t = 0.125},
         }
     },
     ["reload_ubgl_insert_mksetup"] = {

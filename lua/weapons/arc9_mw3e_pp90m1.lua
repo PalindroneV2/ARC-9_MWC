@@ -12,7 +12,7 @@ SWEP.Trivia = {
     Manufacturer = "KBP Instrument Design Bureau",
     Calibre = "9x19mm Parabellum",
     Mechanism = "Blowback",
-    Country = "Japan",
+    Country = "Russia",
     Year = "1990s",
     Games = [[Call of Duty: Modern Warfare 3]]
 }
