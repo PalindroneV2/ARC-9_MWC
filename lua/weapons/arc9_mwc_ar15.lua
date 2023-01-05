@@ -131,7 +131,7 @@ SWEP.Firemodes = {
         Mode = 1,
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_ar2", "weapon_smg1"}
+SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

@@ -121,7 +121,7 @@ SWEP.Firemodes = {
         PrintName = "SINGLE"
     },
 }
-SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = 3
 SWEP.NPCWeight = 10
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.

@@ -146,7 +146,7 @@ SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle ag
 -- SWEP.SlamFire = true
 SWEP.CycleTime = 1
 
-SWEP.ARC9WeaponCategory = {"weapon_shotgun"}
+SWEP.ARC9WeaponCategory = 2
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
