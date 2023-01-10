@@ -186,7 +186,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, 0)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -200,19 +200,19 @@ SWEP.MovingMidPoint = {
 SWEP.BipodPos = Vector(-4.13, 0, -2.35)
 SWEP.BipodAng = Angle(0,0,0)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 100
 
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -269,6 +269,28 @@ SWEP.Attachments = {
         Installed = "mwc_optic_msr",
     },
     {
+        PrintName = "Backup Optic",
+        DefaultName = "Backup L",
+        Bone = "j_gun",
+        Pos = Vector(11, -0.95, 2.5),
+        Ang = Angle(0, 0, -45),
+        KeepBaseIrons = true,
+        InstalledElements = {"anglemount"},
+        Category = {"bo1_optic_lp"},
+        Icon_Offset = Vector(0,0,2),
+    },
+    {
+        PrintName = "Backup Optic",
+        DefaultName = "Backup R",
+        Bone = "j_gun",
+        Pos = Vector(11, 0.95, 2.5),
+        Ang = Angle(0, 0, 45),
+        KeepBaseIrons = true,
+        InstalledElements = {"anglemount"},
+        Category = {"bo1_optic_lp"},
+        Icon_Offset = Vector(2,0,2),
+    },
+    {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
@@ -292,6 +314,24 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_bipod"},
         Installed = "mwc_bipod_integrated",
+    },
+    {
+        PrintName = "Tactical Left",
+        DefaultCompactName = "TAC L",
+        Bone = "j_gun",
+        Pos = Vector(18.2, -0.7, 1.5),
+        Ang = Angle(0, 0, 90),
+        Category = "bo1_tactical",
+        Icon_Offset = Vector(2,0,0),
+    },
+    {
+        PrintName = "Tactical Right",
+        DefaultCompactName = "TAC R",
+        Bone = "j_gun",
+        Pos = Vector(18.2, 0.7, 1.5),
+        Ang = Angle(0, 0, -90),
+        Category = "bo1_tactical",
+        Icon_Offset = Vector(-2,0,0),
     },
     {
         PrintName = "Ammunition",

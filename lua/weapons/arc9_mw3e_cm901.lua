@@ -173,7 +173,7 @@ SWEP.IronSights = {
     Pos = Vector(-2.825, 0, 0.125),
     Ang = Angle(0.025, 0, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -252,9 +252,9 @@ SWEP.AttachmentElements = {
             [2] = {
                 Pos = Vector(16.25, 0, 2.6)
             },
-            [9] = {
-                Pos = Vector(11, 0, 3.5)
-            },
+            -- [9] = {
+            --     Pos = Vector(11, 0, 3.5)
+            -- },
         },
     },
     ["mw3_magnifier"] = {

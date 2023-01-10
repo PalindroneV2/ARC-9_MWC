@@ -1,9 +1,7 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/mw3/mw3_pkp/pkp"
-	//$color2 "[0.5 0.5 0.5]"
-	$bumpmap	"models/weapons/arc9/mw3/mw3_pkp/pkp_n"
-	$phongexponenttexture	"models/weapons/arc9/mw3/mw3_pkp/pkp_s"
+	$basetexture	"models/weapons/arc9/mw3/mw3_pkp/bullet"
+	$bumpmap	"models/weapons/arc9/mw3/mw3_pkp/bullet_n"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
@@ -11,6 +9,7 @@ VertexlitGeneric
 	"$phongalbedotint" "2"
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
+//	"$basemapalphaenvmapmask" "1"
 	$envmapfresnel "0.01"
 	$envmaptint "[ .01 .01 .01 ]"
 

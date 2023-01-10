@@ -1,53 +1,55 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mk. 14 Mod 0"
-SWEP.Class = "Assault Rifle"
+SWEP.PrintName = "AS50"
+SWEP.Class = "Anti-Materiel Precision Rifle"
 SWEP.Description = [[
-    Heavily modified M14 rifle put in marksman and sniper roles.
+    British .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Springfield Armory",
-    Calibre = "7.62x51mm NATO",
-    Mechanism = "Gas-Operated",
-    Country = "USA",
-    Year = 1959,
-    Games = [[COD4, MW2, BO1, MW3, BO2, Ghosts, AW, MW19, Mobile, BOCW]]
+    Manufacturer = "Accuracy International",
+    Calibre = ".50 BMG",
+    Mechanism = "Direct Impingement",
+    Country = "UK",
+    Year = 2005,
+    Games = [[Call of Duty: Modern Warfare 3]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
 }
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw3e_mk14.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw3e_mk14.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw3e_as50.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_mw3e_as50.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-2.5, 4.25, -7.56),
-    Ang        =    Angle(-7.5, -1, 180),
+    Pos        =    Vector(-4.5, 4, -6.3),
+    Ang        =    Angle(-6, -1.25, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
-    Scale = 0.9,
+    Scale = 1.2,
 }
 SWEP.ViewModelFOVBase = 75
 
-SWEP.DefaultBodygroups = "00000000000000"
+SWEP.DefaultBodygroups = "00000000"
 
-SWEP.DamageMax = 42
-SWEP.DamageMin = 25 -- damage done at maximum range
-SWEP.RangeMax = 8000
-SWEP.RangeMin = 2000
-SWEP.Penetration = 8
+SWEP.DamageMax = 300
+SWEP.DamageMin = 75 -- damage done at maximum range
+SWEP.RangeMax = 10000
+SWEP.RangeMin = 2500
+SWEP.Penetration = 50
+SWEP.ImpactForce = 25
+SWEP.ArmorPiercing = 1
 SWEP.DamageType = DMG_BULLET
-SWEP.ShootEntity = nil -- entity to fire, if any
+SWEP.ShootEnt = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 2500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -64,30 +66,30 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 20 -- DefaultClip is automatically set.
+SWEP.ClipSize = 5 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.35
-SWEP.RecoilUp = 0.55
+SWEP.Recoil = 2
+SWEP.RecoilSide = 0.7
+SWEP.RecoilUp = 2
 
-SWEP.RecoilRandomUp = 0.6
-SWEP.RecoilRandomSide = 0.3
+SWEP.RecoilRandomUp = 1
+SWEP.RecoilRandomSide = 0.6
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
-SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.95
+SWEP.RecoilAutoControl = 0.3
+SWEP.RecoilKick = 4
 
-SWEP.Spread = math.rad(1.15 / 37.5)
+SWEP.Spread = math.rad(1.5 / 37.5)
 SWEP.SpreadMultRecoil = 1.25
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(250 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
@@ -101,7 +103,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.75
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -112,22 +114,17 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.3
+SWEP.SprintToFireTime = 0.3
 
-SWEP.RPM = 750
+SWEP.RPM = 125
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = 1,
     },
-    {
-        Mode = -1,
-        DamageMaxMult = 0.75,
-        DamageMinMult = 0.85,
-    },
 }
-SWEP.ARC9WeaponCategory = 4
+SWEP.ARC9WeaponCategory = 5
 SWEP.NPCWeight = 100
 
 SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
@@ -139,29 +136,24 @@ SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses
 
-SWEP.ShootVolume = 125
-SWEP.ShootPitch = 100
+SWEP.ShootVolume = 170
+SWEP.ShootPitch = 80
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_MW3E.MK14_Fire"
+SWEP.ShootSound = "ARC9_MW3E.AS50_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.RSASS_Sil"
 
-SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
-SWEP.DoFireAnimationUBGL = true
-SWEP.NoShellEjectUBGL = true
-SWEP.MuzzleEffectQCAUBGL = 1
-
 --SWEP.MuzzleEffect = "muzzleflash_4"
-SWEP.MuzzleParticle = "muzzleflash_m14" -- Used for some muzzle effects.
+SWEP.MuzzleParticle = "muzzleflash_g3" -- Used for some muzzle effects.
 
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/shells/shell_338mag.mdl"
 SWEP.ShellPitch = 90
-SWEP.ShellScale = 1.4
+SWEP.ShellScale = 1.5
 
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -172,10 +164,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.73, -3, 1.2),
-    Ang = Angle(0.05, -0.625, 0),
+    Pos = Vector(-4.1, -4, 2),
+    Ang = Angle(0.03, -0.1, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -184,10 +176,7 @@ SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
 
-SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/m14_wood"
-SWEP.CustomCamoScale = 1
-
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
@@ -202,18 +191,19 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-3.73, 0, -1.5)
-SWEP.BipodAng = Angle(0, 0, 0)
+SWEP.BipodPos = Vector(-4.1, 0, -2)
+SWEP.BipodAng = Angle(0,0,0)
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotFOV = 100
 
 SWEP.RestPos = Vector(0, 0, -1)
 SWEP.RestAng = Angle(0, 0, -5)
@@ -228,31 +218,11 @@ SWEP.AttachmentElements = {
             {1,1}
         },
     },
-    ["mwc_bipod"] = {
-        Bodygroups = {
-            {3,1}
-        },
-    },
-    ["stock_m"] = {
-        Bodygroups = {
-            {2,1}
-        },
-    },
-    ["stock_h"] = {
-        Bodygroups = {
-            {2,2}
-        },
-    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
-
     local vm = data.model
-    -- local CUSTSTATE = self:GetCustomize()
     local attached = data.elements
-
-    -- COSMETICS
-    -- CAMO
 
     local camo = 0
     if attached["universal_camo"] then
@@ -262,24 +232,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
-
-    if attached["mwc_bipod"] then
-        vm:SetBodygroup(3,1)
-        if self:GetBipod() then
-            vm:SetBodygroup(3,2)
-        end
-    end
-
 end
 
 SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Mk. 14 Md 0"
+    local gunname = "AI AS50"
 
     if attached["bo1_pap"] then
-        gunname = "Alzheimers"
+        gunname = "Eris Victor"
     end
 
     return gunname
@@ -289,74 +251,52 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(9, 0, 3.9),
+        Pos = Vector(4.5, 0, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"bo1_optic"},
         InstalledElements = {"mount"},
-        MergeSlots = {2},
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Pos = Vector(4.9, 0, 0.7),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_awm_scope"},
-        Installed = "mwc_optic_leupold",
-    },
-    {
-        PrintName = "Stock",
-        Bone = "j_gun",
-        Pos = Vector(-3, 0, 0),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
-        Installed = "bo1_stock_heavy",
+        Installed = "mwc_optic_as50",
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(26.1, 0.15, 0.75),
+        Scale = Vector(1.25, 1.25, 1.25),
+        Pos = Vector(31.5, 0, 1.7),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle"},
-        ExcludeElements = {"newbarrel"},
     },
     {
         PrintName = "Underbarrel",
         DefaultCompactName = "UB",
         Bone = "j_gun",
-        Pos = Vector(15, 0.1, 0.3),
+        Pos = Vector(12.5, 0, 0.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"bo1_grips"},
+        Icon_Offset = Vector(0,0,-2),
     },
     {
         PrintName = "Tactical Left",
         DefaultCompactName = "TAC L",
         Bone = "j_gun",
-        Pos = Vector(15, -0.75, 2),
+        Pos = Vector(12.5, -0.825, 1.65),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_rail_tactical",
+        Category = "bo1_tactical",
+        Icon_Offset = Vector(2,0,0),
     },
     {
         PrintName = "Tactical Right",
         DefaultCompactName = "TAC R",
         Bone = "j_gun",
-        Pos = Vector(15, 0.75, 2),
+        Pos = Vector(12.5, 0.825, 1.65),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_rail_tactical",
-    },
-    {
-        PrintName = "Bipod",
-        DefaultCompactName = "None",
-        Bone = "j_gun",
-        Pos = Vector(22, 0, -0.25),
-        Ang = Angle(0, 0, 0),
-        Category = {"mwc_bipod"},
-        Installed = "mwc_bipod_integrated",
+        Category = "bo1_tactical",
+        Icon_Offset = Vector(-2,0,0),
     },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5.5, 0, -3),
+        Pos = Vector(6, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -386,19 +326,14 @@ SWEP.Attachments = {
     },
 }
 
-SWEP.HideBones = {
-    "j_grenade_ammo",
-    "tag_ammo2",
-}
-SWEP.ReloadHideBoneTables = {
-    [1] = {"j_grenade_ammo"},
-    [2] = {"tag_ammo2"},
-}
+-- SWEP.RejectAttachments = {
+--     ["bo1_cosmetic_black"] = true,
+-- }
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Time = 1 / 30,
+        Time = 1 / 35,
     },
     ["draw"] = {
         Source = "draw",
@@ -406,7 +341,7 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.75,
+        Time = 1,
     },
     ["ready"] = {
         Source = "draw",
@@ -414,31 +349,21 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 7 / 30,
+        Time = 13 / 35,
         ShellEjectAt = 0,
-        EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
-        },
     },
     ["fire_iron"] = {
-        Source = {"fire_ads"},
-        Time = 7 / 30,
+        Source = "idle",
+        Time = 13 / 35,
         ShellEjectAt = 0,
-        EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
-        },
-    },
-    ["fire_bipod"] = {
-        Source = {"fire_ads"},
-        Time = 7 / 30,
-        ShellEjectAt = 0,
-        EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
-        },
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.7,
+        Time = 3.25,
+        EventTable = {
+            {s = "ARC9_MW3E.AS50_MagOut", t = 0.5},
+            {s = "ARC9_MW3E.AS50_MagIn", t = 1.95},
+        },
         IKTimeLine = {
             {
                 t = 0,
@@ -446,29 +371,31 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
+                t = 0.3,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.72,
                 lhik = 0,
                 rhik = 0
             },
             {
                 t = 0.85,
-                lhik = 0,
-                rhik = 0
-            },
-            {
-                t = 0.95,
                 lhik = 1,
                 rhik = 1
             },
         },
-        EventTable = {
-            {s = "ARC9_MW3E.MK14_MagOut", t = 0.6},
-            {s = "ARC9_MW3E.MK14_MagIn", t = 1.75}
-        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3.5,
+        Time = 4.666,
+        EventTable = {
+            {s = "ARC9_MW3E.AS50_MagOut", t = 0.5},
+            {s = "ARC9_MW3E.AS50_MagIn", t = 2.1},
+            {s = "ARC9_MW3E.AS50_Open", t = 2.8},
+            {s = "ARC9_MW3E.AS50_Chamber", t = 3.15},
+        },
         IKTimeLine = {
             {
                 t = 0,
@@ -476,7 +403,7 @@ SWEP.Animations = {
                 rhik = 1
             },
             {
-                t = 0.2,
+                t = 0.3,
                 lhik = 0,
                 rhik = 0
             },
@@ -490,11 +417,6 @@ SWEP.Animations = {
                 lhik = 1,
                 rhik = 1
             },
-        },
-        EventTable = {
-            {s = "ARC9_MW3E.MK14_MagOut", t = 0.6},
-            {s = "ARC9_MW3E.MK14_MagIn", t = 1.75},
-            {s = "ARC9_MW3E.MK14_Chamber", t = 2.5}
         },
     },
     ["enter_sprint"] = {
