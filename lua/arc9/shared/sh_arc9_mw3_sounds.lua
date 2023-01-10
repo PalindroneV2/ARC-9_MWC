@@ -695,6 +695,122 @@ sound.Add( {
     }
 } )
 
+-- MW3E MSR -- 
+
+sound.Add( {
+    name = "ARC9_MW3E.MSR_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.MSR_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MSR_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MSR_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MSR_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MSR_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MSR/lift.wav",
+    }
+} )
+
+-- MW3E AS50 -- 
+
+sound.Add( {
+    name = "ARC9_MW3E.AS50_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.AS50_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.AS50_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.AS50_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.AS50_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.AS50_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_AS50/lift.wav",
+    }
+} )
+
 --MW3E P99--
 
 sound.Add( {

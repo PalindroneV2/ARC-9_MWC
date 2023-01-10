@@ -12,8 +12,8 @@ VertexlitGeneric
 	"$PhongFresnelRanges" "[ 2 5 4 ]"
 	"$envmap" "env_cubemap"
 //	"$basemapalphaenvmapmask" "1"
-	"$normalmapalphaenvmapmask" "1"
-	"$envmapfresnel" "0.01"
+	$normalmapalphaenvmapmask 1
+	$envmapfresnel "0.01"
 	$envmaptint "0.1"
 
 	"$nocull" "1"
