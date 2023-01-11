@@ -164,10 +164,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.23, 3, 1.45),
+    Pos = Vector(-2.23, 0, 1.45),
     Ang = Angle(-0.1, -1.45, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -201,8 +201,10 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(0, 0, 0)
 SWEP.SprintAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(15, 15, 4)
+SWEP.CustomizePos = Vector(15, 25, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(1.5, -10, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 9
 
@@ -231,7 +233,7 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "MUZZ",
         Bone = "j_gun",
-        Pos = Vector(4.7, 0.25, 1),
+        Pos = Vector(4.625, 0.255, 1),
         Ang = Angle(0, 0, 0),
         Category = "bo1_muzzle_pistol",
     },
@@ -241,7 +243,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         -- Scale = Vector(1, 1, 1),
         Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(3, 0.225, 0.15),
+        Pos = Vector(3, 0.255, 0.15),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_tactical", "bo1_pistol_rail", "mw3_usp_lams"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),

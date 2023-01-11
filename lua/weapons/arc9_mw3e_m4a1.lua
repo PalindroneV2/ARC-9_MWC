@@ -428,6 +428,19 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     return anim .. suffix
 end
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt M4A1"
+
+    if attached["bo1_pap"] then
+        gunname = "Xeno Matter 4000"
+    end
+
+    return gunname
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",

@@ -2231,3 +2231,33 @@ sound.Add( {
         "^weapons/ARC9/mw3e_XM25/fire/mech.wav",
     }
 } )
+
+--SMAW
+
+sound.Add({
+    name = "ARC9_MW3E.SMAW_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_smaw/fire.wav",
+    }
+})
+sound.Add( {
+    name = "ARC9_MW3E.SMAW_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_smaw/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.SMAW_Lift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_smaw/lift.wav",
+    }
+} )

@@ -7,7 +7,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_pistol_rail"}
-ATT.ActivateElements = {"pistol_rail"}
+ATT.ActivateElements = {"pistol_rail", "rail_lamp"}
 
 ATT.Model = "models/weapons/arc9/atts/mw3_pistolrail.mdl"
 ATT.Scale = 1.1

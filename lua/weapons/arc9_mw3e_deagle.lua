@@ -282,6 +282,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Pos = newpos,
         Ang = newang,
         Magnification = 1.1,
+        ViewModelFOV = 60,
     }
 
 end

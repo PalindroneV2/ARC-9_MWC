@@ -377,11 +377,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Control Group",
-        DefaultCompactName = "AUTO",
+        DefaultCompactName = "BST",
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_fcg_bst", "mwc_fcg_semi"},
+        Category = {"mwc_fcg_semi"},
     },
     {
         PrintName = "Ammunition",

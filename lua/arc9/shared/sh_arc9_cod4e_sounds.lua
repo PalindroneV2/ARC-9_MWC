@@ -1164,6 +1164,73 @@ sound.Add( {
     }
 } )
 
+-- RPG7
+
+sound.Add( {
+    name = "ARC9_COD4E.RPG_Fire",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPG_Loop",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/loop.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPG_FlameHiss",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/flamehiss.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPG_WhippingWhistle",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/whippingwhistle.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.RPG_Insert",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/insert.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPG_Twist",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/twist.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.RPG_Lift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_rpg7/lift.wav",
+    }
+} )
+
 -- AT4 --
 
 sound.Add( {
@@ -1191,5 +1258,26 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/ARC9/cod4_at4/raise_first.wav",
+    }
+} )
+
+-- Stinger --
+
+sound.Add( {
+    name = "ARC9_COD4E.Stinger_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_at4/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.Stinger_Lift",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/cod4_at4/lift.wav",
     }
 } )

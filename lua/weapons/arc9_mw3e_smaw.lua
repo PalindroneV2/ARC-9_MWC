@@ -1,21 +1,21 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AT4"
+SWEP.PrintName = "SMAW"
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[
-    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
+    American rocket launcher with bunker-busti and anti-armor capabilites.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Saab Bofors Dynamics",
-    Calibre = "84mm HEAT Round",
+    Manufacturer = "Nammo Talley",
+    Calibre = "83mm HEAT Round",
     Mechanism = "Rocket Propelled Grenade",
     Country = "USA",
-    Year = 1987,
-    Games = [[COD4, MW2]]
+    Year = 1984,
+    Games = [[MW3, BO2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -25,8 +25,8 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw2e_at4.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw2e_at4.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw3e_smaw.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_mw3e_smaw.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -5),
@@ -44,7 +44,7 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_mwc_at4_missile" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_mwc_smaw_missile" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 12500
 SWEP.ShootEntityData = {}
 
@@ -128,7 +128,7 @@ SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
 SWEP.AimDownSightsTime = 1
-SWEP.SprintToFireTime = 0.4
+SWEP.SprintToFireTime = 0.45
 
 SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -159,7 +159,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_COD4E.RPG_Fire"
+SWEP.ShootSound = "ARC9_MW3E.SMAW_Fire"
 SWEP.ShootSoundSilenced = "ARC9_BO1.MP5_Sil"
 
 SWEP.MuzzleParticle = "muzzleflash_m79" -- Used for some muzzle effects.
@@ -185,8 +185,9 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(0, 0, 0),
-    Ang = Angle(0, 0, 0),
+    Ang = Angle(-0.2, 0.1, 0),
     Magnification = 1.25,
+    ViewModelFOV = 50,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -199,8 +200,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG
 SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_RPG
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
-SWEP.ActivePos = Vector(1, 0, -1)
-SWEP.ActiveAng = Angle(-10, 10, 10)
+SWEP.ActivePos = Vector(1, 0, 1)
+-- SWEP.ActiveAng = Angle(0, 0, 0)
+SWEP.ActiveAng = Angle(-10, 10, 25)
 
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
@@ -210,18 +212,20 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(1, 0, -1)
-SWEP.CrouchAng = Angle(-10, 10, 10)
+SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
-SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizePos = Vector(0, 40, 4)
+SWEP.CustomizeAng = Angle(80, -15, 15)
+SWEP.CustomizeSnapshotPos = Vector(-2.5, 30, 0)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -274,27 +278,38 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         EventTable = {
-            {s = "ARC9_COD4E.AT4_Raise", t = 1 / 30},
+            {s = "ARC9_MW3E.SMAW_Lift", t = 1 / 30},
         },
     },
     ["holster"] = {
         Source = "holster",
         EventTable = {
-            {s = "ARC9_COD4E.AT4_Raise", t = 1 / 30},
+            {s = "ARC9_MW3E.SMAW_Lift", t = 1 / 30},
         },
     },
     ["ready"] = {
         Source = "draw",
         EventTable = {
-            {s = "ARC9_COD4E.AT4_RaiseFirst", t = 1 / 30},
+            {s = "ARC9_MW3E.SMAW_LiftFirst", t = 1 / 30},
         },
     },
     ["fire"] = {
         Source = {
-            "fire_ads",
+            "fire",
         },
         Time = 15 / 35,
     },
+    ["reload"] = {
+        Source = "reload",
+        EventTable = {
+            {s = "ARC9_MW3E.SMAW_Chamber", t = 0.5},
+            {s = "ARC9_MW3E.SMAW_Lift", t = 2},
+        },
+    },
+    -- ["enter_iron"] = {
+    --     Source = {"ads_up"},
+    --     Time = 1,
+    -- },
     ["idle_iron"] = {
         Source = {"idle_ads"},
         Time = 1 / 35,
@@ -305,13 +320,10 @@ SWEP.Animations = {
         },
         Time = 15 / 35,
     },
-    ["reload"] = {
-        Source = "reload",
-        EventTable = {
-            {s = "ARC9_COD4E.AT4_Drop", t = 0.5},
-            {s = "ARC9_COD4E.AT4_Raise", t = 2},
-        },
-    },
+    -- ["exit_iron"] = {
+    --     Source = {"ads_down"},
+    --     Time = 1,
+    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
