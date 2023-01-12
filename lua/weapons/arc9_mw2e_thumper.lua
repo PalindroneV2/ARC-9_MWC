@@ -10,7 +10,7 @@ SWEP.Description = [[
     American break-action, single shot grenade launcher using 40mm High Explosive rounds. Famously used in the Vietnam War and still used in small numbers.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Ithaca",
+    Manufacturer = "Springfield Armory",
     Calibre = "40x46mm HE",
     Mechanism = "Break-Action",
     Country = "USA",

@@ -1,21 +1,21 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Skorpion Vz. 61"
+SWEP.PrintName = "PP-2000"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[
-    Soviet Submachine Gun designed for security forces which found use by low ranking army staff, vehicle drivers and personnel, and special forces.
+    9mm russian submachine gun common among security forces and popular for its compact size.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "KBP",
-    Calibre = "9x18mm Parabellum",
+    Manufacturer = "KBP Instrument Design Bureau",
+    Calibre = "9x19mm Parabellum",
     Mechanism = "Blowback",
-    Country = "Soviet Union",
-    Year = 1961,
-    Games = [[Call of Duty 4: Modern Warfare]]
+    Country = "Russia",
+    Year = 2000,
+    Games = [[Call of Duty: Modern Warfare 2]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -25,11 +25,11 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_cod4_skorpion.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_cod4_skorpion.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw2e_pp2000.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_mw2e_pp2000.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-10.15, 5.4, -4.5),
+    Pos        =    Vector(-10.25, 5.4, -4.75),
     Ang        =    Angle(-6, 2, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
@@ -64,7 +64,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ClipSize = 20 -- DefaultClip is automatically set.
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
@@ -117,7 +117,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.2
 SWEP.SprintToFireTime = 0.2
 
-SWEP.RPM = 850
+SWEP.RPM = 900
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -143,8 +143,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_COD4E.Skorpion_Fire"
-SWEP.ShootSoundSilenced = "ARC9_COD4E.MP5_Sil"
+SWEP.ShootSound = "ARC9_MW2E.PP2000_Fire"
+SWEP.ShootSoundSilenced = "ARC9_MW3E.SMG_Sil"
 
 --SWEP.MuzzleEffect = "muzzleflash_4"
 SWEP.MuzzleParticle = "muzzleflash_smg" -- Used for some muzzle effects.
@@ -167,10 +167,9 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.79, -2, 1),
-    Ang = Angle(0.5, 0.7, 2),
+    Pos = Vector(-3.49, 0, 0.9),
+    Ang = Angle(0, -0.75, 0),
     Magnification = 1.1,
-    AssociatedSlot = 1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
@@ -213,7 +212,7 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mount"] = {
+    ["stock_l"] = {
         Bodygroups = {
             {1,1}
         },
@@ -223,28 +222,47 @@ SWEP.AttachmentElements = {
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
-    if attached["bo1_pap"] then
-        vm:SetSkin(1)
+
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 end
+
+
+-- SWEP.Hook_TranslateAnimation = function (self, anim)
+    -- local attached = self:GetElements()
+-- end
+
+--TEST 3
 
 SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(0.56, 0, 3.1),
+        Pos = Vector(-2, 0, 2),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_optic_lp", "bo1_rail_riser"},
-        -- CorrectiveAng = Angle(0.025, 0.05, 0),
-        InstalledElements = {"mount"},
     },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1.3, 1, 1),
-        Pos = Vector(7, 0, 1.4),
+        Pos = Vector(8, 0, 1.35),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_muzzle_smg", "bo1_muzzle_pistol"},
+    },
+    {
+        PrintName = "Stock",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 0),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_stock_l"},
+        Installed = "mwc_stock_light"
     },
     {
         PrintName = "Firing Group",
@@ -278,20 +296,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
+    {
+        PrintName = "Cosmetic",
+        Bone = "j_gun",
+        Pos = Vector(-12.5, 0, 2.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
-
-SWEP.HookP_NameChange = function(self, name)
-
-    local attached = self:GetElements()
-
-    local gunname = "Skorpion Vz. 61"
-
-    if attached["bo1_pap"] then
-        gunname = "Vicious Zeta-115"
-    end
-
-    return gunname
-end
 
 SWEP.Animations = {
     ["idle"] = {
@@ -300,24 +313,18 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        Time = 0.75,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        Time = 0.75,
     },
     ["ready"] = {
-        Source = "draw",
-        Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
+        Source = "first_draw",
+        Time = 1,
+        EventTable = {
+            {s = "ARC9_MW2E.PP2000_FirstLift", t = 0.01},
+        },
     },
     ["fire"] = {
         Source = {"fire"},
@@ -331,28 +338,20 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2.5,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        Time = 2,
         EventTable = {
-            {s = "ARC9_COD4E.Skorpion_MagOut", t = 0.25},
-            {s = "ARC9_COD4E.Skorpion_MagIn", t = 1.6},
+            {s = "ARC9_MW2E.PP2000_MagOut", t = 0.25},
+            {s = "ARC9_MW2E.PP2000_MagIn", t = 1.2},
         },
         MinProgress = 2,
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 3.36,
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.2,
+        Time = 2.7,
         EventTable = {
-            {s = "ARC9_COD4E.Skorpion_MagOut", t = 0.25},
-            {s = "ARC9_COD4E.Skorpion_MagIn", t = 1.7},
-            {s = "ARC9_COD4E.Skorpion_Chamber", t = 2.3}
+            {s = "ARC9_MW2E.PP2000_MagOut", t = 0.25},
+            {s = "ARC9_MW2E.PP2000_MagIn", t = 1.2},
+            {s = "ARC9_MW2E.PP2000_Chamber", t = 1.8}
         },
         MinProgress = 2.7,
     },

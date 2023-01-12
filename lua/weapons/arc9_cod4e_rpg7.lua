@@ -4,18 +4,19 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AT4"
+SWEP.PrintName = "RPG-7"
 SWEP.Class = "Rocket Launcher"
 SWEP.Description = [[
-    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
+    A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+    The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.
 ]]
 SWEP.Trivia = {
-    Manufacturer = "Saab Bofors Dynamics",
-    Calibre = "84mm HEAT Round",
+    Manufacturer = "Bazalt",
+    Calibre = "85x40mm RPG",
     Mechanism = "Rocket Propelled Grenade",
-    Country = "USA",
-    Year = 1987,
-    Games = [[COD4, MW2]]
+    Country = "USSR",
+    Year = 1958,
+    Games = [[COD4, MW2, BO1, MW3, BO1, AW, ]]
 }
 SWEP.Credits = {
     Author = "Palindrone"
@@ -25,8 +26,8 @@ SWEP.Slot = 4
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw2e_at4.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw2e_at4.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_cod4_rpg7.mdl"
+SWEP.WorldModel = "models/weapons/arc9/c_cod4_rpg7.mdl"
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3, 5, -5),
@@ -44,7 +45,7 @@ SWEP.RangeMax = 6000
 SWEP.RangeMin = 1000
 SWEP.Penetration = 0
 SWEP.DamageType = nil
-SWEP.ShootEnt = "arc9_mwc_at4_missile" -- Set to an entity to launch it out of this weapon.
+SWEP.ShootEnt = "arc9_mwc_rocket_rpg" -- Set to an entity to launch it out of this weapon.
 SWEP.ShootEntForce = 12500
 SWEP.ShootEntityData = {}
 
@@ -228,6 +229,8 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
+    if self:Clip1() == 0 then vm:SetBodygroup(1,1) end
+
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
@@ -284,22 +287,29 @@ SWEP.Animations = {
         },
     },
     ["fire"] = {
-        Source = "fire",
+        Source = {
+            "fire",
+        },
         Time = 15 / 35,
     },
     ["idle_iron"] = {
-        Source = "idle_ads",
+        Source = {"idle_ads"},
         Time = 1 / 35,
     },
     ["fire_iron"] = {
-        Source = "fire_ads",
+        Source = {
+            "fire_ads",
+        },
         Time = 15 / 35,
     },
     ["reload"] = {
         Source = "reload",
+        MinProgress = 0.1,
         EventTable = {
-            {s = "ARC9_COD4E.AT4_Drop", t = 0.5},
-            {s = "ARC9_COD4E.AT4_Raise", t = 2},
+            {s = "ARC9_COD4E.RPG_Lift", t = 1 / 30},
+            {s = "ARC9_COD4E.RPG_Insert", t = 25 / 30},
+            -- {s = "weapons/arc9/bo1_rpg/futz.wav", t = 33 / 30},
+            {s = "ARC9_COD4E.RPG_Twist", t = 40 / 30},
         },
     },
     ["enter_sprint"] = {

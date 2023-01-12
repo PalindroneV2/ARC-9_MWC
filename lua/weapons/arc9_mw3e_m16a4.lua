@@ -131,7 +131,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
-SWEP.PostBurstDelay = 0.1
+SWEP.PostBurstDelay = 0.2
 SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 

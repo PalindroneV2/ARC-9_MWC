@@ -432,7 +432,7 @@ SWEP.Animations = {
         Source = "first_draw",
         Time = 1.5,
         EventTable = {
-            {s = "ARC9_COD4E.MP5_BoltFwd", t = 15 / 30},
+            {s = "ARC9_COD4E.MP5_Chamber", t = 0.5},
         },
         IKTimeLine = {
             {
