@@ -165,10 +165,10 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.475, 3, 1.6),
+    Pos = Vector(-2.475, 0, 1.6),
     Ang = Angle(-0.075, -1.35, 0),
     Magnification = 1.1,
-    --AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
@@ -254,10 +254,19 @@ SWEP.Attachments = {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
+        Scale = Vector(1,1,1),
+        Pos = Vector(2.5, 0.26, 0.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"bo1_tactical"},
+        MergeSlots = {3},
+    },
+    {
+        Hidden = true,
+        Bone = "j_gun",
         Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(2.5, 0.26, 0.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical", "bo1_pistol_rail"},
+        Category = {"bo1_pistol_rail"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
     },
     {
@@ -307,9 +316,6 @@ SWEP.Animations = {
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 0.5,
-        LHIK = true,
-        LHIKIn = 0.2,
-        LHIKOut = 0.25,
     },
     ["draw"] = {
         Source = "draw",
@@ -324,20 +330,8 @@ SWEP.Animations = {
         Time = 0.5,
     },
     ["ready"] = {
-        Source = "first_draw",
-        Time = 1,
-        EventTable = {
-            {s = "ARC9_BO1.M1911_Slide_Back", t = 0.2},
-            {s = "ARC9_BO1.M1911_Slide_Fwd", t = 0.8}
-        }
-    },
-    ["ready_bo2"] = {
-        Source = "first_draw",
-        Time = 1,
-        EventTable = {
-            {s = "ARC9_BO2.Pistol_SlideBack", t = 0.2},
-            {s = "ARC9_BO2.Pistol_SlideFwd", t = 0.8}
-        }
+        Source = "draw",
+        Time = 0.5,
     },
     ["fire"] = {
         Source = {"fire"},

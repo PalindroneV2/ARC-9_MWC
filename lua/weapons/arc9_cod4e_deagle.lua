@@ -215,6 +215,13 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["cod4_peq6"] = {
+        AttPosMods = {
+            [6] = {
+                Pos = Vector(-6, -0.05, 2),
+            },
+        },
+    },
 }
 
 SWEP.DefaultBodygroups = "10000000000000"
@@ -329,7 +336,7 @@ SWEP.Attachments = {
         DefaultCompactName = "Black Steel",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
-        Pos = Vector(-5, 0, 2),
+        Pos = Vector(-5, -0.05, 2),
         Ang = Angle(0, 0, 0),
         Category = {"cod4e_deagle_skin"},
         DefaultIcon = Material("materials/entities/cod4_generic.png", "mips smooth"),

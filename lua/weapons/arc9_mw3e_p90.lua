@@ -1,10 +1,10 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
-SWEP.SubCategory = "Machine Pistols"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN P90"
+SWEP.PrintName = "FN P90 TR"
 SWEP.Class = "Personal Defense Weapon"
 SWEP.Description = [[
     A peculiar firearm of belgian origin. It's bullpup configuration with a magazine on top keeps the weapon profile low and compact.

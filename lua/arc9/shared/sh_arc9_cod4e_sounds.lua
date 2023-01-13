@@ -934,6 +934,84 @@ sound.Add( {
     }
 } )
 
+--COD4E P90--
+
+sound.Add( {
+    name = "ARC9_COD4E.P90_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.P90_Sil",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/sil.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.P90_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.P90_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.P90_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_COD4E.P90_Hit",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/hit.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.P90_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/lift.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_COD4E.P90_RLift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/COD4_P90/reload_lift.wav",
+    }
+} )
+
 --COD4E Skorpion--
 
 sound.Add( {

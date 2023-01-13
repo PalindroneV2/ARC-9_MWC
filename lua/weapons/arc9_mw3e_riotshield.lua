@@ -218,17 +218,17 @@ SWEP.Attachments = {
     },
 }
 
-hook.Add("EntityTakeDamage", "ARC9_CODPACKS_RIOTSHIELD", function(ent, dmg)
-    if !(ent:IsPlayer() or ent:IsNPC()) then return end
-    local wep = ent:GetActiveWeapon()
-    if !IsValid(wep) or !wep.ARC9 then return end
-    local attached = wep:GetElements()
-    local damagetypes = (dmg:GetDamageType() == DMG_BLAST) or (dmg:GetDamageType() == DMG_BURN) or (dmg:GetDamageType() == DMG_FALL) or (dmg:GetDamageType() == DMG_DISSOLVE)
+-- hook.Add("EntityTakeDamage", "ARC9_CODPACKS_RIOTSHIELD", function(ent, dmg)
+--     if !(ent:IsPlayer() or ent:IsNPC()) then return end
+--     local wep = ent:GetActiveWeapon()
+--     if !IsValid(wep) or !wep.ARC9 then return end
+--     local attached = wep:GetElements()
+--     local damagetypes = (dmg:GetDamageType() == DMG_BLAST) or (dmg:GetDamageType() == DMG_BURN) or (dmg:GetDamageType() == DMG_FALL) or (dmg:GetDamageType() == DMG_DISSOLVE)
 
-    if attached["riotshield"] and !damagetypes then
-        dmg:ScaleDamage(50 / 250)
-    end
-end)
+--     if attached["riotshield"] and !damagetypes then
+--         dmg:ScaleDamage(50 / 250)
+--     end
+-- end)
 
 SWEP.HideBones = {
     -- "tag_ammo2",

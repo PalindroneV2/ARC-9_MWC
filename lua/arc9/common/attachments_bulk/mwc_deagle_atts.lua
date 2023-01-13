@@ -91,6 +91,9 @@ ATT.Free = true
 ATT.Category = {"cod4e_deagle_skin", "mw3e_deagle_skin"}
 ATT.ActivateElements = {"tactical_eagle", "no_tac_rail"}
 
+-- ATT.AttachmentElements = {
+-- }
+
 ATT.Attachments = {
     {
         PrintName = "Underbarrel",
