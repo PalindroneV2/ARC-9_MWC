@@ -150,7 +150,7 @@ SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
 SWEP.ShootSound = "ARC9_MW3E.ACR_Fire"
-SWEP.ShootSoundSilenced = "ARC9_MW3E.M4M16_Sil"
+SWEP.ShootSoundSilenced = "ARC9_MW3E.ACR_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
 SWEP.DoFireAnimationUBGL = true
@@ -270,7 +270,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "ACR 6.8"
+    local gunname = "Remington ACR 6.8"
 
     if attached["bo1_pap"] then
         gunname = "Atomic Collapse Reverb"

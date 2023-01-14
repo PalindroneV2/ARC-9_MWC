@@ -707,7 +707,7 @@ SWEP.Animations = {
         Time = 35 / 30,
         RestoreAmmo = 1,
         EventTable = {
-            --{s = "ARC9_COD4E.M203_Open", t = 0.125},
+            --{s = "ARC9_MWC.M203_Open", t = 0.125},
         }
     },
     ["reload_ubgl_insert_mksetup"] = {

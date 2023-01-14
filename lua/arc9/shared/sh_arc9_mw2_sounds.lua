@@ -121,7 +121,7 @@ sound.Add( {
     }
 } )
 
---MW3E SCARL--
+--MW2E SCARL--
 
 sound.Add( {
     name = "ARC9_MW2E.SCARH_Fire",
@@ -177,6 +177,64 @@ sound.Add( {
     level = 100,
     sound = {
         "^weapons/ARC9/mw2e_scarh/lift.wav",
+    }
+} )
+
+--MW2E ACR --
+
+sound.Add( {
+    name = "ARC9_MW2E.ACR_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_ACR/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.ACR_Sil",
+    channel = CHAN_STATIC,
+    volume = 1,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_ACR/sil.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.ACR_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_ACR/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.ACR_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_ACR/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.ACR_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_ACR/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.ACR_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw2e_ACR/lift.wav",
     }
 } )
 

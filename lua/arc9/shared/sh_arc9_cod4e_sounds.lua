@@ -619,7 +619,7 @@ sound.Add( {
 -- COD4 M203
 
 sound.Add( {
-    name = "ARC9_COD4E.M203_Fire",
+    name = "ARC9_MWC.M203_Fire",
     channel = CHAN_STATIC,
     volume = 0.75,
     level = 100,
@@ -629,7 +629,7 @@ sound.Add( {
 } )
 
 sound.Add( {
-    name = "ARC9_COD4E.M203_Load",
+    name = "ARC9_MWC.M203_Load",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
@@ -638,7 +638,7 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ARC9_COD4E.M203_Open",
+    name = "ARC9_MWC.M203_Open",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
@@ -647,7 +647,7 @@ sound.Add( {
     }
 } )
 sound.Add( {
-    name = "ARC9_COD4E.M203_Close",
+    name = "ARC9_MWC.M203_Close",
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,

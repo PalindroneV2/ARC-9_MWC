@@ -1,5 +1,215 @@
 local ATT = {}
 
+ATT.PrintName = "Brockhaurd"
+ATT.FullColorIcon = true
+ATT.CompactName = "BROCK"
+ATT.Icon = Material("entities/mwc_camos/cod4/brockhaurd.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Effective desert pattern.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/brockhaurd"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "cod4_camo_brock")
+
+ATT = {}
+
+ATT.PrintName = "Bushdweller"
+ATT.FullColorIcon = true
+ATT.CompactName = "BUSH"
+ATT.Icon = Material("entities/mwc_camos/cod4/bush_dweller.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[For when ghillie is not enough.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/bush_dweller"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "cod4_camo_bush")
+
+ATT = {}
+
+ATT.PrintName = "Black & White MARPAT"
+ATT.FullColorIcon = true
+ATT.CompactName = "BW MARPAT"
+ATT.Icon = Material("entities/mwc_camos/cod4/bw_marpat.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Effective digital camo for urban operations. Oorah.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/bw_marpat"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "cod4_camo_bwmarpat")
+
+ATT = {}
+
+ATT.PrintName = "Commando Tiger"
+ATT.FullColorIcon = true
+ATT.CompactName = "CMD TIGER"
+ATT.Icon = Material("entities/mwc_camos/cod4/commando_tiger.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Only color this blends in with is the blood of your enemies.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/commando_tiger"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "cod4_camo_commando_tiger")
+
+ATT = {}
+
+ATT.PrintName = "Arctic"
+ATT.FullColorIcon = true
+ATT.CompactName = "ARCTIC"
+ATT.Icon = Material("entities/mwc_camos/mw2/arctic.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Temperatures below zero.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/arctic"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_arctic")
+
+ATT = {}
+
+ATT.PrintName = "Blue Tiger"
+ATT.FullColorIcon = true
+ATT.CompactName = "BLUE TIGER"
+ATT.Icon = Material("entities/mwc_camos/mw2/blue_tiger.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Rare breed of big feline.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/blue_tiger"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_blue_tiger")
+
+ATT = {}
+
+ATT.PrintName = "Red Tiger"
+ATT.FullColorIcon = true
+ATT.CompactName = "RED TIGER"
+ATT.Icon = Material("entities/mwc_camos/mw2/red_tiger.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Rare breed of big feline.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/red_tiger"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_red_tiger")
+
+ATT = {}
+
+ATT.PrintName = "Desert"
+ATT.FullColorIcon = true
+ATT.CompactName = "DESERT"
+ATT.Icon = Material("entities/mwc_camos/mw2/desert.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Ugly combination of yellows work best near dry sandy environments.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/desert"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_desert")
+
+ATT = {}
+
+ATT.PrintName = "Digital"
+ATT.FullColorIcon = true
+ATT.CompactName = "DIGITAL"
+ATT.Icon = Material("entities/mwc_camos/mw2/digital.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Another grayscale digital urban camo.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/digital"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_digital")
+
+ATT = {}
+
+ATT.PrintName = "Orange Fall"
+ATT.FullColorIcon = true
+ATT.CompactName = "ORN FALL"
+ATT.Icon = Material("entities/mwc_camos/mw2/orange_fall.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Autumn colors.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/orange_fall"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_orange_fall")
+
+ATT = {}
+
+ATT.PrintName = "Red Urban"
+ATT.FullColorIcon = true
+ATT.CompactName = "RED URBAN"
+ATT.Icon = Material("entities/mwc_camos/mw2/red_urban.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Decay of the urban environment.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/red_urban"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_red_urban")
+
+ATT = {}
+
+ATT.PrintName = "Blue Urban"
+ATT.FullColorIcon = true
+ATT.CompactName = "BLU URBAN"
+ATT.Icon = Material("entities/mwc_camos/mw2/blue_urban.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Renewed inner city areas.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/blue_urban"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_blue_urban")
+
+ATT = {}
+
+ATT.PrintName = "Woodland"
+ATT.FullColorIcon = true
+ATT.CompactName = "WOODLAND"
+ATT.Icon = Material("entities/mwc_camos/mw2/woodland.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Hiding in the woods.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/mw2/camos/woodland"
+ATT.Folder = "MWC CAMOS/MW2"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "mw2_camo_woodland")
+
+ATT = {}
+
+ATT.PrintName = "Stagger Blue"
+ATT.FullColorIcon = true
+ATT.CompactName = "STGRBLU"
+ATT.Icon = Material("entities/mwc_camos/cod4/stagger_blue.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Something about a wearing blue in a warzone doesn't seem right.]]
+ATT.MenuCategory = "ARC-9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/stagger_blue"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 5
+
+ARC9.LoadAttachment(ATT, "cod4_camo_stagger_blue")
+
+ATT = {}
+
 ATT.PrintName = "Autumn"
 ATT.FullColorIcon = true
 ATT.CompactName = "AUTUMN"

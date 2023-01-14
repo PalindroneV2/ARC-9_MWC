@@ -377,7 +377,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Control Group",
-        DefaultCompactName = "BST",
+        DefaultCompactName = "AUTO",
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
@@ -652,18 +652,18 @@ SWEP.Animations = {
         Source = "reload_glsetup",
         Time = 3,
         EventTable = {
-            {s = "ARC9_COD4E.M203_Open", t = 0.125},
-            {s = "ARC9_COD4E.M203_Load", t = 1.5},
-            {s = "ARC9_COD4E.M203_Close", t = 2.25},
+            {s = "ARC9_MWC.M203_Open", t = 0.125},
+            {s = "ARC9_MWC.M203_Load", t = 1.5},
+            {s = "ARC9_MWC.M203_Close", t = 2.25},
         }
     },
     ["reload_glsetup_soh"] = {
         Source = "reload_glsetup",
         Time = 3 / 2,
         EventTable = {
-            {s = "ARC9_COD4E.M203_Open", t = 0.125 / 2},
-            {s = "ARC9_COD4E.M203_Load", t = 1.5 / 2},
-            {s = "ARC9_COD4E.M203_Close", t = 2.25 / 2},
+            {s = "ARC9_MWC.M203_Open", t = 0.125 / 2},
+            {s = "ARC9_MWC.M203_Load", t = 1.5 / 2},
+            {s = "ARC9_MWC.M203_Close", t = 2.25 / 2},
         }
     },
     ["enter_sprint_glsetup"] = {
@@ -711,7 +711,7 @@ SWEP.Animations = {
         Time = 35 / 30,
         RestoreAmmo = 1,
         EventTable = {
-            --{s = "ARC9_COD4E.M203_Open", t = 0.125},
+            --{s = "ARC9_MWC.M203_Open", t = 0.125},
         }
     },
     ["reload_ubgl_insert_mksetup"] = {
