@@ -226,6 +226,7 @@ SWEP.AttachmentElements = {
         Bodygroups = {
             {1,1},
         },
+        -- ClipSizeMult = 2,
     },
     ["mwc_alt_irons"] = {
         Bodygroups = {

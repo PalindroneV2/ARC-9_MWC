@@ -570,6 +570,72 @@ sound.Add( {
     }
 } )
 
+--MW2E Ranger--
+
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_In1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/in1.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_In2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/in2.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Ranger_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Ranger/lift.wav",
+    }
+} )
+
 -- MWC MASTERKEY --
 
 sound.Add( {
