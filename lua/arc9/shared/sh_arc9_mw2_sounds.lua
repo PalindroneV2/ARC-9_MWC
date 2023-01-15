@@ -368,6 +368,55 @@ sound.Add( {
     }
 } )
 
+--MW2E Tavor--
+
+sound.Add( {
+    name = "ARC9_MW2E.Tavor_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Tavor/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.Tavor_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Tavor/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Tavor_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Tavor/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Tavor_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Tavor/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Tavor_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Tavor/lift.wav",
+    }
+} )
+
 --MW2E PP2000--
 
 sound.Add( {
