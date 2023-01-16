@@ -239,7 +239,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(6, 0, 3.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser", "mw3e_deagle_tactical"},
+        Category = {"cod_optic", "cod_rail_riser", "mw3e_deagle_tactical"},
         InstalledElements = {"mount"}
     },
     {
@@ -265,7 +265,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(7, 0.4, 3.125),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical", "mw3e_tactical_p90_r"},
+        Category = {"cod_tactical", "mw3e_tactical_p90_r"},
     },
     {
         PrintName = "Tactical",
@@ -274,7 +274,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(7, -0.4, 3.125),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical", "mw3e_tactical_p90_l"},
+        Category = {"cod_tactical", "mw3e_tactical_p90_l"},
     },
     {
         PrintName = "Ammunition",

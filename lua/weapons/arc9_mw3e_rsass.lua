@@ -295,7 +295,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.5, 0-.025, 2.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
         Installed = "mwc_optic_psr",
     },
@@ -307,7 +307,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, -40),
         KeepBaseIrons = true,
         InstalledElements = {"anglemount"},
-        Category = {"bo1_optic_lp"},
+        Category = {"cod_optic_lp"},
         Icon_Offset = Vector(0,0,2),
     },
     {
@@ -324,7 +324,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 0.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
         Icon_Offset = Vector(0,0,-2),
     },
     {
@@ -342,7 +342,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10, -0.825, 1.65),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(2,0,0),
     },
     {
@@ -351,7 +351,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10, 0.825, 1.65),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(-2,0,0),
     },
     {

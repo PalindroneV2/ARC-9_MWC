@@ -192,8 +192,14 @@ SWEP.IronSights = {
     Pos = Vector(-3.245, -3, 0.625),
     Ang = Angle(0.025, 0.25, 0),
     Magnification = 1.1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.625, -2, -0.25),
+    Ang = Angle(0.0125, 0.125, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -215,8 +221,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -224,9 +233,6 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BipodPos = Vector(-3.245, 0, -2)
 SWEP.BipodAng = Angle(0.02, 0, 0)
@@ -310,7 +316,7 @@ SWEP.Attachments = {
         Bone = "j_reload_cover",
         Pos = Vector(-2.125, 0, 0.45),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
     },
     {
@@ -336,7 +342,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7.25, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Bipod",

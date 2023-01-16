@@ -219,7 +219,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
@@ -287,7 +287,7 @@ SWEP.Attachments = {
         Bone = "j_ammo_cover",
         Pos = Vector(-4.2, 0, 0.82),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -304,7 +304,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(19.25, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Bipod",

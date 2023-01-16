@@ -317,7 +317,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
     },
     {
@@ -348,7 +348,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.55),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m320", "bo1_grips"},
+        Category = {"mwc_m320", "cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -356,7 +356,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0.8, 2.55),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -364,7 +364,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, -0.8, 2.55),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Top",
@@ -372,7 +372,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0, 3.5),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
         ExcludeElements = {"mw3_psrscope"},
     },
     {

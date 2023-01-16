@@ -194,7 +194,7 @@ SWEP.MovingMidPoint = {
 SWEP.BipodPos = Vector(-4.1, 0, -2)
 SWEP.BipodAng = Angle(0,0,0)
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
@@ -253,7 +253,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4.5, 0, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
         Installed = "mwc_optic_as50",
     },
@@ -271,7 +271,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12.5, 0, 0.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
         Icon_Offset = Vector(0,0,-2),
     },
     {
@@ -280,7 +280,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12.5, -0.825, 1.65),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(2,0,0),
     },
     {
@@ -289,7 +289,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12.5, 0.825, 1.65),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(-2,0,0),
     },
     {

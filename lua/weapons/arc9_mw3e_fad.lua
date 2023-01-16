@@ -307,7 +307,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, -0.03, 3.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
     },
     {
@@ -332,7 +332,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(13.5, -1.125, 1.75),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"right_cover"},
     },
     {
@@ -341,7 +341,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(13.5, 1.125, 1.75),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"left_cover"},
     },
     {

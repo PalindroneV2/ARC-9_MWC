@@ -258,7 +258,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bo1_optic"] and !attached["bo1_ar15_toprail"] then
+    if attached["cod_optic"] and !attached["bo1_ar15_toprail"] then
         vm:SetBodygroup(1,1)
     end
     if attached["classic_irons"] then
@@ -267,7 +267,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     local ub = 0
-    if attached["bo1_grips"] then
+    if attached["cod_grips"] then
         ub = 1
     end
     if attached["mwc_m203"] then
@@ -321,7 +321,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw2_classic_irons"},
+        Category = {"cod_optic", "mw2_classic_irons"},
         InstalledElements = {"mainoptic"},
     },
     {
@@ -346,7 +346,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.15),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "mwc_mk", "bo1_grips"},
+        Category = {"mwc_m203", "mwc_mk", "cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -354,7 +354,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, 0.6, 2.3),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"right_cover"},
     },
     {
@@ -363,7 +363,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, -0.6, 2.3),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"left_cover"},
     },
     {
@@ -372,7 +372,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, 0, 3.55),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
         InstalledElements = {"top_cover"},
     },
     {

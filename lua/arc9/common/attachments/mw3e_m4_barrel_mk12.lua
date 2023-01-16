@@ -51,7 +51,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.75, 0, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical", "mwc_bipod"},
+        Category = {"cod_tactical", "mwc_bipod"},
         -- InstalledElements = {"top_cover"},
     },
     {
@@ -60,7 +60,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.75, -0.6, 0),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         RequireElements = {"ism16"},
     },
     {
@@ -69,7 +69,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.75, 0.6, 0),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         RequireElements = {"ism16"},
     },
     {
@@ -78,7 +78,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-12.75, 0, -0.95),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         RequireElements = {"ism16"},
     },
     {
@@ -87,6 +87,6 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.75, 0, 0.95),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
 }

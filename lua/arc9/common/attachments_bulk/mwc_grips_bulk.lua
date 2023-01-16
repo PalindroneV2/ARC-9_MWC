@@ -42,7 +42,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2e_foregrip_scar.mdl"
 ATT.Scale = 1
@@ -72,7 +72,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
-ATT.Category = {"bo1_grips"}
+ATT.Category = {"cod_grips"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2e_foregrip_m14.mdl"
 ATT.Scale = 1

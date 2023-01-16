@@ -207,7 +207,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
@@ -263,7 +263,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 5.215),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"stock_l"},
     },
@@ -281,7 +281,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0, 0.9),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Firing Group",

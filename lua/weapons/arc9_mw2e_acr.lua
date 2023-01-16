@@ -315,7 +315,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 2.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mainoptic"},
     },
     {
@@ -341,7 +341,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0, -1),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "mwc_mk", "bo1_rail_underbarrel"},
+        Category = {"mwc_m203", "mwc_mk", "cod_rail_underbarrel"},
     },
     {
         PrintName = "Tactical Right",
@@ -349,7 +349,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(15.25, 1.2, 0.7),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -357,7 +357,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(15.25, -1.2, 0.7),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Top",
@@ -365,7 +365,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(13.25, 0, 2.0),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
     },
     {
         PrintName = "Fire Control Group",

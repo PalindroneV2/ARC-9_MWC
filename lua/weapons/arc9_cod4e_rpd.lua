@@ -196,6 +196,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = {
+    Pos = Vector(-1.625, -3, 0),
+    Ang = Angle(0.025, 0.4, 0),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
@@ -215,18 +220,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, -3, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, -3, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BipodPos = Vector(-3.245, 0, -2)
 SWEP.BipodAng = Angle(0.02, 0, 0)
@@ -280,7 +285,7 @@ end
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
-    if attached["bo1_rail_optic"] and anim == "reload" then
+    if attached["cod_rail_optic"] and anim == "reload" then
         return anim .. "_optic"
     end
     if self:GetBipod() and anim == "fire" then
@@ -295,7 +300,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(-5, 0, 0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"cod_rail_optic"},
     },
     {
         PrintName = "Muzzle",
@@ -320,7 +325,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(10.5, 0, -0.25),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_grips"},
+        Category = {"cod_grips"},
     },
     {
         PrintName = "Bipod",

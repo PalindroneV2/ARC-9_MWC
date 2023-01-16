@@ -311,7 +311,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(0.05, 0, 0)
 
     local ub = 0
-    if attached["bo1_grips"] then
+    if attached["cod_grips"] then
         ub = 2
     end
     if attached["mwc_m203"] then
@@ -358,7 +358,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             gas = 0
         end
     end
-    if (attached["bo1_optic"] or attached["bo1_rail_riser"]) and !attached["bo1_ar15_toprail"] then
+    if (attached["cod_optic"] or attached["cod_rail_riser"]) and !attached["bo1_ar15_toprail"] then
         rear = 3
         front = 7
         gas = 1
@@ -447,7 +447,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw3_classic_irons", "bo1_rail_riser"},
+        Category = {"cod_optic", "mw3_classic_irons", "cod_rail_riser"},
         InstalledElements = {"mainoptic"},
     },
     {
@@ -481,7 +481,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.5),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "bo1_grips"},
+        Category = {"mwc_m203", "cod_grips"},
         ExcludeElements = {"barrel_mk12"},
     },
     {
@@ -490,7 +490,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, 0.6, 2.3),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"right_cover"},
         ExcludeElements = {"barrel_classic"},
     },
@@ -500,7 +500,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, -0.6, 2.3),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"left_cover"},
         ExcludeElements = {"barrel_classic"},
     },
@@ -510,7 +510,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11.25, 0, 3.35),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
         InstalledElements = {"top_cover"},
         ExcludeElements = {"barrel_classic"},
     },

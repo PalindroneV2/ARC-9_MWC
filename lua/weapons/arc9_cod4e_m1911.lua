@@ -173,6 +173,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.25, 0, 0.75),
+    Ang = Angle(-0.075, -0.675, -2.5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "revolver"
 SWEP.HoldTypeSights = "revolver"
@@ -192,15 +197,15 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
-SWEP.RestPos = Vector(0.532, -6, 0)
-SWEP.RestAng = Angle(-4.633, 36.881, 0)
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, 0)
-SWEP.SprintAng = Angle(0, 0, 0)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(15, 25, 2)
 SWEP.CustomizeAng = Angle(90, 0, -1.5)
@@ -257,7 +262,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(2.5, 0.26, 0.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         MergeSlots = {3},
     },
     {

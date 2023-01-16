@@ -174,12 +174,14 @@ SWEP.CaseBones = {}
 
 SWEP.IronSights = {
     Pos = Vector(-2.55, -2, 0.65),
-    Ang = Angle(-0.0125, 0.5, 0),
-    Midpoint = { -- Where the gun should be at the middle of it's irons
-        Pos = Vector(0, 15, -4),
-        Ang = Angle(0, 0, -45),
-    },
+    Ang = Angle(-0.0125, 0.15, 0),
+    ViewModelFOV = 60,
     Magnification = 1.1,
+}
+
+SWEP.SightMidPoint = {
+    Pos = Vector(-1.255, -2, -0.25),
+    Ang = Angle(0, 0.075, -1.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -191,7 +193,7 @@ SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.AnimDraw = ACT_HL2MP_GESTURE_RANGE_ATTACK_KNIFE
 
 SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(-2, 1, -3)
+SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos
 SWEP.MovingAng = SWEP.ActiveAng
@@ -201,18 +203,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(-2, 1, -3)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(-2, 1, -3)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -271,7 +273,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0, 1.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
         ExcludeElements = {"tactical"}
     },
     {

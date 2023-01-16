@@ -217,7 +217,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(20, 30, 4)

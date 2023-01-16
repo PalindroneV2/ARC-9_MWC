@@ -290,7 +290,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             newang = Angle(0.05, -0.2, 0)
         end
     end
-    if (attached["bo1_optic"] or attached["bo1_rail_riser"]) and !attached["bo1_ar15_toprail"] then
+    if (attached["cod_optic"] or attached["cod_rail_riser"]) and !attached["bo1_ar15_toprail"] then
         rear = 3
         front = 5
         gas = 1
@@ -356,7 +356,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.8),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw3_m4_irons", "bo1_rail_riser"},
+        Category = {"cod_optic", "mw3_m4_irons", "cod_rail_riser"},
         InstalledElements = {"mainoptic"},
         Icon_Offset = Vector(0, 0, -0.5),
     },
@@ -402,7 +402,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.375),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "bo1_rail_underbarrel"},
+        Category = {"mwc_m203", "cod_rail_underbarrel"},
         ExcludeElements = {"barrel_mk12"},
     },
     -- {
@@ -411,7 +411,7 @@ SWEP.Attachments = {
     --     Bone = "j_gun",
     --     Pos = Vector(16, 0.6, 2.3),
     --     Ang = Angle(0, 0, -90),
-    --     Category = {"bo1_tactical"},
+    --     Category = {"cod_tactical"},
     --     InstalledElements = {"right_cover"},
     -- },
     -- {
@@ -420,7 +420,7 @@ SWEP.Attachments = {
     --     Bone = "j_gun",
     --     Pos = Vector(16, -0.6, 2.3),
     --     Ang = Angle(0, 0, 90),
-    --     Category = {"bo1_tactical"},
+    --     Category = {"cod_tactical"},
     --     InstalledElements = {"left_cover"},
     -- },
     -- {
@@ -429,7 +429,7 @@ SWEP.Attachments = {
     --     Bone = "j_gun",
     --     Pos = Vector(16, 0, 3.05),
     --     Ang = Angle(0, 0, 180),
-    --     Category = {"bo1_tactical_top"},
+    --     Category = {"cod_tactical_top"},
     --     InstalledElements = {"top_cover"},
     --     ExcludeElements = {"mw3_psrscope"},
     -- },

@@ -38,7 +38,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0.6, 0.3),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         RequireElements = {"grip_cover"},
     },
     {
@@ -47,7 +47,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, -0.6, 0.3),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         RequireElements = {"grip_cover"},
     },
 }

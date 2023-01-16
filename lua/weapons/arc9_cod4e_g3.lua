@@ -175,9 +175,15 @@ SWEP.IronSights = {
     Pos = Vector(-2.335, 0, 1),
     Ang = Angle(0.025, -0.3, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    AssociatedSlot = 1,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.1525, 0, 0),
+    Ang = Angle(0.0125, -0.15, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -201,18 +207,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, -1)
-SWEP.RestAng = Angle(0, 0, -5)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -262,7 +268,7 @@ SWEP.AttachmentElements = {
     --             Pos = Vector(2.2, 0, 3.75),
     --         },
     --     },
-    --     ExcludeElements = {"bo1_rail_riser"}
+    --     ExcludeElements = {"cod_rail_riser"}
     -- },
 }
 
@@ -288,7 +294,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["psg1_scope"] then
         irons = 2
-        if attached["bo1_rail_riser"] then
+        if attached["cod_rail_riser"] then
             irons = 1
         end
     end
@@ -332,7 +338,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.2, 0, 4.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic","bo1_rail_riser"},
+        Category = {"cod_optic","cod_rail_riser"},
         InstalledElements = {"mount"},
         MergeSlots = {2}
     },

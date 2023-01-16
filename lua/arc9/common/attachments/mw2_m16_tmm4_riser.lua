@@ -24,7 +24,7 @@ ATT.Attachments = {
         Pos = Vector(0, 0, -0.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0,0,2),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"tmm4_optic"},
     },
 }

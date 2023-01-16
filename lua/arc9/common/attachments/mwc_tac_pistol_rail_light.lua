@@ -23,7 +23,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
         -- CorrectiveAng = Angle(-1, -1, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         -- InstalledElements = {"mount"},
     },
 }

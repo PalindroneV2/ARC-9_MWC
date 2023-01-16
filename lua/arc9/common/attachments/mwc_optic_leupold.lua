@@ -14,7 +14,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 
-ATT.Category = {"mwc_mk14_scope","mwc_awm_scope"} --"bo1_optic", "bo1_optic_alt", 
+ATT.Category = {"mwc_mk14_scope","mwc_awm_scope"} --"cod_optic", "cod_optic_alt", 
 
 ATT.Model = "models/weapons/arc9/atts/mw3_awm_scope.mdl"
 ATT.Scale = 1

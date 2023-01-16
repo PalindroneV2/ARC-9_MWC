@@ -16,7 +16,7 @@ ATT.Attachments = {
         Pos = Vector(-1, 0, -0.8),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 1.5),
-        Category = {"bo1_optic", "bo1_rail_riser"},Z
+        Category = {"cod_optic", "cod_rail_riser"},Z
         -- InstalledElements = {"mount"},
     },
     {
@@ -25,6 +25,6 @@ ATT.Attachments = {
         Pos = Vector(-7, 0, 2.25),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -0.50),
-        Category = {"bo1_grips","mwc_igrip"},
+        Category = {"cod_grips","mwc_igrip"},
     },
 }

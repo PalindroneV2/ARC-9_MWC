@@ -249,7 +249,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3.2, 0, 2.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_lp", "bo1_rail_riser"},
+        Category = {"cod_optic_lp", "cod_rail_riser"},
         -- CorrectiveAng = Angle(0.025, 0.05, 0),
         InstalledElements = {"mount"},
     },
@@ -275,7 +275,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, -0.6, 1.1),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Tactical Right",
@@ -283,7 +283,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0.6, 1.1),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_rail_tactical",
+        Category = "cod_rail_tactical",
     },
     {
         PrintName = "Ammunition",

@@ -292,7 +292,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(4, 0, 2.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "mw3e_deagle_tactical"},
+        Category = {"cod_optic", "mw3e_deagle_tactical"},
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
         ActivateElement = {"noirons"}
     },

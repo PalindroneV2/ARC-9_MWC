@@ -338,7 +338,7 @@ SWEP.Attachments = {
         -- Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(3.4, 0.225, 0.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         ExcludeElements = {"raffica"},
         MergeSlots = {3},
     },

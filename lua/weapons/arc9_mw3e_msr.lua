@@ -200,7 +200,7 @@ SWEP.MovingMidPoint = {
 SWEP.BipodPos = Vector(-4.13, 0, -2.35)
 SWEP.BipodAng = Angle(0,0,0)
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
@@ -264,7 +264,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4.2, 0, 2.85),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
         Installed = "mwc_optic_msr",
     },
@@ -276,7 +276,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, -45),
         KeepBaseIrons = true,
         InstalledElements = {"anglemount"},
-        Category = {"bo1_optic_lp"},
+        Category = {"cod_optic_lp"},
         Icon_Offset = Vector(0,0,2),
     },
     {
@@ -287,7 +287,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 45),
         KeepBaseIrons = true,
         InstalledElements = {"anglemount"},
-        Category = {"bo1_optic_lp"},
+        Category = {"cod_optic_lp"},
         Icon_Offset = Vector(2,0,2),
     },
     {
@@ -304,7 +304,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12.5, 0, 0.7),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Bipod",
@@ -321,7 +321,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(18.2, -0.7, 1.5),
         Ang = Angle(0, 0, 90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(2,0,0),
     },
     {
@@ -330,7 +330,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(18.2, 0.7, 1.5),
         Ang = Angle(0, 0, -90),
-        Category = "bo1_tactical",
+        Category = "cod_tactical",
         Icon_Offset = Vector(-2,0,0),
     },
     {

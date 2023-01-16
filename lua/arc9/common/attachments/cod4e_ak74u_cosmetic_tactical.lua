@@ -23,8 +23,8 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-14, 0.5, 2.7),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
-        RequireElements = {"bo1_grips"}
+        Category = {"cod_tactical"},
+        RequireElements = {"cod_grips"}
     },
     {
         PrintName = "Tactical Left",
@@ -32,7 +32,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-14, -0.5, 2.7),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
-        RequireElements = {"bo1_grips"}
+        Category = {"cod_tactical"},
+        RequireElements = {"cod_grips"}
     },
 }

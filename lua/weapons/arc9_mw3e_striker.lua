@@ -197,7 +197,7 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = SWEP.ActivePos
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
@@ -245,7 +245,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.5, -0.025, 2.4),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         Icon_Offset = Vector(0, 0, 1),
         InstalledElements = {"mount"},
     },

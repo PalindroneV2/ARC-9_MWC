@@ -304,7 +304,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(0, -0.02, 5.08),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
     },
     {
@@ -330,7 +330,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7, 0, 0.25),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel", "mwc_m320", "mwc_mk"},
+        Category = {"cod_rail_underbarrel", "mwc_m320", "mwc_mk"},
     },
     {
         PrintName = "Tactical Left",
@@ -338,7 +338,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7, -0.75, 1.35),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_rail_tactical"},
+        Category = {"cod_rail_tactical"},
         InstalledElements = {"right_cover"},
     },
     {
@@ -347,7 +347,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(7, 0.75, 1.35),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_rail_tactical"},
+        Category = {"cod_rail_tactical"},
         InstalledElements = {"left_cover"},
     },
     {

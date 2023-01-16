@@ -15,7 +15,7 @@ ATT.Free = false
 ATT.Folder = "SCOPE"
 
 ATT.ActivateElements = {"svd_scope"}
-ATT.Category = {"mwc_svd_scope"} --"bo1_optic", "bo1_optic_alt", 
+ATT.Category = {"mwc_svd_scope"} --"cod_optic", "cod_optic_alt", 
 
 ATT.ModelBodygroups = "000"
 ATT.Model = "models/weapons/arc9/atts/cod4_dragunov_scope.mdl"

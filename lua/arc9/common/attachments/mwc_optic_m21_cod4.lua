@@ -15,7 +15,7 @@ ATT.Free = false
 ATT.Folder = "SCOPE"
 
 ATT.ActivateElements = {"m21_scope"}
-ATT.Category = {"mwc_m21_scope"} --"bo1_optic", "bo1_optic_alt", 
+ATT.Category = {"mwc_m21_scope"} --"cod_optic", "cod_optic_alt", 
 
 ATT.ModelBodygroups = "10"
 ATT.Model = "models/weapons/arc9/atts/cod4_m14scope.mdl"

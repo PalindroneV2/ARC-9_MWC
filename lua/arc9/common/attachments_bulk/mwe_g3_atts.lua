@@ -75,7 +75,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 1.1),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "bo1_grips"},
+        Category = {"mwc_m203", "cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -84,7 +84,7 @@ ATT.Attachments = {
         Pos = Vector(-11 , 0.8, -0.1),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 1.5, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -93,7 +93,7 @@ ATT.Attachments = {
         Pos = Vector(-11, -0.8, -0.1),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Bottom",
@@ -102,7 +102,7 @@ ATT.Attachments = {
         Pos = Vector(-11, 0, 1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -1),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         ExcludeElements = {"mwc_m203"}
     },
 }
@@ -134,7 +134,7 @@ ATT.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-2, 0, 1),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "bo1_grips"},
+        Category = {"mwc_m203", "cod_grips"},
     },
     {
         PrintName = "Tactical Right",
@@ -143,7 +143,7 @@ ATT.Attachments = {
         Pos = Vector(-5.5 , 0.8, -0.1),
         Ang = Angle(0, 0, -90),
         Icon_Offset = Vector(0, 1.5, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Left",
@@ -152,7 +152,7 @@ ATT.Attachments = {
         Pos = Vector(-5.5, -0.8, -0.1),
         Ang = Angle(0, 0, 90),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
     },
     {
         PrintName = "Tactical Bottom",
@@ -161,7 +161,7 @@ ATT.Attachments = {
         Pos = Vector(-5.5, 0, 1),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, -1),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         ExcludeElements = {"mwc_m203"}
     },
 }
@@ -260,7 +260,7 @@ ATT.MenuCategory = "ARC-9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwe_g3_ubrail"}
-ATT.ActivateElements = {"bo1_rail_underbarrel"}
+ATT.ActivateElements = {"cod_rail_underbarrel"}
 ATT.Model = "models/weapons/arc9/item/bo2_rail.mdl"
 ATT.Scale = Vector(0.75,0.5,1)
 ATT.ModelOffset = Vector(0.5, 0, -0.4)
@@ -275,7 +275,7 @@ ATT.Attachments = {
         Ang = Angle(0, 0, 0),
         Scale = Vector(1, 1, 1),
         Icon_Offset = Vector(0, 0, -2),
-        Category = {"bo1_grips","mwc_m203"},
+        Category = {"cod_grips","mwc_m203"},
         ExcludeElements = {"no_ub_rail"},
     }
 }

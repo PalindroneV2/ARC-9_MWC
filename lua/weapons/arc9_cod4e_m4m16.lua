@@ -127,7 +127,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
-SWEP.PostBurstDelay = 0.1
+SWEP.PostBurstDelay = 0.2
 SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 
@@ -177,8 +177,14 @@ SWEP.IronSights = {
     Ang = Angle(0.025, 0.7, 0),
     Magnification = 1.1,
     AssociatedSlot = 9,
+    ViewModelFOV = 60,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.38, -1, -0.5),
+    Ang = Angle(0.0125, 0.35, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -200,27 +206,31 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
-
-SWEP.BipodPos = Vector(0, 10,-4)
-SWEP.BipodAng = Angle(0, 0, 10)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(4, 0, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
+SWEP.BipodPos = Vector(0, 10,-4)
+SWEP.BipodAng = Angle(0, 0, 10)
 
 SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
+
+SWEP.StandardPresets = {
+    "[M4A1]XQAAAQD+AAAAAAAAAAA9iIIiM7hMNz0dhJSTKmZ7v+v6JvsiMe7L46vKInPcOgdSbKHQHqdcUGBYAdOyTdnkWxAY6v4mAitXeXatvSpaiwRZ4hlH+3PJ9xW+uYZwyuLQc7EnMcq4CWvgd0Ui7yHRcGzvWyVh1EtsQf0YElEBmReqyKpE649n6ljrai0KYvnBl2lO7OXRK+PuEDvnPEwg",
+}
 
 SWEP.AttachmentElements = {
     ["grip_cover"] = {
@@ -412,7 +422,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3, 0, 3.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
         ExcludeElements = {"bo1_ar15_toprail"},
     },
@@ -444,7 +454,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.55),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_m203", "bo1_grips"},
+        Category = {"mwc_m203", "cod_grips"},
         InstalledElements = {"grip_cover"}
     },
     {
@@ -453,7 +463,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(16, 0.6, 2.3),
         Ang = Angle(0, 0, -90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"right_cover"},
         ExcludeElements = {"barrel_m4", "barrel_m203", "barrel_mk18", "mwc_m203"},
     },
@@ -463,7 +473,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(16, -0.6, 2.3),
         Ang = Angle(0, 0, 90),
-        Category = {"bo1_tactical"},
+        Category = {"cod_tactical"},
         InstalledElements = {"left_cover"},
         ExcludeElements = {"barrel_m4", "barrel_m203", "barrel_mk18", "mwc_m203"},
     },
@@ -473,7 +483,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(16, 0, 3.05),
         Ang = Angle(0, 0, 180),
-        Category = {"bo1_tactical_top"},
+        Category = {"cod_tactical_top"},
         InstalledElements = {"top_cover"},
         ExcludeElements = {"mw3_psrscope", "mwc_m203", "barrel_m203" },
     },

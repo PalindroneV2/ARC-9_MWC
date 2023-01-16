@@ -254,7 +254,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0.15, 2.7),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_optic"},
+        Category = {"cod_rail_optic"},
         InstalledElements = {"mount"},
         MergeSlots = {2}
     },
@@ -280,7 +280,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0.15, -0.1),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
     },
     {
         PrintName = "Ammunition",

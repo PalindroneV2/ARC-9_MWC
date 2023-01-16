@@ -15,7 +15,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "REFLEX"
 
-ATT.Category = {"bo1_optic", "bo1_optic_alt"}
+ATT.Category = {"cod_optic", "cod_optic_alt"}
 
 
 ATT.Model = "models/weapons/arc9/atts/mw3_compm4.mdl"

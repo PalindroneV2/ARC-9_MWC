@@ -408,7 +408,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 9
         gasblock = 4
         frontsight = 5
-        if attached["bo1_optic"] then
+        if attached["cod_optic"] then
             frontsight = 6
         end
         newCustPose = Vector(0, 0, 0)
@@ -579,7 +579,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
-    -- if hand == 3 and barrel == 0 and attached["bo1_optic"] then
+    -- if hand == 3 and barrel == 0 and attached["cod_optic"] then
     --     vm:SetBodygroup(8, 2)
     -- end
     -- IRON SIGHT POSITION CHANGES
@@ -887,7 +887,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(3.5, 0, 5.025-0.2),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"classicrail"},
         ExcludeElements = {"a4_top", "handguard_famas", "is_patriot"},
     },
@@ -932,7 +932,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(11, 0, 1.15), --(-4, 0, -0.4)
         Ang = Angle(0, 0, 0),
-        Category = {"cde_m203", "bo1_mk", "bo1_rail_underbarrel"},
+        Category = {"cde_m203", "bo1_mk", "cod_rail_underbarrel"},
         ExcludeElements = {"no_ub_rail", "carbine_hg", "is_patriot"},
         InstalledElements = {"allowtac"},
     },

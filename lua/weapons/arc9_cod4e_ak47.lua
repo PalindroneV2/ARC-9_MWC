@@ -170,11 +170,14 @@ SWEP.CaseBones = {}
 SWEP.IronSights = {
     Pos = Vector(-2.55, -2, 0.65),
     Ang = Angle(-0.0125, 0.5, 0),
-    Midpoint = { -- Where the gun should be at the middle of it's irons
-        Pos = Vector(0, 15, -4),
-        Ang = Angle(0, 0, -45),
-    },
     Magnification = 1.1,
+    ViewModelFOV = 60,
+    AssociatedSlots = {1,2},
+}
+
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = Vector(-1.25, -2, -.25),
+    Ang = Angle(-1, 0.75, -1.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -196,18 +199,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(-2, 1, -3)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(-2, 1, -3)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -252,7 +255,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(1,2)
         newpos = Vector(-2.55, -2, 0.8)
         newang = Angle(0.025, -0.1, 0)
-        if attached["bo1_optic_ak"] then
+        if attached["cod_optic_ak"] then
             vm:SetBodygroup(1,0)
         end
     end
@@ -269,10 +272,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     self.IronSights = {
         Pos = newpos,
         Ang = newang,
-        Midpoint = { -- Where the gun should be at the middle of it's irons
-            Pos = Vector(0, 15, -4),
-            Ang = Angle(0, 0, -45),
-        },
+        ViewModelFOV = 60,
         Magnification = 1.1,
     }
 end
@@ -301,7 +301,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.75, 0-0.02, 3.35),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic", "bo1_rail_riser"},
+        Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"rail"},
         MergeSlots = {2},
         ExcludeElements = {"dontuserear"},
@@ -311,8 +311,17 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 2.6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic_ak"},
+        Category = {"cod_optic_ak"},
         ExcludeElements = {"dontuserear"},
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultName = "Classic",
+        Bone = "j_gun",
+        Pos = Vector(-5, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod4e_ak47_cosmetic"},
+        CosmeticOnly = true,
     },
     {
         PrintName = "Muzzle",
@@ -328,7 +337,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(12, 0, 0.55),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_gp25","bo1_grips"},
+        Category = {"mwc_gp25","cod_grips"},
         ExcludeElements = {"tactical"}
     },
     {
@@ -363,15 +372,6 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
-    },
-    {
-        PrintName = "Cosmetic",
-        DefaultName = "Classic",
-        Bone = "j_gun",
-        Pos = Vector(-5, 0, 4),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod4e_ak47_cosmetic"},
-        CosmeticOnly = true,
     },
 }
 

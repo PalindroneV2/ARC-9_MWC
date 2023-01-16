@@ -255,7 +255,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0.15, 2.7),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_optic"},
+        Category = {"cod_optic"},
         InstalledElements = {"mount"},
         MergeSlots = {2}
     },

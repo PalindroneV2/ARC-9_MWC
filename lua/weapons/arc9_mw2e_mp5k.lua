@@ -256,7 +256,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    local isoptic = "bo1_optic" or "bo1_rail_riser"
+    local isoptic = "cod_optic" or "cod_rail_riser"
 
     local body = 0
     local rail = 0
@@ -341,7 +341,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(8.375, 0, 1.3),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_rail_underbarrel"},
+        Category = {"cod_rail_underbarrel"},
         ExcludeElements = {"mp5k"},
     },
     {
