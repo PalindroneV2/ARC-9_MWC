@@ -173,9 +173,14 @@ SWEP.IronSights = {
     Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 50,
-    -- AssociatedSlot = 9,
+    AssociatedSlot = {1,2},
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = {
+    Pos = Vector(-2.055, -4.5, 0.7),
+    Ang = Angle(0, 0, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -197,11 +202,11 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.BipodPos = Vector(-4.13, 0, -2.35)
-SWEP.BipodAng = Angle(0,0,0)
-
-SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
 SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
@@ -211,8 +216,8 @@ SWEP.CustomizePos = Vector(17.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 100
 
-SWEP.RestPos = SWEP.ActivePos
-SWEP.RestAng = SWEP.ActiveAng
+SWEP.BipodPos = Vector(-4.13, 0, -2.35)
+SWEP.BipodAng = Angle(0,0,0)
 
 SWEP.BarrelLength = 0 -- = 25
 

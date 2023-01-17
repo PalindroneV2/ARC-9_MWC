@@ -19,10 +19,10 @@ ATT.SprintToFireTimeMult = 1.1
 
 ATT.UBGL = true
 ATT.UBGLAmmo = "buckshot"
-ATT.UBGLClipSize = 3
+ATT.UBGLClipSize = 4
 ATT.UBGLFiremode = 1
 ATT.UBGLFiremodeName = "MKEY"
-ATT.UBGLChamberSize = 1
+ATT.UBGLChamberSize = 0
 
 ATT.FirstShootSoundUBGL = false
 ATT.ShootSoundUBGL = "ARC9_MWC.MK_Fire"

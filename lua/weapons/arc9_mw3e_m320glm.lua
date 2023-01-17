@@ -168,6 +168,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = {
+    Pos = Vector(0, 0, -0.5),
+    Ang = Angle(0, 0, -2.5),
+}
+
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
