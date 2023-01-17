@@ -92,12 +92,14 @@ SWEP.SpreadAddMidAir = 0.1
 
 SWEP.RecoilPatternDrift = 20
 
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoil = 0.01
 SWEP.VisualRecoilUp = 1
-SWEP.VisualRecoilSide = 0
+SWEP.VisualRecoilSide = 0.1
 SWEP.VisualRecoilRoll = 0
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilPunch = 3
+SWEP.VisualRecoilMultSights = 200
 
 SWEP.Speed = 1
 
@@ -288,7 +290,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {
-            "fire",
+            "idle",
         },
         Time = 15 / 35,
     },
