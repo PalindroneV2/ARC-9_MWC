@@ -89,6 +89,8 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 2
 
+SWEP.PushBackForce = 1 -- Push the player back when shooting.
+
 SWEP.Spread = 0.03
 SWEP.SpreadMultRecoil = 1.25
 
@@ -142,6 +144,7 @@ SWEP.Firemodes = {
         RecoilMult = 2,
         RecoilUpMult = 2,
         RecoilSideMult = 1.5,
+        PushBackForceMult = 2,
     },
 }
 
@@ -152,8 +155,6 @@ SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire
 SWEP.Sway = 0 -- How much the gun sways.
 
 SWEP.FreeAimRadiusMultSights = 0
-
-SWEP.PushBackForce = 1 -- Push the player back when shooting.
 
 SWEP.SwayMultSights = 0
 
@@ -194,6 +195,11 @@ SWEP.IronSights = {
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
+SWEP.SightMidPoint = {
+    Pos = Vector(-1.5025, -1.5, 0.5),
+    Ang = Angle(0.006, 0.8, -2.5),
+}
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "ar2"
 SWEP.HoldTypeSights = "ar2"
@@ -213,18 +219,18 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
+
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CrouchPos = SWEP.ActivePos + Vector(0, -2, -1)
-SWEP.CrouchAng = SWEP.ActiveAng
-
 SWEP.CustomizePos = Vector(20, 30, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, -3, -1)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 

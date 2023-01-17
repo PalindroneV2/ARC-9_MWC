@@ -179,13 +179,18 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.74, -2, 0.2),
-    Ang = Angle(0.025, 0.1, 0),
+    Pos = Vector(-2.81, -2, 1.2125),
+    Ang = Angle(0, -0.65, 0),
     Magnification = 1.1,
-    -- AssociatedSlot = 9,
+    AssociatedSlot = 1,
     CrosshairInSights = false,
     ViewModelFOV = 60,
     SwitchToSound = "", -- sound that plays when switching to this sight
+}
+
+SWEP.SightMidPoint = {
+    Pos = Vector(-1.405, -1, 0.1),
+    Ang = Angle(0, -0.35, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -207,21 +212,21 @@ SWEP.MovingMidPoint = {
     Ang = SWEP.ActiveAng
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos = SWEP.ActivePos + Vector(0,-1,-1)
+SWEP.CrouchAng = SWEP.ActiveAng
+
+SWEP.RestPos = SWEP.ActivePos
+SWEP.RestAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
-SWEP.SprintPos = Vector(0, 0, -1)
-SWEP.SprintAng = Angle(0, 0, -5)
+SWEP.SprintPos = SWEP.ActivePos
+SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.BipodPos = Vector(0, 10,-4)
 SWEP.BipodAng = Angle(0, 0, 10)
 
 SWEP.CustomizePos = Vector(12.5, 40, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-
-SWEP.RestPos = Vector(0, 0, 0)
-SWEP.RestAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
 
@@ -420,8 +425,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
         },
     },
     ["reload_empty"] = {
@@ -450,8 +455,8 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
             {s = "ARC9_MW2E.FNFAL_Chamber", t = 2.05},
         },
     },
@@ -499,16 +504,16 @@ SWEP.Animations = {
         Source = "reload_gl",
         Time = 2.7,
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
         },
     },
     ["reload_empty_gl"] = {
         Source = "reload_empty_gl",
         Time = 3.26,
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
             {s = "ARC9_MW2E.FNFAL_Chamber", t = 2.05},
         },
     },
@@ -555,16 +560,16 @@ SWEP.Animations = {
         Source = "reload_mk",
         Time = 2.7,
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
         },
     },
     ["reload_empty_mk"] = {
         Source = "reload_empty_mk",
         Time = 3.26,
         EventTable = {
-            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.5},
-            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.25},
+            {s = "ARC9_MW2E.FNFAL_MagOut", t = 0.75},
+            {s = "ARC9_MW2E.FNFAL_MagIn", t = 1.5},
             {s = "ARC9_MW2E.FNFAL_Chamber", t = 2.05},
         },
     },
