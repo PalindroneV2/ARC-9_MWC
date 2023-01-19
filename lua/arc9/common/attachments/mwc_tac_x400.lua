@@ -15,7 +15,7 @@ ATT.MenuCategory = "ARC-9 - MWC Attachments"
 ATT.Free = false
 -- ATT.Folder = "RDS"
 
-ATT.Category = {"cod_tactical"}
+ATT.Category = {"cod_tactical","cod_tactical_pistols"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2_x400.mdl"
 ATT.Scale = 1

@@ -97,7 +97,7 @@ ATT.ActivateElements = {"tactical_eagle", "no_tac_rail"}
 ATT.Attachments = {
     {
         PrintName = "Underbarrel",
-        Category = "cod_tactical",
+        Category = "cod_tactical_pistols",
         Bone = "j_gun",
         Pos = Vector(-8.7, 0.35, 2),
         Ang = Angle(0, 0, 0),
