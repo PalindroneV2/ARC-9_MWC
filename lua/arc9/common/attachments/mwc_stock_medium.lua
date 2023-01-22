@@ -5,7 +5,7 @@ ATT.Description = [[A stock that provides a balance between mobility and recoil 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_stocks", "mwc_stock_m", "mwc_stock_lm", "mwc_stock_mh"}

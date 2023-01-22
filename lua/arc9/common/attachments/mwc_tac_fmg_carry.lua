@@ -3,7 +3,7 @@ ATT.CompactName = [[FMG]]
 ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[FMG Grame for glock.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_fmgframe_carry"}

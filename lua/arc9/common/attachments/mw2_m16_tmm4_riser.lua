@@ -3,7 +3,7 @@ ATT.CompactName = [[S-SYSTEM]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
 ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "RISERS"
 

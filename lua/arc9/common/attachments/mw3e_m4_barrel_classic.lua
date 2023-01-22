@@ -12,7 +12,7 @@ ATT.Cons = {
     "- No Tactical Attachments",
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mw3_m4_barrel"}

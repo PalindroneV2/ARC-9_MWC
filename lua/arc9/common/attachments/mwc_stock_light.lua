@@ -5,7 +5,7 @@ ATT.Description = [[Lightweight stock that doesn't provide as much recoil contro
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_stocks", "mwc_stock_l", "mwc_stock_lm", "mwc_stock_lh"}

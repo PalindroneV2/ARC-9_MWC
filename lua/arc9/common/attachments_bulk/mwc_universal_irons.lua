@@ -7,7 +7,7 @@ ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]
 ATT.SortOrder = 6
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 ATT.Folder = "MWC REARS"
 ATT.Ignore = true

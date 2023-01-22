@@ -3,7 +3,7 @@ ATT.CompactName = [[Rail]]
 ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Optic rail system for pistols.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"bo1_pistol_rail"}

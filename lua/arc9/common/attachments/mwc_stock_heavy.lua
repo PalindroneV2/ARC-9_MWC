@@ -5,7 +5,7 @@ ATT.Description = [[Offers best possible recoil control but handling and mobilit
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC-9 - MWC Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_stocks", "mwc_stock_h", "mwc_stock_lh", "mwc_stock_mh"}

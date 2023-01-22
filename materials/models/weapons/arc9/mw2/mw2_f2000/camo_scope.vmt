@@ -18,7 +18,8 @@ VertexlitGeneric
 
 	// $detailblendmode 4
 	// "$detailblendfactor" "1"
-	// Proxies {
+	// $detail "models/weapons/arc9/colors/black_detail"
+	Proxies {
 	// 	CustomCamo {
 	// 		camoTexture $detail
 	// 		camoScale $detailscale

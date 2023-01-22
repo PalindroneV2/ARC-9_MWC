@@ -9,7 +9,7 @@ Reduces long range stopping power significantly, but has less recoil and can be 
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
-ATT.MenuCategory = "ARC-9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_ump_mag"}
