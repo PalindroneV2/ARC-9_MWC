@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Riot Shield"
 SWEP.Class = "Melee Weapon"
-SWEP.Description = [[
-    Riot Shield
-]]
+SWEP.Description = [[The Riot Shield offers significant protection, deflecting attacks across a wide area.]]
 SWEP.Trivia = {
     Mechanism = "Bashing",
     Material = "Translucent Polycarbonate",

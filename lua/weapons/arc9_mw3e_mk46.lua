@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M249 Para"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    Belgian light machine gun. Standard squad automatic weapon for the United States armed forces. Paratrooper variant.
-]]
+SWEP.Description = [[Belgian light machine gun. Standard squad automatic weapon for the United States armed forces.
+Paratrooper variant.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm NATO",

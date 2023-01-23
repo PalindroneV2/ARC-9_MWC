@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MP-44"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The father of all modern assault rifles.
-    
-    It is one of the most common weapons to appear across the Call of Duty series, tied with the MP40 and second only to the M1911.
-]]
+SWEP.Description = [[The father of all modern assault rifles.
+It is one of the most common weapons to appear across the Call of Duty series, tied with the MP40 and second only to the M1911.]]
 SWEP.Trivia = {
     Manufacturer = "C.G. Haenel",
     Calibre = "7.92x33mm Kurz",

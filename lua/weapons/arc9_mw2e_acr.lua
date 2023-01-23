@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "ACR"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Military variant of a high end assault rifle originally by Magpul, later adopted by Bushmaster and now produced by Remington.
-]]
+SWEP.Description = [[Military variant of a high end assault rifle originally by Magpul.
+Later it was adopted by Bushmaster and now been produced by Remington.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "5.56x45mm NATO",

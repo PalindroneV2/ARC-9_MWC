@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Glock 18"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    9mm austrian pistol with a large double stack magazine. It's large magazine along with being relatively cheap and reliable has made it ubiquitous.
-    Very popular all over the world with civilians, police and is even the standard sidearm for some militaries.
-]]
+SWEP.Description = [[9mm Austrian pistol with a large double stack magazine. It's large magazine along with being relatively cheap and reliable has made it ubiquitous.
+Very popular all over the world with civilians, police, and is even the standard sidearm for some militaries.]]
 SWEP.Trivia = {
     Manufacturer = "Glock",
     Calibre = "9x19mm Parabellum",

@@ -6,10 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN F2000"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The M16A4 was introduced as an improved version of the M16A2 during the mid 1990s.
-    The main difference is a flat top upper receiver with an optics rail system.
-]]
+SWEP.Description = [[A 5.56×45mm NATO bullpup rifle, designed by FN Herstal in Belgium.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm NATO",

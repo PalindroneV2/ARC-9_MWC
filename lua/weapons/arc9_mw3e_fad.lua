@@ -6,12 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FAD"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Fusíl Automático Doble (Double Automatic Rifle). A peruvian bullpup assault rifle.
-
-    Due to its simplicity and light weight, it is used in the Peruvian Army as a secondary weapon.
-    The country was originally intending on purchasing 580,000 AN-94 assault rifles to replace the HK33 already in service, but ended up settling on the FAD due to its price.
-]]
+SWEP.Description = [[Fusíl Automático Doble (Double Automatic Rifle). A peruvian bullpup assault rifle.
+Due to its simplicity and lightweight, it is used in the Peruvian Army as a secondary weapon.
+The country was originally intending on purchasing 580,000 AN-94 assault rifles to replace the HK33 already in service, but ended up settling on the FAD due to its price.]]
 SWEP.Trivia = {
     Manufacturer = "SIMA Electrónica",
     Calibre = "5.56x45mm NATO",

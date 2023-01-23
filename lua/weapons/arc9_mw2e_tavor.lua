@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "TAR-21"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Israeli bullpup carbine in 5.56mm NATO.
-]]
+SWEP.Description = [[Israeli bullpup carbine in 5.56mm NATO.]]
 SWEP.Trivia = {
     Manufacturer = "IWI",
     Calibre = "5.56x45mm NATO",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt CM901"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    Modern AR-15 variant produced by Colt in a selection of calibers such as 5.56mm NATO, 7.62mm NATO, and 6.8mm Remington SPC.
-]]
+SWEP.Description = [[Modern AR-15 variant produced by Colt in a selection of calibers such as 5.56mm NATO, 7.62mm NATO, and 6.8mm Remington SPC.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = "7.62x51mm NATO",

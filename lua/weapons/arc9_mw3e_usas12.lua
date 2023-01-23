@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "USAS-12"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    12 gauge automatic combat shotgun produced in South Korea. Used by many police departments across Asia.
-]]
+SWEP.Description = [[12 gauge automatic combat shotgun produced in South Korea. Used by many police departments across Asia.]]
 SWEP.Trivia = {
     Manufacturer = "Daewoo",
     Calibre = "12 Gauge",

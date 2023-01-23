@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt Anaconda"
 SWEP.Class = "Revolver"
-SWEP.Description = [[
-    Magnum caliber revolver. Upscaled version of the .357 Magnum Colt Python, now fires .44 Magnum.
-]]
+SWEP.Description = [[Magnum caliber revolver. Upscaled version of the .357 Magnum Colt Python, now fires .44 Magnum.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = ".44 Magnum",

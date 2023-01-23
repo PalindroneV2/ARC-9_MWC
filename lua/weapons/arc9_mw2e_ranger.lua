@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Ranger"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    12 gauge double-barrel side-by-side sporting shotgun with a sawed-off stock and barrel.
-]]
+SWEP.Description = [[12 gauge double-barrel side-by-side sporting shotgun with a sawed-off stock and barrel.]]
 SWEP.Trivia = {
     Manufacturer = "Sears & Roebuck",
     Calibre = "12 Gauge",

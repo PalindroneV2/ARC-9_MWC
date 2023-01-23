@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK M320 GLM"
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    Single shot grenade launcher module created to replace the M203, but can be used detached from the rifle.
-]]
+SWEP.Description = [[Single shot grenade launcher module created to replace the M203, but can be used detached from the rifle.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "40x46mm HE",

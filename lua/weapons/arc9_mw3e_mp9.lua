@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "B&T MP9"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
-    Shortened variant denoted by the suffix "K".
-]]
+SWEP.Description = [[A submachine gun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
+Shortened variant denoted by the suffix "K".]]
 SWEP.Trivia = {
     Manufacturer = "Brügger & Thomet",
     Calibre = "9x19mm Parabellum",

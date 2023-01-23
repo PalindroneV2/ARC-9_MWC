@@ -6,11 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK UMP-45"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    Universale Maschinenpistole. German submachine gun intended to be the successor to the MP5. It has variants in .45 ACP, .40 S&W and 9mm.
-    
-    Though it did not find the same success as its older brother, it is still a formidable weapon.
-]]
+SWEP.Description = [[Universale Maschinenpistole. German submachine gun intended to be the successor to the MP5. It has variants in .45 ACP, .40 S&W, and 9mm.
+Though it did not find the same success as its older brother, it is still a formidable weapon.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = ".45 ACP",

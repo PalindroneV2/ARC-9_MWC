@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1014"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    Semi-automatic shotgun used by the US military in close-quarter encounters. Also serves as a door breaching tool.
-]]
+SWEP.Description = [[Semi-automatic shotgun used by the US military in close-quarter encounters.
+Also serves as a door breaching tool.]]
 SWEP.Trivia = {
     Manufacturer = "Benelli",
     Calibre = "12 Gauge",

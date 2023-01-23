@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK MP5K"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    A submachinegun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
-    Shortened variant denoted by the suffix "K".
-]]
+SWEP.Description = [[A submachine gun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
+Shortened variant denoted by the suffix "K".]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "9x19mm Parabellum",

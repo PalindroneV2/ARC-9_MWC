@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Walther P99"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    9mm german pistol. Pistol made for law enforcement, security forces and civilian shooting market. Successor of the P5 and P88.
-]]
+SWEP.Description = [[9mm German pistol. Pistol made for law enforcement, security forces, and civilian shooting market. Successor of the P5 and P88.]]
 SWEP.Trivia = {
     Manufacturer = "Walther",
     Calibre = "9x19mm Parabellum",

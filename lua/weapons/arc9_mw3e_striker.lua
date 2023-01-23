@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Striker-12"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    12 gauge semi automatic combat shotgun using a spring-loaded cylinder to load shells.
-]]
+SWEP.Description = [[12 gauge semi automatic combat shotgun using a spring-loaded cylinder to load shells.]]
 SWEP.Trivia = {
     Manufacturer = "Penn Arms",
     Calibre = "12 Gauge",

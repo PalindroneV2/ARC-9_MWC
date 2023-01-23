@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "RPD"
 SWEP.Class = "General Purpose Machine Gun"
-SWEP.Description = [[
-    Russian Belt-Fed Machine Gun that replaced the DP-28.
-]]
+SWEP.Description = [[Russian belt-fed machine gun that replaced the DP-28.]]
 SWEP.Trivia = {
     Manufacturer = "Many",
     Calibre = "7.62x54mmR",

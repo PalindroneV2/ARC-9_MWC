@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M67 Frag Grenade"
 SWEP.Class = "Grenade"
-SWEP.Description = [[
-    Fragmentation hand grenade used by the United States military.
-]]
+SWEP.Description = [[Fragmentation hand grenade used by the United States military.]]
 SWEP.Trivia = {
     Country = "USA",
     Year = 1968,

@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "QBZ-97"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Export version of the QBZ-95 Assault Rifle standard to the Chinese PLA. Fires 5.56mm NATO instead of the original chinese 5.8x42mm DBP87.
-]]
+SWEP.Description = [[Export version of the QBZ-95 Assault Rifle standard to the Chinese PLA.
+Fires 5.56mm NATO instead of the original chinese 5.8x42mm DBP87.]]
 SWEP.Trivia = {
     Manufacturer = "Norinco",
     Calibre = "5.56x45mm NATO",

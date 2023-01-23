@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M240B"
 SWEP.Class = "General Purpose Machine Gun"
-SWEP.Description = [[
-    This is the standard infantry medium machine gun of the U.S. Marine Corps.
-    It comes configured for ground combat with a buttstock and bipod, though it can also be mounted on tripod, ground vehicles, aircraft, aboard ships, and small boats.
-    It is almost always referred to as the "M240 Bravo" or just "240" verbally.
-]]
+SWEP.Description = [[This is the standard infantry medium machine gun of the U.S. Marine Corps.
+It comes configured for ground combat with a buttstock and bipod, though it can also be mounted on tripod, ground vehicles, aircraft, aboard ships, and small boats.
+It is almost always referred to as the "M240 Bravo" or just "240" verbally.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "7.62x51mm NATO",

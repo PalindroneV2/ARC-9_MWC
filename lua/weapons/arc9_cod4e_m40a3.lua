@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M40A3"
 SWEP.Class = "Sniper Rifle"
-SWEP.Description = [[
-    American bolt action rifle built from a Remington 700, with the wooden stock replaced by a fiberglass stock produced by McMillan.
-]]
+SWEP.Description = [[American bolt action rifle built from a Remington 700. 
+With the wooden stock replaced by a fiberglass stock produced by McMillan Firearms.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "7.62x51mm NATO",

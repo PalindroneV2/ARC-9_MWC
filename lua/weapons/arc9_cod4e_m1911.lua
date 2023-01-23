@@ -6,12 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M1911A1"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-    The M1911 has been in service with military forces, law enforcement agencies and civilians for over 100 years.
-
-    The pistol that forgot to become obsolete.
-]]
+SWEP.Description = [[This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
+The M1911 has been in service with military forces, law enforcement agencies, and civilians for over 100 years.
+The pistol that forgot to become obsolete.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = ".45 ACP",

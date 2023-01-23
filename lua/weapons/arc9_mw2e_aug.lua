@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AUG HBAR"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Austrian bullpup assault rifle with a unique integrated scope.
-    Equipped with a progressive trigger that forgoes a traditional fire selector.
-    Pulling the trigger all the way back fires the weapon in full auto.
-]]
+SWEP.Description = [[Austrian bullpup assault rifle with a unique integrated scope.
+Equipped with a progressive trigger that forgoes a traditional fire selector.
+Pulling the trigger all the way back fires the weapon in full auto.]]
 SWEP.Trivia = {
     Manufacturer = "Steyr",
     Calibre = "5.56x45mm NATO",

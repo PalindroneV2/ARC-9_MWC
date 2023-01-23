@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK XM25"
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    German experimental airburst grenade launcher using programmable 25mm High Explosive rounds and an advanced targeting system remnants of the XM29 OICW program.
-]]
+SWEP.Description = [[German experimental airburst grenade launcher.
+Using programmable 25mm High Explosive rounds and an advanced targeting system remnants of the XM29 OICW program.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "40x46mm HE",

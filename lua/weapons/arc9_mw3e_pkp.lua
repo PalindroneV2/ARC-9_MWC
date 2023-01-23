@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PKP Pecheneg"
 SWEP.Class = "General Purpose Machine Gun"
-SWEP.Description = [[
-Further modernization of the PKM.
-It has a heavy fixed barrel encased in a radial cooling sleeve that uses forced-air cooling, much like the Lewis Gun of World War I.
-]]
+SWEP.Description = [[Further modernization of the PKM.
+It has a heavy fixed barrel encased in a radial cooling sleeve that uses forced-air cooling, much like the Lewis Gun of WW1.]]
 SWEP.Trivia = {
     Manufacturer = "Degtyaryov Plant",
     Calibre = "7.62x54mm R",

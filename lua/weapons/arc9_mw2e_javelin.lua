@@ -6,13 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FGM-148 Javelin"
 SWEP.Class = "Missile Launcher"
-SWEP.Description = [[
-    American-made portable anti-tank missile system.
-
-    Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
-
-    Will not reliably hit moving aircraft.
-]]
+SWEP.Description = [[American-made portable anti-tank missile system.
+Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
+Will not reliably to target moving aircraft.]]
 SWEP.Trivia = {
     Manufacturer = "Raytheon/Lockheed Martin",
     Calibre = "Tandem HEAT",

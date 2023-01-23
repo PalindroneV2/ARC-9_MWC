@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SPAS-12"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-Special Purpose Automatic Shotgun. Created mostly for police use, it tried getting around the assault weapons ban by being renamed Sporting Purpose Automatic Shotgun but despite this the 
-This dual mode shotgun can switch between semi-automatic fire and pump-action for use of lower-powered rounds such as non-lethals.
-]]
+SWEP.Description = [[Special Purpose Automatic Shotgun. Created mostly for police use, it tried getting around the "assault weapons ban" by being renamed Sporting Purpose Automatic Shotgun.
+Despite this, dual mode shotgun can switch between semi-automatic fire and pump-action for use of lower-powered rounds such as non-lethals.]]
 SWEP.Trivia = {
     Manufacturer = "Franchi",
     Calibre = "12 Gauge",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AK-74u"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    A carbine length version of the AK-74. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces and support units.
-]]
+SWEP.Description = [[A carbine length version of the AK-74. Affectionally nicknamed the Krinkov, this weapon was issued to only Soviet tank crews, special forces, and support units.]]
 SWEP.Trivia = {
     Manufacturer = "Izhmash",
     Calibre = "5.45x39mm R",

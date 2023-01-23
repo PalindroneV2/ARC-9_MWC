@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AT4"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    American 1-use rocket launcher that shoots unguided 66mm anti-tank payloads.
-]]
+SWEP.Description = [[American single-use rocket launcher that shoots unguided 66mm anti-tank payloads.]]
 SWEP.Trivia = {
     Manufacturer = "Saab Bofors Dynamics",
     Calibre = "84mm HEAT Round",

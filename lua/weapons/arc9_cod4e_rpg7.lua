@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "RPG-7"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
-    The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.
-]]
+SWEP.Description = [[A Russian portable, reusable, unguided, shoulder-launched, anti-tank rocket-propelled grenade launcher.
+The ruggedness, simplicity, low cost, and effectiveness of the RPG-7 has made it the most widely used anti-armor weapon in the world.]]
 SWEP.Trivia = {
     Manufacturer = "Bazalt",
     Calibre = "85x40mm RPG",

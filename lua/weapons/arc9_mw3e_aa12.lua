@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AA-12"
 SWEP.Class = "Combat Shotgun"
-SWEP.Description = [[
-    American, mag-fed, fully-automatic combat shotgun.
-]]
+SWEP.Description = [[Originally designed and known as the Atchisson Assault Shotgun, is an automatic combat shotgun developed in 1972 by Maxwell Atchisson.]]
 SWEP.Trivia = {
     Manufacturer = "Maxwell Atchisson",
     Calibre = "12 Gauge",

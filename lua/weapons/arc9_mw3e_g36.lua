@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK G36"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The G36 is the result of Heckler and Koch's time developing the OICW and the XM8 for the US Military.
-    While missing many of the experimental features the rifle still boasts impressive performance and engineering and it has become the standard rifle for the Bundeswehr.
-]]
+SWEP.Description = [[The G36 is the result of Heckler and Koch's time developing the OICW and the XM8 for the US Military.
+While missing many of the experimental features, the rifle still boasts impressive performance and engineering and it has become the standard rifle for the Bundeswehr.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "5.56x45mm NATO",

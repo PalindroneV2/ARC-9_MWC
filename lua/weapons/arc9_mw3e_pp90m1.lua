@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PP-90M1"
 SWEP.Class = "Submachine Gun"
-SWEP.Description = [[
-    9mm russian submachine gun similar to the PP-19 Bizon in appearance and functionality. It uses a helical 64 round magazine.
-]]
+SWEP.Description = [[9mm Russian submachine gun similar to the PP-19 Bizon in appearance and functionality.
+It uses a helical 64 round magazine.]]
 SWEP.Trivia = {
     Manufacturer = "KBP Instrument Design Bureau",
     Calibre = "9x19mm Parabellum",

@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "RSASS"
 SWEP.Class = "Designated Marksman Rifle"
-SWEP.Description = [[
-    Remington-made AR-10 specialized for marksman roles.
-]]
+SWEP.Description = [[Remington-made AR-10 specialized for marksman roles.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "7.62x51mm NATO",

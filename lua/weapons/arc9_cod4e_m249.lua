@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M249 SAW"
 SWEP.Class = "Light Machine Gun"
-SWEP.Description = [[
-    Belgian light machine gun. Standard squad automatic weapon for the United States armed forces.
-]]
+SWEP.Description = [[Belgian light machine gun. Standard squad automatic weapon for the United States armed forces.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "5.56x45mm NATO",

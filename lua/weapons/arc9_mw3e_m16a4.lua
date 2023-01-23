@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Colt M16A4"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The M16A4 was introduced as an improved version of the M16A2 during the mid 1990s.
-    The main difference is a flat top upper receiver with an optics rail system.
-]]
+SWEP.Description = [[The M16A4 was introduced as an improved version of the M16A2 during the mid 90s.
+The main difference is a flat top upper receiver with an optics rail system.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = "5.56x45mm NATO",

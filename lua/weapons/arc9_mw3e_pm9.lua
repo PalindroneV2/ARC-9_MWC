@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PM-9"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    9mm japanese machine pistol based on the Mini-Uzi standard for the JSDF.
-]]
+SWEP.Description = [[9mm Japanese machine pistol based on the Mini-Uzi standard for the JSDF.]]
 SWEP.Trivia = {
     Manufacturer = "Minebea Co.",
     Calibre = "9x19mm Parabellum",

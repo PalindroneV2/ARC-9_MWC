@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FMG9"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    American proof-of-concept firearm. Meant to be carried by security forces disguised as a handheld spotlight, the weapon unfolds into a small machine gun built from a Glock 18 inside a custom chassis.
-]]
+SWEP.Description = [[American proof-of-concept firearm. Meant to be carried by security forces disguised as a handheld spotlight.
+The weapon unfolds into a small machine gun built from a Glock 18 inside a custom chassis.]]
 SWEP.Trivia = {
     Manufacturer = "Magpul",
     Calibre = "9x19mm Parabellum",

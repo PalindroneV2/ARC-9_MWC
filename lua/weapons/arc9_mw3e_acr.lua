@@ -6,10 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "ACR 6.8"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    Military variant of a high end assault rifle originally by Magpul, later adopted by Bushmaster and now produced by Remington.
-    This is a select-fire varaint which fires the more powerful 6.8mm SPC.
-]]
+SWEP.Description = [[Military variant of a high end assault rifle originally by Magpul.
+Later it was adopted by Bushmaster and now been produced by Remington.
+This is a select-fire variant which fires the more powerful 6.8mm SPC.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "6.8mm Remington SPC",

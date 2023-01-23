@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Skorpion Vz. 61"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    Soviet Submachine Gun designed for security forces which found use by low ranking army staff, vehicle drivers and personnel, and special forces.
-]]
+SWEP.Description = [[Soviet submachine gun designed for security forces. 
+Which found to be used by low-ranking army staff, vehicle drivers, personnel, and special forces.]]
 SWEP.Trivia = {
     Manufacturer = "KBP",
     Calibre = "9x18mm Parabellum",

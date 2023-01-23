@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AS50"
 SWEP.Class = "Anti-Materiel Precision Rifle"
-SWEP.Description = [[
-    British .50 caliber precision rifle. Very heavy, very powerful and extremely dangerous in the right hands.
-]]
+SWEP.Description = [[British .50 caliber precision rifle. Very heavy, very powerful, and extremely dangerous in the right hands.]]
 SWEP.Trivia = {
     Manufacturer = "Accuracy International",
     Calibre = ".50 BMG",

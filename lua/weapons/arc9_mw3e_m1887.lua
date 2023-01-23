@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Model 1887"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[
-    Modernized 10 gauge lever-action shotgun. Basic but reliable. Sawn-off to be more compact.
-]]
+SWEP.Description = [[Modernized 10 gauge lever-action shotgun. Basic but reliable. Sawn-off to be more compact.]]
 SWEP.Trivia = {
     Manufacturer = "Winchester",
     Calibre = "10 Gauge",

@@ -6,8 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "AK-47"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[The AK-47 is one of the first modern assault rifles. There is little new to say about the most common weapons platform in the planet. Everyone knows what an AK is.]]
-
+SWEP.Description = [[The AK-47 is one of the first modern assault rifles. There is little new to say about the most common weapons platform in the planet.
+Everyone knows what an AK is.]]
 SWEP.Trivia = {
     Manufacturer = "Izhmash",
     Calibre = "7.62x39mm M43",

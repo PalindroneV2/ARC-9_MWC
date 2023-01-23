@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Remington 700"
 SWEP.Class = "Sniper Rifle"
-SWEP.Description = [[
-    Very basic American bolt action rifle firing 7.62mm NATO. Became the standard US Military Sniper Rifle.
-]]
+SWEP.Description = [[Very basic American bolt action rifle firing 7.62mm NATO.
+Became the standard for US Military sniper rifle.]]
 SWEP.Trivia = {
     Manufacturer = "Remington",
     Calibre = "7.62x51mm NATO",

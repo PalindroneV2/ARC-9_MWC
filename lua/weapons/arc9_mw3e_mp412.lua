@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "MP-412 REX"
 SWEP.Class = "Revolver"
-SWEP.Description = [[
-    Russian magnum revolver with a break-action chamber. Although these are supposed to have an automatic extractor, this one in particular doesn't have it.
-]]
+SWEP.Description = [[Russian magnum revolver with a break-action chamber.
+Although these are supposed to have an automatic extractor, this one in particular doesn't have it.]]
 SWEP.Trivia = {
     Manufacturer = "Izhevsk Mechanical Plant",
     Calibre = ".357 Magnum",

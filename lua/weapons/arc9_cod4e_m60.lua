@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M60E3"
 SWEP.Class = "General Purpose Machine Gun"
-SWEP.Description = [[
-    The U.S. Military's standard general purpose machine gun adopted in 1957. Nicknamed the Pig due to it's huge size and appetite for ammo.
-]]
+SWEP.Description = [[The U.S. Military's standard general purpose machine gun adopted in 1957.
+Nicknamed "The Pig" due to it's huge size and appetite for ammo.]]
 SWEP.Trivia = {
     Manufacturer = "U.S. Ordnance",
     Calibre = "7.62x51mm NATO",

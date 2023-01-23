@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M79 \"Thumper\""
 SWEP.Class = "Grenade Launcher"
-SWEP.Description = [[
-    American break-action, single shot grenade launcher using 40mm High Explosive rounds. Famously used in the Vietnam War and still used in small numbers.
-]]
+SWEP.Description = [[American break-action, single shot grenade launcher using 40mm High Explosive rounds.
+Famously used in the Vietnam War and still used in small numbers.]]
 SWEP.Trivia = {
     Manufacturer = "Springfield Armory",
     Calibre = "40x46mm HE",

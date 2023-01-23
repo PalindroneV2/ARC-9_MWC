@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "Intervention"
 SWEP.Class = "Sniper Rifle"
-SWEP.Description = [[
-    A high-caliber sniper rifle used by the SAS with some antimateriel capabilities.
-]]
+SWEP.Description = [[A high-caliber sniper rifle used by the SAS with some anti-materiel capabilities.]]
 SWEP.Trivia = {
     Manufacturer = "CheyTac USA",
     Calibre = ".408 CheyTac",

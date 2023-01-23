@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "IMI Mini-Uzi"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    9mm irsaeli machine pistol derivative from the larger UZI. It boasts a much faster rate of fire.
-]]
+SWEP.Description = [[9mm Israeli machine pistol derivative from the larger UZI.
+It boasts a much faster rate of fire.]]
 SWEP.Trivia = {
     Manufacturer = "IMI",
     Calibre = "9x19mm Parabellum",

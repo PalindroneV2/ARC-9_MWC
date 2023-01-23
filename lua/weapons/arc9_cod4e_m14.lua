@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M14"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. 
-    Was soon replaced by the M16 rifle which offered much better performance in full-auto and was much lighter.
-]]
+SWEP.Description = [[A traditional battle rifle designed by the United States for its military. Based on the M1 Garand, the M14 now uses detachable 20 round box magazines. 
+Was soon to be replaced by the M16 rifle which offered much better performance in full-auto and was much lighter.]]
 SWEP.Trivia = {
     Manufacturer = "Springfield Armory",
     Calibre = "7.62x51mm NATO",

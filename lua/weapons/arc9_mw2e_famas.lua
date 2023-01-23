@@ -6,10 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FAMAS F1"
 SWEP.Class = "Assault Rifle"
-SWEP.Description = [[
-    The M16A4 was introduced as an improved version of the M16A2 during the mid 1990s.
-    The main difference is a flat top upper receiver with an optics rail system.
-]]
+SWEP.Description = [[A bullpup assault rifle designed and manufactured in France by MAS (Manufacture d'Armes de Saint-Étienne or "Saint-Étienne Weapons Factory" in English) in 1978.
+A year after the Austrian Steyr AUG.]]
 SWEP.Trivia = {
     Manufacturer = "Colt",
     Calibre = "5.56x45mm NATO",

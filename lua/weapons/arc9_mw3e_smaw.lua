@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "SMAW"
 SWEP.Class = "Rocket Launcher"
-SWEP.Description = [[
-    American rocket launcher with bunker-busti and anti-armor capabilites.
-]]
+SWEP.Description = [[American rocket launcher with bunker-busti and anti-armor capabilites.]]
 SWEP.Trivia = {
     Manufacturer = "Nammo Talley",
     Calibre = "83mm HEAT Round",

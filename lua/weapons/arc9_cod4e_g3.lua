@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK G3"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    German Army standard issue rifle chambered in 7.62mm NATO. The power of the cardtridge makes it difficult to control in full-auto.
-]]
+SWEP.Description = [[German Army standard issue rifle chambered in 7.62mm NATO.
+The power of the cardtridge makes it difficult to control in full-auto.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Koch",
     Calibre = "7.62x51mm NATO",

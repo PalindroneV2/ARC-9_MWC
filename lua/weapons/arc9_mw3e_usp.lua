@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "HK USP Tactical"
 SWEP.Class = "Pistol"
-SWEP.Description = [[
-    .45 ACP 
-]]
+SWEP.Description = [[.45 ACP semi-automatic sidearm with medium capacity and power. Effective at close range.]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Kock",
     Calibre = ".45 ACP",

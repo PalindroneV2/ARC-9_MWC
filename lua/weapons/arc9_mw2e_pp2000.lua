@@ -6,9 +6,7 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "PP-2000"
 SWEP.Class = "Machine Pistol"
-SWEP.Description = [[
-    9mm russian submachine gun common among security forces and popular for its compact size.
-]]
+SWEP.Description = [[9mm Russian submachine gun common among security forces and popular for its compact size.]]
 SWEP.Trivia = {
     Manufacturer = "KBP Instrument Design Bureau",
     Calibre = "9x19mm Parabellum",

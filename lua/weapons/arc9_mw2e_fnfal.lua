@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN FAL"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    An automatic lightweight rifle firing 7.62x51mm NATO, used by military forces aligned with NATO all over the world.
-    Originally designed for the intermediate .280 British and suddenly changed to a .30 caliber to comply with NATO Standards, the rifle found itself shunned by the US military whom had demanded the change of caliber.
-    The rifle is very accurate and precise. Its full rifle round gives it excellent stopping power, armor penetration and range. However it suffers while being used in full auto.
-]]
+SWEP.Description = [[An automatic lightweight rifle firing 7.62x51mm NATO, used by military forces aligned with NATO all over the world.
+Originally designed for the intermediate .280 British and suddenly changed to a .30 caliber to comply with NATO Standards, the rifle found itself shunned by the US military whom had demanded the change of caliber.
+The rifle is very accurate and precise. Its full rifle round gives it excellent stopping power, armor penetration and range. However it suffers while being used in full auto.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "7.62x51mm NATO",

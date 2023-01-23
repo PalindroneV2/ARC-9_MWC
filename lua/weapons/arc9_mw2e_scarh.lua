@@ -6,11 +6,9 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "FN SCAR-H"
 SWEP.Class = "Battle Rifle"
-SWEP.Description = [[
-    The FN SCAR is a rifle platform designed to be a light, modular and highly customizable system, the SCAR has found favor with many special forces groups around the world.
-
-    This is the H ("Heavy") variant, which fires 7.62x51mm NATO.
-]]
+SWEP.Description = [[The FN SCAR is a rifle platform designed to be a light, modular, and highly customizable system. 
+The SCAR has found favor with many special forces groups around the world.
+This is the H ("Heavy") variant, which fires 7.62x51mm NATO.]]
 SWEP.Trivia = {
     Manufacturer = "FN Herstal",
     Calibre = "7.62x51mm NATO",
