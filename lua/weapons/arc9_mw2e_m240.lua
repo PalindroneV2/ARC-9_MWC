@@ -155,7 +155,7 @@ SWEP.DoFireAnimationUBGL = true
 SWEP.NoShellEjectUBGL = true
 SWEP.MuzzleEffectQCAUBGL = 1
 
---SWEP.MuzzleEffect = "muzzleflash_4"
+--SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.MuzzleParticle = "muzzleflash_minimi" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_556.mdl"

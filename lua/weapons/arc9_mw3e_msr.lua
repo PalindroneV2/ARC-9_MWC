@@ -147,7 +147,7 @@ SWEP.ShootSound = "ARC9_MW3E.MSR_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.RSASS_Sil"
 SWEP.DistantShootSound = "ARC9_MW3E.Mech_Sniper"
 
---SWEP.MuzzleEffect = "muzzleflash_4"
+--SWEP.MuzzleEffect = "muzzleflash_1"
 SWEP.MuzzleParticle = "muzzleflash_g3" -- Used for some muzzle effects.
 
 SWEP.ShellModel = "models/shells/shell_338mag.mdl"
