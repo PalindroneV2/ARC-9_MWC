@@ -22,7 +22,7 @@ VertexlitGeneric
 			resultVar	$detailblendfactor // The shader parameter to be manipulated
 			sineperiod	2
 			sinemin		0.75
-			sinemax		1.25
+			sinemax		2
 		}
 	}
 }

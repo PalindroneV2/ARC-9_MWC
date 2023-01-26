@@ -16,6 +16,7 @@ ATT.Free = false
 ATT.Folder = "REFLEX"
 
 ATT.Category = {"cod_optic", "cod_optic_alt"}
+ATT.ActivateElements = {"mars_sight"}
 
 ATT.DrawFunc = function(swep, model, wm)
     if swep:GetCustomize() then

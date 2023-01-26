@@ -476,6 +476,65 @@ sound.Add( {
     }
 } )
 
+
+
+--MW2E Vector--
+
+sound.Add( {
+    name = "ARC9_MW2E.Vector_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.6,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Vector_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Vector_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Vector_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Vector_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/lift.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.Vector_FirstLift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_Vector/first_lift.wav",
+    }
+} )
+
 -- MW2E M79
 
 sound.Add( {
