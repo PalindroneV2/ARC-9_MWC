@@ -1187,6 +1187,56 @@ sound.Add( {
     }
 } )
 
+--MW3E MP7--
+
+sound.Add( {
+    name = "ARC9_MW3E.MP7_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MP7/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.MP7_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MP7/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MP7_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MP7/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.MP7_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MP7/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.MP7_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_MP7/lift.wav",
+    }
+} )
+
 --MW3E M4M16--
 
 sound.Add( {

@@ -318,7 +318,7 @@ SWEP.Attachments = {
         Pos = Vector(19, 0, 2.5),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         PrintName = "Underbarrel",

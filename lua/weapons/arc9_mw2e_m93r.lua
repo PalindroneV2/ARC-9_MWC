@@ -332,7 +332,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(5.635, 0.225, 1.25),
         Ang = Angle(0, 0, 0),
-        Category = "bo1_muzzle_pistol",
+        Category = "cod_muzzle_pistol",
     },
     {
         PrintName = "Tactical",
@@ -342,9 +342,8 @@ SWEP.Attachments = {
         -- Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(3.4, 0.225, 0.3),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_pistols"},
         ExcludeElements = {"raffica"},
-        MergeSlots = {3},
     },
     {
         PrintName = "Tactical",

@@ -277,7 +277,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(5.325, 0, 1.15),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_muzzle_pistol"},
+        Category = {"cod_muzzle_pistol"},
         ExcludeElements = {"fmg_frame"}
     },
     {

@@ -293,7 +293,7 @@ SWEP.Attachments = {
         Pos = Vector(23.25, 0, 1.9),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bo1_muzzle"},
+        Category = {"cod_muzzle"},
     },
     {
         Hidden = true,
