@@ -3,9 +3,7 @@ local ATT = {}
 ATT.PrintName = "Classic"
 ATT.CompactName = "COD4"
 ATT.Icon = Material("materials/entities/cod4_generic.png", "mips smooth")
-ATT.Description = [[
-    The original one.
-]]
+ATT.Description = [[The original one.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -22,9 +20,7 @@ ATT = {}
 ATT.PrintName = "Classic Two-Tone"
 ATT.CompactName = "COD4 2Tone"
 ATT.Icon = Material("materials/entities/cod4_generic.png", "mips smooth")
-ATT.Description = [[
-    The original one.
-]]
+ATT.Description = [[The original one.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -41,9 +37,7 @@ ATT = {}
 ATT.PrintName = "Classic Gold"
 ATT.CompactName = "COD4 Gold"
 ATT.Icon = Material("materials/entities/cod4_generic.png", "mips smooth")
-ATT.Description = [[
-    Stare down the barrel of oppression.
-]]
+ATT.Description = [[Stare down the barrel of oppression.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -60,9 +54,7 @@ ATT = {}
 ATT.PrintName = "Silver Eagle"
 ATT.CompactName = "Silver"
 ATT.Icon = Material("materials/entities/mw3_generic.png", "mips smooth")
-ATT.Description = [[
-    Weapon now has a silver finish.
-]]
+ATT.Description = [[Weapon now has a silver finish.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -79,9 +71,7 @@ ATT = {}
 ATT.PrintName = "Two-Tone Tactical"
 ATT.CompactName = "Tactical"
 ATT.Icon = Material("materials/entities/mw2_generic.png", "mips smooth")
-ATT.Description = [[
-    Top and bottom rails and a two-tone black and nickel finish.
-]]
+ATT.Description = [[Top and bottom rails and a two-tone black and nickel finish.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -112,9 +102,7 @@ ATT = {}
 ATT.PrintName = "Annihilator Handcannon"
 ATT.CompactName = "Handcannon"
 ATT.Icon = Material("materials/entities/from_bo1/bo1_generic.png", "mips smooth")
-ATT.Description = [[
-    Heavily modified Desert Eagle with an integral compensator and custom explosive frangible rounds that offer no penetration.
-]]
+ATT.Description = [[Heavily modified Desert Eagle with an integral compensator and custom explosive frangible rounds that offer no penetration.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -132,9 +120,7 @@ ATT = {}
 ATT.PrintName = "Hybrid Handcannon"
 ATT.CompactName = "Hybrid"
 ATT.Icon = Material("materials/entities/from_bo1/bo1_generic.png", "mips smooth")
-ATT.Description = [[
-    Modified Desert Eagle with an integral compensator.
-]]
+ATT.Description = [[Modified Desert Eagle with an integral compensator.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -152,12 +138,9 @@ ATT = {}
 ATT.PrintName = [[.44 Magnum 8 Round Magazine]]
 ATT.CompactName = [[.44 MAG]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-.44 Magnum conversion for the Desert Eagle.
-More power means more recoil.
-Bigger cartridges means one less bullet in your mag. 
-Slight improvement to penetration and accuracy due to the better ballistics of .44 Magnum.
-]]
+ATT.Description = [[.44 Magnum conversion for the Desert Eagle.
+More power means more recoil and bigger cartridges means one less bullet in your mag. 
+Slight improvement to penetration and accuracy due to the better ballistics of .44 Magnum.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
@@ -202,12 +185,9 @@ ATT = {}
 ATT.PrintName = [[.50 Action Express 7 Round Magazine]]
 ATT.CompactName = [[.50 AE]]
 ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
-ATT.Description = [[
-.50 Action Express conversion for the Desert Eagle.
-More power means more recoil.
-The biggest possible cardtridge means two less bullets in your mag.
-Slight improvement to penetration and accuracy due to the better ballistics of .50 AE.
-]]
+ATT.Description = [[.50 Action Express conversion for the Desert Eagle.
+More power means more recoil and the biggest possible cartridge means two less bullets in your mag.
+Slight improvement to penetration and accuracy due to the better ballistics of .50 AE.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5

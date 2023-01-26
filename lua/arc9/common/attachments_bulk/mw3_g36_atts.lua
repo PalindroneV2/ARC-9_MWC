@@ -3,9 +3,7 @@ local ATT = {}
 ATT.PrintName = "Short Barrel"
 ATT.CompactName = "Kurz"
 ATT.Icon = Material("materials/entities/mw3_generic.png", "mips smooth")
-ATT.Description = [[
-    Shorter barrel
-]]
+ATT.Description = [[Short frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -37,9 +35,7 @@ ATT = {}
 ATT.PrintName = "Compact Barrel"
 ATT.CompactName = "Compact"
 ATT.Icon = Material("materials/entities/mw3_generic.png", "mips smooth")
-ATT.Description = [[
-    Carbine barrel
-]]
+ATT.Description = [[Carbine frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -71,9 +67,7 @@ ATT = {}
 ATT.PrintName = "Machine Gun Barrel"
 ATT.CompactName = "MG36"
 ATT.Icon = Material("materials/entities/mw3_generic.png", "mips smooth")
-ATT.Description = [[
-    Machine Gun Barrel
-]]
+ATT.Description = [[Machine gun frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

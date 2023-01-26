@@ -3,9 +3,7 @@ local ATT = {}
 ATT.PrintName = "Call of Duty 4: Modern Warfare"
 ATT.CompactName = "COD4"
 ATT.Icon = Material("materials/entities/cod4_generic.png")
-ATT.Description = [[
-    The weapon as it sounds in Call of Duty: Black Ops II.
-]]
+ATT.Description = [[The weapon as it sounds in Call of Duty: Black Ops II.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2

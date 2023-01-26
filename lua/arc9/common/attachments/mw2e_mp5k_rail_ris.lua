@@ -1,7 +1,7 @@
 ATT.PrintName = [[ICS RAS Handguard]]
 ATT.CompactName = [[RAS]]
 ATT.Icon = Material("entities/mw2_generic.png")
-ATT.Description = [[Rail Attachment System with 4 rails allows for attachment of several accessories.]]
+ATT.Description = [[Rail attachment system with 4 rails allows for attachment of several accessories.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

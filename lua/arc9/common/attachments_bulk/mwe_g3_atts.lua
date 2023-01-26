@@ -1,11 +1,9 @@
 local ATT = {}
 
-ATT.PrintName = [[Polymer Slim Handguard]]
+ATT.PrintName = [[Slim Handguard]]
 ATT.CompactName = [[Slim]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Polymer Slim Handguard.
-]]
+ATT.Description = [[Slim polymer handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -23,9 +21,7 @@ ATT = {}
 ATT.PrintName = [[Wide Handguard]]
 ATT.CompactName = [[Wide]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Wide Polymer Handguard.
-]]
+ATT.Description = [[Wide polymer handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -55,9 +51,7 @@ ATT = {}
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Handguard with integrated picatinny rails on the bottom and sides.
-]]
+ATT.Description = [[Handguard with integrated picatinny rails on the bottom and sides.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -114,9 +108,7 @@ ATT = {}
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Handguard with integrated picatinny rails on the bottom and sides.
-]]
+ATT.Description = [[Handguard with integrated picatinny rails on the bottom and sides.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -173,9 +165,7 @@ ATT = {}
 ATT.PrintName = [[Kurz Barrel]]
 ATT.CompactName = [[KURZ]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Short frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -205,12 +195,10 @@ ARC9.LoadAttachment(ATT, "mwe_g3_barrel_kurz")
 
 ATT = {}
 
-ATT.PrintName = [[Submachine gun Barrel]]
+ATT.PrintName = [[Submachine Gun Barrel]]
 ATT.CompactName = [[SMG]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Shorter SMG profile barrel.
-]]
+ATT.Description = [[Shorter SMG profile frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

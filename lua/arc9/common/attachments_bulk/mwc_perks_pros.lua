@@ -7,10 +7,8 @@ ATT = {}
 ATT.PrintName = [[Quickdraw]]
 ATT.CompactName = [[DRAW]]
 ATT.Icon = Material("entities/mwc_atts/perks/quickdraw.png")
-ATT.Description = [[
-    ADS entering speed increased.
-    Draw and holster speed halved.
-]]
+ATT.Description = [[ADS entering speed increased.
+Draw and holster speed halved.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -30,9 +28,7 @@ ATT = {}
 ATT.PrintName = [[Double Tap]]
 ATT.CompactName = [[DOUBLE]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_doubletap.png")
-ATT.Description = [[
-    15% Fire Rate increase.
-]]
+ATT.Description = [[15% fire rate increase.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -51,9 +47,7 @@ ATT = {}
 ATT.PrintName = [[Stopping Power]]
 ATT.CompactName = [[POWER]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_stoppingpower.png")
-ATT.Description = [[
-    Deal 40% more damage.
-]]
+ATT.Description = [[Deal 40% more damage.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -73,10 +67,8 @@ ATT = {}
 ATT.PrintName = [[Juggernaut]]
 ATT.CompactName = [[JUG]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_juggernaut.png")
-ATT.Description = [[
-    Gain 60% resistance to conventional damage types i.e. bullets and melee.
-    No resistance against explosions, fall damage or toxins.
-]]
+ATT.Description = [[Gain 60% resistance to conventional damage types i.e. bullets and melee.
+No resistance against explosions, fall damage or toxins.]]
 ATT.Pros = {
     "+ 60% Resistance to conventional damage types."
 }
@@ -96,9 +88,8 @@ ATT = {}
 ATT.PrintName = [[Blast Shield]]
 ATT.CompactName = [[BLAST]]
 ATT.Icon = Material("entities/mwc_atts/perks/blastshield.png")
-ATT.Description = [[
-    Gain complete resistance to explosives and fall damage. Falling from any height that would damage the player triggers an explosion.
-]]
+ATT.Description = [[Gain complete resistance to explosives and fall damage.
+Falling from any height that would damage the player triggers an explosion.]]
 ATT.Pros = {
     "+ 40% resistance to explosive damage."
 }
@@ -118,9 +109,7 @@ ARC9.LoadAttachment(ATT, "mwc_perk_blast_shield")
 -- ATT.PrintName = [[Sonic Boom]]
 -- ATT.CompactName = [[BOOM]]
 -- ATT.Icon = Material("entities/mwc_atts/perks/classic_sonic_boom.png")
--- ATT.Description = [[
---     Increased explosives damage.
--- ]]
+-- ATT.Description = [[Increased explosives damage.]]
 -- ATT.Pros = {
 --     "+ 25% explosive damage."
 -- }
@@ -140,9 +129,7 @@ ATT = {}
 ATT.PrintName = [[Assassin]]
 ATT.CompactName = [[ASSASSIN]]
 ATT.Icon = Material("entities/mwc_atts/perks/assassin.png")
-ATT.Description = [[
-    Double Melee Damage.
-]]
+ATT.Description = [[Doubles the melee damage.]]
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -165,9 +152,7 @@ ATT = {}
 ATT.PrintName = [[Sleight of Hand]]
 ATT.CompactName = [[SLEIGHT]]
 ATT.Icon = Material("entities/mwc_atts/perks/sleight.png")
-ATT.Description = [[
-    Reload speed is halved.
-]]
+ATT.Description = [[Reload speed is halved.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -186,9 +171,7 @@ ATT = {}
 ATT.PrintName = [[Conditioning]]
 ATT.CompactName = [[STAMINA]]
 ATT.Icon = Material("entities/mwc_atts/perks/conditioning.png")
-ATT.Description = [[
-    10% Higher Overall Speed.
-]]
+ATT.Description = [[10% higher overall speed.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -207,9 +190,7 @@ ATT = {}
 ATT.PrintName = [[Scavenger]]
 ATT.CompactName = [[SCAV]]
 ATT.Icon = Material("entities/mwc_atts/perks/scavenger.png")
-ATT.Description = [[
-    Enemies drop ammo pack on death.
-]]
+ATT.Description = [[Enemies drop ammo pack on death.]]
 ATT.Pros = {
     "+ Immunity to explosive damage."
 }
@@ -231,9 +212,7 @@ ATT = {}
 ATT.PrintName = [[Stalker]]
 ATT.CompactName = [[STALKER]]
 ATT.Icon = Material("entities/mwc_atts/perks/stalker.png")
-ATT.Description = [[
-    ADS Movement Speed increased.
-]]
+ATT.Description = [[Increased the ADS movement speed.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -252,9 +231,7 @@ ATT = {}
 ATT.PrintName = [[Marksman]]
 ATT.CompactName = [[MARK]]
 ATT.Icon = Material("entities/mwc_atts/perks/marksman.png")
-ATT.Description = [[
-    Headshots deal double damage.
-]]
+ATT.Description = [[Headshots now dealt double damage.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -273,11 +250,8 @@ ATT = {}
 ATT.PrintName = [[Steady Aim]]
 ATT.CompactName = [[STEADY]]
 ATT.Icon = Material("entities/mwc_atts/perks/steadyaim.png")
-ATT.Description = [[
-    Tighter aim on hip fire.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Tighter aim on hip fire.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -296,11 +270,8 @@ ATT = {}
 ATT.PrintName = [[Commando]]
 ATT.CompactName = [[COMMANDO]]
 ATT.Icon = Material("entities/mwc_atts/perks/commando.png")
-ATT.Description = [[
-    Double Melee Range.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Doubles the melee range.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -319,11 +290,8 @@ ATT = {}
 ATT.PrintName = [[Iron Lung]]
 ATT.CompactName = [[LUNG]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_iron_lung.png")
-ATT.Description = [[
-    Reduced sway.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Reduced sway.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -341,11 +309,8 @@ ATT = {}
 ATT.PrintName = [[Deep Impact]]
 ATT.CompactName = [[IMPACT]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_deep_impact.png")
-ATT.Description = [[
-    Increased penetration.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Increased the penetration with extra bullet damage.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -365,11 +330,8 @@ ATT = {}
 ATT.PrintName = [[Kick]]
 ATT.CompactName = [[KICK]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/kick.png")
-ATT.Description = [[
-    Reduced recoil and kick.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Reduced recoil and kick.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -387,11 +349,8 @@ ATT = {}
 ATT.PrintName = [[Damage]]
 ATT.CompactName = [[DAMAGE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/damage.png")
-ATT.Description = [[
-    Minor damage increase.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Minor damage increase.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -409,11 +368,8 @@ ATT = {}
 ATT.PrintName = [[Precision]]
 ATT.CompactName = [[PRECISE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/stability.png")
-ATT.Description = [[
-    Minor precision increase.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Minor precision increase.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -430,11 +386,8 @@ ATT = {}
 ATT.PrintName = [[Stability]]
 ATT.CompactName = [[STABLE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/focus.png")
-ATT.Description = [[
-    Reduced sway.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Reduced sway.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -451,11 +404,8 @@ ATT = {}
 ATT.PrintName = [[Speed]]
 ATT.CompactName = [[SPEED]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/speed.png")
-ATT.Description = [[
-    Minor Speed increase.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Minor speed increase.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -472,11 +422,8 @@ ATT = {}
 ATT.PrintName = [[Impact]]
 ATT.CompactName = [[IMPACT]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/damage.png")
-ATT.Description = [[
-    Minor penetration increase.
-]]
-ATT.Pros = {
-}
+ATT.Description = [[Minor penetration increase.]]
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -493,9 +440,7 @@ ATT = {}
 ATT.PrintName = [[Melee]]
 ATT.CompactName = [[MELEE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/melee.png")
-ATT.Description = [[
-    Melee speed increase.
-]]
+ATT.Description = [[Increases the melee speed.]]
 ATT.Pros = {
 }
 ATT.Cons = {}
@@ -516,9 +461,7 @@ ATT = {}
 ATT.PrintName = [[Range]]
 ATT.CompactName = [[RANGE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/range.png")
-ATT.Description = [[
-    Range increase.
-]]
+ATT.Description = [[Increases the range.]]
 ATT.Pros = {
 }
 ATT.Cons = {}

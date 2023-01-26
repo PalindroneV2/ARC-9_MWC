@@ -1,11 +1,8 @@
 ATT.PrintName = "P-2000 Maxx Laser"
 ATT.CompactName = [[P-2000]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
-
-    Belongs to Black Ops Cold War.
-]]
+ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
+Belongs to Black Ops Cold War.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

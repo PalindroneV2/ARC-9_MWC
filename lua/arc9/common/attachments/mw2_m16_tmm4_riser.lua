@@ -1,7 +1,7 @@
 ATT.PrintName = [[TMM-4 S-System Rail]]
 ATT.CompactName = [[S-SYSTEM]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Three-Rail RIS Handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Three-rail RIS handguard allows for attachment of underbarrels.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

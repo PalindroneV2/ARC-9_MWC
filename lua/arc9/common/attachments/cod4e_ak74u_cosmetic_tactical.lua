@@ -1,9 +1,7 @@
 ATT.PrintName = "Modernized"
 ATT.CompactName = "TAC"
 ATT.Icon = Material("materials/entities/mw2_generic.png")
-ATT.Description = [[
-    Modernized look with railed parts.
-]]
+ATT.Description = [[Modernized look with railed parts.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

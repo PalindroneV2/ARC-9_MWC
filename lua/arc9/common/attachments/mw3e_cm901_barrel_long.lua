@@ -1,9 +1,7 @@
 ATT.PrintName = [[Long Barrel]]
 ATT.CompactName = [[LONG]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/long_pro.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Long frame tube for the CM901.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

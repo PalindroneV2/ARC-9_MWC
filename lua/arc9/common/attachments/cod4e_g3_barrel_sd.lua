@@ -1,9 +1,7 @@
 ATT.PrintName = [[SD Barrel]]
 ATT.CompactName = [[SD]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[SD (Schalldampfer in German, or sound suppressor) frame tube for the G3.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

@@ -1,7 +1,7 @@
 ATT.PrintName = [[Low-Profile Iron Sights]]
 ATT.CompactName = [[LP Irons]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[Low-Profile Removable Iron Sights.]]
+ATT.Description = [[Low-profile removable iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

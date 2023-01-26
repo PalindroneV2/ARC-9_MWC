@@ -1,7 +1,7 @@
 ATT.PrintName = [[AUG A2 Rail]]
 ATT.CompactName = [[A2]]
 ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
-ATT.Description = [[AUG A2 Rail.]]
+ATT.Description = [[AUG A2 rail.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

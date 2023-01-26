@@ -1,9 +1,7 @@
 ATT.PrintName = "Elite"
 ATT.CompactName = "ELITE"
 ATT.Icon = Material("materials/entities/cs_generic.png")
-ATT.Description = [[
-    Imposing nickel plated finish.
-]]
+ATT.Description = [[Imposing nickel plated finish.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

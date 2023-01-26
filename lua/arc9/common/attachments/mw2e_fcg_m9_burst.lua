@@ -2,13 +2,9 @@ ATT.PrintName = "Raffica Modification"
 ATT.CompactName = "M93R"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group.
-
 Greatly improves recoil control and reduces spread.]]
-ATT.Pros = {
-"Burst Fire Mode."
-}
-ATT.Cons = {
-}
+ATT.Pros = {}
+ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - BO1 Attachments"
 ATT.Free = true

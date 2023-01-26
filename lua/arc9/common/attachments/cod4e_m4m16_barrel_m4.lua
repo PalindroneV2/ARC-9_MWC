@@ -1,9 +1,7 @@
 ATT.PrintName = [[M4 Barrel]]
 ATT.CompactName = [[M4]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Original M4 frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

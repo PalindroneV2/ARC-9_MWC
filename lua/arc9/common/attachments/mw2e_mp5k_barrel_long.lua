@@ -1,9 +1,7 @@
 ATT.PrintName = [[Standard MP5 Barrel]]
 ATT.CompactName = [[STD]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Standard MP5 barrel with slim handguard.
-]]
+ATT.Description = [[Standard MP5 barrel with slim handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

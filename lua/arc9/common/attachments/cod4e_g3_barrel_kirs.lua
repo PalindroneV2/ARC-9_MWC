@@ -1,9 +1,7 @@
 ATT.PrintName = [[Kurz RIS Barrel]]
 ATT.CompactName = [[KRIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    Short barrel
-]]
+ATT.Description = [[Medium frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
