@@ -1,9 +1,7 @@
 ATT.PrintName = "Wooden Furniture"
 ATT.CompactName = "WOOD"
 ATT.Icon = Material("materials/entities/cod4_generic.png")
-ATT.Description = [[
-    Wooden look for weapon's furniture.
-]]
+ATT.Description = [[Wooden look for weapon's furniture.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

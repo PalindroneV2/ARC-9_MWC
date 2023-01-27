@@ -1,9 +1,7 @@
 ATT.PrintName = [[10.5" Mk. 18 Barrel]]
 ATT.CompactName = [[10.5" MK18]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
-ATT.Description = [[
-    CQB barrel perfect for short range engagements, especially when clearing buildings.
-]]
+ATT.Description = [[CQB barrel perfect for short range engagements, especially when clearing buildings.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

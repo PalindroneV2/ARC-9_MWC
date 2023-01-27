@@ -1,11 +1,8 @@
 ATT.PrintName = "Trijicon ACOG TA31 (4x)"
 ATT.CompactName = [[ACOG 4x]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
-ATT.Description = [[
-    Medium range combat scope for improved precision at longer ranges.
-
-    bo.desc
-]]
+ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
+Belongs to Modern Warfare 3.]]
 ATT.Pros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"

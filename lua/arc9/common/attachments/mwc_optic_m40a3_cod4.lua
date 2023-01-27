@@ -1,11 +1,9 @@
 ATT.PrintName = "M40 Scope (6-12x)"
 ATT.CompactName = [[M40]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Sniper Scope for the Remington 700/M40A3.
-]]
+ATT.Description = [[Sniper scope for the Remington 700/M40A3.]]
 ATT.Pros = {
-    "+ 8z Zoom",
+    "+ 8x Zoom",
     "+ Clearer sight picture"
 }
 ATT.Cons = {}

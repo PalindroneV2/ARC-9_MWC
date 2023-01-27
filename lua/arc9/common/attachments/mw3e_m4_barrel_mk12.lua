@@ -1,11 +1,9 @@
 ATT.PrintName = [[20" SPR Barrel]]
 ATT.CompactName = [[20" SPR]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
-ATT.Description = [[
-    Long range precision barrel for engagements beyond 500 meters.
-    Used by squad marksmen and snipers.
-    Full-auto is restricted when using this sniper barrels to prevent wear and preserve high precision.
-]]
+ATT.Description = [[Long range precision barrel for engagements beyond 500 meters.
+Used by squad marksman and snipers.
+Full-auto is restricted when using this sniper barrels to prevent wear and preserve high precision.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

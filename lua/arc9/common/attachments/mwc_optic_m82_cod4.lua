@@ -1,11 +1,9 @@
 ATT.PrintName = "M82 Scope (6x)"
 ATT.CompactName = [[M82 Scope]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Scope designed for the Barrett M82.
-]]
+ATT.Description = [[Scope designed for the Barrett M82.]]
 ATT.Pros = {
-    "+ 8z Zoom",
+    "+ 8x Zoom",
     "+ Clearer sight picture"
 }
 ATT.Cons = {}

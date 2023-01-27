@@ -1,8 +1,7 @@
 ATT.PrintName = "S-1-F FCG"
 ATT.CompactName = "AUTO"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
-ATT.Description = [[Fully Automatic fire control group.
-
+ATT.Description = [[Fully automatic fire control group.
 Recoil control and spread increases.]]
 ATT.Pros = {}
 ATT.Cons = {

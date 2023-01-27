@@ -1,13 +1,10 @@
 ATT.PrintName = "PSO-1 (6x)"
 ATT.CompactName = [[PSO-1]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Scope designed for the Dragunov SVD-63.
-
-    MW3 version.
-]]
+ATT.Description = [[Scope designed for the Dragunov SVD-63.
+Modern Warfare 3 version.]]
 ATT.Pros = {
-    "+ 8z Zoom",
+    "+ 8x Zoom",
     "+ Clearer sight picture"
 }
 ATT.Cons = {}

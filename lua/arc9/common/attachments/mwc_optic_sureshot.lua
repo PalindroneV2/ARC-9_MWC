@@ -1,11 +1,8 @@
 ATT.PrintName = "Sightmark Sure Shot"
 ATT.CompactName = [[RDS MW3]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_rds.png", "mips smooth")
-ATT.Description = [[
-    Typical red dot sight which uses a holographic reticle for faster sight acquisition.
-
-    Belongs to Modern Warfare 3.
-]]
+ATT.Description = [[Typical red dot sight which uses a holographic reticle for faster sight acquisition.
+Belongs to Modern Warfare 3.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

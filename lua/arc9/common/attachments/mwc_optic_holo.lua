@@ -1,11 +1,8 @@
 ATT.PrintName = "EOTech 553"
 ATT.CompactName = [[HOLO MW3]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_holo.png", "mips smooth")
-ATT.Description = [[
-    Typical holograpic sight which uses a holographic reticle for faster sight acquisition.
-
-    Belongs to Modern Warfare 3.
-]]
+ATT.Description = [[Typical holograpic sight which uses a holographic reticle for faster sight acquisition.
+Belongs to Modern Warfare 3.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

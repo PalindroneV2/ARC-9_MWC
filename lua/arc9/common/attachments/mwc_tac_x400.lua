@@ -1,11 +1,8 @@
 ATT.PrintName = "X400 Laser"
 ATT.CompactName = [[X400]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Modern Warfare 2.
-]]
+ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
+Belongs to Modern Warfare 2.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

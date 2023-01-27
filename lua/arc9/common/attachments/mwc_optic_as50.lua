@@ -1,11 +1,8 @@
 ATT.PrintName = "AI AS50 Scope"
 ATT.CompactName = [[AS50]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Long range combat scope with variable zoom.
-
-    bo.desc
-]]
+ATT.Description = [[Long range combat scope with variable zoom.
+Belongs to Modern Warfare 3.]]
 ATT.Pros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"

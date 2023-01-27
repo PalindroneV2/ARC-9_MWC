@@ -1,11 +1,9 @@
 ATT.PrintName = "Leupold Mark 4 Scope 8x"
 ATT.CompactName = [[LEUPOLD]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Long range precision scope made for sniper rifles.
-]]
+ATT.Description = [[Long range precision scope made for sniper rifles.]]
 ATT.Pros = {
-    "+ 8z Zoom",
+    "+ 8x Zoom",
     "+ Clearer sight picture"
 }
 ATT.Cons = {}

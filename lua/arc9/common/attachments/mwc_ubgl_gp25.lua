@@ -1,10 +1,8 @@
 ATT.PrintName = [[GP-25 Grenade Launcher]]
 ATT.CompactName = [[GP-25]]
 ATT.Icon = Material("materials/entities/mwc_atts/ubs/gp25.png")
-ATT.Description = [[
-    Underbarrel grenade launcher that fires 40mm High Explosive rounds.
-    Reduced handling.
-]]
+ATT.Description = [[Underbarrel grenade launcher that fires 40mm High Explosive rounds.
+Reduced handling.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

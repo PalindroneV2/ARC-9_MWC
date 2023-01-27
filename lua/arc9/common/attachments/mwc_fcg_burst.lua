@@ -2,7 +2,6 @@ ATT.PrintName = "S-1-3 FCG"
 ATT.CompactName = "BURST"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Standard 3-round burst fire control group.
-
 Greatly improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {

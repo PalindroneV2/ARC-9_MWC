@@ -1,11 +1,8 @@
 ATT.PrintName = "PEQ-6 Laser Aiming Module"
 ATT.CompactName = [[PEQ6]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
-ATT.Description = [[
-    Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
-
-    Belongs to Modern Warfare.
-]]
+ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
+Belongs to Modern Warfare.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

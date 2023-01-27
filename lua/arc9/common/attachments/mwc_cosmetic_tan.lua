@@ -1,9 +1,7 @@
 ATT.PrintName = "Flat Dark Earth"
 ATT.CompactName = "TAN"
 ATT.Icon = Material("materials/entities/cod4_generic.png")
-ATT.Description = [[
-    Tan look for weapon's furniture.
-]]
+ATT.Description = [[Tan look for weapon's furniture.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

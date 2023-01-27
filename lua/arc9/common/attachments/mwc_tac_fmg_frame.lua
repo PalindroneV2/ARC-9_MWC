@@ -1,7 +1,7 @@
-ATT.PrintName = [[FMG Frame]]
+ATT.PrintName = [[FMG Slide Frame]]
 ATT.CompactName = [[FMG]]
 ATT.Icon = Material("entities/mw3_generic.png")
-ATT.Description = [[FMG Grame for glock.]]
+ATT.Description = [[Slide frame from FMG, for Glock 18.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

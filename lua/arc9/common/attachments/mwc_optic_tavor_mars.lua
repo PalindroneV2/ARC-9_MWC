@@ -1,11 +1,8 @@
 ATT.PrintName = "IMI MARS Optical Gunsight"
 ATT.CompactName = [[MARS]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_reflex.png", "mips smooth")
-ATT.Description = [[
-    Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
-
-    Belongs to Modern Warfare 3.
-]]
+ATT.Description = [[Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
+Belongs to Modern Warfare 3.]]
 ATT.Pros = {
     "+ Clearer sight picture"
 }

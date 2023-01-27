@@ -1,9 +1,7 @@
 ATT.PrintName = [[20" RIS Barrel]]
 ATT.CompactName = [[20" RIS]]
 ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
-ATT.Description = [[
-    Standard 20 inch barrel with a RIS handguard allowing for attachment of tactical laser pointers or weapon lights, grips, etc.
-]]
+ATT.Description = [[Standard 20 inch barrel with a RIS handguard allowing for attachment of tactical laser pointers or weapon lights, grips, etc.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

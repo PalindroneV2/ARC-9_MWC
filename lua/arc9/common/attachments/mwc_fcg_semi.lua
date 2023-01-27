@@ -2,7 +2,6 @@ ATT.PrintName = "Sporting FCG"
 ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
-
 Its high quality, finely machined parts make this the best option for marksmanship.]]
 ATT.Pros = {}
 ATT.Cons = {

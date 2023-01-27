@@ -1,11 +1,9 @@
 ATT.PrintName = "R700 Scope (6-12x)"
 ATT.CompactName = [[R700]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
-ATT.Description = [[
-    Sniper Scope for the Remington 700.
-]]
+ATT.Description = [[Sniper scope for the Remington 700.]]
 ATT.Pros = {
-    "+ 8z Zoom",
+    "+ 8x Zoom",
     "+ Clearer sight picture"
 }
 ATT.Cons = {}

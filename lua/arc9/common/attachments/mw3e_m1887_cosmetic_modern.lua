@@ -1,9 +1,7 @@
 ATT.PrintName = "Modernized"
 ATT.CompactName = "Modern"
 ATT.Icon = Material("materials/entities/mw3_generic.png", "mips smooth")
-ATT.Description = [[
-    Modern Warfare 3 appearance.
-]]
+ATT.Description = [[Modern Warfare 3 appearance.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

@@ -1,9 +1,7 @@
 ATT.PrintName = "Olive Drab"
 ATT.CompactName = "OD"
 ATT.Icon = Material("materials/entities/cod4_generic.png")
-ATT.Description = [[
-    Olive drab look for weapon's furniture.
-]]
+ATT.Description = [[Olive drab look for weapon's furniture.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
