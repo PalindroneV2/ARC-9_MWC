@@ -26,6 +26,7 @@ SWEP.UseHands = true
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_cm901.mdl"
 SWEP.WorldModel = "models/weapons/arc9/c_mw3e_cm901.mdl"
 SWEP.MirrorVMWM = true
+SWEP.NoTPIKVMPos = false
 SWEP.WorldModelOffset = {
     Pos        =    Vector(-3.2, 4.25, -5.6),
     Ang        =    Angle(-7.5, 2, 180),
