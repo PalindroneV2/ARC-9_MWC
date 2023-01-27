@@ -188,7 +188,7 @@ SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "shotgun"
-SWEP.HoldTypeSights = "ar2"
+SWEP.HoldTypeSights = "rpg"
 
 SWEP.CustomCamoTexture = "models/weapons/arc9/bo1/m14_wood"
 SWEP.CustomCamoScale = 1

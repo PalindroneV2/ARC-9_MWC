@@ -159,8 +159,8 @@ SWEP.IronSights = {
 SWEP.NoShellEject = true
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "grenade"
-SWEP.HoldTypeSights = "grenade"
+SWEP.HoldType = "slam"
+SWEP.HoldTypeSights = "slam"
 
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_GRENADE
