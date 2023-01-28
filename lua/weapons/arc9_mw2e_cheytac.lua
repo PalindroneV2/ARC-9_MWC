@@ -183,8 +183,8 @@ SWEP.SightMidPoint = {
 }
 
 SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "shotgun"
-SWEP.HoldTypeSights = "rpg"
+SWEP.HoldType = "ar2"
+SWEP.HoldTypeSights = "ar2"
 
 SWEP.Bipod = true
 
