@@ -16,6 +16,16 @@ VertexlitGeneric
 	$envmapfresnel "0.01"
 	$envmaptint "[ .01 .01 .01 ]"
 
+	$detailblendmode 4
+	$detailblendfactor 0.75
+	$detail "models/weapons/arc9/colors/black_detail"
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 }
 
 //test 3
