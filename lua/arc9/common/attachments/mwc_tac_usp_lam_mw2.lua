@@ -15,8 +15,8 @@ ATT.Free = false
 ATT.Category = {"mw3_usp_lams"}
 
 ATT.Model = "models/weapons/arc9/atts/mw2e_usp_lam.mdl"
-ATT.Scale = 1.375
-ATT.ModelOffset = Vector(-4,0.075,-0.25)
+ATT.Scale = 1.025
+ATT.ModelOffset = Vector(-3,0,-0.25)
 
 ATT.Laser = true
 ATT.LaserStrength = 3

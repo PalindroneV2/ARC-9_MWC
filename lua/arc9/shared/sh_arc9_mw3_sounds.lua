@@ -811,6 +811,66 @@ sound.Add( {
     }
 } )
 
+--MW3E FiveSeven--
+
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_Chamber",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_MagIn",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/out.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/lift.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW3E.FiveSeven_Open",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_FiveSeven/open.wav",
+    }
+} )
+
 --MW3E P99--
 
 sound.Add( {
