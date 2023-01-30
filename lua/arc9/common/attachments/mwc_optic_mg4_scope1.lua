@@ -12,6 +12,7 @@ ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
+ATT.Ignore = true
 
 ATT.Category = {"cod_optic"}
 ATT.ActivateElements = {"mg4_scoper"}
