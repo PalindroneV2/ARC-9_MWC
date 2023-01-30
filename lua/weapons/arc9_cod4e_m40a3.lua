@@ -239,7 +239,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = 2
     end
     vm:SetSkin(camo)
 end
@@ -278,7 +278,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1.5, 1.5, 1.5),
+        Scale = Vector(1.125, 1.125, 1.125),
         Pos = Vector(23, 0, 1.6),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},

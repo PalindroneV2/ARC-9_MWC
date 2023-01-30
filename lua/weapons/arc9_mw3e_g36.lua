@@ -275,6 +275,14 @@ SWEP.AttachmentElements = {
                 Pos = Vector(16, -1, 0),
             },
         },
+        IronSights = {
+            Pos = Vector(-3.6125, -3, 0),
+            Ang = Angle(0, 0.1, 0),
+            Magnification = 1.1,
+            AssociatedSlot = 1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
     },
 }
 

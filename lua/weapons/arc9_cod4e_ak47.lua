@@ -247,10 +247,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local newang = Angle(-0.0125, 0.5, 0)
 
     if attached["gold"] then
-        camo = 4
+        camo = camo + 4
     end
     if attached["tactical"] then
-        camo = 0
         tac = 1
         vm:SetBodygroup(1,2)
         newpos = Vector(-2.55, -2, 0.8)
@@ -259,13 +258,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             vm:SetBodygroup(1,0)
         end
     end
-    if attached["bo1_pap"] then
-        camo = camo + 3
-    end
     if attached["stock_h"] then
         vm:SetBodygroup(2, 1 + tac)
     end
 
+    if attached["universal_camo"] then
+        camo = camo + 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
     vm:SetSkin(camo)
     vm:SetBodygroup(0, tac)
 
@@ -372,6 +374,15 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultName = "No Camo",
+        Bone = "j_gun",
+        Pos = Vector(-2, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

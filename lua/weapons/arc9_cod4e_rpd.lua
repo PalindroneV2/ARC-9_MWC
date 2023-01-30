@@ -369,6 +369,15 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
 
 SWEP.HideBones = {
