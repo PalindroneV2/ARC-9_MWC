@@ -18,8 +18,6 @@ VertexlitGeneric
 	$phongtint "[1 .65 .2]"
 	$phongalbedotint "1"
 	
-	$normalmapalphaenvmapmask 1
-	
 	$envmap "env_cubemap"
 	$envmaptint "[.1 .075 .025]"
 	$envmapfresnel "1"

@@ -295,6 +295,13 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["mg4_scoper"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(0, 0, 3.6),
+            },
+        },
+    },
 }
 SWEP.AttachmentTableOverrides = {
     ["mw3e_m4_barrel_mk12"] = {

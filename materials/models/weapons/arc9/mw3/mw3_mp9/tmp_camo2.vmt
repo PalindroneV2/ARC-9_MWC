@@ -1,10 +1,8 @@
 "VertexlitGeneric"
 {
 	"$basetexture" "models/weapons/arc9/mw2/mw2_tmp/tmp"
-	
 	"$bumpmap" "models/weapons/arc9/mw2/mw2_tmp/tmp_n"
 
-	
 	//"$color2" "[ .4 .4 .4 ]"
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

@@ -293,9 +293,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["barrel_k"] then
         vm:SetBodygroup(3,1)
-        if attached["mount"] then
-           iron = iron + 2
-        end
     end
     if attached["barrel_c"] then
         vm:SetBodygroup(3,2)

@@ -176,7 +176,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-4.35, 0, 1.575),
+    Pos = Vector(-4.35, -3, 1.575),
     Ang = Angle(0.0125, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
@@ -184,7 +184,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = {
-    Pos = Vector(-2.175, 0, 0.775),
+    Pos = Vector(-2.175, -3, 0.775),
     Ang = Angle(0, 0.35, 0),
 }
 
@@ -195,7 +195,7 @@ SWEP.HoldTypeSights = "ar2"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -300,7 +300,7 @@ SWEP.Attachments = {
         Bone = "tag_clip",
         Pos = Vector(0, 0, -6),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_shot_slug", "bo1_ammo", "bo1_pap"},
+        Category = {"bo1_shot_slug", "bo1_pap"},
     },
     -- {
     --     PrintName = "Perk-a-Cola",

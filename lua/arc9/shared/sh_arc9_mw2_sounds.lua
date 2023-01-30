@@ -300,6 +300,92 @@ sound.Add( {
     }
 } )
 
+
+-- MW2E MG4
+
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/fire.wav",
+    }
+} )
+
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Open",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/open.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Close",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/close.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_HitCover",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/hit.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_HitClip",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/hitclip.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_In",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Out",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW2E.MG4_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/MW2E_MG4/lift.wav",
+    }
+} )
+
 --MW2E F2000--
 
 sound.Add( {

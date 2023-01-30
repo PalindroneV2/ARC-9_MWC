@@ -227,9 +227,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
-    if attached["bo1_pap"] then
-        vm:SetSkin(3)
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 end
 
 SWEP.HookP_NameChange = function(self, name)

@@ -330,7 +330,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(23.5, 0, 2.2),
+        Pos = Vector(20, 0, 2.2),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
         Category = {"cod_muzzle"},
@@ -342,6 +342,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_mh"},
         Installed = "mwc_stock_medium",
+        Integral = true,
     },
     {
         PrintName = "Underbarrel",
