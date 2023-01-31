@@ -248,7 +248,7 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "Remington 700"
 
     if attached["bo1_pap"] then
-        gunname = "Stag Hunter"
+        gunname = "El Royale"
     end
 
     return gunname
@@ -275,8 +275,8 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1.5, 1.5, 1.5),
-        Pos = Vector(21.8, 0, 1.65),
+        Scale = Vector(1.15, 1.15, 1.15),
+        Pos = Vector(21.35, 0, 1.65),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
     },

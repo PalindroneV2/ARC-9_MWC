@@ -310,7 +310,27 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Winchester M1200"
+    if attached["bo1_pap"] then
+        gunname = "Warcrime 12K"
+    end
+
+    return gunname
+end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()

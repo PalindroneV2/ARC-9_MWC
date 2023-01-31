@@ -171,14 +171,15 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.0675, 0, 1.7),
+    Pos = Vector(-3.0675, -3, 1.7),
     Ang = Angle(0, .15, 0),
+    ViewModelFOV = 60,
     Magnification = 1.1,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.5, 0, 1),
+    Pos = Vector(-1.5, -1.5, 1),
     Ang = Angle(0, 0.075, -2.5),
 }
 
@@ -235,6 +236,18 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M1014"
+    if attached["bo1_pap"] then
+        gunname = "God's Key"
+    end
+
+    return gunname
+end
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
@@ -242,13 +255,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local camo = 0
     if attached["universal_camo"] then
-        camo = 1
+        camo = camo + 1
+    end
+    if attached["gold"] then
+        camo = camo + 2
     end
     if attached["bo1_pap"] then
-        camo = camo + 6
-        if attached["stock_l"] then
-            camo = camo - 2
-        end
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 
@@ -320,6 +333,15 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
     },
 }
 

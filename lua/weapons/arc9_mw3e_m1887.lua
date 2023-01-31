@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Model 1887"
+SWEP.PrintName = "M1887"
 SWEP.Class = "Shotgun"
 SWEP.Description = [[Modernized 10 gauge lever-action shotgun. Basic but reliable. Sawn-off to be more compact.]]
 SWEP.Trivia = {
@@ -278,7 +278,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         Magnification = 1.1,
         ViewModelFOV = 60,
     }
-
 end
 
 SWEP.Attachments = {
@@ -359,6 +358,18 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     end
 
     return anim .. suffix
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Model 1887"
+    if attached["bo1_pap"] then
+        gunname = "Hasta La Vista"
+    end
+
+    return gunname
 end
 
 SWEP.HideBones = {

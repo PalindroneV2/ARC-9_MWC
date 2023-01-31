@@ -280,7 +280,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 2
+        camo = 2
     end
     vm:SetSkin(camo)
 
@@ -366,14 +366,32 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
+    {
+        PrintName = "Cosmetic",
+        DefaultCompactName = "CAMO",
+        Bone = "j_gun",
+        Pos = Vector(-8, 0, 4),
+        Ang = Angle(0, 0, 0),
+        Category = {"universal_camo"},
+        CosmeticOnly = true,
+    },
 }
 
-SWEP.HideBones = {
-    -- "tag_ammo2",
-}
-SWEP.ReloadHideBoneTables = {
-    -- [1] = {"tag_ammo2"},
-}
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M249 SAW"
+
+    if attached["barrel_stub"] then
+        gunname = "M249 Para"
+    end
+    if attached["bo1_pap"] then
+        gunname = "Mnesia"
+    end
+
+    return gunname
+end
 
 SWEP.Animations = {
     ["idle"] = {

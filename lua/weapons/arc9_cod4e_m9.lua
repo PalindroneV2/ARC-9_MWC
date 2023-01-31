@@ -7,8 +7,8 @@ SWEP.AdminOnly = false
 SWEP.PrintName = "M9"
 SWEP.Class = "Pistol"
 SWEP.Description = [[9mm italian pistol. Currently the standard issue sidearm for US forces.
-Though it is a quality weapon in a civilian context, it was maligned in the US Military due to the poor quality of the mil-spec parts. 
-And, its lack of power compared to the venerable M1911 and in the process of being replaced by a SIG-Sauer model.]]
+Though it is a quality weapon in a civilian context, it was maligned in the US Military due to the poor quality of the mil-spec parts
+and its lack of power compared to the venerable M1911 and in the process of being replaced by a SIG-Sauer model.]]
 SWEP.Trivia = {
     Manufacturer = "Beretta",
     Calibre = "9x19mm Parabellum",
@@ -266,6 +266,9 @@ SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
 
     local gunname = "Beretta M9"
+    if attached["bo1_pap"] then
+        gunname = "Woo Wondernine"
+    end
 
     return gunname
 end

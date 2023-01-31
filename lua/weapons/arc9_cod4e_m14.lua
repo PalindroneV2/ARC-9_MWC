@@ -263,7 +263,13 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local camo = 0
     if attached["woodland"] then
-        camo = 4
+        camo = 2
+    end
+    if attached["universal_camo"] then
+        camo = 1
+    end
+    if attached["bo1_pap"] then
+        camo = camo + 3
     end
     if attached["m21_barrel"] then
         vm:SetBodygroup(2,1)
@@ -432,7 +438,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-4, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"cod4_m14_camo"},
+        Category = {"cod4_m14_camo","universal_camo"},
         CosmeticOnly = true,
     },
     {

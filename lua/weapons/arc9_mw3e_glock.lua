@@ -275,9 +275,12 @@ SWEP.HookP_NameChange = function(self, name)
 
     local gunname = "Glock 18"
 
+    if attached["bo1_pap"] then
+        gunname = "Spaßschalter" -- Fun Switch
+    end
+
     return gunname
 end
-
 
 SWEP.Attachments = {
     {

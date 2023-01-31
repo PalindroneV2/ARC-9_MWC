@@ -233,12 +233,17 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
 
+    local camo = 0
+    if attached["universal_camo"] then
+        camo = camo + 1
+    end
     if attached["gold"] then
-        vm:SetSkin(4)
+        camo = camo + 2
     end
     if attached["bo1_pap"] then
-        vm:SetSkin(2)
+        camo = camo + 4
     end
+    vm:SetSkin(camo)
 end
 
 
@@ -253,6 +258,9 @@ SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
 
     local gunname = "IMI Mini-Uzi"
+    if attached["bo1_pap"] then
+        gunname = "Gal Jr."
+    end
 
     return gunname
 end
@@ -337,7 +345,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-8, 0, 4),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_cosmetic_gold"},
+        Category = {"mwc_cosmetic_gold","universal_camo"},
         CosmeticOnly = true,
     },
 }

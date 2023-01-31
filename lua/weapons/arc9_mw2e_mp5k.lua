@@ -242,7 +242,7 @@ SWEP.AttachmentElements = {
     ["barrel_std"] = {
         AttPosMods = {
             [3] = {
-                Pos = Vector(14.5, 0, 2.04),
+                Pos = Vector(13.5, 0, 2.04),
             },
             [5] = {
                 Pos = Vector(9.25, 0, 1.3),
@@ -313,6 +313,18 @@ SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
 
     local gunname = "HK MP5K"
+    if attached["barrel_std"] then
+        gunname = "HK MP5A3"
+        if attached["stock_h"] then
+            gunname = "HK MP5A2"
+        end
+    end
+    if attached["bo1_pap"] then
+        gunname = "HK MP115 Kollider"
+        if attached["barrel_std"] then
+            gunname = "HK MP115 Nimrod"
+        end
+    end
 
     return gunname
 end
@@ -335,8 +347,8 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1,1,1),
-        Pos = Vector(12, 0, 2.04),
+        Scale = Vector(1.2,1.2,1.2),
+        Pos = Vector(11, 0, 2.04),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle_smg", "cod_muzzle_pistol"},
     },

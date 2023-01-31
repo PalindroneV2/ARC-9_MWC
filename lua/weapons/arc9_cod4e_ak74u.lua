@@ -231,6 +231,19 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "AKS-74u"
+
+    if attached["bo1_pap"] then
+        gunname = "AKS-74fu2"
+    end
+
+    return gunname
+end
+
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()
 
