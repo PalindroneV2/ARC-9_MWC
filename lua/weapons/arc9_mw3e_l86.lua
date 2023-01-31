@@ -1,11 +1,11 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
 SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
-SWEP.SubCategory = "Machine Guns"
+SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "L86 LSW"
-SWEP.Class = "Assault Rifle"
+SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[Belgian light machine gun. Standard squad automatic weapon for the United States armed forces. Paratrooper variant.]]
 SWEP.Trivia = {
     Manufacturer = "Steyr",
