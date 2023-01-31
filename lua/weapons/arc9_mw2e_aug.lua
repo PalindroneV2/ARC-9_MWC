@@ -392,7 +392,7 @@ SWEP.Animations = {
     },
     ["reload"] = {
         Source = "reload",
-        Time = 2,
+        Time = 3,
         IKTimeLine = {
             {
                 t = 0,
@@ -416,13 +416,13 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_MW2E.AUG_MagOut", t = 0.15},
-            {s = "ARC9_MW2E.AUG_MagIn", t = 1.1}
+            {s = "ARC9_MW2E.AUG_MagOut", t = 0.6},
+            {s = "ARC9_MW2E.AUG_MagIn", t = 2.0}
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        Time = 2.5,
+        Time = 3.6,
         IKTimeLine = {
             {
                 t = 0,
@@ -446,9 +446,9 @@ SWEP.Animations = {
             },
         },
         EventTable = {
-            {s = "ARC9_MW2E.AUG_MagOut", t = 0.15},
-            {s = "ARC9_MW2E.AUG_MagIn", t = 1.1},
-            {s = "ARC9_MW2E.AUG_Chamber", t = 1.65}
+            {s = "ARC9_MW2E.AUG_MagOut", t = 0.6},
+            {s = "ARC9_MW2E.AUG_MagIn", t = 2.0},
+            {s = "ARC9_MW2E.AUG_Chamber", t = 2.5}
         },
     },
     ["enter_sprint"] = {
