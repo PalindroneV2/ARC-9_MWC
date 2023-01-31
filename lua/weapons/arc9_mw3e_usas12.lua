@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "USAS-12"
+SWEP.PrintName = "USAS 12"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[12 gauge automatic combat shotgun produced in South Korea. Used by many police departments across Asia.]]
 SWEP.Trivia = {

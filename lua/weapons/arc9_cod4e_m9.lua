@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Beretta M9"
+SWEP.PrintName = "M9"
 SWEP.Class = "Pistol"
 SWEP.Description = [[9mm italian pistol. Currently the standard issue sidearm for US forces.
 Though it is a quality weapon in a civilian context, it was maligned in the US Military due to the poor quality of the mil-spec parts. 
@@ -260,6 +260,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Beretta M9"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

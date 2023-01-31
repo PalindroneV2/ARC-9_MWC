@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP-412 REX"
+SWEP.PrintName = "MP412"
 SWEP.Class = "Revolver"
 SWEP.Description = [[Russian magnum revolver with a break-action chamber.
 Although these are supposed to have an automatic extractor, this one in particular doesn't have it.]]
@@ -241,7 +241,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "MP-412 REX"
+    local gunname = "MP412 REX"
 
     if attached["bo1_pap"] then
         gunname = "Eternus Tyrannus"

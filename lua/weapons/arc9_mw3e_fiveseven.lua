@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN Five-SeveN"
+SWEP.PrintName = "Five Seven"
 SWEP.Class = "Pistol"
 SWEP.Description = [[Belgian semi-automatic pistol. Versatile and strong overall with a large magazine.
 Designed in conjunction with the FN P90 platform using the same cartridge.

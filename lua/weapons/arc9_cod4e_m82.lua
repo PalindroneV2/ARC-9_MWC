@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Barrett M82"
+SWEP.PrintName = "Barrett .50cal"
 SWEP.Class = "Anti-Materiel Precision Rifle"
 SWEP.Description = [[American .50 caliber precision rifle. Very heavy, very powerful, and extremely dangerous in the right hands.]]
 SWEP.Trivia = {

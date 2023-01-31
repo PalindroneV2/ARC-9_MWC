@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M60E3"
+SWEP.PrintName = "M60E4"
 SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[The U.S. Military's standard general purpose machine gun adopted in 1957.
 Nicknamed "The Pig" due to it's huge size and appetite for ammo.]]

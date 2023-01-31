@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN P90 TR"
+SWEP.PrintName = "P90"
 SWEP.Class = "Personal Defense Weapon"
 SWEP.Description = [[A peculiar firearm of belgian origin. It's bullpup configuration with a magazine on top keeps the weapon profile low and compact.
 Great handling and ballistics along with a 50 round capacity makes this PDW a great option.]]
@@ -234,6 +234,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = camo + 2
     end
     vm:SetSkin(camo)
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "FN P90 TR"
+
+    return gunname
 end
 
 SWEP.Attachments = {

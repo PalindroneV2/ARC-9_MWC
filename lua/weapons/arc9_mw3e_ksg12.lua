@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "KSG-12"
+SWEP.PrintName = "KSG 12"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[Unconventional 12 gauge pump action slug shotgun with a bullpup design. Fires a single slug for high damage at longer ranges.
 It has two magazine tubes that hold 7 rounds each, which gives this shotgun a massive advantage in ammo count.]]
@@ -260,7 +260,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "KSG-12"
+    local gunname = "KSG 12"
 
     if attached["bo1_pap"] then
         gunname = "Mist Maker"

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M249 Para"
+SWEP.PrintName = "MK46"
 SWEP.Class = "Light Machine Gun"
 SWEP.Description = [[Belgian light machine gun. Standard squad automatic weapon for the United States armed forces.
 Paratrooper variant.]]
@@ -305,6 +305,15 @@ end
 
 --     return anim .. suffix
 -- end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M249 Para"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MP5A3"
+SWEP.PrintName = "MP5"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[A submachine gun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
 Shortened variant denoted by the suffix "K".]]
@@ -14,7 +14,7 @@ SWEP.Trivia = {
     Mechanism = "Roller-Delayed Blowback",
     Country = "West Germany",
     Year = 1964,
-    Games = [[COD4,MW3,BO2,MW19,BOCW,MW22]]
+    Games = [[COD4, MW3, BO2, MW19, BOCW, MW22]]
 }
 SWEP.Credits = {
     Author = "Palindrone"

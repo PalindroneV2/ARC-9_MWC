@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Machine Pistols"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Glock 18"
+SWEP.PrintName = "G18"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[9mm Austrian pistol with a large double stack magazine. It's large magazine along with being relatively cheap and reliable has made it ubiquitous.
 Very popular all over the world with civilians, police, and is even the standard sidearm for some militaries.]]
@@ -268,6 +268,16 @@ end
 -- end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Glock 18"
+
+    return gunname
+end
+
 
 SWEP.Attachments = {
     {

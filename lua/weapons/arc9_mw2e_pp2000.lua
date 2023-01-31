@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PP-2000"
+SWEP.PrintName = "PP2000"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[9mm Russian submachine gun common among security forces and popular for its compact size.]]
 SWEP.Trivia = {

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK USP Tactical"
+SWEP.PrintName = "USP .45"
 SWEP.Class = "Pistol"
 SWEP.Description = [[.45 ACP semi-automatic sidearm with medium capacity and power. Effective at close range.]]
 SWEP.Trivia = {
@@ -247,6 +247,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK USP Tactical"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

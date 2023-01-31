@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "AKM"
+SWEP.PrintName = "AK-47"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Modernized AKM with a RIS railed handguard and a collapsible stock.
 Remains in the 7.62x39mm M43 round rather than the AK-74's 5.45x39mm.]]

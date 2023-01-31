@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Walther P99"
+SWEP.PrintName = "P99"
 SWEP.Class = "Pistol"
 SWEP.Description = [[9mm German pistol. Pistol made for law enforcement, security forces, and civilian shooting market. Successor of the P5 and P88.]]
 SWEP.Trivia = {
@@ -235,6 +235,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Walther P99"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

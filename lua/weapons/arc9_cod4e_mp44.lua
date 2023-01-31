@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "MP-44"
+SWEP.PrintName = "MP44"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[The father of all modern assault rifles.
 It is one of the most common weapons to appear across the Call of Duty series, tied with the MP40 and second only to the M1911.]]

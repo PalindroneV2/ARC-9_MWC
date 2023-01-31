@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Skorpion Vz. 61"
+SWEP.PrintName = "Skorpion"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[Soviet submachine gun designed for security forces. 
 Which found to be used by low-ranking army staff, vehicle drivers, personnel, and special forces.]]

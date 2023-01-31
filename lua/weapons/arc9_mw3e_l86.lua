@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "L86A2 LSW"
+SWEP.PrintName = "L86 LSW"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Belgian light machine gun. Standard squad automatic weapon for the United States armed forces. Paratrooper variant.]]
 SWEP.Trivia = {

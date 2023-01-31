@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FGM-148 Javelin"
+SWEP.PrintName = "Javelin"
 SWEP.Class = "Missile Launcher"
 SWEP.Description = [[American-made portable anti-tank missile system.
 Top-attack mode allows the launcher to attack the most vulnerable point of the enemy to deal extra damage. Lock does not need to be maintained after firing. The missile can also be switched to direct (SACLOS - Semi-Automatic Control Line of Sight) mode, allowing it to be directly guided to the target, but this is not as effective.
@@ -389,6 +389,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap_launcher"] then
         vm:SetSkin(2)
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "FGM-148 Javelin"
+
+    return gunname
 end
 
 SWEP.Attachments = {

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Remington MSR"
+SWEP.PrintName = "MSR"
 SWEP.Class = "Sniper Rifle"
 SWEP.Description = [[A master of the one-shot kill, the bolt-action MSR deals exceptionally high damage from exceptionally far distances.
 Paced shooting and an even-tempered approach ensures any MSR sharpshooter success no matter the range.]]

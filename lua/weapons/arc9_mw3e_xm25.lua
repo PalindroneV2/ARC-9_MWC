@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK XM25"
+SWEP.PrintName = "XM25"
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[German experimental airburst grenade launcher.
 Using programmable 25mm High Explosive rounds and an advanced targeting system remnants of the XM29 OICW program.]]
@@ -224,6 +224,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK XM25"
+
+    return gunname
 end
 
 SWEP.Attachments = {

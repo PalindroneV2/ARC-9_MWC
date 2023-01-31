@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Striker-12"
+SWEP.PrintName = "Striker"
 SWEP.Class = "Combat Shotgun"
 SWEP.Description = [[12 gauge semi automatic combat shotgun using a spring-loaded cylinder to load shells.]]
 SWEP.Trivia = {
@@ -239,6 +239,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Striker-12"
+
+    return gunname
 end
 
 SWEP.Attachments = {

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK M320 GLM"
+SWEP.PrintName = "M320 GLM"
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[Single shot grenade launcher module created to replace the M203, but can be used detached from the rifle.]]
 SWEP.Trivia = {
@@ -219,6 +219,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK M320 GLM"
+
+    return gunname
 end
 
 SWEP.Attachments = {

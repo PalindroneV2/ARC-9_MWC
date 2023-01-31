@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M79 \"Thumper\""
+SWEP.PrintName = "Thumper"
 SWEP.Class = "Grenade Launcher"
 SWEP.Description = [[American break-action, single shot grenade launcher using 40mm High Explosive rounds.
 Famously used in the Vietnam War and still used in small numbers.]]
@@ -220,6 +220,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         vm:SetSkin(2)
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M79 \"Thumper\""
+
+    return gunname
 end
 
 SWEP.Attachments = {

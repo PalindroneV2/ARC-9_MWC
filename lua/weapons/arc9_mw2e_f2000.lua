@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN F2000"
+SWEP.PrintName = "F2000"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A 5.56×45mm NATO bullpup rifle, designed by FN Herstal in Belgium.]]
 SWEP.Trivia = {

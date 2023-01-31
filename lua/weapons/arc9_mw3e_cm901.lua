@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt CM901"
+SWEP.PrintName = "CM901"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[Modern AR-15 variant produced by Colt in a selection of calibers such as 5.56mm NATO, 7.62mm NATO, and 6.8mm Remington SPC.]]
 SWEP.Trivia = {
@@ -312,6 +312,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     end
 
     return anim .. suffix
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt CM901"
+
+    return gunname
 end
 
 SWEP.Attachments = {

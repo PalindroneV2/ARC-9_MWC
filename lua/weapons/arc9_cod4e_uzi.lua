@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "IMI Mini-Uzi"
+SWEP.PrintName = "Mini-Uzi"
 SWEP.Class = "Machine Pistol"
 SWEP.Description = [[9mm Israeli machine pistol derivative from the larger UZI.
 It boasts a much faster rate of fire.]]
@@ -247,6 +247,15 @@ end
 -- end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "IMI Mini-Uzi"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

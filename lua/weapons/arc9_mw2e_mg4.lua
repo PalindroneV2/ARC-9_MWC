@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MG4"
+SWEP.PrintName = "MG4"
 SWEP.Class = "Light Machine Gun"
 SWEP.Description = [[German light machine gun. Standard squad automatic weapon for the Bundeswehr.]]
 SWEP.Trivia = {

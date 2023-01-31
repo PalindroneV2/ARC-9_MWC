@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Desert Eagle Mk XIX"
+SWEP.PrintName = "Desert Eagle"
 SWEP.Class = "Pistol"
 SWEP.Description = [[Magnum caliber semi-automatic pistol designed in the United States and produced by IMI. 
 Though hard to control and unreliable at times it offers great stopping power due to its magnum round.]]

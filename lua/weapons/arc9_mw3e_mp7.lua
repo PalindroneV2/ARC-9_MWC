@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK MP7A1"
+SWEP.PrintName = "MP7"
 SWEP.Class = "Personal Defense Weapon"
 SWEP.Description = [[Heckler & Koch's answer to FN's P90 PDW.
 It entered NATO trials to become a standard PDW but was rejected in favor of the P90, though the P90 was vetoed by Germany.

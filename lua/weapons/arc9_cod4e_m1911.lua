@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M1911A1"
+SWEP.PrintName = "M1911 .45"
 SWEP.Class = "Pistol"
 SWEP.Description = [[This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
 The M1911 has been in service with military forces, law enforcement agencies, and civilians for over 100 years.
@@ -241,6 +241,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt M1911A1"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

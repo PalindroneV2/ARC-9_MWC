@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G3"
+SWEP.PrintName = "G3"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[German Army standard issue rifle chambered in 7.62mm NATO.
 The power of the cardtridge makes it difficult to control in full-auto.]]
@@ -329,6 +329,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     end
 
     return anim .. suffix
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK G3"
+
+    return gunname
 end
 
 SWEP.Attachments = {

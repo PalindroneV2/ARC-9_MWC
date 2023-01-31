@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt M16A4"
+SWEP.PrintName = "M16A4"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[The M16A4 was introduced as an improved version of the M16A2 during the mid 90s.
 The main difference is a flat top upper receiver with an optics rail system.]]
@@ -293,6 +293,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetSkin(1)
     end
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "Colt M16A4"
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

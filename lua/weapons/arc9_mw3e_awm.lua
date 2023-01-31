@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "L115A2"
+SWEP.PrintName = "L118A"
 SWEP.Class = "Sniper Rifle"
 SWEP.Description = [[A high-caliber sniper rifle designed for cold-weather police and military units.
 Known for once holding the record of the longest range sniper shot in history.]]

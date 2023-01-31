@@ -4,8 +4,8 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Dragunov SVD-63"
-SWEP.Class = "Designated Marskman Rifle"
+SWEP.PrintName = "Dragunov"
+SWEP.Class = "Designated Marksman Rifle"
 SWEP.Description = [[Soviet semi-automatic sniper rifle aesthetically similar to the AK-47, built for designated marksman.
 Also, it was produced by the Chinese gun manufacturer Norinco for the Chinese Army.]]
 SWEP.Trivia = {
@@ -247,7 +247,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Dragunov SVD63"
+    local gunname = "Dragunov SVD-63"
 
     if attached["bo1_pap"] then
         gunname = "D115 Disassembler"

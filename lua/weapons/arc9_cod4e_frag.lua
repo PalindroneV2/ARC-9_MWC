@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Specials/Explosives"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M67 Frag Grenade"
+SWEP.PrintName = "M67 Grenade"
 SWEP.Class = "Grenade"
 SWEP.Description = [[Fragmentation hand grenade used by the United States military.]]
 SWEP.Trivia = {

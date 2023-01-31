@@ -1,7 +1,7 @@
 ATT.PrintName = "Golden"
 ATT.CompactName = "GOLD"
 ATT.Icon = Material("materials/entities/cod4_generic.png")
-ATT.Description = [[Pimp up your AK like a cartel boss.]]
+ATT.Description = [[Pimp up your weapons in gold like a cartel boss.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0

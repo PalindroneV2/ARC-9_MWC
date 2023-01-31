@@ -1,10 +1,10 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Colt Anaconda"
+SWEP.PrintName = ".44 Magnum"
 SWEP.Class = "Revolver"
 SWEP.Description = [[Magnum caliber revolver. Upscaled version of the .357 Magnum Colt Python, now fires .44 Magnum.]]
 SWEP.Trivia = {

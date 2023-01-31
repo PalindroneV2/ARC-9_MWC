@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK G36"
+SWEP.PrintName = "G36C"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[The G36 is the result of Heckler and Koch's time developing the OICW and the XM8 for the US Military.
 While missing many of the experimental features, the rifle still boasts impressive performance and engineering and it has become the standard rifle for the Bundeswehr.]]
@@ -353,6 +353,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     end
 
     return anim .. suffix
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "HK G36C"
+
+    return gunname
 end
 
 SWEP.Attachments = {

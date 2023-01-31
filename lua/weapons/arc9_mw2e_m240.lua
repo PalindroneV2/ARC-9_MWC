@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M240B"
+SWEP.PrintName = "M240"
 SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[This is the standard infantry medium machine gun of the U.S. Marine Corps.
 It comes configured for ground combat with a buttstock and bipod, though it can also be mounted on tripod, ground vehicles, aircraft, aboard ships, and small boats.
@@ -283,6 +283,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     if self:GetBipod() and anim == "fire" then
         return anim .. "_bipod"
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M240 \"Bravo\""
+
+    return gunname
 end
 
 SWEP.Attachments = {

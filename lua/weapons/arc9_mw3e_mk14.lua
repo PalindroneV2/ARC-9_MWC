@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Mk. 14 Mod 0"
+SWEP.PrintName = "MK14"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Heavily modified M14 rifle put in marksman and sniper roles.]]
 SWEP.Trivia = {

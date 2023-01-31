@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "HK USP .45"
+SWEP.PrintName = "USP .45"
 SWEP.Class = "Pistol"
 SWEP.Description = [[.45 ACP semi-automatic sidearm with medium capacity and power.
 Effective at close range.]]

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN FAL"
+SWEP.PrintName = "FAL"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[An automatic lightweight rifle firing 7.62x51mm NATO, used by military forces aligned with NATO all over the world.
 Originally designed for the intermediate .280 British and suddenly changed to a .30 caliber to comply with NATO Standards, the rifle found itself shunned by the US military whom had demanded the change of caliber.
@@ -265,6 +265,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "FN FAL"
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

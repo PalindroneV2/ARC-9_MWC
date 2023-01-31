@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FAMAS F1"
+SWEP.PrintName = "FAMAS"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[A bullpup assault rifle designed and manufactured in France by MAS (Manufacture d'Armes de Saint-Étienne or "Saint-Étienne Weapons Factory" in English) in 1978.
 A year after the Austrian Steyr AUG.]]
@@ -289,6 +289,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetSkin(camo)
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "FAMAS F1"
+
+    return gunname
 end
 
 SWEP.Hook_TranslateAnimation = function (self, anim)

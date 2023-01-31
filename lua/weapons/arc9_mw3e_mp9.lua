@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Machine Pistols"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "B&T MP9"
+SWEP.PrintName = "MP9"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[A submachine gun derivative of the G3 design chambered in 9mm. Known for its use by the British SAS.
 Shortened variant denoted by the suffix "K".]]
@@ -258,6 +258,15 @@ end
 -- end
 
 --TEST 3
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "B&T MP9"
+
+    return gunname
+end
 
 SWEP.Attachments = {
     {

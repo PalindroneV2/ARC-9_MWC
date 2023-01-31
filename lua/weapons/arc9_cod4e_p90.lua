@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "FN P90"
+SWEP.PrintName = "P90"
 SWEP.Class = "Personal Defense Weapon"
 SWEP.Description = [[A peculiar firearm of Belgian origin. It's bullpup configuration with a magazine on top keeps the weapon profile low and compact.
 Great handling and ballistics along with a 50 round capacity, makes this PDW a great option.]]
@@ -250,6 +250,15 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
     if attached["mount"] and anim == "fire_iron" then
         return "fire_scope"
     end
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "FN P90"
+
+    return gunname
 end
 
 SWEP.Attachments = {

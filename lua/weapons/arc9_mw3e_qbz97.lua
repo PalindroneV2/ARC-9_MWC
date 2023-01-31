@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "QBZ-97"
+SWEP.PrintName = "Type 95"
 SWEP.Class = "Assault Rifle"
 SWEP.Description = [[Export version of the QBZ-95 Assault Rifle standard to the Chinese PLA.
 Fires 5.56mm NATO instead of the original chinese 5.8x42mm DBP87.]]

@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Submachine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "PP-90M1"
+SWEP.PrintName = "PP90M1"
 SWEP.Class = "Submachine Gun"
 SWEP.Description = [[9mm Russian submachine gun similar to the PP-19 Bizon in appearance and functionality.
 It uses a helical 64 round magazine.]]
