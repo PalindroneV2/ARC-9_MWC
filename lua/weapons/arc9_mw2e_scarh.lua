@@ -464,8 +464,7 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
         },
     },
     ["reload_empty"] = {
@@ -495,9 +494,8 @@ SWEP.Animations = {
         },
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
-            {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 2.15},
         },
     },
     ["enter_sprint"] = {
@@ -545,8 +543,7 @@ SWEP.Animations = {
         Time = 2.63,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
         },
     },
     ["reload_empty_gl"] = {
@@ -554,9 +551,8 @@ SWEP.Animations = {
         Time = 3.36,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
-            {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 2.15},
         },
     },
     ["enter_sprint_gl"] = {
@@ -603,8 +599,7 @@ SWEP.Animations = {
         Time = 2.63,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
         },
     },
     ["reload_empty_mk"] = {
@@ -612,9 +607,8 @@ SWEP.Animations = {
         Time = 3.36,
         EventTable = {
             {s = "ARC9_MW3E.SCARL_MagOut", t = 0.5},
-            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.25},
-            {s = "ARC9_MW3E.SCARL_Hit", t = 1.65},
-            {s = "ARC9_MW3E.SCARL_Chamber", t = 2.15},
+            {s = "ARC9_MW3E.SCARL_MagIn", t = 1.5},
+            {s = "ARC9_MW3E.SCARL_Hit", t = 2.15},
         },
     },
     ["enter_sprint_mk"] = {
