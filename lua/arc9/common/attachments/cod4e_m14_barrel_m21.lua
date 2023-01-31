@@ -17,7 +17,7 @@ ATT.ExcludeElements = {}
 ATT.SpreadMult = 0.75
 ATT.RecoilMult = 0.85
 ATT.SpreadMultHipFire = 1.35
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMultShooting = 0.8
 ATT.DamageMinAdd = 15
 ATT.DamageMaxAdd = 15
 

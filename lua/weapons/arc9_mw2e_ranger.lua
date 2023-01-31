@@ -91,7 +91,7 @@ SWEP.RecoilKick = 2
 SWEP.PushBackForce = 1 -- Push the player back when shooting.
 
 SWEP.Spread = 0.03
-SWEP.SpreadMultRecoil = 1.25
+SWEP.SpreadMultShooting = 1.25
 
 SWEP.SpreadMultSights = 2
 SWEP.SpreadAddHipFire = math.rad(150 / 37.5)

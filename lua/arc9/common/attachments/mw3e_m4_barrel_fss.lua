@@ -19,7 +19,7 @@ ATT.MuzzleEffectQCA = 6
 ATT.SpreadMult = 1.1
 ATT.RecoilMult = 1.1
 ATT.SpreadMultHipFire = 0.85
-ATT.SpreadMultRecoil = 1.1
+ATT.SpreadMultShooting = 1.1
 
 ATT.SpeedMult = 1.05
 ATT.SpeedMultSights = 1.1

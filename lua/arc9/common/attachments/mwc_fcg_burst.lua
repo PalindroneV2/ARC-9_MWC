@@ -25,7 +25,7 @@ ATT.RunawayBurstOverride = true
 ATT.PostBurstDelayOverride = 0.1
 
 ATT.SpreadMult = 0.9
-ATT.SpreadMultRecoil = 0.8
+ATT.SpreadMultShooting = 0.8
 ATT.RecoilMult = 0.8
 ATT.RecoilUpMult = 0.9
 ATT.RecoilSideMult = 0.9

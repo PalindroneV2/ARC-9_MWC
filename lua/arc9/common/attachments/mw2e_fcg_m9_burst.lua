@@ -25,7 +25,7 @@ ATT.PostBurstDelayOverride = 0.1
 ATT.ClipSize = 21
 
 ATT.SpreadMult = 1.15
-ATT.SpreadMultRecoil = 1.15
+ATT.SpreadMultShooting = 1.15
 ATT.RecoilMult = 1.1
 ATT.RecoilUpMult = 1.1
 ATT.RecoilSideMult = 1.1

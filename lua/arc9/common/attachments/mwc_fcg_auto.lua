@@ -23,7 +23,7 @@ ATT.FiremodesOverride = {
 }
 
 ATT.SpreadMult = 1.1
-ATT.SpreadMultRecoil = 1.2
+ATT.SpreadMultShooting = 1.2
 ATT.RecoilMult = 1.15
 ATT.RecoilUpMult = 1.1
 ATT.RecoilSideMult = 1.1

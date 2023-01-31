@@ -18,7 +18,7 @@ ATT.ClipSize = 30
 
 ATT.DamageMax = 25
 ATT.DamageMin = 12
-ATT.SpreadMultRecoil = 0.85
+ATT.SpreadMultShooting = 0.85
 
 ATT.SpreadMult = 1.25
 ATT.RangeMaxMult = 1.1
