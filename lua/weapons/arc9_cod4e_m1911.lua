@@ -10,7 +10,7 @@ SWEP.Description = [[This handgun is a staple of firearm design. It would come t
 The M1911 has been in service with military forces, law enforcement agencies, and civilians for over 100 years.
 The pistol that forgot to become obsolete.]]
 SWEP.Trivia = {
-    Manufacturer = "Colt",
+    Manufacturer = "Springfield",
     Calibre = ".45 ACP",
     Mechanism = "Blowback",
     Country = "USA",
@@ -246,7 +246,11 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Colt M1911A1"
+    local gunname = "1911-A1"
+
+    if attached["bo1_pap"] then
+        gunname = "G115 Perforator"
+    end
 
     return gunname
 end
