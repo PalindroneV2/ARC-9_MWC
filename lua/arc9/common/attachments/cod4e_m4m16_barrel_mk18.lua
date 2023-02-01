@@ -1,6 +1,6 @@
 ATT.PrintName = [[Mk. 18 Barrel]]
 ATT.CompactName = [[Mk. 18]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Mk. 18 frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}

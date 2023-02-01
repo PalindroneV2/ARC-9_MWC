@@ -1,6 +1,6 @@
 ATT.PrintName = [[14.5" Classic Barrel]]
 ATT.CompactName = [[14.5" Classic]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Standard M4 barrel wearing the classic round, ribbed handguard for M4s.
 Drilled into it are two picatinny rails on the left and the right, protected by covers.]]
 ATT.Pros = {

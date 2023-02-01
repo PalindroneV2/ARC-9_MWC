@@ -1,6 +1,6 @@
 ATT.PrintName = [[11.5" FSS Barrel]]
 ATT.CompactName = [[11.5" FSS]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[CQB barrel perfect for short range engagements, especially when clearing buildings.
 The cut-down, low-profile gas block is hidden inside the handguard allowing for lower-profile optics to have clearance.
 Comes attached by default with G.I. foldable irons.]]

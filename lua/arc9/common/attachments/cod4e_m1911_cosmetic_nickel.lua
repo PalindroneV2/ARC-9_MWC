@@ -6,7 +6,7 @@ Used by Griggs.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {"cod4_m1911_cosmetic"}

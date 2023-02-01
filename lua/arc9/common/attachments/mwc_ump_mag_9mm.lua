@@ -2,13 +2,13 @@
 
 ATT.PrintName = [[H&K 9x19mm 30 Round Magazine]]
 ATT.CompactName = [[30 9MM]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[9x19mm conversion for the UMP using 30 round magazines.
 Reduces long range stopping power significantly, but has less recoil and can be fired much faster.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 5
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_ump_mag"}

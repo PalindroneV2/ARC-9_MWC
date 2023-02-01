@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "Five Seven"
+SWEP.PrintName = "Five-seveN"
 SWEP.Class = "Pistol"
 SWEP.Description = [[Belgian semi-automatic pistol. Versatile and strong overall with a large magazine.
 Designed in conjunction with the FN P90 platform using the same cartridge.
@@ -241,7 +241,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "FN Five-SeveN"
+    local gunname = "FN Five-seveN"
     if attached["bo1_pap"] then
         gunname = "Ultra"
     end

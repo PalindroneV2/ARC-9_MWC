@@ -7,7 +7,7 @@ ATT.Description = [[The weapon as it sounds in Call of Duty: Black Ops II.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 2
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.ShootSound = "ARC9_COD4E.1911_Fire"

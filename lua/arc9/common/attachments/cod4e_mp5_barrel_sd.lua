@@ -1,6 +1,6 @@
 ATT.PrintName = [[SD Barrel]]
 ATT.CompactName = [[SD]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[SD (Schalldampfer in German, or sound suppressor) frame tube for the MP5.]]
 ATT.Pros = {}
 ATT.Cons = {}

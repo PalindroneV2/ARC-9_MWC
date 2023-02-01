@@ -1,6 +1,6 @@
 ATT.PrintName = [[Extended Magazine]]
 ATT.CompactName = [[EXT MAG]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Holds 50% more ammunition.]]
 ATT.Pros = {}
 ATT.Cons = {}

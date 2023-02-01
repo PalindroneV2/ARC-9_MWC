@@ -446,8 +446,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3, 0, 0),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_mh"},
-        Installed = "bo1_stock_heavy",
+        Category = {"mwc_stock_mh"},
+        Installed = "mwc_stock_heavy",
     },
 }
 

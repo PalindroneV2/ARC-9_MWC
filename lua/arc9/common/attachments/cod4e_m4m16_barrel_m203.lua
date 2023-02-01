@@ -1,6 +1,6 @@
 ATT.PrintName = [[M203 Heatshield]]
 ATT.CompactName = [[HEAT]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[M203 frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}

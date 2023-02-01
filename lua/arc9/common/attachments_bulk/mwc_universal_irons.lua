@@ -2,7 +2,7 @@ local ATT = {}
 
 ATT.PrintName = "FAD Rear Sight"
 ATT.CompactName = "FAD Rear"
-ATT.Icon = Material("entities/bo1_atts/optics/retro_ar15/carry_side.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]

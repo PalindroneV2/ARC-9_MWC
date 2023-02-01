@@ -5,7 +5,7 @@ ATT.Description = [[Custom made for a SWAT team from a midwestern town.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {

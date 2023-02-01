@@ -1,12 +1,12 @@
 ATT.PrintName = [[M1158 7.62mm NATO Black Tip]]
 ATT.CompactName = [[Black Tip]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Improved rifle rounds that offer better penetration and damage to target, as well as producing less fouling on the barrel.
 Comes in a 10 round STANAG magazine for better positon in prone.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {"cod4_m14_ammo"}

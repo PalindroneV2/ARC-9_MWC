@@ -287,8 +287,8 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-5, 0, 0.5),
         Ang = Angle(0, 0, 0),
-        Category = {"bo1_stock_lm"},
-        Installed = "bo1_stock_light"
+        Category = {"mwc_stock_lm"},
+        Installed = "mwc_stock_light"
     },
     {
         PrintName = "Tactical Left",

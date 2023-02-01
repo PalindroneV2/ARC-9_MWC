@@ -1,6 +1,6 @@
 ATT.PrintName = [[RIS Barrel]]
 ATT.CompactName = [[RIS]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Long barrel tube.]]
 ATT.Pros = {}
 ATT.Cons = {}

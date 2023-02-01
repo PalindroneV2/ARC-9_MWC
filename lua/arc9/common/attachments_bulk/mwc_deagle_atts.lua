@@ -137,7 +137,7 @@ ATT = {}
 
 ATT.PrintName = [[.44 Magnum 8 Round Magazine]]
 ATT.CompactName = [[.44 MAG]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[.44 Magnum conversion for the Desert Eagle.
 More power means more recoil and bigger cartridges means one less bullet in your mag. 
 Slight improvement to penetration and accuracy due to the better ballistics of .44 Magnum.]]
@@ -184,7 +184,7 @@ ATT = {}
 
 ATT.PrintName = [[.50 Action Express 7 Round Magazine]]
 ATT.CompactName = [[.50 AE]]
-ATT.Icon = Material("entities/bo1_atts/ammo/ext_mag.png")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[.50 Action Express conversion for the Desert Eagle.
 More power means more recoil and the biggest possible cartridge means two less bullets in your mag.
 Slight improvement to penetration and accuracy due to the better ballistics of .50 AE.]]

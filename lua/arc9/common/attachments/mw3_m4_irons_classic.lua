@@ -1,6 +1,6 @@
 ATT.PrintName = [[Carry Handle Irons]]
 ATT.CompactName = [[Classic]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Classic carry handle iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"

@@ -1,6 +1,6 @@
 ATT.PrintName = [[M21 Barrel]]
 ATT.CompactName = [[M21]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m16.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Long range precision barrel for engagements beyond 500 meters.
 Used by squad marksman and snipers.
 Full-auto is restricted when using this sniper barrels to prevent wear and preserve high precision.]]

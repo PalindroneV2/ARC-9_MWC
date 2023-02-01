@@ -9,7 +9,7 @@ ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 ATT.Folder = "SCOPE"
 

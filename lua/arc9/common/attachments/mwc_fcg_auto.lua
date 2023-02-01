@@ -1,13 +1,13 @@
 ATT.PrintName = "S-1-F FCG"
 ATT.CompactName = "AUTO"
-ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Fully automatic fire control group.
 Recoil control and spread increases.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {"mwc_fcg_auto", "mwc_fcgs"}

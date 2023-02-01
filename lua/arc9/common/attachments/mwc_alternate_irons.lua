@@ -1,6 +1,6 @@
 ATT.PrintName = "Alternate Iron Sights"
 ATT.CompactName = "ALT IRONS"
-ATT.Icon = Material("entities/bo1_atts/optics/bo2_irons.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [["You will aim with sights of iron and you will like it."
 
 Functions identically to other iron sights.]]

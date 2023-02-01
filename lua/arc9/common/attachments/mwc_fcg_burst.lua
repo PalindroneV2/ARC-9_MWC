@@ -1,13 +1,13 @@
 ATT.PrintName = "S-1-3 FCG"
 ATT.CompactName = "BURST"
-ATT.Icon = Material("entities/bo1_atts/other/select_fire.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Standard 3-round burst fire control group.
 Greatly improves recoil control and reduces spread.]]
 ATT.Pros = {}
 ATT.Cons = {
 }
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true
 
 ATT.Category = {"mwc_fcg_bst", "mwc_fcgs"}

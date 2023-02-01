@@ -2,7 +2,7 @@ local ATT = {}
 
 ATT.PrintName = [[Slim Handguard]]
 ATT.CompactName = [[Slim]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Slim polymer handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -20,7 +20,7 @@ ATT = {}
 
 ATT.PrintName = [[Wide Handguard]]
 ATT.CompactName = [[Wide]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Wide polymer handguard.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -50,7 +50,7 @@ ATT = {}
 
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Handguard with integrated picatinny rails on the bottom and sides.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -107,7 +107,7 @@ ATT = {}
 
 ATT.PrintName = [[RIS Handguard]]
 ATT.CompactName = [[RIS]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Handguard with integrated picatinny rails on the bottom and sides.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -164,7 +164,7 @@ ATT = {}
 
 ATT.PrintName = [[Kurz Barrel]]
 ATT.CompactName = [[KURZ]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Short frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -197,7 +197,7 @@ ATT = {}
 
 ATT.PrintName = [[Submachine Gun Barrel]]
 ATT.CompactName = [[SMG]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ar15/barrels/m4.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Shorter SMG profile frame tube.]]
 ATT.Pros = {}
 ATT.Cons = {}
@@ -241,10 +241,10 @@ ATT = {}
 
 ATT.PrintName = [[Picattiny Rail]]
 ATT.CompactName = [[PICATINNY]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Standard rail system that allows for attachment for underbarrel grips.]]
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwe_g3_ubrail"}

@@ -1,13 +1,13 @@
 ATT.PrintName = "Integrated Bipod"
 ATT.CompactName = [[I. BIPOD]]
-ATT.Icon = Material("entities/bo1_atts/ubs/bipod.png", "mips smooth")
+ATT.Icon = Material("entities/cod4_generic.png")
 ATT.Description = [[Bipod that goes under the foregrip.
 Belongs to Black Ops II.]]
 ATT.Pros = {
 }
 ATT.Cons = {}
 ATT.SortOrder = 4
-ATT.MenuCategory = "ARC9 - BO1 Attachments"
+ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"mwc_bipod"}

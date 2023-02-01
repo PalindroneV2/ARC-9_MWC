@@ -1,6 +1,6 @@
 ATT.PrintName = [[Short Barrel]]
 ATT.CompactName = [[SHORT]]
-ATT.Icon = Material("entities/bo1_atts/bocw/atts_ak5/barrels/mix_pro.png", "mips smooth")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Short frame tube for the CM901.]]
 ATT.Pros = {}
 ATT.Cons = {}

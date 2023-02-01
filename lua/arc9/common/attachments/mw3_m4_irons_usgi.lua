@@ -1,6 +1,6 @@
 ATT.PrintName = [[MaTech Irons]]
 ATT.CompactName = [[MaTech]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[MaTech iron sights.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
