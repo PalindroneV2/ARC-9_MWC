@@ -411,7 +411,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -419,6 +419,6 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
 }

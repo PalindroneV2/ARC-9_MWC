@@ -447,7 +447,7 @@ SWEP.Animations = {
     },
     ["enter_sprint"] = {
         Source = "sprint_in",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint"] = {
         Source = "sprint_loop",
@@ -455,11 +455,11 @@ SWEP.Animations = {
     },
     ["exit_sprint"] = {
         Source = "sprint_out",
-        Time = 10 / 30
+        Time = 1,
     },
     ["enter_sprint_empty"] = {
         Source = "sprint_in_empty",
-        Time = 10 / 30
+        Time = 1,
     },
     ["idle_sprint_empty"] = {
         Source = "sprint_loop_empty",
@@ -467,7 +467,7 @@ SWEP.Animations = {
     },
     ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
-        Time = 10 / 30
+        Time = 1,
     },
 
     -- ANNIHILATOR --
