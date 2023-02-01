@@ -321,20 +321,20 @@ end
 
 SWEP.Attachments = {
     {
-        PrintName = "Muzzle",
-        Bone = "j_gun",
-        Pos = Vector(24, 0, 2.35),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
-        ExcludeElements = {"newbarrel"},
-    },
-    {
         PrintName = "Optic",
         Bone = "j_ammo_cover",
         Pos = Vector(-6, 0, 0.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic", "cod_rail_riser"},
         InstalledElements = {"mount"},
+    },
+    {
+        PrintName = "Muzzle",
+        Bone = "j_gun",
+        Pos = Vector(25, 0, 2.6),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_muzzle"},
+        ExcludeElements = {"newbarrel"},
     },
     {
         PrintName = "Underbarrel",
