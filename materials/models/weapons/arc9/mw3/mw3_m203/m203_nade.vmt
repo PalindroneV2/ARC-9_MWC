@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models/weapons/arc9/mw3/mw3_m203/m203_nade_c"
 	
-	"$bumpmap" "models/weapons/arc9/mw3/mw3_m203/m203_nade_c"
+	"$bumpmap" "models/weapons/arc9/mw3/mw3_m203/m203_nade_n"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"
