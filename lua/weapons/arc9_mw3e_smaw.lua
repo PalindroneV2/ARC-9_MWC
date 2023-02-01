@@ -134,12 +134,7 @@ SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
         Mode = -1,
-    },
-    {
-        Mode = 3,
-    },
-    {
-        Mode = 1,
+        PrintName = "SINGLE"
     },
 }
 SWEP.ARC9WeaponCategory = 6
