@@ -301,6 +301,15 @@ SWEP.Attachments = {
         ActivateElement = {"noirons"}
     },
     {
+        PrintName = "Tactical",
+        DefaultCompactName = "TAC",
+        Bone = "j_gun",
+        Scale = Vector(1, 1, 1),
+        Pos = Vector(10.25, 0.075, 0.75),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_tactical_revolver"},
+    },
+    {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",

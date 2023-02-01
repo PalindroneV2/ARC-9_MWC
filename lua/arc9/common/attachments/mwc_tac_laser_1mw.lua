@@ -12,7 +12,7 @@ ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 -- ATT.Folder = "RDS"
 
-ATT.Category = {"cod_tactical", "cod_tactical_top"}
+ATT.Category = {"cod_tactical", "cod_tactical_top", "cod_tactical_revolver"}
 
 ATT.Model = "models/weapons/arc9/atts/mw3_laser_1mw.mdl"
 ATT.Scale = 1

@@ -262,7 +262,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(2, 0, 2.25),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic_lp", "mw3e_deagle_tactical"},
+        Category = {"cod_optic_lp"},
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
         ActivateElement = {"noirons"}
     },
@@ -270,9 +270,9 @@ SWEP.Attachments = {
         PrintName = "Tactical Bottom",
         DefaultCompactName = "TAC B",
         Bone = "j_reload",
-        Pos = Vector(4, 0, 0.25),
+        Pos = Vector(3.15, 0, 0.25),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
+        Category = {"cod_tactical_revolver"},
         ExcludeElements = {"mw3_psrscope"},
     },
     {

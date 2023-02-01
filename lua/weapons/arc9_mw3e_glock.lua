@@ -165,8 +165,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3, 3, 0.8),
-    Ang = Angle(0.075, -0.45, 0),
+    Pos = Vector(-3, 0, 0.8),
+    Ang = Angle(0.075, 0, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 1,
     ViewModelFOV = 60,
@@ -215,14 +215,24 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["g17"] = {
+        IronSights = {
+            Pos = Vector(-3, 0, 0.65),
+            Ang = Angle(0.075, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+        },
+        Bodygroups = {
+            {0,1},
+            {2,0},
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
-
-    local newpos = Vector(-3, 0, 0.8)
-    local newang = Angle(0.075, -0.45, 0)
 
     local camo = 0
     if attached["universal_camo"] then
@@ -231,35 +241,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["bo1_pap"] then
         camo = camo + 2
     end
-
     vm:SetSkin(camo)
-
-    vm:SetBodygroup(2,1)
-    if attached["g17"] then
-        vm:SetBodygroup(0,1)
-        vm:SetBodygroup(2,0)
-        newpos = Vector(-3, 0, 0.65)
-        newang = Angle(0.075, 0, 0)
-    end
-
-    local fmgpose = Vector(0, 0, -1)
-
-    if attached["fmg_frame"] then
-        fmgpose = Vector(0, -5, -3)
-        newpos = Vector(-3, -5, -0.8)
-        newang = Angle(0.075, 1, 0)
-    end
-
-    self.ActivePos = fmgpose
-    self.SprintPos = fmgpose
-    self.CrouchPos = fmgpose
-
-    self.IronSights = {
-        Pos = newpos,
-        Ang = newang,
-        Magnification = 1.1,
-        CrosshairInSights = false,
-    }
 end
 
 
@@ -299,7 +281,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(2.5, 0, 0.4),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical", "bo1_pistol_rail", "mwc_fmg_frame"},
+        Category = {"cod_tactical", "cod_pistol_rail", "mwc_fmg_frame"},
     },
     {
         PrintName = "Ammunition",

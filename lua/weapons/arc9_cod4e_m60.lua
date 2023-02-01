@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - COD4: Modern Warfare" -- edit this if you like
 SWEP.SubCategory = "Light Machine Guns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M60E4"
+SWEP.PrintName = "M60E3"
 SWEP.Class = "General Purpose Machine Gun"
 SWEP.Description = [[The U.S. Military's standard general purpose machine gun adopted in 1957.
 Nicknamed "The Pig" due to it's huge size and appetite for ammo.]]
@@ -146,7 +146,8 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_COD4E.M60_Fire"
+-- SWEP.ShootSound = "ARC9_COD4E.M60_Fire"
+SWEP.ShootSound = "ARC9_MW2E.MG4_Fire"
 SWEP.ShootSoundSilenced = "ARC9_COD4E.M4M16_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
@@ -298,6 +299,19 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         end
     end
 
+end
+
+SWEP.HookP_NameChange = function(self, name)
+
+    local attached = self:GetElements()
+
+    local gunname = "M60E3"
+
+    if attached["bo1_pap"] then
+        gunname = "Slow Burn"
+    end
+
+    return gunname
 end
 
 

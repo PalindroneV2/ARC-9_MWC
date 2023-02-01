@@ -6,9 +6,8 @@ SWEP.AdminOnly = false
 
 SWEP.PrintName = "M1911 .45"
 SWEP.Class = "Pistol"
-SWEP.Description = [[This handgun is a staple of firearm design. It would come to influence many future semi-automatic handguns.
-The M1911 has been in service with military forces, law enforcement agencies, and civilians for over 100 years.
-The pistol that forgot to become obsolete.]]
+SWEP.Description = [[A staple of firearm design, in service with military forces, law enforcement agencies and civilians for over 100 years. A pistol that forgot to become obsolete.
+Fires a powerful cartridge, but is let down by its single stack magazine.]]
 SWEP.Trivia = {
     Manufacturer = "Springfield",
     Calibre = ".45 ACP",
@@ -214,6 +213,13 @@ SWEP.BarrelLength = 0 -- = 9
 SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
+    ["rail_lamp"] = {
+        AttPosMods = {
+            [2] = {
+                Pos = Vector(2.5, 0.26, 0.3),
+            },
+        },
+    }
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -266,23 +272,24 @@ SWEP.Attachments = {
         Category = {"cod_muzzle_pistol"},
     },
     {
+        PrintName = "Rail",
+        DefaultCompactName = "RAIL",
+        Bone = "j_gun",
+        Scale = Vector(0.75,0.75,0.75),
+        Icon_Offset = Vector(-3,0,1),
+        Pos = Vector(3.5, 0.26, 0.4),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_pistol_rail"},
+        CorrectiveAng = Angle(-1.525, -1.25, 0),
+    },
+    {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
         Pos = Vector(2.5, 0.26, 0.4),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical"},
-        MergeSlots = {3},
-    },
-    {
-        Hidden = true,
-        Bone = "j_gun",
-        Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(2.5, 0.26, 0.4),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_pistol_rail"},
-        CorrectiveAng = Angle(-1.525, -1.25, 0),
+        Category = {"cod_tactical_pistols"},
     },
     {
         PrintName = "Ammunition",

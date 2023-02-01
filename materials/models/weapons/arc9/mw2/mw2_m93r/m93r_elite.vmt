@@ -2,13 +2,12 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/mw2/mw2_m93r/m93r"
 	$bumpmap	"models/weapons/arc9/mw2/mw2_m93r/m93r_n"
+	$phongexponenttexture "models/weapons/arc9/mw2/mw2_m93r/m93r_s"
 
 	"$detail" "models/weapons/arc9/mw2/mw2_m93r/m93r_spc"
     $detailblendmode 1
     "$detailscale" "1"
     "$detailblendfactor" "1"
-
-	$phongexponenttexture "models/weapons/arc9/mw2/mw2_m93r/m93r_s"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

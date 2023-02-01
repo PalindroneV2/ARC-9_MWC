@@ -2,7 +2,6 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/mw2/mw2_m93r/m93r"
 	$bumpmap	"models/weapons/arc9/mw2/mw2_m93r/m93r_n"
-
 	$phongexponenttexture "models/weapons/arc9/mw2/mw2_m93r/m93r_s"
 	
 	"$blendtintbybasealpha" "1"
