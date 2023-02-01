@@ -202,7 +202,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = {
-    Pos = Vector(-1.875, -1.5, 0),
+    Pos = Vector(-1.875, -3, 0),
     Ang = Angle(0.025, 0, -2.5),
 }
 
@@ -296,15 +296,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
 end
-
-
--- SWEP.Hook_TranslateAnimation = function (self, anim)
---     local attached = self:GetElements()
-
---     local suffix = ""
-
---     return anim .. suffix
--- end
 
 SWEP.HookP_NameChange = function(self, name)
 
