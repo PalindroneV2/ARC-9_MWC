@@ -216,7 +216,7 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mount"] = {
+    ["muzzle"] = {
         Bodygroups = {
             {1,1}
         },
@@ -263,10 +263,11 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1.25, 1.25, 1.25),
-        Pos = Vector(31.5, 0, 1.7),
+        Scale = 1,
+        Pos = Vector(31.15, 0, 1.7),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
+        Category = {"cod_muzzle_sniper"},
+        InstalledElements = {"muzzle"}
     },
     {
         PrintName = "Underbarrel",

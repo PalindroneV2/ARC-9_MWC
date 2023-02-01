@@ -274,10 +274,11 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Scale = Vector(1.5, 1.5, 1.5),
-        Pos = Vector(37.5, 0, 1.75),
+        Scale = 1.2,
+        -- Scale = Vector(1.5, 1.5, 1.5),
+        Pos = Vector(37.25, 0, 1.75),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
+        Category = {"cod_muzzle_sniper"},
     },
     {
         PrintName = "Ammunition",

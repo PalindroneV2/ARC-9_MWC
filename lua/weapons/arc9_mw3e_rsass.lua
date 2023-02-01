@@ -316,7 +316,7 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(24.5, 0, 1.325),
+        Pos = Vector(24, 0, 1.325),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         ExcludeElements = {"newbarrel"},

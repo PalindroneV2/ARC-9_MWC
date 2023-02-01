@@ -166,8 +166,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.49, 0, 0.9),
-    Ang = Angle(0, -0.75, 0),
+    Pos = Vector(-4.15, -3, 1.1),
+    Ang = Angle(0.05, -0.75, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
@@ -175,7 +175,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = {
-    Pos = Vector(-1.745, 0, 0),
+    Pos = Vector(-2.075, -1.5, 0),
     Ang = Angle(0, -0.375, -2.5),
 }
 

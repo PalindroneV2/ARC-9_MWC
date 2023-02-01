@@ -216,7 +216,7 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mount"] = {
+    ["muzzle"] = {
         Bodygroups = {
             {1,1}
         },
@@ -266,15 +266,16 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_m82_scope"},
-        -- Installed = "mwc_optic_m82_cod4",
+        Installed = "mwc_optic_m82_cod4",
     },
     {
         PrintName = "Muzzle",
         Bone = "j_recoil",
-        Scale = Vector(1.5, 1.5, 1.5),
+        Scale = 1,
         Pos = Vector(13,0,0),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_muzzle"},
+        Category = {"cod_muzzle_sniper"},
+        InstalledElements = {"muzzle"},
     },
     {
         PrintName = "Ammunition",

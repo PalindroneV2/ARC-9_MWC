@@ -1,8 +1,8 @@
  "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/mw3/mw3_m203/m320_nade"
+	"$basetexture" "models/weapons/arc9/mw3/mw3_m320/m320_nade"
 	
-	"$bumpmap" "models/weapons/arc9/mw3/mw3_m203/m320_nade_n"
+	"$bumpmap" "models/weapons/arc9/mw3/mw3_m320/m320_nade_n"
 	$phong                      		1
 //	$phongexponent                      "20"
 	$phongboost                         "0.5"
@@ -10,7 +10,7 @@
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	"$envmap" "env_cubemap"					
-	$envmaptint "[ .01 .01 .01 ]"					
+	"$envmap" "env_cubemap"
+	$envmaptint "[ .01 .01 .01 ]"
 	$envmapfresnel "0.01"
 }

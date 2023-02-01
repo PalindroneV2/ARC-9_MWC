@@ -137,7 +137,7 @@ SWEP.Firemodes = {
     {
         PrintName = "BOTH",
         Mode = 1,
-        NumOverride = 16,
+        NumMult = 2,
         SpreadMult = 1.25,
         AmmoPerShotOverride = 2,
         RecoilMult = 2,
