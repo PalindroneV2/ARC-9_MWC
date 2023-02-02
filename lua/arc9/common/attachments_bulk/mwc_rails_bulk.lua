@@ -37,7 +37,7 @@ ARC9.LoadAttachment(ATT, "mwc_rail_underbarrel")
 ATT = {}
 ATT.PrintName = [[Picatinny Rail]]
 ATT.CompactName = [[PIC MWC]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/cod4_generic.png")
 ATT.Description = [[Standard rail system that allows for attachment of optics.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -65,7 +65,7 @@ ARC9.LoadAttachment(ATT, "mwc_rail_optic")
 ATT = {}
 ATT.PrintName = [[Picatinny Rail]]
 ATT.CompactName = [[PIC MWC]]
-ATT.Icon = Material("entities/bo1_atts/barrel/barrel.png")
+ATT.Icon = Material("entities/cod4_generic.png")
 ATT.Description = [[Standard rail system that allows for attachment of tactical attachments such as flashlights or laser pointers.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
