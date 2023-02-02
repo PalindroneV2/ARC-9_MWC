@@ -468,23 +468,14 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.75,
-        LHIK = true,
-        LHIKIn = 0,
-        LHIKOut = 1,
     },
     ["ready"] = {
         Source = "draw",
         Time = 1,
-        LHIK = true,
-        LHIKIn = 0.5,
-        LHIKOut = 0.5,
     },
     ["fire"] = {
         Source = {"fire"},
@@ -503,6 +494,28 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M14_MagOut", t = 0.6},
             {s = "ARC9_COD4E.M14_MagInTac", t = 1.75}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
+        },
         MinProgress = 2.5,
     },
     ["reload_empty"] = {
@@ -512,6 +525,28 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M14_MagOut", t = 0.6},
             {s = "ARC9_COD4E.M14_MagIn", t = 1.75},
             {s = "ARC9_COD4E.M14_Chamber", t = 2.5}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 1
+            },
+            {
+                t = 0.2,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.6,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0.8,
+                lhik = 1,
+                rhik = 1
+            },
         },
         MinProgress = 2.5,
     },
