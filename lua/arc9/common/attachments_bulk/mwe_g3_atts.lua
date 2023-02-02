@@ -239,7 +239,7 @@ ARC9.LoadAttachment(ATT, "mwe_g3_barrel_hk51")
 
 ATT = {}
 
-ATT.PrintName = [[Picattiny Rail]]
+ATT.PrintName = [[Picatinny Rail]]
 ATT.CompactName = [[PICATINNY]]
 ATT.Icon = Material("entities/cod4_generic.png", "mips smooth")
 ATT.Description = [[Standard rail system that allows for attachment for underbarrel grips.]]
