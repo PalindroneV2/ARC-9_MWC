@@ -226,7 +226,7 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mount"] = {
         Bodygroups = {
-            {2,1},
+            {1,1},
         },
     },
 }
