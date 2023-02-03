@@ -47,7 +47,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -255,7 +255,10 @@ SWEP.HookP_NameChange = function(self, name)
     local gunname = "1911-A1"
 
     if attached["bo1_pap"] then
-        gunname = "G115 Perforator"
+        gunname = "Pain"
+    end
+    if attached["sally"] then
+        gunname = "C-3000 B1at-ch35"
     end
 
     return gunname

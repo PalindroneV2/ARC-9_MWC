@@ -50,7 +50,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 900 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

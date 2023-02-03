@@ -48,7 +48,7 @@ SWEP.ShootEnt = "arc9_mwc_25mm_he" -- Set to an entity to launch it out of this 
 SWEP.ShootEntForce = 15000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 400 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -231,6 +231,10 @@ SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
 
     local gunname = "HK XM25"
+
+    if attached["bo1_pap"] then
+        gunname = "Xtermination-25KT"
+    end
 
     return gunname
 end

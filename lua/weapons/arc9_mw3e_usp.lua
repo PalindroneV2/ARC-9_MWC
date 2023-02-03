@@ -48,7 +48,7 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil -- entity to fire, if any
 SWEP.EntityMuzzleVelocity = 10000
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 500 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
@@ -235,7 +235,7 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = "Undead Swift Pacifier"
     end
 
-    if attached["pistol_pap"] then
+    if attached["sally"] then
         gunname = "Mist Kreator"
     end
 
@@ -258,7 +258,7 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = "Undead Swift Pacifier"
     end
 
-    if attached["pistol_pap"] then
+    if attached["sally"] then
         gunname = "Mist Kreator"
     end
 

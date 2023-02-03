@@ -47,7 +47,7 @@ SWEP.ShootEnt = "arc9_mwc_m203_he" -- Set to an entity to launch it out of this 
 SWEP.ShootEntForce = 15000
 SWEP.ShootEntityData = {} -- Extra data that can be given to a projectile. Sets SENT.WeaponDataLink with this table.
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 300 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,

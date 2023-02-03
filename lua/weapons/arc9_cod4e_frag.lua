@@ -52,7 +52,7 @@ SWEP.ThrowChargeTime = 1 -- How long it takes to charge the grenade to its maxim
 
 SWEP.ThrowTumble = true -- Grenade tumbles when thrown.
 
-SWEP.PhysBulletMuzzleVelocity = 960 * 39.37
+SWEP.PhysBulletMuzzleVelocity = 50 * 39.37
 
 SWEP.BodyDamageMults = {
     [HITGROUP_HEAD] = 2,
