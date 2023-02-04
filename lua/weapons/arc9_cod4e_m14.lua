@@ -70,18 +70,18 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.35
-SWEP.RecoilUp = 0.6
+SWEP.RecoilUp = 0.8
 
-SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.3
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.9
+SWEP.RecoilKick = 1.1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultShooting = 1.25
@@ -172,8 +172,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-4.3, -3, 2.4),
-    Ang = Angle(0.025, -0.6, 0),
+    Pos = Vector(-4.3125, -3, 2.4),
+    Ang = Angle(0, -0.6, 0),
     Magnification = 1.1,
     -- AssociatedSlot = 9,
     CrosshairInSights = false,
@@ -279,9 +279,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     if attached["ghillie"] then
         vm:SetBodygroup(4,1)
-    end
-    if attached["bo1_pap"] then
-        camo = camo + 2
     end
     vm:SetSkin(camo)
 

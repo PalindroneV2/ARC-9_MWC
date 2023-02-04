@@ -69,9 +69,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.35
-SWEP.RecoilUp = 0.55
+SWEP.RecoilUp = 0.8
 
 SWEP.RecoilRandomUp = 0.6
 SWEP.RecoilRandomSide = 0.3
@@ -80,7 +80,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.95
+SWEP.RecoilKick = 1.1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultShooting = 1.25
@@ -160,7 +160,7 @@ SWEP.ShellScale = 1.4
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }
@@ -171,8 +171,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.73, -3, 1.2),
-    Ang = Angle(0.05, -0.625, 0),
+    Pos = Vector(-3.7, -3, 1.5),
+    Ang = Angle(0, 0, 0),
     Magnification = 1.1,
     AssociatedSlot = 1,
     ViewModelFOV = 60,
@@ -181,8 +181,8 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = {
-    Pos = Vector(-1.875, -1.5, 0.1),
-    Ang = Angle(0.025, -0.325, -2.5),
+    Pos = Vector(-1.85, -1.5, 0.25),
+    Ang = Angle(0, 0, -2.5),
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -305,7 +305,7 @@ SWEP.Attachments = {
         Pos = Vector(4.9, 0, 0.7),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_awm_scope"},
-        Installed = "mwc_optic_leupold",
+        -- Installed = "mwc_optic_leupold",
     },
     {
         PrintName = "Stock",
@@ -318,7 +318,8 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
-        Pos = Vector(26.1, 0.15, 0.75),
+        Scale = 1.2,
+        Pos = Vector(33.1, 0.15, 2.5),
         Ang = Angle(0, 0, 0),
         Category = {"cod_muzzle"},
         ExcludeElements = {"newbarrel"},
