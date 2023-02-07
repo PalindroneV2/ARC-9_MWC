@@ -4,7 +4,7 @@
 	
 	"$bumpmap" "models/weapons/arc9/mw2/mw2_mp5k/mp5k_bo1_n"
 
-	$detail "models/weapons/arc9/bo1/black_detail"
+	$detail "models/weapons/arc9/colors/black_detail"
 	$detailblendmode "0"
 	"$detailblendfactor" "0.9"
 
