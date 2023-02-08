@@ -290,7 +290,7 @@ ATT = {}
 ATT.PrintName = [[Iron Lung]]
 ATT.CompactName = [[LUNG]]
 ATT.Icon = Material("entities/mwc_atts/perks/classic_iron_lung.png")
-ATT.Description = [[Reduced sway.]]
+ATT.Description = [[Reduced sway. Increased breath time and reduced cooldown.]]
 ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
@@ -301,6 +301,9 @@ ATT.Folder = "TIER 3"
 ATT.Category = {"mwc_perk"}
 ATT.ActivateElements = {"iron_lung"}
 ATT.SwayMult = 0.5
+ATT.SwayMultSights = 0.5
+ATT.HoldBreathTimeMult = 1.5
+ATT.RestoreBreathTimeMult = 0.75
 
 ARC9.LoadAttachment(ATT, "mwc_perk_ironlung")
 
@@ -396,6 +399,7 @@ ATT.Free = false
 ATT.Category = {"mwc_proficiency"}
 ATT.ActivateElements = {"pro_stability"}
 ATT.SwayMult = 0.85
+ATT.SwayMultSights = 0.85
 
 ARC9.LoadAttachment(ATT, "mwc_pro_stability")
 

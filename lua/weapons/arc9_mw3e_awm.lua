@@ -101,7 +101,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.85
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -112,8 +112,16 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.3
-SWEP.SprintToFireTime = 0.3
+SWEP.AimDownSightsTime = 0.4
+SWEP.SprintToFireTime = 0.4
+
+SWEP.Sway = 0
+SWEP.SwayAddSights = 0.25
+SWEP.HoldBreathTime = 5
+SWEP.RestoreBreathTime = 10
+
+SWEP.FreeAimRadius = 0
+SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.RPM = 600
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -158,7 +166,7 @@ SWEP.ShellScale = 1.5
 SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
-SWEP.CamQCA = 4
+SWEP.CamQCA = 3
 
 SWEP.BulletBones = {
 }

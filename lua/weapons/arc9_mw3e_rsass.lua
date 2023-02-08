@@ -70,9 +70,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 1
 SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 0.75
+SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 0.75
 SWEP.RecoilRandomSide = 0.5
@@ -101,7 +101,7 @@ SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilPunch = 0
 SWEP.VisualRecoilMultSights = 0
 
-SWEP.Speed = 0.95
+SWEP.Speed = 0.9
 
 SWEP.ShootWhileSprint = true
 SWEP.ReloadInSights = false
@@ -115,6 +115,14 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.25
 SWEP.SprintToFireTime = 0.25
 
+SWEP.Sway = 0
+SWEP.SwayAddSights = 0.25
+SWEP.HoldBreathTime = 5
+SWEP.RestoreBreathTime = 10
+
+SWEP.FreeAimRadius = 0
+SWEP.FreeAimRadiusMultSights = 0
+
 SWEP.RPM = 500
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
@@ -124,13 +132,6 @@ SWEP.Firemodes = {
 }
 SWEP.ARC9WeaponCategory = 5
 SWEP.NPCWeight = 100
-
-SWEP.FreeAimRadius = 0 -- In degrees, how much this gun can free aim in hip fire.
-SWEP.Sway = 0 -- How much the gun sways.
-
-SWEP.FreeAimRadiusMultSights = 0
-
-SWEP.SwayMultSights = 0
 
 SWEP.Ammo = "ar2" -- what ammo type the gun uses
 

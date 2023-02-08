@@ -75,9 +75,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.3
-SWEP.RecoilUp = 0.5
+SWEP.Recoil = 1
+SWEP.RecoilSide = 0.6
+SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 0.4
 SWEP.RecoilRandomSide = 0.5
@@ -86,7 +86,7 @@ SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 0.9
+SWEP.RecoilKick = 1
 
 SWEP.Spread = math.rad(1.15 / 37.5)
 SWEP.SpreadMultShooting = 1.25
@@ -333,6 +333,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_m"},
         Installed = "mwc_stock_medium",
+        Integral = true,
     },
     {
         PrintName = "Underbarrel",

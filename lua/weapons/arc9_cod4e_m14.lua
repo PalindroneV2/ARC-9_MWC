@@ -112,8 +112,16 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.11
-SWEP.SprintToFireTime = 0.14
+SWEP.AimDownSightsTime = 0.25
+SWEP.SprintToFireTime = 0.25
+
+SWEP.Sway = 0
+SWEP.SwayAddSights = 0.25
+SWEP.HoldBreathTime = 5
+SWEP.RestoreBreathTime = 10
+
+SWEP.FreeAimRadius = 0
+SWEP.FreeAimRadiusMultSights = 0
 
 SWEP.RPM = 700
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
