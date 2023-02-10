@@ -233,11 +233,11 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local color = 6
-    if attached["elite"] then
-        color = 10
-    end
     if attached["stars"] then
         color = 8
+    end
+    if attached["elite"] then
+        color = 10
     end
 
     if attached["bo1_pap"] then
@@ -245,7 +245,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
 end
-
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
     local attached = self:GetElements()

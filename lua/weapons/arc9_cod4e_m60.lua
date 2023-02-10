@@ -429,15 +429,12 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 41 / 30,
     },
     ["holster"] = {
         Source = "holster",
-        Time = 41 / 30,
     },
     ["ready"] = {
         Source = "draw",
-        Time = 41 / 30,
     },
     ["fire"] = {
         Source = {"fire"},

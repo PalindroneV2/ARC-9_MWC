@@ -12,7 +12,7 @@ SWEP.Trivia = {
     Manufacturer = "KBP",
     Calibre = "9x18mm Parabellum",
     Mechanism = "Blowback",
-    Country = "Soviet Union",
+    Country = "Czechoslovakia",
     Year = 1961,
     Games = [[Call of Duty 4: Modern Warfare]]
 }

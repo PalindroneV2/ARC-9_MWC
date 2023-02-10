@@ -162,8 +162,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.475, 0, 1.6),
-    Ang = Angle(-0.075, -1.35, 0),
+    Pos = Vector(-2.475, -3, 1.575),
+    Ang = Angle(-0.125, -1.5, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
@@ -171,7 +171,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
-    Pos = Vector(-1.25, 0, 0.75),
+    Pos = Vector(-1.25, -1.5, 0.75),
     Ang = Angle(-0.075, -0.675, -2.5),
 }
 
@@ -232,9 +232,15 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         finish = 4
     end
     if attached["bo1_pap"] then
-        finish = finish + 2
-        if finish == 6 then
-            finish = finish - 1
+        finish = 2
+        if attached["nickel"] then
+            finish = 6
+        end
+    end
+    if attached["sally"] then
+        finish = 1
+        if attached["nickel"] then
+            finish = 5
         end
     end
 

@@ -75,9 +75,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.9
+SWEP.Recoil = 1.25
 SWEP.RecoilSide = 0.75
-SWEP.RecoilUp = 0.9
+SWEP.RecoilUp = 1.25
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.5
@@ -177,7 +177,7 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-3.065, -2, 1.1),
+    Pos = Vector(-3.065, -3, 1.1),
     Ang = Angle(0.025, 0.65, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
@@ -185,7 +185,7 @@ SWEP.IronSights = {
 }
 
 SWEP.SightMidPoint = {
-    Pos = Vector(-1.5025, -1, 0),
+    Pos = Vector(-1.5025, -3, 0),
     Ang = Angle(0.0125, 0.325, 0),
 }
 
@@ -196,7 +196,7 @@ SWEP.HoldTypeSights = "ar2"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
 
-SWEP.ActivePos = Vector(0, 0, -1)
+SWEP.ActivePos = Vector(0, -3, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.MovingPos = SWEP.ActivePos
@@ -242,10 +242,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 6
-        if attached["stock_l"] then
-            camo = camo - 2
-        end
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 

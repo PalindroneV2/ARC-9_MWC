@@ -281,6 +281,7 @@ SWEP.Attachments = {
         Pos = Vector(3.05, -0.06, 0.2),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols"},
+        Installed = "mwc_tac_peq6",
     },
     {
         PrintName = "Ammunition",

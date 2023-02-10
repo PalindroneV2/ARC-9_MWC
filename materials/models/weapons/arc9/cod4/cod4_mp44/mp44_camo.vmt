@@ -2,12 +2,11 @@ VertexlitGeneric
 {
 	$basetexture	"models/weapons/arc9/cod4/cod4_mp44/mp44"
 	"$bumpmap" "models/weapons/arc9/cod4/cod4_mp44/mp44_n"
+	$phongexponenttexture "models/weapons/arc9/cod4/cod4_mp44/mp44_s"
 
 	$detail "models/weapons/arc9/colors/black_detail"
 	$detailblendmode 0
 	"$detailblendfactor" "0.75"
-
-//	$phongexponenttexture "models/weapons/arc9/cod4/cod4_mp44/mp44_s"
 	
 	"$blendtintbybasealpha" "1"
 	"$phong" "1"

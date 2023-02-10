@@ -25,7 +25,8 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw2e_m16.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw2e_m16.mdl"
+SWEP.WorldModel = "models/weapons/arc9/w_mw2e_m16.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_mw2e_m16.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -287,11 +288,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(3,ub)
 
-    -- vm:SetBodygroup(2,barrel)
-
+    local camo = 0
     if attached["universal_camo"] then
-        vm:SetSkin(1)
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
 end
 

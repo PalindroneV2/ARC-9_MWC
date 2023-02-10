@@ -281,11 +281,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
     vm:SetBodygroup(2,ub)
 
-    -- vm:SetBodygroup(2,barrel)
-
+    local camo = 0
     if attached["universal_camo"] then
-        vm:SetSkin(1)
+        camo = 1
     end
+    if attached["bo1_pap"] then
+        camo = camo + 2
+    end
+    vm:SetSkin(camo)
 
 end
 
