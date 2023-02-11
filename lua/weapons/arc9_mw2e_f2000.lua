@@ -290,22 +290,17 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
 
     local suffix = ""
 
-    if attached["mwc_ubgl_m203"] then
-        if self:GetUBGL() then
-            suffix = "_glsetup"
-        end
-    elseif attached["mwc_ubgl_mk"] then
-        if self:GetUBGL() then
-            suffix = "_mksetup"
-        end
-    else
-        suffix = ""
+    if attached["mwc_m203"] and self:GetUBGL() then
+        suffix = "_glsetup"
+    end
+    if attached["mwc_mk"] and self:GetUBGL() then
+        suffix = "_mksetup"
     end
 
-    if anim == "enter_ubgl" and attached["mwc_ubgl_mk"] then
+    if anim == "enter_ubgl" and attached["mwc_mk"] then
         return "enter_ubgl_mksetup"
     end
-    if anim == "exit_ubgl" and attached["mwc_ubgl_mk"] then
+    if anim == "exit_ubgl" and attached["mwc_mk"] then
         return "exit_ubgl_mksetup"
     end
 

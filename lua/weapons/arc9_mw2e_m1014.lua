@@ -242,10 +242,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         camo = 1
     end
     if attached["bo1_pap"] then
-        camo = camo + 6
-        if attached["stock_l"] then
-            camo = camo - 2
-        end
+        camo = camo + 2
     end
     vm:SetSkin(camo)
 

@@ -289,19 +289,18 @@ SWEP.Hook_TranslateAnimation = function (self, anim)
         if self:GetUBGL() then
             suffix = "_glsetup"
         end
-    elseif attached["mwc_ubgl_mk"] then
+    end
+    if attached["mwc_mk"] then
         suffix = "_mk"
         if self:GetUBGL() then
             suffix = "_mksetup"
         end
-    else
-        suffix = ""
     end
 
-    if anim == "enter_ubgl" and attached["mwc_ubgl_mk"] then
+    if anim == "enter_ubgl" and attached["mwc_mk"] then
         return "enter_ubgl_mksetup"
     end
-    if anim == "exit_ubgl" and attached["mwc_ubgl_mk"] then
+    if anim == "exit_ubgl" and attached["mwc_mk"] then
         return "exit_ubgl_mksetup"
     end
 
@@ -733,24 +732,24 @@ SWEP.Animations = {
     ["reload_ubgl_start_mksetup"] = {
         Source = "reload_in_mksetup",
         Time = 35 / 30,
-        RestoreAmmo = 1,
         EventTable = {
-            --{s = "ARC9_MWC.M203_Open", t = 0.125},
-        }
+            {s = "ARC9_MWC.MK_Shell", t = 20 / 30},
+        },
+        RestoreAmmo = 1,
     },
     ["reload_ubgl_insert_mksetup"] = {
         Source = "reload_loop_mksetup",
         Time = 33 / 30,
         EventTable = {
-            {s = "ARC9_MWC.MK_Shell", t = 0 / 30},
+            {s = "ARC9_MWC.MK_Shell", t = 15 / 30},
         }
     },
     ["reload_ubgl_finish_mksetup"] = {
         Source = "reload_out_mksetup",
         Time = 50 / 30,
         EventTable = {
-            {s = "ARC9_MW2E.W1200_Pump", t = 20 / 30 },
-            -- {s = "ARC9_MWC.MK_Fwd", t = 25 / 30 },
+            {s = "ARC9_COD4E.W1200_Pump", t = 15 / 30 },
+            -- {s = "ARC9_MW3E.SPAS12_Fwd", t = 25 / 30 },
         }
     },
     ["enter_sprint_mksetup"] = {
