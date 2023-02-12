@@ -336,6 +336,7 @@ SWEP.Attachments = {
         Pos = Vector(1.5, 0, 3.3),
         Ang = Angle(0, 0, 0),
         Category = {"hk_rail_riser", "mp5k_mw2_rail"},
+        Installed = "mw2e_mp5k_rail_ris"
     },
     {
         PrintName = "Stock",
