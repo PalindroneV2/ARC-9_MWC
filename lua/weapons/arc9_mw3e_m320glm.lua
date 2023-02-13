@@ -109,8 +109,8 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.25
+SWEP.AimDownSightsTime = 0.35
+SWEP.SprintToFireTime = 0.35
 
 SWEP.RPM = 150
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
@@ -286,14 +286,14 @@ SWEP.Animations = {
         },
         Time = 15 / 35,
     },
-    -- ["enter_sights"] = {
-    --     Source = "ads_up",
-    --     Time = 1,
-    -- },
-    -- ["exit_sights"] = {
-    --     Source = "ads_down",
-    --     Time = 1,
-    -- },
+    ["enter_sights"] = {
+        Source = "ads_up",
+        Time = 1,
+    },
+    ["exit_sights"] = {
+        Source = "ads_down",
+        Time = 1,
+    },
     ["idle_iron"] = {
         Source = "idle_ads",
         Time = 1 / 35,

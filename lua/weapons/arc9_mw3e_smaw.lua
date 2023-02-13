@@ -304,8 +304,12 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.SMAW_Lift", t = 2},
         },
     },
-    -- ["enter_iron"] = {
-    --     Source = {"ads_up"},
+    -- ["enter_sights"] = {
+    --     Source = "ads_up",
+    --     Time = 1,
+    -- },
+    -- ["exit_sights"] = {
+    --     Source = "ads_down",
     --     Time = 1,
     -- },
     ["idle_iron"] = {
@@ -318,10 +322,6 @@ SWEP.Animations = {
         },
         Time = 15 / 35,
     },
-    -- ["exit_iron"] = {
-    --     Source = {"ads_down"},
-    --     Time = 1,
-    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,
