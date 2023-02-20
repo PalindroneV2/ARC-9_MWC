@@ -25,7 +25,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_cod4_p90.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_cod4_p90.mdl"
+SWEP.WorldModel = "models/weapons/w_smg_p90.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_cod4_p90.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -297,7 +297,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(7, 0.4, 3.125),
         Ang = Angle(0, 0, -90),
-        Category = {"COD4E_tactical_p90_r"},
+        Category = {"mw3e_tactical_p90_r"},
     },
     {
         PrintName = "Tactical",
@@ -306,7 +306,7 @@ SWEP.Attachments = {
         Scale = Vector(1,1,1),
         Pos = Vector(7, -0.4, 3.125),
         Ang = Angle(0, 0, 90),
-        Category = {"COD4E_tactical_p90_l"},
+        Category = {"mw3e_tactical_p90_l"},
     },
     {
         PrintName = "Ammunition",

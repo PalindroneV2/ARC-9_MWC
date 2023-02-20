@@ -25,7 +25,8 @@ SWEP.Slot = 3
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_cod4_dragunov.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_cod4_dragunov.mdl"
+SWEP.WorldModel = "models/weapons/w_snip_sg550.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_cod4_dragunov.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {

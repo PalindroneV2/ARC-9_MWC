@@ -26,7 +26,7 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_fiveseven.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw3e_fiveseven.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_fiveseven.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_mw3e_fiveseven.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

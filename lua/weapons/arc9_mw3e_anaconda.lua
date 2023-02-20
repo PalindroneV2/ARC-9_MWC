@@ -24,7 +24,7 @@ SWEP.Slot = 1
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_anaconda.mdl"
-SWEP.WorldModel = "models/weapons/arc9/w_mw3e_anaconda.mdl"
+SWEP.WorldModel = "models/weapons/w_357.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/w_mw3e_anaconda.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true

@@ -25,7 +25,8 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_cod4_mp44.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_cod4_mp44.mdl"
+SWEP.WorldModel = "models/weapons/w_rif_ak47.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_cod4_mp44.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -326,6 +327,13 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 1,
+    },
+    ["ready"] = {
+        Source = "first_draw",
+        Time = 1.5,
+        EventTable = {
+            {s = "ARC9_COD4E.MP44_Chamber", t = 0.25},
+        },
     },
     ["holster"] = {
         Source = "holster",

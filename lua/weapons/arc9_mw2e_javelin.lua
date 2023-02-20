@@ -26,7 +26,8 @@ SWEP.Slot = 4
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw2e_javelin.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw2e_javelin.mdl"
+SWEP.WorldModel = "models/weapons/w_rocket_launcher.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_mw2e_javelin.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {

@@ -24,7 +24,7 @@ SWEP.Slot = 2
 SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_mw3e_rsass.mdl"
-SWEP.WorldModel = "models/weapons/arc9/c_mw3e_rsass.mdl"
+SWEP.WorldModel = "models/weapons/w_snip_sg550.mdl"
 SWEP.WorldModelMirror = "models/weapons/arc9/c_mw3e_rsass.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
@@ -365,6 +365,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = {"mwc_stock_mh"},
         Installed = "mwc_stock_heavy",
+        Integral = true,
     },
     {
         PrintName = "Ammunition",
