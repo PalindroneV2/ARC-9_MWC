@@ -431,7 +431,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
@@ -439,7 +439,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
@@ -535,7 +535,7 @@ SWEP.Animations = {
     },
     ["fire_gp25"] = {
         Source = {"fire_gl"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
@@ -543,7 +543,7 @@ SWEP.Animations = {
     },
     ["fire_iron_gp25"] = {
         Source = {"fire_ads_gl"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
@@ -642,7 +642,7 @@ SWEP.Animations = {
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
@@ -650,7 +650,7 @@ SWEP.Animations = {
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
