@@ -11,7 +11,7 @@ ATT.Cons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
-ATT.Folder = "SCOPE"
+ATT.Folder = "SCOPE/MWC"
 
 ATT.Category = {"cod_optic", "cod_optic_alt"}
 
