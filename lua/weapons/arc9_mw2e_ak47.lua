@@ -138,7 +138,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_MW3E.AK47_Fire"
+SWEP.ShootSound = "ARC9_MW2E.AK47_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.M4M16_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
@@ -231,6 +231,7 @@ SWEP.AttachmentElements = {
                 Pos = Vector(22.5, 0, 1.5),
             },
         },
+        ShootSound = "ARC9_MW3E.AK47_Fire"
     },
     ["mwc_gp25"] = {
         Bodygroups = {
