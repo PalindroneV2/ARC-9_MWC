@@ -343,12 +343,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 6 / 30,
+        Time = 7 / 40,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 6 / 30,
+        Time = 7 / 40,
         ShellEjectAt = 0,
     },
     ["reload"] = {
@@ -429,7 +429,7 @@ SWEP.Animations = {
 
     ["waw_fire"] = {
         Source = {"fire"},
-        Time = 6 / 30,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},
@@ -437,7 +437,7 @@ SWEP.Animations = {
     },
     ["waw_fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 6 / 30,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
             {s = "ARC9_WAW.STG44_Mech", t = 1 / 35},

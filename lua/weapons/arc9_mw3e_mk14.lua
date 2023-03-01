@@ -5,7 +5,7 @@ SWEP.SubCategory = "Assault Rifles"
 SWEP.AdminOnly = false
 
 SWEP.PrintName = "MK14"
-SWEP.Class = "Assault Rifle"
+SWEP.Class = "Battle Rifle"
 SWEP.Description = [[Heavily modified M14 rifle put in marksman and sniper roles.]]
 SWEP.Trivia = {
     Manufacturer = "Springfield Armory",
@@ -284,7 +284,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Mk. 14 Md 0"
+    local gunname = "Mk. 14 Mod 0"
 
     if attached["bo1_pap"] then
         gunname = "Alzheimers"

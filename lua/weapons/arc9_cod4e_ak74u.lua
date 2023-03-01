@@ -117,7 +117,7 @@ SWEP.SpeedMultBlindFire = 1
 SWEP.AimDownSightsTime = 0.11
 SWEP.SprintToFireTime = 0.14
 
-SWEP.RPM = 650
+SWEP.RPM = 750
 SWEP.AmmoPerShot = 1 -- number of shots per trigger pull.
 SWEP.Firemodes = {
     {
@@ -383,12 +383,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
     },
     ["reload"] = {
