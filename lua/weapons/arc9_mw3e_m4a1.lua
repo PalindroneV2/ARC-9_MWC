@@ -67,7 +67,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 30 -- DefaultClip is automatically set.
+SWEP.ClipSize = 30 -- DefaultClip is automatically set.c
 SWEP.ReloadTime = 1
 
 SWEP.Crosshair = true
