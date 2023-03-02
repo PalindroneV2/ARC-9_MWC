@@ -51,7 +51,6 @@ sound.Add( {
     channel = CHAN_STATIC,
     volume = 0.75,
     level = 100,
-    pitch = {120,130},
     sound = {
         "^weapons/ARC9/mw3e_g36/fire.wav",
     }
@@ -101,7 +100,6 @@ sound.Add( {
     channel = CHAN_STATIC,
     volume = 0.75,
     level = 100,
-    pitch = {120,130},
     sound = {
         "^weapons/ARC9/mw3e_mg36/fire.wav",
     }

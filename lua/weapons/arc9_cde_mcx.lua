@@ -38,7 +38,7 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
-SWEP.DamageMax = 42
+SWEP.DamageMax = 37
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 8000
 SWEP.RangeMin = 2000
@@ -144,7 +144,7 @@ SWEP.ShootVolume = 125
 SWEP.ShootPitch = 100
 SWEP.ShootPitchVariation = 0
 
-SWEP.ShootSound = "ARC9_MW3E.CM901_Fire"
+SWEP.ShootSound = "ARC9_MWCE.MCX_SPEAR_Fire"
 SWEP.ShootSoundSilenced = "ARC9_MW3E.RSASS_Sil"
 
 SWEP.UBGLIntegralReload = true -- The UBGL uses reload animations that are baked into the gun.
@@ -431,7 +431,7 @@ SWEP.Attachments = {
         Hidden = true,
         PrintName = "IK THING",
         Bone = "j_gun",
-        Pos = Vector(10, 0.4, 1.75),
+        Pos = Vector(11, 0.4, 1.75),
         Ang = Angle(0, 0, 0),
         Category = {"cod_ik_mw3_ak"},
         CosmeticOnly = true,
@@ -504,18 +504,18 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {"fire"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["reload"] = {
@@ -634,18 +634,18 @@ SWEP.Animations = {
     },
     ["fire_m320"] = {
         Source = {"fire_gl"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["fire_iron_m320"] = {
         Source = {"fire_ads_gl"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["reload_m320"] = {
@@ -720,18 +720,18 @@ SWEP.Animations = {
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
-        Time = 0.5,
+        Time = 7 / 40,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_D", t = 1 / 35},
+            {s = "ARC9_MW3E.Mech_C", t = 1 / 35},
         },
     },
     ["reload_mk"] = {

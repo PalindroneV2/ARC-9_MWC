@@ -1010,7 +1010,6 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    --pitch = {95, 110},
     sound = {
         "^weapons/arc9/mw2e_javelin/lockon_start.wav",
     }
@@ -1020,7 +1019,6 @@ sound.Add( {
     channel = CHAN_ITEM,
     volume = 1.0,
     level = 100,
-    --pitch = {95, 110},
     sound = {
         "^weapons/arc9/mw2e_javelin/lockon.wav",
     }
