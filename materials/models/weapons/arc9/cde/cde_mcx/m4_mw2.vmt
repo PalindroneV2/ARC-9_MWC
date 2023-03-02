@@ -1,0 +1,17 @@
+VertexlitGeneric
+{
+	$basetexture	"models/weapons/arc9/mw2/mw2_m4/m4"
+	$bumpmap	"models/weapons/arc9/mw2/mw2_m4/m4_n"
+	$phongexponenttexture	"models/weapons/arc9/mw2/mw2_m4/m4_s"
+	
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+
+	"$envmap" "env_cubemap"
+	$envmapfresnel "0.01"
+	$envmaptint "[ .01 .01 .01 ]"
+
+	"$nocull" "1"
+}

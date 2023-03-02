@@ -1,0 +1,21 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/cde/cde_mcx/peacekeeper"
+	"$bumpmap" "models/weapons/arc9/cde/cde_mcx/peacekeeper_n"
+	"$phonexponenttexture" "models/weapons/arc9/cde/cde_mcx/peacekeeper_s"
+
+	$detail "models/weapons/arc9/colors/black_detail"
+	$detailblendmode 4
+	"$detailblendfactor" "1"
+
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongalbedotint" "2"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+
+	"$envmap" "env_cubemap"
+	$envmapfresnel "0.01"
+	$envmaptint "[ .01 .01 .01 ]"
+
+	"$nocull" "1"
+}

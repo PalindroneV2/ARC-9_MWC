@@ -102,3 +102,27 @@ ATT.LHIK = true
 ATT.LHIK_Priority = 5
 
 ARC9.LoadAttachment(ATT, "mwc_grip_ksg")
+
+ATT = {}
+
+ATT.PrintName = "MW3 AK Grip"
+ATT.CompactName = [[KSG]]
+ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
+ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
+Belongs to Modern Warfare 3.]]
+ATT.Pros = {
+}
+ATT.Cons = {}
+ATT.SortOrder = 4
+ATT.MenuCategory = "ARC9 - MWC Attachments"
+ATT.Free = false
+
+ATT.Category = {"cod_ik_mw3_ak"}
+
+ATT.Model = "models/weapons/arc9/atts/ik_mwc/mw3e_ak_ik.mdl"
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.LHIK = true
+ATT.LHIK_Priority = 0
+
+ARC9.LoadAttachment(ATT, "mwc_ik_mw3_ak")
