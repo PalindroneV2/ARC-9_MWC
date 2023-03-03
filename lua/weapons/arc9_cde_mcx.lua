@@ -4,7 +4,7 @@ SWEP.Category = "ARC9 - A COD" -- edit this if you like
 SWEP.SubCategory = "Battle Rifles"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "XM5"
+SWEP.PrintName = "XM7"
 SWEP.Class = "Battle Rifle"
 SWEP.Description = [[New service rifle for the US armed forces made for a new caliber.]]
 SWEP.Trivia = {
@@ -313,7 +313,7 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "SIG XM5 SPEAR"
+    local gunname = "SIG XM7 SPEAR"
     if attached["bo1_pap"] then
         gunname = "Spear of Destiny"
     end
