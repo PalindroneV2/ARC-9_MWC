@@ -222,6 +222,12 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
+    ["mcxvirtus"] = {
+        Bodygroups = {
+            {0,1},
+            {1,1},
+        },
+    },
     ["mwc_m320"] = {
         Bodygroups = {
             {4,1}
@@ -232,26 +238,21 @@ SWEP.AttachmentElements = {
             {4,2}
         },
     },
-    -- ["ext_mag"] = {
-    --     Bodygroups = {
-    --         {1,1}
-    --     },
-    -- },
-    -- ["stock_l"] = {
-    --     Bodygroups = {
-    --         {4,1}
-    --     },
-    -- },
-    -- ["stock_m"] = {
-    --     Bodygroups = {
-    --         {4,2}
-    --     },
-    -- },
-    -- ["stock_h"] = {
-    --     Bodygroups = {
-    --         {4,3}
-    --     },
-    -- },
+    ["stock_l"] = {
+        Bodygroups = {
+            {2,1}
+        },
+    },
+    ["stock_m"] = {
+        Bodygroups = {
+            {2,2}
+        },
+    },
+    ["stock_h"] = {
+        Bodygroups = {
+            {2,3}
+        },
+    },
     ["mw3_magnifier"] = {
         AttPosMods = {
             [2] = {
@@ -259,6 +260,11 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    -- ["ext_mag"] = {
+    --     Bodygroups = {
+    --         {1,1}
+    --     },
+    -- }
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -345,12 +351,11 @@ SWEP.Attachments = {
     --     Category = {"mw3e_cm901_barrel"},
     -- },
     {
-        Integral = true,
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_m"},
+        Category = {"mwc_stocks"},
         Installed = "mwc_stock_medium",
     },
     {
@@ -386,14 +391,14 @@ SWEP.Attachments = {
         Category = {"cod_tactical_top"},
         ExcludeElements = {"mw3_psrscope"},
     },
-    -- {
-    --     PrintName = "Magazine",
-    --     DefaultCompactName = "MAG",
-    --     Bone = "tag_clip",
-    --     Pos = Vector(0.5, 0, -3),
-    --     Ang = Angle(0, 0, 0),
-    --     Category = {"mwc_mag"},
-    -- },
+    {
+        PrintName = "Caliber",
+        DefaultCompactName = ".277 FURY",
+        Bone = "j_gun",
+        Pos = Vector(4, 0, 1),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_mcx_mod"},
+    },
     {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
@@ -500,6 +505,28 @@ SWEP.Animations = {
         Time = 1.25,
         EventTable = {
             {s = "ARC9_MW3E.CM901_Chamber", t = 1 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.15,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.8,
+                lhik = 0,
+                rhik = 1
+            },
+            {
+                t = 0.9,
+                lhik = 1,
+                rhik = 1
+            },
         },
     },
     ["fire"] = {

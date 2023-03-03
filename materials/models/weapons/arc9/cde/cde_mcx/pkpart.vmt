@@ -4,9 +4,16 @@
 	"$bumpmap" "models/weapons/arc9/cde/cde_mcx/peacekeeper_n"
 	"$phonexponenttexture" "models/weapons/arc9/cde/cde_mcx/peacekeeper_s"
 
-	$detail "models/weapons/arc9/colors/black_detail"
+	$detail "models/weapons/arc9/colors/blue_mac"
 	$detailblendmode 4
-	"$detailblendfactor" "1"
+	"$detailblendfactor" "0.5"
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
 
 	"$phong" "1"
 	"$phongboost" "1"
