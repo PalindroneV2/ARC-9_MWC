@@ -38,6 +38,10 @@ SWEP.ViewModelFOVBase = 75
 
 SWEP.DefaultBodygroups = "00000000000000"
 
+SWEP.CustomCamoTexture = "models/weapons/arc9/colors/blue_mac"
+SWEP.CustomCamoScale = 1
+SWEP.CustomBlendFactor = 1
+
 SWEP.DamageMax = 37
 SWEP.DamageMin = 25 -- damage done at maximum range
 SWEP.RangeMax = 8000
@@ -222,7 +226,7 @@ SWEP.BarrelLength = 0 -- = 25
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mcxvirtus"] = {
+    ["mcxlt"] = {
         Bodygroups = {
             {0,1},
             {1,1},
@@ -238,19 +242,29 @@ SWEP.AttachmentElements = {
             {4,2}
         },
     },
-    ["stock_l"] = {
+    ["stock_ul"] = {
         Bodygroups = {
             {2,1}
         },
     },
-    ["stock_m"] = {
+    ["stock_l"] = {
         Bodygroups = {
             {2,2}
         },
     },
-    ["stock_h"] = {
+    ["stock_pro"] = {
         Bodygroups = {
             {2,3}
+        },
+    },
+    ["stock_m"] = {
+        Bodygroups = {
+            {2,4}
+        },
+    },
+    ["stock_h"] = {
+        Bodygroups = {
+            {2,5}
         },
     },
     ["mw3_magnifier"] = {
@@ -260,18 +274,41 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    -- ["ext_mag"] = {
-    --     Bodygroups = {
-    --         {1,1}
-    --     },
-    -- }
+    ["matech"] = {
+        Bodygroups = {
+            {3,2}
+        },
+        IronSights = {
+            Pos = Vector(-2.825, 0, -0.125),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        },
+    },
+    ["hkirons"] = {
+        Bodygroups = {
+            {3,4}
+        },
+        IronSights = {
+            Pos = Vector(-2.825, 0, 0.1),
+            Ang = Angle(0, 0.45, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        },
+    }
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
     local attached = data.elements
     local irons = 0
-    if attached["mount"] then
+    if attached["matech"] then irons = 2 end
+    if attached["hkirons"] then irons = 4 end
+    if attached["cod_optic"] or attached["cod_rail_riser"] then
         irons = irons + 1
     end
 
@@ -320,6 +357,9 @@ SWEP.HookP_NameChange = function(self, name)
     local attached = self:GetElements()
 
     local gunname = "SIG XM7 SPEAR"
+    if attached["mcxlt"] then
+        gunname = "SIG MCX SPEAR LT"
+    end
     if attached["bo1_pap"] then
         gunname = "Spear of Destiny"
     end
@@ -333,8 +373,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic", "cod_rail_riser"},
-        InstalledElements = {"mount"},
+        Category = {"cod_optic", "cod_rail_riser", "mwc_mcx_altirons"},
     },
     {
         PrintName = "Muzzle",
@@ -355,7 +394,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.65),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stocks"},
+        Category = {"mwc_stocks","mwc_stock_ul","mwc_stock_pro"},
         Installed = "mwc_stock_medium",
     },
     {

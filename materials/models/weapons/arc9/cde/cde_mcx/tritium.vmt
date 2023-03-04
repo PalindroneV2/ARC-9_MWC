@@ -1,0 +1,7 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/weapons/arc9/cde/cde_mcx/tritium"
+	"$bumpmap" "models/weapons/arc9/cde/cde_mcx/tritium_n"
+	"$color2" "[ 1 .0 .0 ]"
+	"$translucent" "1"
+}

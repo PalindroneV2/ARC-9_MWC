@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+     "$basetexture" "models/weapons/arc9/cde/cde_mcx/hb"
+     "$bumpmap" "models/weapons/arc9/cde/cde_mcx/hbn"
+     "$phongexponenttexture" "models/weapons/arc9/cde/cde_mcx/hbg"
+
+     "$phong" 1
+     "$phongboost" 1
+     "$phongfresnelranges" "[2 5 4]"
+     "$phongalbedotint" "1"
+     "$phongalbedoboost" "38"
+
+     "$envmap" "env_cubemap"
+     "$envmaptint" "[0.01 0.01 0.01]"
+     "$normalmapalphaenvmapmask" 1
+     "$envmapfresnel" "0.01"
+
+     "$rimlight" "0"
+     "$rimlightexponent" "88"
+     "$rimlightboost""2"
+     "$rimmask" "1"
+
+	$detailblendmode 4
+	"$detailblendfactor" "0.4"
+	"$detail" "models/weapons/arc9/colors/blue_mac"
+	Proxies {
+		CustomCamo {
+			camoTexture $detail
+			camoScale $detailscale
+            blend $detailblendfactor
+		}
+	}
+}
