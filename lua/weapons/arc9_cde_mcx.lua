@@ -269,7 +269,7 @@ SWEP.AttachmentElements = {
     },
     ["mw3_magnifier"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(6, 0, 3.85)
             },
         }
