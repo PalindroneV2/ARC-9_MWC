@@ -781,7 +781,7 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.MG36_MagOut", t = 30 / 35},
             {s = "ARC9_MW3E.MG36_MagIn", t = 90 / 35},
-            {s = "ARC9_MW3E.MG36_Charge", t = 120 / 35},
+            {s = "ARC9_MW3E.MG36_Charge", t = 130 / 35},
             --{s = "ARC9_BO1.AK_BoltFwd", t = 95 / 35},
         },
         IKTimeLine = {
