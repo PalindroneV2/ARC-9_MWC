@@ -249,7 +249,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_long"] = {
         AttPosMods = {
-            [1] = {
+            [2] = {
                 Pos = Vector(23, 0, 2.6)
             },
         },
@@ -266,7 +266,7 @@ SWEP.AttachmentElements = {
     },
     ["mw3_magnifier"] = {
         AttPosMods = {
-            [2] = {
+            [1] = {
                 Pos = Vector(6, 0, 3.85)
             },
         }
