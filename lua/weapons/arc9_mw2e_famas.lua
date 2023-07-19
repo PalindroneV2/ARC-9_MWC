@@ -442,7 +442,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["fire_iron"] = {
@@ -450,7 +450,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["reload"] = {
@@ -550,7 +550,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["fire_iron_m203"] = {
@@ -558,7 +558,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["reload_m203"] = {
@@ -663,7 +663,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["fire_iron_mk"] = {
@@ -671,7 +671,7 @@ SWEP.Animations = {
         Time = 7 / 30,
         ShellEjectAt = 0,
         EventTable = {
-            {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
+            -- {s = "ARC9_MW3E.Mech_C", t = 1 / 60},
         },
     },
     ["reload_mk"] = {
