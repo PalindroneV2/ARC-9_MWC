@@ -1,6 +1,6 @@
-ATT.PrintName = "Trijicon ACOG TA31 (4x)"
-ATT.CompactName = [[ACOG MW3]]
-ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
+ATT.PrintName = "Trijicon ACOG ECOS (4x)"
+ATT.CompactName = [[ACOG MW2]]
+ATT.Icon = Material("entities/mwc_atts/optics/mw2_acog.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Modern Warfare 3.]]
 ATT.Pros = {
@@ -16,7 +16,7 @@ ATT.Folder = "SCOPE/MWC"
 ATT.Category = {"cod_optic", "cod_optic_alt"}
 
 
-ATT.Model = "models/weapons/arc9/atts/mw3_acog.mdl"
+ATT.Model = "models/weapons/arc9/atts/mw2e_acog.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 
