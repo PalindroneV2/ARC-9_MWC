@@ -101,12 +101,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilUp = 0.17
+SWEP.VisualRecoilSide = 0.17
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 1.7
+SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 0.95
 

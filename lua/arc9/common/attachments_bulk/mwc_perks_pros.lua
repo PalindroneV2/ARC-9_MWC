@@ -39,6 +39,7 @@ ATT.Folder = "TIER 2"
 ATT.Category = {"mwc_perk"}
 ATT.ActivateElements = {"doubletap"}
 ATT.RPMMult = 1.15
+ATT.CycleTimeMult = 0.85
 
 ARC9.LoadAttachment(ATT, "mwc_perk_doubletap")
 

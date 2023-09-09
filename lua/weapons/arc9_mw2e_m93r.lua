@@ -100,12 +100,13 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.VisualRecoilUp = 0
-SWEP.VisualRecoilSide = 0
-SWEP.VisualRecoilRoll = 0
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilPunch = 0
-SWEP.VisualRecoilMultSights = 0
+SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilSide = 0.22
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2.5
+SWEP.VisualRecoilMultSights = 0.5
 
 SWEP.Speed = 1
 
@@ -362,7 +363,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Fire Control Group",
-        DefaultCompactName = "AUTO",
+        DefaultCompactName = "SEMI",
         Bone = "j_gun",
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),

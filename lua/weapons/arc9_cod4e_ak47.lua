@@ -96,12 +96,13 @@ SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(100 / 37.5)
 
-SWEP.VisualRecoilUp = 0 -- Vertical tilt for visual recoil.
-SWEP.VisualRecoilSide = 0 -- Horizontal tilt for visual recoil.
-SWEP.VisualRecoilRoll = 0 -- Roll tilt for visual recoil.
-SWEP.VisualRecoilCenter = Vector(0, 0, 0) -- The "axis" of visual recoil. Where your hand is.
-SWEP.VisualRecoilPunch = 0 -- How far back visual recoil moves the gun.
-SWEP.VisualRecoilMultSights = 0 -- Visual recoil multiplier while in sights.
+SWEP.UseVisualRecoil = true
+SWEP.VisualRecoilCenter = Vector(0, 0, 0)
+SWEP.VisualRecoilUp = 0.2
+SWEP.VisualRecoilSide = 0.3
+SWEP.VisualRecoilRoll = 1
+SWEP.VisualRecoilPunch = 2.5
+SWEP.VisualRecoilMultSights = 0.2
 
 SWEP.Speed = 0.95
 SWEP.ShootWhileSprint = true
