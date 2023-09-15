@@ -269,7 +269,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         Bone = "j_gun",
-        Pos = Vector(4, 0.15, 2.7),
+        Pos = Vector(4, 0, 3.25),
         Ang = Angle(0, 0, 0),
         Category = {"cod_optic"},
         InstalledElements = {"mount"},
