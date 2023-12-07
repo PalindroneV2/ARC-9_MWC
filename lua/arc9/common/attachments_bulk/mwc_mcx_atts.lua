@@ -82,3 +82,21 @@ ATT.Category = {"mwc_mcx_altirons"}
 ATT.ActivateElements = {"hkirons"}
 
 ARC9.LoadAttachment(ATT, "mwc_mcx_altirons_hk")
+
+ATT = {}
+ATT.PrintName = [[XM7 Barrel]]
+ATT.CompactName = [[XM7]]
+ATT.Icon = Material("entities/mw3_generic.png")
+ATT.Description = [[XM7 Barrel.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - MWC Attachments"
+ATT.Free = false
+-- ATT.Folder = "RISERS"
+
+ATT.Category = {"mwc_xm7_barrel"}
+ATT.Model = "models/weapons/arc9/c_mw23e_basb2.mdl"
+-- ATT.ModelOffset = Vector(-13.8, 0, -2.75)
+ATT.BoneMerge = true
+ATT.MuzzleDevice = true
+
+ARC9.LoadAttachment(ATT, "mwc_xm7_barrel_default")
