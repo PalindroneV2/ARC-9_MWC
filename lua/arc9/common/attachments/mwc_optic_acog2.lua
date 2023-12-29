@@ -59,7 +59,7 @@ ATT.HoloSightSize = 50
 ATT.HoloSightColorable = true
 
 ATT.RTScope = true
-ATT.RTScopeSubmatIndex = 0
+ATT.RTScopeSubmatIndex = 3
 ATT.RTScopeFOV = 8
 ATT.RTScopeRes = 512
 ATT.RTScopeSurface = Material("models/weapons/arc9/mw3/mw3_optics/hamr_lens")
