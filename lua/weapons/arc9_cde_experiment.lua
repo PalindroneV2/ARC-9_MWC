@@ -1,5 +1,5 @@
 SWEP.Base = "arc9_base"
-SWEP.Spawnable = true -- this obviously has to be set to true
+SWEP.Spawnable = false -- this obviously has to be set to true
 SWEP.Category = "ARC9 - A COD" -- edit this if you like
 SWEP.SubCategory = "Battle Rifles"
 SWEP.AdminOnly = false
@@ -201,16 +201,16 @@ SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_AR2
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.MovingPos = SWEP.ActivePos
-SWEP.MovingAng = SWEP.ActiveAng
+SWEP.MovingPos = Vector(0, -1, -1)
+SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = SWEP.ActivePos,
-    Ang = SWEP.ActiveAng
+    Pos = Vector(0, -0.5, -0.5),
+    Ang = Angle(0, 0, 0)
 }
 
-SWEP.CrouchPos = Vector(0, 0, -1)
-SWEP.CrouchAng = Angle(0, 0, -5)
+SWEP.CrouchPos =  Vector(0, -0.5, -1)
+SWEP.CrouchAng = SWEP.ActiveAng
 
 SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = Vector(0, 0, -1)
