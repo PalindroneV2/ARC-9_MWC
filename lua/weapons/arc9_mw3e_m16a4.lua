@@ -266,6 +266,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local cover = 0
     if attached["mwc_m203"] then
         ub = 1
+        hand  = 2
     end
     if attached["mwc_bipod"] then
         ub = 2
@@ -278,6 +279,10 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         hand = 1
         front = front + 2
         cover = 1
+    end
+    if attached["barrel_m203"] then
+        hand = 2
+        cover = 0
     end
     if attached["m4_lowirons"] then
         rear = rear + 1
@@ -404,10 +409,10 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultCompactName = "20\" M16",
         Bone = "j_gun",
-        Pos = Vector(6.5, 0, 2.45),
+        Pos = Vector(10.5, 0.2, 1.8),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"mw3_m16_barrel"},
+        Icon_Offset = Vector(-4, -0.2, 0.5),
+        Category = {"mw3_m16_barrel", "mwc_m4m16_cosmetic"},
         InstalledElements = {"ism16"},
     },
     {
@@ -517,6 +522,18 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["draw"] = {
         Source = "draw",
@@ -624,17 +641,65 @@ SWEP.Animations = {
     ["idle_m203"] = {
         Source = "idle_gl",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["draw_m203"] = {
         Source = "draw_gl",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["ready_m203"] = {
         Source = "draw_gl",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["holster_m203"] = {
         Source = "holster_gl",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_m203"] = {
         Source = {"fire_gl"},
@@ -642,6 +707,18 @@ SWEP.Animations = {
         ShellEjectAt = 0,
         EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
         },
     },
     ["fire_iron_m203"] = {
@@ -651,6 +728,18 @@ SWEP.Animations = {
         EventTable = {
             {s = "ArcCW_MW3E.Mech_D", t = 1 / 35},
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -658,6 +747,18 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_MW3E.M4M16_MagOut", t = 0.15},
             {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_m203"] = {
@@ -668,18 +769,66 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.M4M16_MagIn", t = 1.1},
             {s = "ARC9_MW3E.M4M16_Chamber", t = 1.65}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["enter_sprint_m203"] = {
         Source = "sprint_in_gl",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["idle_sprint_m203"] = {
         Source = "sprint_loop_gl",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["exit_sprint_m203"] = {
         Source = "sprint_out_gl",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
 
     --MK ANIMS --

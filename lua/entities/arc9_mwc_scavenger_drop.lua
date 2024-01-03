@@ -5,6 +5,13 @@ ENT.PrintName                 = "Scavenger"
 ENT.Spawnable                 = false
 ENT.Model                     = "models/weapons/arc9/item/mw2_scavenger_pack.mdl"
 
+ENT.InfiniteUse = false
+ENT.OpeningAnim = false
+ENT.NextUse = 0
+ENT.Open = false
+
+ENT.Supply = 1
+
 function ENT:Initialize()
     if engine.ActiveGamemode() == "terrortown" and arc9.TTTReplaceTable then
         self.AmmoType = arc9.TTTReplaceTable[self.AmmoType] or self.AmmoType

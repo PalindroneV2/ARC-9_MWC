@@ -238,9 +238,9 @@ SWEP.ExtraSightDist = 5
 SWEP.AttachmentElements = {
     ["mw2_m4_toprail"] = {
         Bodygroups = {
-            {1,3},
-            {2,1},
-            {5,1},
+            {2,3},
+            {3,1},
+            {6,1},
         },
         AttPosMods = {
             [8] = {
@@ -250,12 +250,12 @@ SWEP.AttachmentElements = {
     },
     ["stock_m"] = {
         Bodygroups = {
-            {4,1},
+            {5,1},
         },
     },
     ["stock_h"] = {
         Bodygroups = {
-            {4,3},
+            {5,3},
         },
     },
 }
@@ -266,30 +266,38 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     local attached = data.elements
     local CUSTSTATE = self:GetCustomize()
 
-    if CUSTSTATE then
-        vm:SetBodygroup(0,1)
-    else
-        vm:SetBodygroup(0,0)
-    end
-
     if (attached["cod_optic"] or attached["cod_rail_riser"]) and !attached["bo1_ar15_toprail"] then
-        vm:SetBodygroup(1,2)
+        vm:SetBodygroup(2,2)
         if attached["tmm4_riser"] then
-            vm:SetBodygroup(1, 4)
+            vm:SetBodygroup(2, 4)
         end
     end
 
     local ub = 0
+    local hg = 0
     if attached["mwc_m203"] then
         ub = 1
+        hg = 2
+        vm:SetBodygroup(6,1)
     end
     if attached["mwc_mk"] then
         ub = 2
     end
-    if CUSTSTATE and ub > 0 then
-        ub = ub + 2
+    if attached["barrel_m203"] then
+        hg = 2
+        vm:SetBodygroup(6,1)
     end
-    vm:SetBodygroup(3,ub)
+    if CUSTSTATE then
+        vm:SetBodygroup(0,1)
+        hg = hg + 1
+        if ub > 0 then
+            ub = ub + 2
+        end
+    else
+        vm:SetBodygroup(0,0)
+    end
+    vm:SetBodygroup(1,hg)
+    vm:SetBodygroup(4,ub)
 
     local camo = 0
     if attached["universal_camo"] then
@@ -451,6 +459,14 @@ SWEP.Attachments = {
         Category = "mwc_proficiency",
     },
     {
+        PrintName = "Handguard",
+        Bone = "j_gun",
+        Pos = Vector(10.5, 0.2, 1.8),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_m4m16_cosmetic"},
+        CosmeticOnly = true,
+    },
+    {
         PrintName = "Cosmetic",
         Bone = "j_gun",
         Pos = Vector(-6, 0, 2.65),
@@ -464,6 +480,18 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 1,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 1,
+                rhik = 0
+            },
+        },
     },
     ["draw"] = {
         Source = "draw",
@@ -565,27 +593,99 @@ SWEP.Animations = {
     ["idle_m203"] = {
         Source = "idle_gl",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["draw_m203"] = {
         Source = "draw_gl",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["ready_m203"] = {
         Source = "draw_gl",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["holster_m203"] = {
         Source = "holster_gl",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_m203"] = {
         Source = {"fire_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_iron_m203"] = {
         Source = {"fire_ads_gl"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["reload_m203"] = {
         Source = "reload_gl",
@@ -593,6 +693,18 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
             {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_m203"] = {
@@ -603,45 +715,165 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1},
             {s = "ARC9_COD4E.M4M16_Chamber", t = 1.65}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["enter_sprint_m203"] = {
         Source = "sprint_in_gl",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["idle_sprint_m203"] = {
         Source = "sprint_loop_gl",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["exit_sprint_m203"] = {
         Source = "sprint_out_gl",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
 
     --MK ANIMS --
     ["idle_mk"] = {
         Source = "idle_mk",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["draw_mk"] = {
         Source = "draw_mk",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["ready_mk"] = {
         Source = "draw_mk",
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["holster_mk"] = {
         Source = "holster_mk",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_mk"] = {
         Source = {"fire_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_iron_mk"] = {
         Source = {"fire_ads_mk"},
         Time = 0.5,
         ShellEjectAt = 0,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["reload_mk"] = {
         Source = "reload_mk",
@@ -649,6 +881,18 @@ SWEP.Animations = {
         EventTable = {
             {s = "ARC9_COD4E.M4M16_MagOut", t = 0.15},
             {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1}
+        },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
         },
     },
     ["reload_empty_mk"] = {
@@ -659,18 +903,66 @@ SWEP.Animations = {
             {s = "ARC9_COD4E.M4M16_MagIn", t = 1.1},
             {s = "ARC9_COD4E.M4M16_Chamber", t = 1.65}
         },
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["enter_sprint_mk"] = {
         Source = "sprint_in_mk",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["idle_sprint_mk"] = {
         Source = "sprint_loop_mk",
-        Time = 30 / 40
+        Time = 30 / 40,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["exit_sprint_mk"] = {
         Source = "sprint_out_mk",
         Time = 1,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
 
 -- UBGL IN ANIMS -----------------------------------------------------------------
@@ -678,18 +970,66 @@ SWEP.Animations = {
     ["enter_ubgl"] = {
         Source = "glsetup_in",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["exit_ubgl"] = {
         Source = "glsetup_out",
         Time = 0.5,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["idle_glsetup"] = {
         Source = "idle_glsetup",
         Time = 1 / 30,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["fire_glsetup"] = {
         Source = "fire_glsetup",
         Time = 0.3,
+        IKTimeLine = {
+            {
+                t = 0,
+                lhik = 0,
+                rhik = 0
+            },
+            {
+                t = 1,
+                lhik = 0,
+                rhik = 0
+            },
+        },
     },
     ["reload_ubgl_glsetup"] = {
         Source = "reload_glsetup",
