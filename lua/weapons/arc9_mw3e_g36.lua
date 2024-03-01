@@ -287,6 +287,13 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false,
         },
     },
+    ["cod4_tasco"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(0.5, -0.035, 3.6),
+            },
+        },
+    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
