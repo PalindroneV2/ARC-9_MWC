@@ -391,7 +391,7 @@ SWEP.HookP_NameChange = function(self, name)
         gunname = "M249 Para"
     end
     if attached["bo1_pap"] then
-        gunname = "Mnesia"
+        gunname = "Trapezohedron Shard"
     end
 
     return gunname

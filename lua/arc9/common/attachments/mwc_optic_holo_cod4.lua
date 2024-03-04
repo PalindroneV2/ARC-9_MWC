@@ -26,13 +26,13 @@ end
 ATT.Model = "models/weapons/arc9/atts/cod4_eotech.mdl"
 ATT.WorldModel = "models/weapons/arc9/atts/cod4_eotech_w.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(-1, 0, -0.05)
+ATT.ModelOffset = Vector(-1.5, 0, -0.05)
 
 ATT.Sights = {
     {
         Pos = Vector(0, 8, -1.325),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1.25,
         IgnoreExtra = false
     },

@@ -17,13 +17,13 @@ ATT.Category = {"cod_optic", "cod_optic_alt", "cod_optic_lp"}
 ATT.Model = "models/weapons/arc9/atts/mw2e_rds_burris.mdl"
 ATT.WorldModel = "models/weapons/arc9/atts/mw2e_rds_burris_w.mdl"
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, -0.05)
+ATT.ModelOffset = Vector(0, 0, -0.1)
 
 ATT.Sights = {
     {
         Pos = Vector(0, 9, -1.05),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = false
     },

@@ -1,27 +1,23 @@
 VertexlitGeneric
 {
-	$basetexture "models/weapons/arc9/bo1/plastic"
-	$bumpmap	"models/weapons/arc9/bo1/plastic"
-	$selfillum 1
-	$selfillummask "models/weapons/arc9/pap/pap_cosmic_s"
-
-	$detail	"models/weapons/arc9/pap/pap_cosmic"
-	$detailscale 4
-	$detailblendmode 2
-	$detailblendfactor 1
-
-	$envmap                    		 env_cubemap
-	$envmaptint                 		"[.01 .01 .01]"
-	$normalmapalphaenvmapmask   	1
+	$color2 "[1 0 5]"
+	$basetexture	"models/weapons/arc9/mw3/mw3_xm25/xm25"
+	$bumpmap	"models/weapons/arc9/pap/pap_wp115_n"
+    
+	$detail	"models/weapons/arc9/pap/pap_wp115_color"
+	$detailscale 2
+	$detailblendmode 1
+	"$selfillum" "1"
+	$selfillummask "models/weapons/arc9/pap/pap_wp115"
+	
 	Proxies
 	{
 		TextureScroll
 		{
 			texturescrollvar $detailtexturetransform
-			texturescrollrate .05
-			texturescrollangle 210
+			texturescrollrate .01
+			texturescrollangle 30
 		}
 	}
-	
-	"$nocull" "1"
+	"$nocull" "1"	
 }

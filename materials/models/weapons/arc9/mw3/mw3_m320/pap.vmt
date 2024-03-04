@@ -1,26 +1,21 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/pap/pap_circuit_c"
-	"$basetexturetransform" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
-	$bumpmap	"models/weapons/arc9/pap/pap_circuit_n"
-	"$bumptransform" "center .5 .5 scale 1 1 rotate 0 translate 0 0"
-	"$phongexponenttexture" "models/weapons/arc9/pap/pap_bo1_env"
-	"$envmapmask" "models/weapons/arc9/pap/pap_bo1_env"
-	$normalmapalphaenvmapmask	1
+	$basetexture "models/weapons/arc9/pap/victis/victis"
+	$bumpmap	"models/weapons/arc9/pap/victis/victis_n"
+	$phongexponenttexture "models/weapons/arc9/pap/victis/victis_s"
+	"$basetexturetransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	"$bumptransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
+	$normalmapalphaenvmapmask 1
 
-    $detailblendmode 0
-    $detailblendfactor 1
-	$detailscale 1
-	$detail "models/weapons/arc9/pap/pap_circuit"
-
-	$phong                      		1
-	$phongboost                         "1"
-	$phongfresnelranges         "[2 5 4]"
-	$phongalbedotint             "1"
-	$phongtint	"[0.2 0.1 0.1]"
-
-	$envmap 	env_cubemap
-	$envmaptint   "[0.01 0.01 0.01]"
-	$envmapfresnel "0.1"
-	"$nocull" "1"
+	"$phong" "1"
+	$phongboost "1"
+	"$phongalbedotint" "2"
+	"$phongtint" "[ 0.5 0.5 2 ]"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	$phongalbedotint "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[.1 .075 .025]"
+	$envmapfresnel "[.2 .5 .4]"
+	
 }
