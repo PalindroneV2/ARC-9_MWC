@@ -89,8 +89,7 @@ ATT = {}
 ATT.PrintName = [[Blast Shield]]
 ATT.CompactName = [[BLAST]]
 ATT.Icon = Material("entities/mwc_atts/perks/blastshield.png")
-ATT.Description = [[Gain complete resistance to explosives and fall damage.
-Falling from any height that would damage the player triggers an explosion.]]
+ATT.Description = [[Gain 40% resistance to explosives.]]
 ATT.Pros = {
     "+ 40% resistance to explosive damage."
 }
@@ -131,8 +130,7 @@ ATT.PrintName = [[Assassin]]
 ATT.CompactName = [[ASSASSIN]]
 ATT.Icon = Material("entities/mwc_atts/perks/assassin.png")
 ATT.Description = [[Doubles the melee damage.]]
-ATT.Pros = {
-}
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -192,9 +190,7 @@ ATT.PrintName = [[Scavenger]]
 ATT.CompactName = [[SCAV]]
 ATT.Icon = Material("entities/mwc_atts/perks/scavenger.png")
 ATT.Description = [[Enemies drop ammo pack on death.]]
-ATT.Pros = {
-    "+ Immunity to explosive damage."
-}
+ATT.Pros = {}
 ATT.Cons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
