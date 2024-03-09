@@ -100,7 +100,7 @@ SWEP.SpreadAddMidAir = 0
 
 SWEP.RecoilPatternDrift = 20
 
-SWEP.UseVisualRecoil = false
+SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
 SWEP.VisualRecoilUp = 0.3
 SWEP.VisualRecoilSide = 0.15
@@ -300,6 +300,21 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false,
             SwitchToSound = "", -- sound that plays when switching to this sight
         },
+    },
+    ["cod_extrairons_rear"] = {
+        AttPosMods = {
+            [1] = {
+                Pos = Vector(0, 0, 3.65)
+            },
+        },
+        IronSights = {
+            Pos = Vector(-2.825, 0, 0.075),
+            Ang = Angle(0, 0.05, 0),
+            Magnification = 1.1,
+            ViewModelFOV = 60,
+            CrosshairInSights = false,
+            SwitchToSound = "", -- sound that plays when switching to this sight
+        },
     }
 }
 
@@ -311,6 +326,9 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["hkirons"] then irons = 4 end
     if attached["cod_optic"] or attached["cod_rail_riser"] then
         irons = irons + 1
+    end
+    if attached["extrairon"] then
+        irons = 5
     end
 
     vm:SetBodygroup(3, irons)
@@ -374,7 +392,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(4, 0, 3.85),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_optic", "cod_rail_riser", "mwc_mcx_altirons"},
+        Category = {"cod_optic", "cod_rail_riser", "mwc_mcx_altirons", "cod_extrairons_rear"},
     },
     {
         PrintName = "Muzzle",
@@ -462,6 +480,14 @@ SWEP.Attachments = {
         Pos = Vector(-8, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
+    },
+    {
+        PrintName = "Front Iron",
+        Bone = "j_gun",
+        Pos = Vector(14.75, 0, 3.65),
+        Ang = Angle(0, 0, 0),
+        Category = {"cod_extrairons_front"},
+        RequireElements = {"extrairon"},
     },
     {
         PrintName = "Cosmetic",
