@@ -108,7 +108,7 @@ SWEP.VisualRecoilUp = 0.2
 SWEP.VisualRecoilSide = 0.15
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 1.6
-SWEP.VisualRecoilMultSights = 0.5
+SWEP.VisualRecoilSights = 0.5
 
 SWEP.Speed = 0.95
 
