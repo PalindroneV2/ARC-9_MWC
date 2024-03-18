@@ -74,7 +74,7 @@ SWEP.CanBlindFire = false
 
 SWEP.AutoReload = true
 
-SWEP.Recoil = 0.4
+SWEP.Recoil = 0.6
 SWEP.RecoilSide = 0.7
 SWEP.RecoilUp = 0.7
 

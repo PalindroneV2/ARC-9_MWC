@@ -73,8 +73,8 @@ SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = 0.75
-SWEP.RecoilUp = 1
+SWEP.RecoilSide = 0.525
+SWEP.RecoilUp = 0.6
 
 SWEP.RecoilRandomUp = 0.5
 SWEP.RecoilRandomSide = 0.4
@@ -98,7 +98,7 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.3
+SWEP.VisualRecoilUp = 0.31
 SWEP.VisualRecoilSide = 0.225
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 3

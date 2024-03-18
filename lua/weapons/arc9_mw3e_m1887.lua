@@ -441,7 +441,7 @@ SWEP.Animations = {
             {s = "ARC9_MW3E.M1887_Open", t = 8 / 30},
             {s = "ARC9_MW3E.M1887_Shell", t = 20 / 30},
         },
-        MinProgress = 30 / 30,
+        MinProgress = 20 / 30,
     },
     ["reload_insert"] = {
         Source = "reload_loop",

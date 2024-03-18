@@ -73,9 +73,9 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.3
-SWEP.RecoilSide = 0.5
-SWEP.RecoilUp = 0.7
+SWEP.Recoil = 0.425
+SWEP.RecoilSide = 0.55
+SWEP.RecoilUp = 0.65
 
 SWEP.RecoilRandomUp = 0.4
 SWEP.RecoilRandomSide = 0.3
@@ -99,8 +99,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.2
-SWEP.VisualRecoilSide = 0.25
+SWEP.VisualRecoilUp = 0.24
+SWEP.VisualRecoilSide = 0.185
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 2.2
 SWEP.VisualRecoilSights = 0.2
@@ -134,7 +134,7 @@ SWEP.Firemodes = {
     },
 }
 SWEP.RunawayBurst = true
-SWEP.PostBurstDelay = 0.1
+SWEP.PostBurstDelay = 0.125
 SWEP.ARC9WeaponCategory = 4
 SWEP.NPCWeight = 100
 

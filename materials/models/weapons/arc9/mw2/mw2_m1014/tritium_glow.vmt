@@ -1,8 +1,9 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/arc9/cod4/cod4_m9/tritium"
+	"$basetexture" "models/weapons/arc9/cod4/cod4_tritium/tritium"
+	"$selfillummask" "models/weapons/arc9/cod4/cod4_tritium/tritium"
 
 //	$color2 "[0 255 0]"
-	"$selfillum" "0"
-	"$translucent" "1"
+	"$selfillum" "1"
+	"$additive" "1"
 }

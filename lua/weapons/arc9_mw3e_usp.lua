@@ -298,7 +298,7 @@ SWEP.Attachments = {
         -- Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(3, 0.275, 0.15),
         Ang = Angle(0, 0, 0),
-        Category = {"cod_tactical_pistols", "mw3_usp_lams", "cod_tactical_peq6"},
+        Category = {"cod_tactical_pistols", "mw3_usp_lams", "cod_tactical_hklam"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
         ExcludeElements = {"rail_lamp"},
     },

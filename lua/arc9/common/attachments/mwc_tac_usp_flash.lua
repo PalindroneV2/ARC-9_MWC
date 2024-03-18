@@ -1,5 +1,5 @@
-ATT.PrintName = "Tac Flashlight"
-ATT.CompactName = [[TAC FLASH]]
+ATT.PrintName = "Streamlight TLR 2 HL flashlight/laser combo"
+ATT.CompactName = [[TLR 2 HL]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
 Belongs to Modern Warfare 3.]]

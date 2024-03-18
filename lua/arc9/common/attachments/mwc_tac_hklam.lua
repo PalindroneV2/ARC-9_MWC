@@ -1,5 +1,5 @@
-ATT.PrintName = "PEQ-6 Laser Aiming Module"
-ATT.CompactName = [[PEQ6]]
+ATT.PrintName = "HK Mark 23 Prototype Laser Aiming Module"
+ATT.CompactName = [[Mk23 LAM]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving.
 Belongs to Modern Warfare.]]
@@ -13,10 +13,10 @@ ATT.Free = false
 -- ATT.Folder = "RDS"
 
 -- ATT.Category = {"cod_tactical_pistols"}
-ATT.Category = {"cod_tactical_peq6"}
-ATT.ActivateElements = {"cod4_peq6"}
+ATT.Category = {"cod_tactical_hklam"}
+ATT.ActivateElements = {"cod4_hklam"}
 
-ATT.Model = "models/weapons/arc9/atts/cod4_peq6.mdl"
+ATT.Model = "models/weapons/arc9/atts/cod4_hklam.mdl"
 ATT.Scale = 1
 -- ATT.Scale = 1 / 0.75
 ATT.ModelOffset = Vector(0.1,0,-0.2)

@@ -1,5 +1,5 @@
-ATT.PrintName = "USSOCOM LAM"
-ATT.CompactName = [[TAC LAM]]
+ATT.PrintName = "Viridian X5L Gen 1 Combo Module"
+ATT.CompactName = [[X5L]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
 Belongs to Modern Warfare 2.]]
