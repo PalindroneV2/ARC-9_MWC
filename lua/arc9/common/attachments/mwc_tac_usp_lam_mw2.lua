@@ -18,6 +18,15 @@ ATT.Model = "models/weapons/arc9/atts/mw2e_usp_lam.mdl"
 ATT.Scale = 1.025
 ATT.ModelOffset = Vector(-3,0,-0.25)
 
+ATT.DrawFunc = function(swep, model, wm)
+    -- local attach = swep:GetElements()
+    if swep:GetElements()["grippytape"] then
+        model:SetBodygroup(1, 1)
+    else
+        model:SetBodygroup(1, 0)
+    end
+end
+
 ATT.Laser = true
 ATT.LaserStrength = 3
 ATT.LaserColor = Color(0, 255, 34)

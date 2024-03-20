@@ -1,12 +1,13 @@
 SWEP.Base = "arc9_base"
 SWEP.Spawnable = true -- this obviously has to be set to true
-SWEP.Category = "ARC9 - Modern Warfare 3" -- edit this if you like
+SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Handguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "USP .45"
+SWEP.PrintName = "HK Mk 23"
 SWEP.Class = "Pistol"
-SWEP.Description = [[.45 ACP semi-automatic sidearm with medium capacity and power. Effective at close range.]]
+SWEP.Description = [[.45 ACP semi-automatic sidearm with medium capacity and power. Effective at close range.
+Developed at the same time as its little brother, the USP]]
 SWEP.Trivia = {
     Manufacturer = "Heckler & Kock",
     Calibre = ".45 ACP",
@@ -23,9 +24,9 @@ SWEP.Slot = 1
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw3e_usp.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw2e_usp.mdl"
 SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/c_mw3e_usp.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/w_mw2e_usp.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
@@ -87,11 +88,11 @@ SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil patter
 SWEP.RecoilAutoControl = 0.5
 SWEP.RecoilKick = 1
 
-SWEP.Spread = math.rad(3 / 37.5)
+SWEP.Spread = math.rad(2 / 37.5)
 SWEP.SpreadMultShooting = 1.25
 
-SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(150 / 37.5)
+SWEP.SpreadMultSights = 0.075
+SWEP.SpreadAddHipFire = math.rad(125 / 37.5)
 SWEP.SpreadAddMove = math.rad(0 / 37.5)
 SWEP.SpreadAddMidAir = 0
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- 0 -- = math.rad(100 / 37.5)
@@ -100,8 +101,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.12
-SWEP.VisualRecoilSide = 0.05
+SWEP.VisualRecoilUp = 0.15
+SWEP.VisualRecoilSide = 0.1
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 2.5
 SWEP.VisualRecoilSights = 0.1
@@ -117,7 +118,7 @@ SWEP.SpeedMultMelee = 1
 SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
-SWEP.AimDownSightsTime = 0.2
+SWEP.AimDownSightsTime = 0.27
 SWEP.SprintToFireTime = 0.2
 
 SWEP.RPM = 500
@@ -167,8 +168,8 @@ SWEP.ProceduralIronFire = false
 SWEP.CaseBones = {}
 
 SWEP.IronSights = {
-    Pos = Vector(-2.23, 0, 1.45),
-    Ang = Angle(-0.1, -1.45, 0),
+    Pos = Vector(-2.425, 0, 0.65),
+    Ang = Angle(-0.1, 0, 0),
     Magnification = 1.1,
     ViewModelFOV = 60,
     CrosshairInSights = false,
@@ -208,9 +209,9 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(15, 25, 4)
+SWEP.CustomizePos = Vector(15, 25, 3)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizeSnapshotPos = Vector(1.5, -10, 0)
+SWEP.CustomizeSnapshotPos = Vector(2.5, -8, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 9
@@ -221,11 +222,21 @@ SWEP.AttachmentElements = {
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
+
     local vm = data.model
     local attached = data.elements
+    local CUSTSTATE = self:GetCustomize()
+
+    if CUSTSTATE then
+        vm:SetBodygroup(0,1)
+        -- vm:SetBodygroup(0,3)
+    else
+        vm:SetBodygroup(0,0)
+        -- vm:SetBodygroup(0,2)
+    end
 
     if attached["bo1_pap"] then
-        vm:SetSkin(2)
+        vm:SetSkin(1)
     end
 end
 
@@ -233,37 +244,14 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "HK USP Tactical"
+    local gunname = "HK Mk 23"
 
     if attached["bo1_pap"] then
-        gunname = "Undead Swift Pacifier"
+        gunname = "Special Operations Commando"
     end
 
     if attached["sally"] then
-        gunname = "Mist Kreator"
-    end
-
-    return gunname
-end
-
-SWEP.Hook_TranslateAnimation = function (self, anim)
-    -- local attached = self:GetElements()
-end
-
---TEST 3
-
-SWEP.HookP_NameChange = function(self, name)
-
-    local attached = self:GetElements()
-
-    local gunname = "HK USP Tactical"
-
-    if attached["bo1_pap"] then
-        gunname = "Undead Swift Pacifier"
-    end
-
-    if attached["sally"] then
-        gunname = "Mist Kreator"
+        gunname = "Iriquois Pliskin"
     end
 
     return gunname
@@ -274,7 +262,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultCompactName = "MUZZ",
         Bone = "j_gun",
-        Pos = Vector(4.625, 0.255, 1),
+        Scale = Vector(1.15, 1.15, 1.15),
+        Pos = Vector(5.2, 0, 1.165),
+        -- Pos = Vector(5.95, 0, 1.165),
         Ang = Angle(0, 0, 0),
         Category = "cod_muzzle_pistol",
     },
@@ -283,24 +273,23 @@ SWEP.Attachments = {
         DefaultCompactName = "RAIL",
         Bone = "j_gun",
         -- Scale = Vector(1, 1, 1),
-        Scale = Vector(0.75,0.75,0.75),
+        Scale = Vector(0.865,0.865,0.865),
         Icon_Offset = Vector(-3,0,1),
-        Pos = Vector(3, 0.275, 0.15),
+        Pos = Vector(3.9, 0, 0.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_pistol_rail"},
-        CorrectiveAng = Angle(-1.525, -1.25, 0),
+        CorrectiveAng = Angle(-0.01, 0.2, 0),
     },
     {
         PrintName = "Tactical",
         DefaultCompactName = "TAC",
         Bone = "j_gun",
-        Scale = Vector(1, 1, 1),
+        Scale = Vector(1.15, 1.15, 1.15),
         -- Scale = Vector(0.75,0.75,0.75),
-        Pos = Vector(3, 0.275, 0.15),
+        Pos = Vector(3.45, 0, 0.3),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols", "mw3_usp_lams", "cod_tactical_hklam"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
-        InstalledElements = {"grippytape"},
         ExcludeElements = {"rail_lamp"},
     },
     {
