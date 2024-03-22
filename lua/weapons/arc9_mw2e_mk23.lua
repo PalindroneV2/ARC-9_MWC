@@ -291,6 +291,7 @@ SWEP.Attachments = {
         Category = {"cod_tactical_pistols", "mw3_usp_lams", "cod_tactical_hklam"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
         ExcludeElements = {"rail_lamp"},
+        Installed = "mwc_tac_hklam",
     },
     {
         PrintName = "Ammunition",
