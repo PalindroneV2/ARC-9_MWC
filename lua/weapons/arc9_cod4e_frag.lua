@@ -22,7 +22,7 @@ SWEP.UseHands = true
 
 SWEP.ViewModel = "models/weapons/arc9/c_cod4_frag.mdl"
 SWEP.WorldModel = "models/weapons/arc9/item/cod4_m67_frag.mdl"
-SWEP.MirrorVMWM = true
+SWEP.MirrorVMWM = false
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
     Pos        =    Vector(0, -11, -7),
@@ -41,6 +41,12 @@ SWEP.BottomlessClip = true
 SWEP.Throwable = true -- Set to true to give this weapon throwing capabilities.
 SWEP.Tossable = false -- When grenade is enabled, right click will toss. Set to false to disable, allowing you to aim down sights.
 SWEP.ThrowSpeed = 1
+
+SWEP.QuickSwapTo = true
+SWEP.NoHolsterOnPrimed = true
+SWEP.CanLean = false
+SWEP.CantSafety = true
+SWEP.IsQuickGrenade = true
 
 SWEP.FuseTimer = 5 -- Length of time that the grenade will take to explode in your hands. -1 = Won't explode.
 
@@ -167,8 +173,8 @@ SWEP.HoldTypeSights = "slam"
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_GRENADE
 
-SWEP.ActivePos = Vector(0, 0, -1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.MovingPos = Vector(0, -1, -1)
 SWEP.MovingAng = Angle(0, 0, 0)
@@ -221,6 +227,9 @@ SWEP.Animations = {
         Source = "idle",
     },
     ["pullpin"] = {
+        Source = "pullpin"
+    },
+    ["quicknade"] = {
         Source = "pullpin"
     },
     ["throw"] = {
