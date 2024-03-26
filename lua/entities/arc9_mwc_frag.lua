@@ -9,8 +9,8 @@ ENT.Model = "models/weapons/arc9/item/cod4_m67_frag.mdl"
 ENT.DragCoefficient = 0.15
 
 ENT.ExplodeOnImpact = false
-ENT.Radius = 300
-ENT.DamageOverride = 200
+ENT.Radius = 250
+ENT.DamageOverride = 150
 ENT.ImpactDamage = 0
 ENT.FuseTime = 5
 ENT.BounceSounds = {""}
