@@ -226,6 +226,9 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "idle",
     },
+    ["holster"] = {
+        Source = "idle",
+    },
     ["pullpin"] = {
         Source = "pullpin"
     },
