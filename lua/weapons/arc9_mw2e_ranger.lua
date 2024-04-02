@@ -104,8 +104,6 @@ SWEP.SpreadAddMidAir = 0
 SWEP.UsePelletSpread = true -- Multiple bullets fired at once clump up, like for a shotgun. Spread affects which direction they get fired, not their spread relative to one another.
 SWEP.PelletSpread = 0.35
 
-SWEP.NoShellEject = true
-
 SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
@@ -180,6 +178,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = nil
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }

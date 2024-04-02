@@ -4,9 +4,9 @@ SWEP.Category = "ARC9 - Modern Warfare 2" -- edit this if you like
 SWEP.SubCategory = "Shotguns"
 SWEP.AdminOnly = false
 
-SWEP.PrintName = "M1887"
+SWEP.PrintName = "M1887 Akimbo"
 SWEP.Class = "Shotgun"
-SWEP.Description = [[10 gauge lever-action shotgun. Basic but reliable. Sawn-off to be more compact.]]
+SWEP.Description = [[10 gauge lever-action shotguns. Basic but reliable. Sawn-off to be more compact. Dual-Wield for more power.]]
 SWEP.Trivia = {
     Manufacturer = "Winchester",
     Calibre = "10 Gauge",
@@ -23,14 +23,16 @@ SWEP.Slot = 2
 
 SWEP.UseHands = true
 
-SWEP.ViewModel = "models/weapons/arc9/c_mw3e_m1887.mdl"
+SWEP.ViewModel = "models/weapons/arc9/c_mw2e_1887_akimbo.mdl"
 SWEP.WorldModel = "models/weapons/w_annabelle.mdl"
-SWEP.WorldModelMirror = "models/weapons/arc9/c_mw3e_m1887.mdl"
+SWEP.WorldModelMirror = "models/weapons/arc9/c_mw2e_1887_akimbo.mdl"
 SWEP.MirrorVMWM = true
+SWEP.TPIKforcelefthand = true
 SWEP.NoTPIKVMPos = true
+SWEP.NoTPIK = false
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-3.6, 5, -8),
-    Ang        =    Angle(-5, 0, 180),
+    Pos        =    Vector(-15, 10, -8),
+    Ang        =    Angle(2.5, -10, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale   =   1
 }
@@ -68,7 +70,7 @@ SWEP.TracerEffect = "ARC9_tracer" -- The effect to use for hitscan tracers
 SWEP.TracerColor = Color(255, 255, 255) -- Color of tracers. Only works if tracer effect supports it. For physical bullets, this is compressed down to 9-bit color.
 
 SWEP.ChamberSize = 0 -- dont fucking change this again.
-SWEP.ClipSize = 8 -- DefaultClip is automatically set.
+SWEP.ClipSize = 16 -- DefaultClip is automatically set.
 SWEP.SupplyLimit = 8
 SWEP.SecondarySupplyLimit = 8
 SWEP.ShotgunReload = true
@@ -77,18 +79,18 @@ SWEP.ReloadTime = 1
 SWEP.Crosshair = true
 SWEP.CanBlindFire = false
 
-SWEP.Recoil = 0.9
-SWEP.RecoilSide = 0.75
-SWEP.RecoilUp = 0.9
+SWEP.Recoil = 1.25
+SWEP.RecoilSide = 1
+SWEP.RecoilUp = 1.25
 
-SWEP.RecoilRandomUp = 0.5
+SWEP.RecoilRandomUp = 0.75
 SWEP.RecoilRandomSide = 0.5
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.01 -- How long the gun must go before the recoil pattern starts to reset.
 
 SWEP.RecoilAutoControl = 0.5
-SWEP.RecoilKick = 2
+SWEP.RecoilKick = 3
 
 SWEP.Spread = math.rad(20 / 37.5)
 SWEP.SpreadMultShooting = 1.25
@@ -106,8 +108,8 @@ SWEP.RecoilPatternDrift = 20
 
 SWEP.UseVisualRecoil = true
 SWEP.VisualRecoilCenter = Vector(0, 0, 0)
-SWEP.VisualRecoilUp = 0.6
-SWEP.VisualRecoilSide = 0.2
+SWEP.VisualRecoilUp = 0.75
+SWEP.VisualRecoilSide = 0.4
 SWEP.VisualRecoilRoll = 1
 SWEP.VisualRecoilPunch = 4
 SWEP.VisualRecoilSights = 0.5
@@ -124,7 +126,14 @@ SWEP.SpeedMultCrouch = 1
 SWEP.SpeedMultBlindFire = 1
 
 SWEP.AimDownSightsTime = 0.25
-SWEP.SprintToFireTime = 0.33
+SWEP.SprintToFireTime = 0.2
+
+
+SWEP.ManualActionChamber = 2 -- How many shots we go between needing to cycle again.
+SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
+SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
+SWEP.SlamFire = false
+SWEP.CycleTime = 1
 
 SWEP.RPM = 312
 SWEP.Num = 18
@@ -133,12 +142,18 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
+    {
+        PrintName = "BOTH",
+        Mode = 1,
+        Akimbo = false,
+        RecoilMult = 2,
+        PelletSpreadMult = 2,
+        NumMult = 2,
+        SpreadMult = 1.25,
+        AmmoPerShotOverride = 2,
+        ManualActionChamber = 1
+    },
 }
-SWEP.ManualActionChamber = 1 -- How many shots we go between needing to cycle again.
-SWEP.ManualAction = true -- Pump/bolt action. Play the "cycle" animation after firing, when the trigger is released.
-SWEP.ManualActionNoLastCycle = false -- Do not cycle on the last shot.
-SWEP.SlamFire = true
-SWEP.CycleTime = 1
 
 SWEP.ARC9WeaponCategory = 2
 SWEP.NPCWeight = 100
@@ -166,10 +181,13 @@ SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
 SWEP.ShellPitch = 90
 SWEP.ShellScale = 1.5
 
-SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
-SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
-SWEP.ProceduralViewQCA = nil
-SWEP.CamQCA = 4
+SWEP.MuzzleEffectQCA = 1
+SWEP.MuzzleEffectQCAEvenShot = 3
+SWEP.CaseEffectQCA = 2
+SWEP.CaseEffectQCAEvenShot = 4
+SWEP.AfterShotQCA = 1
+SWEP.AfterShotQCAEvenShot = 2
+SWEP.CamQCA = 5
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
 
@@ -196,12 +214,21 @@ SWEP.SightMidPoint = {
     Ang = Angle(0, 0, -2.5),
 }
 
-SWEP.HoldTypeHolstered = "passive"
-SWEP.HoldType = "ar2"
-SWEP.HoldTypeSights = "ar2"
+SWEP.HasSights = false
 
-SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.HoldType = "duel"
+SWEP.HoldTypeSprint = "duel"
+SWEP.HoldTypeHolstered = "duel"
+SWEP.HoldTypeSights = "duel"
+SWEP.HoldTypeCustomize = "slam"
+
+SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.AnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
+SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_DUEL
+SWEP.AnimDraw = false
 SWEP.NonTPIKAnimReload = ACT_HL2MP_GESTURE_RELOAD_MAGIC
+
+SWEP.Akimbo = true
 
 SWEP.ActivePos = Vector(0, 0, -1)
 SWEP.ActiveAng = Angle(0, 0, -5)
@@ -224,101 +251,63 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(17.5, 40, 4)
+SWEP.CustomizePos = Vector(27.5, 50, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
+SWEP.CustomizeSnapshotPos = Vector(0, 0, 2)
+SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
+SWEP.CustomizeSnapshotFOV = 75
 
 SWEP.BarrelLength = 0 -- = 25
 
 SWEP.ExtraSightDist = 5
 
 SWEP.AttachmentElements = {
-    ["mount"] = {
-        Bodygroups = {
-            {1,1}
-        },
+    ["bo1_pap"] = {
+        CycleTimeMult = 0.75,
+        SlamFire = true,
+        FiremodesOverride = {
+            {
+                Mode = -1,
+            },
+            {
+                PrintName = "BOTH",
+                Mode = -1,
+                Akimbo = false,
+                RecoilMult = 2,
+                PelletSpreadMult = 2,
+                NumMult = 2,
+                SpreadMult = 1.25,
+                AmmoPerShotOverride = 2,
+                ManualActionChamber = 1
+            },
+        }
     },
-    ["new_1887"] = {
-        AttPosMods = {
-            [2] = {
-                Pos = Vector(28, 0, 2.35),
-            },
-            [3] = {
-                Pos = Vector(12.5, 0, 0.25),
-            },
-        },
-    }
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
-
-    local newPos = Vector(-3.35, -3, 1.9)
-    local newAng = Angle(0.05, 0.0125, 0)
-    if attached["mount"] then
-        vm:SetBodygroup(1,3)
-    end
-    if attached["new_1887"] then
-        vm:SetBodygroup(0,0)
-        vm:SetBodygroup(1,0)
-        if attached["mount"] then
-            vm:SetBodygroup(1,1)
-        end
-        newPos = Vector(-3.35, -3, 1.525) --MW3
-        newAng = Angle(0.0125, 0, 0) --MW3
-    end
-
     local camo = 0
-    if attached["universal_camo"] then
+    if attached["bo1_pap"] then
         camo = 1
     end
-    if attached["bo1_pap"] then
-        camo = camo + 2
-    end
     vm:SetSkin(camo)
-
-    self.IronSights = {
-        Pos = newPos,
-        Ang = newAng,
-        Magnification = 1.1,
-        ViewModelFOV = 60,
-    }
 end
 
 SWEP.Attachments = {
-    {
-        PrintName = "Optic",
-        DefaultCompactName = "IRONS",
-        Bone = "j_gun",
-        Pos = Vector(7.5, 0-0.025, 3.7),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_optic"},
-        Icon_Offset = Vector(0, 0, 1),
-        InstalledElements = {"mount"},
-    },
     {
         PrintName = "Muzzle",
         Bone = "j_gun",
         Scale = Vector(1,1,1),
         Pos = Vector(28, 0, 2.5),
         Ang = Angle(0, 0, 0),
+        DuplicateModels = {
+            {
+                Bone = "j_gun1",
+            }
+        },
         Category = {"cod_muzzle_shotty"},
-    },
-    {
-        PrintName = "Underbarrel",
-        Bone = "j_gun",
-        Pos = Vector(12.5, 0, 0.45),
-        Ang = Angle(0, 0, 0),
-        Category = {"cod_rail_underbarrel"},
-    },
-    {
-        PrintName = "Firing Group",
-        DefaultCompactName = "SEMI",
-        Bone = "j_gun",
-        Pos = Vector(-3.5, 0, -2),
-        Ang = Angle(0, 0, 0),
-        Category = {"bo1_fcg"},
     },
     {
         PrintName = "Ammunition",
@@ -344,15 +333,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
-    {
-        PrintName = "Classic",
-        DefaultCompactName = "Modern",
-        Bone = "j_gun",
-        Pos = Vector(-7, 0, 2.5),
-        Ang = Angle(0, 0, 0),
-        Category = {"mw3_m1887_cosmetic"},
-        CosmeticOnly = true,
-    },
 }
 
 SWEP.Hook_TranslateAnimation = function (self, anim)
@@ -370,9 +350,9 @@ SWEP.HookP_NameChange = function(self, name)
 
     local attached = self:GetElements()
 
-    local gunname = "Model 1887"
+    local gunname = "Akimbo Model 1887s"
     if attached["bo1_pap"] then
-        gunname = "Hasta La Vista"
+        gunname = "The Terminators"
     end
 
     return gunname
@@ -389,6 +369,17 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
         Time = 1 / 35,
+        -- EventTable = {
+        --     {e = "AR2Tracer", att = 2, t = 1 / 35}
+        -- }
+    },
+    ["ready"] = {
+        Source = "first_draw",
+        Time = 1,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Open", t = 8 / 35},
+            {s = "ARC9_MW3E.M1887_Close", t = 16 / 35},
+        },
     },
     ["draw"] = {
         Source = "draw",
@@ -400,85 +391,189 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = {
-            "fire",
+            "fire_b",
         },
         Time = 9 / 35,
     },
-    ["fire_iron"] = {
+    ["fire_right"] = {
         Source = {
-            "fire_ads",
+            "fire_b1",
+        },
+        Time = 9 / 35,
+    },
+    ["fire_left"] = {
+        Source = {
+            "fire_b2",
         },
         Time = 9 / 35,
     },
     ["cycle"] = {
         Source = {
-            "cycle",
+            "cycle_b",
         },
         Time = 0.933,
-        EjectAt = 10 / 35,
-        MinProgress = 0.7,
+        EjectAt = nil,
+        MinProgress = 0.8,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Open", t = 8 / 35},
             {s = "ARC9_MW3E.M1887_Close", t = 16 / 35},
+            {
+                shelleject = {
+                    index = 0,
+                    num = 1,
+                },
+                att = 2,
+                t = 10 / 35,
+            },
+            {
+                shelleject = {
+                    index = 0,
+                    num = 1,
+                },
+                att = 4,
+                t = 11 / 35,
+            },
         },
     },
-    ["cycle_iron"] = {
+    ["cycle_right"] = {
         Source = {
-            "cycle_ads",
+            "cycle_b1",
         },
-        Time = 0.93,
-        EjectAt = 10 / 35,
+        Time = 0.933,
+        -- EjectAt = 8 / 35,
         MinProgress = 0.7,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Open", t = 8 / 35},
             {s = "ARC9_MW3E.M1887_Close", t = 16 / 35},
         },
     },
+    ["cycle_left"] = {
+        Source = {
+            "cycle_b2",
+        },
+        Time = 0.933,
+        EjectAt = 8 / 35,
+        MinProgress = 0.7,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Open", t = 8 / 35},
+            {s = "ARC9_MW3E.M1887_Close", t = 16 / 35},
+        },
+    },
+    -- ["cycle_iron"] = {
+    --     Source = {
+    --         "cycle_ads",
+    --     },
+    --     Time = 0.93,
+    --     EjectAt = 8 / 35,
+    --     MinProgress = 0.7,
+    --     EventTable = {
+    --         {s = "ARC9_MW3E.M1887_Open", t = 8 / 35},
+    --         {s = "ARC9_MW3E.M1887_Close", t = 16 / 35},
+    --     },
+    -- },
     ["reload_start"] = {
-        Source = "reload_in",
-        Time = 40 / 30,
-        RestoreAmmo = 1,
+        Source = "reload_in_b",
+        Time = 30 / 30,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
             {s = "ARC9_MW3E.M1887_Open", t = 8 / 30},
-            {s = "ARC9_MW3E.M1887_Shell", t = 20 / 30},
         },
         MinProgress = 20 / 30,
     },
     ["reload_insert"] = {
-        Source = "reload_loop",
-        Time = 0.74,
+        Source = "reload_loop_b",
+        Time = 0.75,
+        RestoreAmmo = 1,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
         },
         MinProgress = 10 / 30,
     },
     ["reload_finish"] = {
-        Source = "reload_out",
+        Source = "reload_out_b",
         Time = 30 / 30,
         EventTable = {
+            {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
             {s = "ARC9_MW3E.M1887_Close", t = 12 / 30},
         },
     },
-    ["reload_start_pap"] = {
-        Source = "reload_in",
-        Time = 40 / 30,
-        RestoreAmmo = 4,
+    ["reload_start_right"] = {
+        Source = "reload_in_b1",
+        Time = 30 / 30,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
             {s = "ARC9_MW3E.M1887_Open", t = 8 / 30},
-            {s = "ARC9_MW3E.M1887_Shell", t = 20 / 30},
         },
-        MinProgress = 30 / 30,
+        MinProgress = 20 / 30,
     },
-    ["reload_insert_pap"] = {
-        Source = "reload_loop",
+    ["reload_insert_right"] = {
+        Source = "reload_loop_b1",
         Time = 0.75,
-        RestoreAmmo = 3,
         EventTable = {
             {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
         },
+        MinProgress = 10 / 30,
     },
+    ["reload_finish_right"] = {
+        Source = "reload_out_b1",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+            {s = "ARC9_MW3E.M1887_Close", t = 12 / 30},
+        },
+    },
+    ["reload_start_left"] = {
+        Source = "reload_in_b2",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+            {s = "ARC9_MW3E.M1887_Open", t = 8 / 30},
+        },
+        MinProgress = 20 / 30,
+    },
+    ["reload_insert_left"] = {
+        Source = "reload_loop_b2",
+        Time = 0.75,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
+        },
+        MinProgress = 10 / 30,
+    },
+    ["reload_finish_left"] = {
+        Source = "reload_out_b2",
+        Time = 30 / 30,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+            {s = "ARC9_MW3E.M1887_Close", t = 12 / 30},
+        },
+    },
+    ["reload_insert_pap"] = {
+        Source = "reload_loop_b",
+        Time = 0.75,
+        RestoreAmmo = 5,
+        EventTable = {
+            {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+            {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
+        },
+    },
+    -- ["reload_insert_right_pap"] = {
+    --     Source = "reload_loop_b1",
+    --     Time = 0.75,
+    --     RestoreAmmo = 2,
+    --     EventTable = {
+    --         {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+    --         {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
+    --     },
+    -- },
+    -- ["reload_insert_left_pap"] = {
+    --     Source = "reload_loop_b2",
+    --     Time = 0.75,
+    --     RestoreAmmo = 2,
+    --     EventTable = {
+    --         {s = "ARC9_MW3E.M1887_Lift", t = 1 / 30},
+    --         {s = "ARC9_MW3E.M1887_Shell", t = 10 / 30},
+    --     },
+    -- },
     ["enter_sprint"] = {
         Source = "sprint_in",
         Time = 1,

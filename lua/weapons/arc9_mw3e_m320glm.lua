@@ -178,6 +178,7 @@ SWEP.SightMidPoint = {
 }
 
 SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "crossbow"

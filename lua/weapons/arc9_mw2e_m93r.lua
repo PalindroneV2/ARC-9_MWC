@@ -159,6 +159,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 3
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
 }
@@ -446,22 +448,22 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_empty"] = {
         Source = "fire_last",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron"] = {
         Source = "fire_ads",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron_empty"] = {
         Source = "fire_last",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["reload"] = {
         Source = "reload",
@@ -538,22 +540,22 @@ SWEP.Animations = {
     ["fire_bst"] = {
         Source = {"fire_bst"},
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_empty_bst"] = {
         Source = "fire_last_bst",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron_bst"] = {
         Source = "fire_ads_bst",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron_empty_bst"] = {
         Source = "fire_last_bst",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["reload_bst"] = {
         Source = "reload_bst",
@@ -630,22 +632,22 @@ SWEP.Animations = {
     ["fire_k"] = {
         Source = {"fire_k"},
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_empty_k"] = {
         Source = "fire_last_k",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron_k"] = {
         Source = "fire_ads_k",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["fire_iron_empty_k"] = {
         Source = "fire_last_k",
         Time = 5 / 30,
-        ShellEjectAt = 1 / 30,
+        EjectAt = 1 / 30,
     },
     ["reload_k"] = {
         Source = "reload_k",

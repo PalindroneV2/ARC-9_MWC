@@ -168,6 +168,8 @@ SWEP.MuzzleEffectQCA = 1 -- which attachment to put the muzzle on
 SWEP.CaseEffectQCA = 2 -- which attachment to put the case effect on
 SWEP.ProceduralViewQCA = 1
 SWEP.CamQCA = 4
+SWEP.NoShellEject = true
+SWEP.NoShellEjectManualAction = true
 
 SWEP.BulletBones = {
     [0] = "j_bullets0",
@@ -424,22 +426,22 @@ SWEP.Animations = {
     ["fire"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_bipod"] = {
         Source = {"fire"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["fire_iron_bipod"] = {
         Source = {"fire_ads"},
         Time = 7 / 30,
-        ShellEjectAt = 0,
+        EjectAt = 0,
     },
     ["reload"] = {
         Source = "reload",
