@@ -10,7 +10,7 @@ ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"cod_rail_underbarrel"}
-ATT.ActivateElements = {"cod_rail_underbarrel"}
+ATT.ActivateElements = {"cod_rail_underbarrel","mwc_rail_ub"}
 ATT.Model = "models/weapons/arc9/item/mwc_rail.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -44,7 +44,7 @@ ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"cod_rail_optic"}
-ATT.ActivateElements = {"cod_rail_optic"}
+ATT.ActivateElements = {"cod_rail_optic","mwc_rail_optic"}
 ATT.Model = "models/weapons/arc9/item/mwc_rail.mdl"
 -- ATT.Scale = Vector(.5,.5,.5)
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -72,7 +72,7 @@ ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
 
 ATT.Category = {"cod_rail_tactical"}
-ATT.ActivateElements = {"cod_rail_tactical"}
+ATT.ActivateElements = {"cod_rail_tactical", "mwc_rail_tac"}
 ATT.Model = "models/weapons/arc9/item/mwc_rail.mdl"
 -- ATT.Scale = Vector(.5,.5,.5)
 ATT.ModelOffset = Vector(0, 0, 0)
