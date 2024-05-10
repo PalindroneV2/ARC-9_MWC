@@ -3,8 +3,8 @@ ATT.CompactName = [[MKEY]]
 ATT.Icon = Material("entities/mwc_atts/ubs/masterkey.png")
 ATT.Description = [[Underbarrel shotgun that holds 4 12 gauge shells.
 Reduced handling.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

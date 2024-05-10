@@ -2,10 +2,10 @@ ATT.PrintName = "Swarovski Scope (2x)"
 ATT.CompactName = [[SWAROVSKI 2x]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
 ATT.Description = [[Short range combat scope for improved precision at longer ranges.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "2x Zoom",
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

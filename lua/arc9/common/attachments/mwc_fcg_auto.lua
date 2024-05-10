@@ -3,8 +3,8 @@ ATT.CompactName = "AUTO"
 ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Fully automatic fire control group.
 Recoil control and spread increases.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"

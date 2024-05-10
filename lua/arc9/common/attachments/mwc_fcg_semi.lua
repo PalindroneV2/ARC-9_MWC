@@ -3,8 +3,8 @@ ATT.CompactName = "SEMI"
 ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Competition grade semi-automatic fire group.
 Its high quality, finely machined parts make this the best option for marksmanship.]]
-ATT.Pros = {}
-ATT.Cons = {
+ATT.CustomPros = {}
+ATT.CustomCons = {
 }
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"

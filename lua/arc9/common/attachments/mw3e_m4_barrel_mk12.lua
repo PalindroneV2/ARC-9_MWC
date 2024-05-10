@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Long range precision barrel for engagements beyond 500 meters.
 Used by squad marksman and snipers.
 Full-auto is restricted when using this sniper barrels to prevent wear and preserve high precision.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

@@ -2,11 +2,11 @@ ATT.PrintName = "CheyTac Scope 8x"
 ATT.CompactName = [[CheyTac]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Long range precision scope made for sniper rifles.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 8x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

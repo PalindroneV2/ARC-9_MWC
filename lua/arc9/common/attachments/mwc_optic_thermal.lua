@@ -3,12 +3,12 @@ ATT.CompactName = [[Thermal]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw2_thermal.png", "mips smooth")
 ATT.Description = [[MW2 Thermal Sight.
 Magnified optical sight that highlights enemies in yellow in a green background.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 2x Zoom",
     "+ Clearer sight picture",
     "+ Marks targets"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

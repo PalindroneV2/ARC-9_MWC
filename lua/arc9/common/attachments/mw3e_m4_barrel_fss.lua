@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[CQB barrel perfect for short range engagements, especially when clearing buildings.
 The cut-down, low-profile gas block is hidden inside the handguard allowing for lower-profile optics to have clearance.
 Comes attached by default with G.I. foldable irons.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

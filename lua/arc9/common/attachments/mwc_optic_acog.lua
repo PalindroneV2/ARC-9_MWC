@@ -3,11 +3,11 @@ ATT.CompactName = [[ACOG MW3]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Modern Warfare 3.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
@@ -22,7 +22,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 
 ATT.Sights = {
     {
-        Pos = Vector(0, 7, -1.2575),
+        Pos = Vector(0.005, 7, -1.2575),
         Ang = Angle(0.1, 0.1, 0),
         ViewModelFOV = 60,
         Magnification = 1,

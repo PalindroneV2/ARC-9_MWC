@@ -3,11 +3,11 @@ ATT.CompactName = [[SUSAT MW2]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Modern Warfare 2.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 4x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

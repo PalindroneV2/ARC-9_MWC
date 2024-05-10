@@ -3,9 +3,9 @@ ATT.CompactName = [[I. BIPOD]]
 ATT.Icon = Material("entities/cod4_generic.png")
 ATT.Description = [[Bipod that goes under the foregrip.
 Belongs to Black Ops II.]]
-ATT.Pros = {
+ATT.CustomPros = {
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

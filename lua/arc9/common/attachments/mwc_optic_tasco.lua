@@ -3,10 +3,10 @@ ATT.CompactName = [[TASCO]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_reflex.png", "mips smooth")
 ATT.Description = [[Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 Belongs to Modern Warfare 3.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

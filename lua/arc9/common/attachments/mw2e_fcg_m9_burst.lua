@@ -3,8 +3,8 @@ ATT.CompactName = "M93R"
 ATT.Icon = Material("entities/mw2_generic.png")
 ATT.Description = [[Standard 3-round burst fire control group.
 Greatly improves recoil control and reduces spread.]]
-ATT.Pros = {}
-ATT.Cons = {}
+ATT.CustomPros = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = true

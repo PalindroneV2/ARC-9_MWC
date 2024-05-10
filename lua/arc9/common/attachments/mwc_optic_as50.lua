@@ -3,11 +3,11 @@ ATT.CompactName = [[AS50]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Long range combat scope with variable zoom.
 Belongs to Modern Warfare 3.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ 3x Zoom",
     "+ Clearer sight picture"
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

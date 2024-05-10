@@ -3,10 +3,10 @@ ATT.CompactName = [[RDS MW2]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw2_rds.png", "mips smooth")
 ATT.Description = [[Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 MW2 Red Dot Sight.]]
-ATT.Pros = {
+ATT.CustomPros = {
     "+ Clearer sight picture",
 }
-ATT.Cons = {}
+ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
