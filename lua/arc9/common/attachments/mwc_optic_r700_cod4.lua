@@ -3,8 +3,7 @@ ATT.CompactName = [[R700]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Sniper scope for the Remington 700.]]
 ATT.CustomPros = {
-    "+ 8x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "6-12x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

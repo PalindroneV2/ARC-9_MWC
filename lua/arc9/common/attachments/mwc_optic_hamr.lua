@@ -4,8 +4,8 @@ ATT.Icon = Material("entities/mwc_atts/optics/mw3_hamr.png", "mips smooth")
 ATT.Description = [[Medium range combat scope for improved precision at longer ranges.
 Belongs to Modern Warfare 3.]]
 ATT.CustomPros = {
-    "+ 4x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "4x",
+    ["Backup Optic"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

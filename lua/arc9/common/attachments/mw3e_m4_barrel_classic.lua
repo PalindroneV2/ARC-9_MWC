@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/mw3_generic.png")
 ATT.Description = [[Standard M4 barrel wearing the classic round, ribbed handguard for M4s.
 Drilled into it are two picatinny rails on the left and the right, protected by covers.]]
 ATT.CustomPros = {
-    "+ Style",
+    ["Style"] = "",
 }
 ATT.CustomCons = {
     "- No Tactical Attachments",

@@ -3,8 +3,7 @@ ATT.CompactName = [[LEUPOLD]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Long range precision scope made for sniper rifles.]]
 ATT.CustomPros = {
-    "+ 8x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "8x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

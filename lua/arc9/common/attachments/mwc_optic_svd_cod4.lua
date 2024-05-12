@@ -3,8 +3,7 @@ ATT.CompactName = [[PSO-1]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Scope designed for the Dragunov SVD-63.]]
 ATT.CustomPros = {
-    "+ 8x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "6x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

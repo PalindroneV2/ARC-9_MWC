@@ -3,7 +3,7 @@ ATT.CompactName = [[SWAROVSKI 2x]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_acog.png", "mips smooth")
 ATT.Description = [[Short range combat scope for improved precision at longer ranges.]]
 ATT.CustomPros = {
-    "2x Zoom",
+    ["Zoom Level"] = "2x"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

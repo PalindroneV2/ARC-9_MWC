@@ -71,9 +71,12 @@ ATT.Icon = Material("entities/mwc_atts/perks/classic_juggernaut.png")
 ATT.Description = [[Gain 60% resistance to conventional damage types i.e. bullets and melee.
 No resistance against explosions, fall damage or toxins.]]
 ATT.CustomPros = {
-    "+ 60% Resistance to conventional damage types."
+    ["General Damage Resistance"]   = "+60%"
 }
-ATT.CustomCons = {}
+ATT.CustomCons = {
+    ["Explosive Damage Resistance"] = "False",
+    ["Toxin Damage Resistance"]     = "False"
+}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false
@@ -91,7 +94,7 @@ ATT.CompactName = [[BLAST]]
 ATT.Icon = Material("entities/mwc_atts/perks/blastshield.png")
 ATT.Description = [[Gain 40% resistance to explosives.]]
 ATT.CustomPros = {
-    "+ 40% resistance to explosive damage."
+    ["Explosive Damage Resistance"] = "+40%"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 0
@@ -442,8 +445,7 @@ ATT.PrintName = [[Melee]]
 ATT.CompactName = [[MELEE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/melee.png")
 ATT.Description = [[Increases the melee speed.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -463,8 +465,7 @@ ATT.PrintName = [[Range]]
 ATT.CompactName = [[RANGE]]
 ATT.Icon = Material("entities/mwc_atts/proficiencies/range.png")
 ATT.Description = [[Increases the range.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"

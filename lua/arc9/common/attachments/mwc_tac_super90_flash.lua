@@ -3,9 +3,7 @@ ATT.CompactName = [[TAC LIGHT]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[Tacical flashlight. Illuminates area where the gun is pointed at. Minimally increases Hip Fire Accuracy.
 Belongs to Modern Warfare 3.]]
-ATT.CustomPros = {
-    "+ Clearer sight picture"
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - MWC Attachments"

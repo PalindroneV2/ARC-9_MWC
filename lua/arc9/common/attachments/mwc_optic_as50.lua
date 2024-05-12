@@ -4,8 +4,7 @@ ATT.Icon = Material("entities/mwc_atts/optics/mw3_sniper.png", "mips smooth")
 ATT.Description = [[Long range combat scope with variable zoom.
 Belongs to Modern Warfare 3.]]
 ATT.CustomPros = {
-    "+ 3x Zoom",
-    "+ Clearer sight picture"
+    ["Zoom Level"] = "8x",
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4

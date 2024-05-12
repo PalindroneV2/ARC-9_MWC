@@ -7,8 +7,7 @@ ATT.CompactName = [[I. GRIP]]
 ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to MWC.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -29,8 +28,7 @@ ATT.CompactName = [[SCAR]]
 ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Modern Warfare 2.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -56,8 +54,7 @@ ATT.CompactName = [[M14]]
 ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Modern Warfare 2.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -83,8 +80,7 @@ ATT.CompactName = [[KSG]]
 ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Modern Warfare 3.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"
@@ -110,8 +106,7 @@ ATT.CompactName = [[KSG]]
 ATT.Icon = Material("entities/mwc_atts/ubs/mw2_grip.png", "mips smooth")
 ATT.Description = [[Vertical foregrip that goes under the weapon's handguard.
 Belongs to Modern Warfare 3.]]
-ATT.CustomPros = {
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 4
 ATT.MenuCategory = "ARC9 - MWC Attachments"

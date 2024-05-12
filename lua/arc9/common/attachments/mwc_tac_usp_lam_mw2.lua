@@ -3,9 +3,7 @@ ATT.CompactName = [[X5L]]
 ATT.Icon = Material("entities/mwc_atts/other/mw3_laser.png", "mips smooth")
 ATT.Description = [[Tacical laser pointer. Tighter aim when firing from hip, less dispersion when moving. Iron sights on top.
 Belongs to Modern Warfare 2.]]
-ATT.CustomPros = {
-    "+ Clearer sight picture"
-}
+ATT.CustomPros = {}
 ATT.CustomCons = {}
 ATT.SortOrder = 1
 ATT.MenuCategory = "ARC9 - MWC Attachments"

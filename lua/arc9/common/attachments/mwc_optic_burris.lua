@@ -4,7 +4,7 @@ ATT.Icon = Material("entities/mwc_atts/optics/mw2_rds.png", "mips smooth")
 ATT.Description = [[Small, low profile optic mainly used by pistols. Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
 MW2 Red Dot Sight.]]
 ATT.CustomPros = {
-    "+ Clearer sight picture",
+    ["Clearer sight picture"] = ""
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 1
