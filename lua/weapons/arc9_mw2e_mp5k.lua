@@ -245,6 +245,11 @@ SWEP.AttachmentElements = {
             {3,3}
         },
     },
+    ["stock_pro"] = {
+        Bodygroups = {
+            {3,4}
+        },
+    },
     ["barrel_std"] = {
         AttPosMods = {
             [3] = {
@@ -261,6 +266,20 @@ SWEP.AttachmentElements = {
         },
     },
 }
+
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+    local newpos = Vector(-3.175, -3, 1)
+    local newang = Angle(0, -0.2, 0)
+
+    if attached["top_g36c"] then
+        newpos = Vector(-3.175, -3.25, 0.4)
+        newang = Angle(0, 0.0, 0)
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 60, CrosshairInSights = false,}
+
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
     local vm = data.model
@@ -284,8 +303,16 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
             sight = 0
         end
     end
+    if attached["top_g36c"] then
+        rail = 4
+        sight = 3
+        if attached["barrel_std"] then
+            rail = 3
+            sight = 2
+        end
+    end
     if attached[isoptic] then
-        sight = 2
+        sight = 4
     end
     vm:SetBodygroup(0, body)
     vm:SetBodygroup(1, rail)
@@ -341,15 +368,15 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(1.5, 0, 3.3),
         Ang = Angle(0, 0, 0),
-        Category = {"hk_rail_riser", "mp5k_mw2_rail"},
-        Installed = "mw2e_mp5k_rail_ris"
+        Category = {"hk_rail_riser", "mp5k_mw2_rail", "mw2e_mp5rail"},
+        -- Installed = "mw2e_mp5k_rail_ris"
     },
     {
         PrintName = "Stock",
         Bone = "j_gun",
         Pos = Vector(-4, 0, 2.5),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stocks"},
+        Category = {"mwc_stocks", "mwc_stock_pro"},
     },
     {
         PrintName = "Muzzle",
