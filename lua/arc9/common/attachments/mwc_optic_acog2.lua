@@ -5,7 +5,8 @@ ATT.Description = [[Medium range combat scope for improved precision at longer r
 Belongs to Modern Warfare 2.]]
 ATT.CustomPros = {
     ["Zoom Level"] = "4x",
-    ["Backup Irons"] = "True"
+    ["Backup Irons"] = "True",
+    ["Backup Optic"] = "True"
 }
 ATT.CustomCons = {}
 ATT.SortOrder = 4
