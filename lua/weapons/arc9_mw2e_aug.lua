@@ -228,7 +228,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 SWEP.BipodPos = Vector(-3.3, 0, -2)
 SWEP.BipodAng = Angle(0, 0, 0)
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(16, 30, 5)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 25
@@ -319,7 +319,7 @@ SWEP.Attachments = {
         PrintName = "Bipod",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(15, 0, -0.25),
+        Pos = Vector(20, 0, 1.8),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_bipod"},
         Installed = "mwc_bipod_integrated",
@@ -328,7 +328,7 @@ SWEP.Attachments = {
         PrintName = "Carry Handle",
         DefaultCompactName = "None",
         Bone = "j_gun",
-        Pos = Vector(7.5, 0, 5),
+        Pos = Vector(9.75, 0, 1.8),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_mg_handle"},
         Installed = "mwc_mg_handle",
@@ -345,7 +345,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(0, 0, -3),
+        Pos = Vector(0.5, 0, -5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -353,7 +353,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(5, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -361,7 +361,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(3, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },

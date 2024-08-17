@@ -209,7 +209,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(17.5, 35, 4.5)
+SWEP.CustomizePos = Vector(20, 35, 3.75)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotPos = Vector(2.5,0,0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
@@ -292,7 +292,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-4, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -300,7 +300,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-4, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },

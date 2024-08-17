@@ -210,7 +210,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(17.5, 25, 4.5)
+SWEP.CustomizePos = Vector(16, 30, 3)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 SWEP.CustomizeSnapshotFOV = 70
 
@@ -325,10 +325,10 @@ SWEP.Attachments = {
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
     },
     {
-        PrintName = "Magazine",
+        PrintName = "Caliber",
         DefaultCompactName = ".357 MAG",
         Bone = "j_gun",
-        Pos = Vector(-1, 0, -2),
+        Pos = Vector(-1.75, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = "mw3_deagle_mag",
         DefaultIcon = Material("materials/entities/mw3_generic.png", "mips smooth"),
@@ -348,7 +348,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "tag_clip",
-        Pos = Vector(1, 0, -2.5),
+        Pos = Vector(-1, 0, -2.75),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -367,7 +367,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-5, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -375,7 +375,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-5, 0, -2),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },

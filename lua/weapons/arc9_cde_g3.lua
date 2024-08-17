@@ -222,7 +222,7 @@ SWEP.SprintVerticalOffset = false
 SWEP.SprintPos = SWEP.ActivePos
 SWEP.SprintAng = SWEP.ActiveAng
 
-SWEP.CustomizePos = Vector(12.5, 40, 4)
+SWEP.CustomizePos = Vector(14, 30, 4)
 SWEP.CustomizeAng = Angle(90, 0, 0)
 
 SWEP.BipodPos = Vector(-2.335, 2, -2)
@@ -386,7 +386,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         Bone = "j_gun",
-        Pos = Vector(20, 0, 2.4),
+        Pos = Vector(20, 0, -0.5),
         Icon_Offset = Vector(-13,0,3),
         Ang = Angle(0, 0, 0),
         Category = {"mwe_g3_barrel"},
@@ -395,7 +395,7 @@ SWEP.Attachments = {
         PrintName = "Handguard",
         DefaultCompactName = "Wood",
         Bone = "j_gun",
-        Pos = Vector(7, 0, 2.4),
+        Pos = Vector(14, 0, 2.4),
         Ang = Angle(0, 0, 0),
         Category = {"mwe_g3_handguard"},
         ExcludeElements = {"hk51barrel"}
@@ -429,7 +429,7 @@ SWEP.Attachments = {
         PrintName = "Ammunition",
         DefaultCompactName = "AMMO",
         Bone = "j_gun",
-        Pos = Vector(5, 0, -1),
+        Pos = Vector(5.25, 0, -3.5),
         Ang = Angle(0, 0, 0),
         Category = {"bo1_ammo", "bo1_pap"},
     },
@@ -445,7 +445,7 @@ SWEP.Attachments = {
         PrintName = "Perk",
         DefaultCompactName = "PERK",
         Bone = "j_gun",
-        Pos = Vector(-5, 0, -5),
+        Pos = Vector(-2, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_perk",
     },
@@ -453,7 +453,7 @@ SWEP.Attachments = {
         PrintName = "Proficiency",
         DefaultCompactName = "PRO",
         Bone = "j_gun",
-        Pos = Vector(-8, 0, -5),
+        Pos = Vector(-4, 0, -4),
         Ang = Angle(0, 0, 0),
         Category = "mwc_proficiency",
     },
