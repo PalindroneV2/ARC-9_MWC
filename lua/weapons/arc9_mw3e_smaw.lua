@@ -195,6 +195,10 @@ SWEP.SightMidPoint = {
     Ang = Angle(-5, 5, -12.5),
 }
 
+SWEP.CantPeek = false
+SWEP.PeekPos = Vector(2, 5, -1)
+SWEP.PeekAng = Angle(0, 0, 5)
+
 SWEP.HoldTypeHolstered = "passive"
 SWEP.HoldType = "rpg"
 SWEP.HoldTypeSights = "rpg"

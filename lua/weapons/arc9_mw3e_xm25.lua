@@ -179,6 +179,10 @@ SWEP.SightMidPoint = {
     Ang = Angle(0, 0.35, -2.5),
 }
 
+SWEP.CantPeek = false
+SWEP.PeekPos = Vector(3, 5, 0)
+SWEP.PeekAng = Angle(0, 0, 5)
+
 SWEP.NoShellEject = true
 SWEP.NoShellEjectManualAction = true
 
