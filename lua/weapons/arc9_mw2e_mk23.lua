@@ -30,7 +30,7 @@ SWEP.WorldModelMirror = "models/weapons/arc9/w_mw2e_usp.mdl"
 SWEP.MirrorVMWM = true
 SWEP.NoTPIKVMPos = true
 SWEP.WorldModelOffset = {
-    Pos        =    Vector(-9.75, 3.55, -3.75),
+    Pos        =    Vector(-10.75, 5, -3.75),
     Ang        =    Angle(-6, 0, 180),
     Bone    =    "ValveBiped.Bip01_R_Hand",
     Scale = 1.1,
@@ -169,18 +169,22 @@ SWEP.ProceduralIronFire = false
 
 SWEP.CaseBones = {}
 
+local ironsightpos = Vector(-2.425, 0, 0.65)
+local ironsightang = Angle(-0.1, 0, 0)
+
 SWEP.IronSights = {
-    Pos = Vector(-2.425, 0, 0.65),
-    Ang = Angle(-0.1, 0, 0),
+    Pos = ironsightpos,
+    Ang = ironsightang,
     Magnification = 1.1,
-    ViewModelFOV = 60,
+    AssociatedSlot = 9,
+    ViewModelFOV = 50,
     CrosshairInSights = false,
     SwitchToSound = "", -- sound that plays when switching to this sight
 }
 
-SWEP.SightMidPoint = {
-    Pos = Vector(-1.115, 0, 0.225),
-    Ang = Angle(-0.05, -0.725, -2.5),
+SWEP.SightMidPoint = { -- Where the gun should be at the middle of it's irons
+    Pos = ironsightpos / 2,
+    Ang = ironsightang / 2,
 }
 
 SWEP.HoldTypeHolstered = "passive"
@@ -213,7 +217,7 @@ SWEP.SprintAng = SWEP.ActiveAng
 
 SWEP.CustomizePos = Vector(14, 25, 3.25)
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizeSnapshotPos = Vector(2.5, -8, 0)
+SWEP.CustomizeSnapshotPos = Vector(5,-8, 0)
 SWEP.CustomizeSnapshotAng = Angle(0, 0, 0)
 
 SWEP.BarrelLength = 0 -- = 9
@@ -222,6 +226,40 @@ SWEP.ExtraSightDist = 15
 
 SWEP.AttachmentElements = {
 }
+
+SWEP.IronSightsHook = function(self)
+    local attached = self:GetElements()
+
+    local newpos = ironsightpos
+    local newang = ironsightang
+
+    if attached["mwc_boloknife"] then
+        newpos = Vector(-1.8, -2, 0)
+        newang = Angle(0.125, -0.225, 0)
+    end
+
+    return {Pos = newpos, Ang = newang, Magnification = 1.1, ViewModelFOV = 50, CrosshairInSights = false,}
+end
+
+SWEP.CustomizePosHook = function(self)
+    local attached = self:GetElements()
+    local newCustPose
+    local newSnapPose = Vector(5,-8, 0)
+    if attached["mwc_boloknife"] then
+        newCustPose = Vector(20, 25, 3)
+        newSnapPose = Vector(-1,-8, 0)
+    end
+    self.CustomizeSnapshotPos = newSnapPose
+    return newCustPose
+end
+SWEP.CustomizeSnapshotPosHook = function(self)
+    local attached = self:GetElements()
+    local newSnapPose
+    if attached["mwc_boloknife"] then
+        newSnapPose = Vector(-20, -8, 0)
+    end
+    return newSnapPose
+end
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
@@ -236,10 +274,24 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
         vm:SetBodygroup(0,0)
         -- vm:SetBodygroup(0,2)
     end
+    if attached["mwc_boloknife"] then
+        vm:SetBodygroup(2,1)
+    end
 
     if attached["bo1_pap"] then
         vm:SetSkin(1)
     end
+end
+
+SWEP.Hook_TranslateAnimation = function (self, anim)
+    local attached = self:GetElements()
+    local newanim
+
+    if attached["mwc_boloknife"] then
+        newanim = anim .. "_k"
+    end
+
+    return newanim
 end
 
 SWEP.HookP_NameChange = function(self, name)
@@ -294,6 +346,14 @@ SWEP.Attachments = {
         CorrectiveAng = Angle(-1.525, -1.25, 0),
         ExcludeElements = {"rail_lamp"},
         Installed = "mwc_tac_hklam",
+    },
+    {
+        PrintName = "Off-hand",
+        DefaultCompactName = "Two-Handed",
+        Bone = "j_gun",
+        Pos = Vector(3, 0, -4),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_tac_knife"},
     },
     {
         PrintName = "Ammunition",
@@ -410,5 +470,111 @@ SWEP.Animations = {
     ["exit_sprint_empty"] = {
         Source = "sprint_out_empty",
         Time = 1,
+    },
+
+    ["idle_k"] = {
+        Source = "idle_k",
+        Time = 1 / 30,
+    },
+    ["idle_empty_k"] = {
+        Source = "idle_empty_k",
+        Time = 1 / 30,
+    },
+    ["draw_empty_k"] = {
+        Source = "draw_empty_k",
+        Time = 0.5,
+    },
+    ["draw_k"] = {
+        Source = "draw_k",
+        Time = 0.5,
+    },
+    ["holster_k"] = {
+        Source = "holster_k",
+        Time = 0.5,
+    },
+    ["holster_empty_k"] = {
+        Source = "holster_empty_k",
+        Time = 0.5,
+    },
+    ["ready_k"] = {
+        Source = "draw_k",
+        Time = 0.5,
+    },
+    ["fire_k"] = {
+        Source = "fire_k",
+        Time = 5 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_empty_k"] = {
+        Source = "fire_last_k",
+        Time = 5 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_iron_k"] = {
+        Source = "fire_ads_k",
+        Time = 5 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["fire_iron_empty_k"] = {
+        Source = "fire_last_k",
+        Time = 5 / 30,
+        EjectAt = 1 / 30,
+    },
+    ["reload_k"] = {
+        Source = "reload_k",
+        Time = 1.5,
+        EventTable = {
+            {s = "ARC9_COD4E.1911_Out", t = 0.25},
+            {s = "ARC9_COD4E.1911_In", t = 1}
+        },
+    },
+    ["reload_empty_k"] = {
+        Source = "reload_empty_k",
+        Time = 2,
+        EventTable = {
+            {s = "ARC9_COD4E.1911_Out", t = 0.25},
+            {s = "ARC9_COD4E.1911_In", t = 1},
+            {s = "ARC9_COD4E.1911_Chamber", t = 1.5}
+        },
+    },
+    ["enter_sprint_k"] = {
+        Source = "sprint_in_k",
+        Time = 1,
+    },
+    ["idle_sprint_k"] = {
+        Source = "sprint_loop_k",
+        Time = 30 / 40
+    },
+    ["exit_sprint_k"] = {
+        Source = "sprint_out_k",
+        Time = 1,
+    },
+    ["enter_sprint_empty_k"] = {
+        Source = "sprint_in_empty_k",
+        Time = 1,
+    },
+    ["idle_sprint_empty_k"] = {
+        Source = "sprint_loop_empty_k",
+        Time = 30 / 40
+    },
+    ["exit_sprint_empty_k"] = {
+        Source = "sprint_out_empty_k",
+        Time = 1,
+    },
+    ["bash"] = {
+        Source = "melee_k",
+        Time = 0.73,
+    },
+    ["bash_empty"] = {
+        Source = "melee_empty_k",
+        Time = 0.73,
+    },
+    ["bash_k"] = {
+        Source = "melee_k",
+        Time = 0.73,
+    },
+    ["bash_empty_k"] = {
+        Source = "melee_empty_k",
+        Time = 0.73,
     },
 }
