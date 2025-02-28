@@ -1,4 +1,4 @@
-ATT.PrintName = "Aimpoint Comp M4"
+ATT.PrintName = "Aimpoint Comp M2"
 ATT.CompactName = [[COMP M4]]
 ATT.Icon = Material("entities/mwc_atts/optics/mw3_reflex.png", "mips smooth")
 ATT.Description = [[Provides a small electronic dot reticle which speeds up target acquisition by eliminating the need to line up irons.
@@ -15,7 +15,7 @@ ATT.Folder = "REFLEX"
 ATT.Category = {"cod_optic", "cod_optic_alt"}
 
 
-ATT.Model = "models/weapons/arc9/atts/mw3_compm4.mdl"
+ATT.Model = "models/weapons/arc9/atts/mw3e_optic_m68.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, -0.16)
 
@@ -23,7 +23,7 @@ ATT.Sights = {
     {
         Pos = Vector(0, 10, -1.3),
         Ang = Angle(0, 0, 0),
-        ViewModelFOV = 60,
+        ViewModelFOV = 50,
         Magnification = 1,
         IgnoreExtra = false
     },

@@ -14,7 +14,7 @@ ATT.IronSights = {
     Pos = Vector(-2.825, -2, -0.175),
     Ang = Angle(0.025, 1, 0),
     Magnification = 1.1,
-    ViewModelFOV = 60,
+    ViewModelFOV = 50,
 }
 
 ATT.Attachments = {
