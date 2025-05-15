@@ -210,11 +210,12 @@ SWEP.ActivePos = Vector(1, 0, 1)
 -- SWEP.ActiveAng = Angle(0, 0, 0)
 SWEP.ActiveAng = Angle(-10, 10, 25)
 
-SWEP.MovingPos = Vector(0, -1, -1)
+local movingoffset = Vector(0, -0.25, -0.25)
+SWEP.MovingPos = movingoffset
 SWEP.MovingAng = Angle(0, 0, 0)
 
 SWEP.MovingMidPoint = {
-    Pos = Vector(0, -0.5, -0.5),
+    Pos = movingoffset / 2,
     Ang = Angle(0, 0, 0)
 }
 
