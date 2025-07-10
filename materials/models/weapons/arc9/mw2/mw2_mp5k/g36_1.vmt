@@ -1,6 +1,6 @@
 VertexlitGeneric
 {
-	$basetexture	"models/weapons/arc9/mw3/mw3_g36/black"
+	$basetexture	"models/weapons/arc9/mw3/mw3_g36/g36"
 	//$color2 "[0.5 0.5 0.5]"
 	$bumpmap	"models/weapons/arc9/mw3/mw3_g36/g36_n"
 	"$phongexponenttexture" "models/weapons/arc9/mw3/mw3_g36/g36_s"
