@@ -751,6 +751,54 @@ sound.Add( {
     }
 } )
 
+-- MW3E Barrett -- 
+
+sound.Add( {
+    name = "ARC9_MW3E.Barrett_Fire",
+    channel = CHAN_STATIC,
+    volume = 0.75,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_Barrett/fire.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.Barrett_Chamber",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_Barrett/chamber.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.Barrett_MagIn",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_Barrett/in.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.Barrett_MagOut",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_Barrett/out.wav",
+    }
+} )
+sound.Add( {
+    name = "ARC9_MW3E.Barrett_Lift",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = {
+        "^weapons/ARC9/mw3e_Barrett/lift.wav",
+    }
+} )
+
 -- MW3E AS50 -- 
 
 sound.Add( {
