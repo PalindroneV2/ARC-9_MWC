@@ -10,7 +10,7 @@ ATT.Free = false
 
 ATT.Category = { "mwc_m4m16_cosmetic"}
 ATT.ActivateElements = {"barrel_m203", "newbarrel"}
-ATT.ExcludeElements = {}
+ATT.ExcludeElements = {"tmm4_riser"}
 
 ATT.Model = "models/weapons/arc9/atts/ik_mwc/mw3e_ak_ik.mdl"
 ATT.Scale = 1

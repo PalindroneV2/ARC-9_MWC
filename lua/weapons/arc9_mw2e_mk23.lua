@@ -228,6 +228,10 @@ SWEP.ExtraSightDist = 15
 SWEP.AttachmentElements = {
 }
 
+SWEP.StandardPresets = {
+    "[Shadow Moses]XQAAAQDFAAAAAAAAAAA9iIIiM7tuo1AtT7XoJcfKugcFs4PcsQt1yybwGERDzqde24e0y6Vkb56G7El7tJZ1CxIvF1bbpi6C0hX428fFPNFvUX+ucJLydCM5gVLO1wRu5DCSZI9kJITN3UP8pelqISg6vODu3Sks1dYXPQEA",
+}
+
 SWEP.IronSightsHook = function(self)
     local attached = self:GetElements()
 

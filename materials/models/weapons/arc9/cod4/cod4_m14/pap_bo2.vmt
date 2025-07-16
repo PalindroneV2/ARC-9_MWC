@@ -1,32 +1,21 @@
 VertexlitGeneric
 {
-	"$basetexture" "models/weapons/arc9/pap/mob/hellscape"
+	$basetexture "models/weapons/arc9/pap/victis/victis"
+	$bumpmap	"models/weapons/arc9/pap/victis/victis_n"
+	$phongexponenttexture "models/weapons/arc9/pap/victis/victis_s"
 	"$basetexturetransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
-	$bumpmap	"models/weapons/arc9/pap/mob/mob_n"
 	"$bumptransform" "center .5 .5 scale 5 5 rotate 0 translate 0 0"
-    
-	$detail	"models/weapons/arc9/pap/mob/hellscape"
-	$detailscale 5
-	$detailblendmode 5
-	
-	//"$color2" "[ .4 .4 .4 ]"
-	"$blendtintbybasealpha" "1"
-	"$phong" "1"
-	"$phongboost" "1"
-	"$phongalbedotint" "2"
-	"$PhongFresnelRanges" "[ 2 5 4 ]"
-	"$envmap" "env_cubemap"
-	$envmapfresnel "0.01"
-	$envmaptint "[ .01 .01 .01 ]"
+	$normalmapalphaenvmapmask 1
 
-	Proxies // proxies are listed inside this block
-	{
-		Sine // a proxy which produces a sine wave
-		{
-			resultVar	$detailblendfactor // The shader parameter to be manipulated
-			sineperiod	2
-			sinemin		0.75
-			sinemax		2
-		}
-	}
+	"$phong" "1"
+	$phongboost "1"
+	"$phongalbedotint" "2"
+	"$phongtint" "[ 0.5 0.5 2 ]"
+	"$PhongFresnelRanges" "[ 2 5 4 ]"
+	$phongalbedotint "1"
+	
+	$envmap "env_cubemap"
+	$envmaptint "[.1 .075 .025]"
+	$envmapfresnel "[.2 .5 .4]"
+	
 }

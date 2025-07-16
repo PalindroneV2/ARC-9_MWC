@@ -263,6 +263,11 @@ SWEP.AttachmentElements = {
     },
 }
 
+SWEP.StandardPresets = {
+    "[Back to Basics]XQAAAQAxAQAAAAAAAAA9iIIiM7tuo1AtT7Xng17dCetJdKEXCTvNcCjYThI2zzPC90Jn5Qp1Vj5f6rosAmDY4SW0BsojJyXhYUQx8pTulevCQQJjFGmcJFvPYSau6pvOCqUPmOrRX8GDrfm39z3ljbR1Wd0rRv36iiFzcHOFnCZOJQtmOdUCNI8lgYZn7pq4C/R3iJvm89QNsY1Y4Qeqs8b7kW9fMO0POAA=",
+    "[Ramirez]XQAAAQBTAQAAAAAAAAA9iIIiM7tuo1AtT7XoJcfMnTqNz3qkNZKKHt0QDkD4X4p6VgFXiAHQLbGTX6sxLGXJK8lmIaEC5gwtNEiel9kfy2DzcN9t7+o7m2pG756mLoeX/0SSpXnl/LYkscMAj5ohfeoZIS+R704QHGqY0Kdfqtk+xPGM8WCg9arBDE+hsAb3HvUNnEMVtJ/cnfUI8Vc++nNnW0iVBtxbng==",
+}
+
 SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model

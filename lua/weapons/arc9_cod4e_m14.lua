@@ -225,6 +225,10 @@ SWEP.MovingMidPoint = {
     Ang = Angle(0, 0, 0)
 }
 
+SWEP.StandardPresets = {
+    "[M21]XQAAAQB6AQAAAAAAAAA9iIIiM7hMNz0dhIkbkvJZHs52O9NWtAOdd6PHd9NCWemHgTlx0cQrCcAZI6HjDSBu+XaHU6FLgQ1PSg77uw8dAi6myb4GfEgEIQXkjVjqDl3mAgpFnWGwyVUuBoP05oOxvxUDQPx4BDTJQknXfV5xg8I2m6LIboYqvZnccEhN2M1FwGapj9U2RPFPLrBK79cgC+UuyEME9HlBkHNU/iXOs8vnQbewRBMA",
+}
+
 SWEP.CrouchPos =  Vector(0, -0.5, -1)
 SWEP.CrouchAng = SWEP.ActiveAng
 

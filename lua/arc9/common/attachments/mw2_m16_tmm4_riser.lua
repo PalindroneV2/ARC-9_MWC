@@ -1,7 +1,8 @@
-ATT.PrintName = [[TMM-4 S-System Rail]]
-ATT.CompactName = [[S-SYSTEM]]
+ATT.PrintName = [[A.R.M.S. #50C SIR Top Rail]]
+ATT.CompactName = [[ARMS #50C]]
 ATT.Icon = Material("entities/mw2_generic.png")
-ATT.Description = [[Three-rail RIS handguard allows for attachment of underbarrels.]]
+ATT.Description = [[Top rail that connects the handhguard and upper receiver rails on the AR-15.
+Part of the A.R.M.S. #50C SIR rail system.]]
 ATT.SortOrder = 0
 ATT.MenuCategory = "ARC9 - MWC Attachments"
 ATT.Free = false

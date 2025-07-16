@@ -409,6 +409,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, -90),
         Category = {"cod_tactical"},
         InstalledElements = {"right_cover"},
+        ExcludeElements = {"mwc_m203","barrel_m203"},
     },
     {
         PrintName = "Tactical Left",
@@ -418,6 +419,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 90),
         Category = {"cod_tactical"},
         InstalledElements = {"left_cover"},
+        ExcludeElements = {"mwc_m203","barrel_m203"},
     },
     {
         PrintName = "Tactical Top",
@@ -427,7 +429,7 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 180),
         Category = {"cod_tactical_top"},
         InstalledElements = {"top_cover"},
-        ExcludeElements = {"mw3_psrscope"},
+        ExcludeElements = {"mw3_psrscope","mwc_m203","barrel_m203"},
     },
     {
         PrintName = "Fire Control Group",
