@@ -218,6 +218,12 @@ SWEP.CustomizePos = Vector(15, 25, 3.5)
 SWEP.CustomizeAng = Angle(90, 0, -1.5)
 SWEP.CustomizeSnapshotPos = Vector(0, -5, 2)
 SWEP.CustomizeSnapshotAng = Angle(0,0,0)
+-- SWEP.CustomizeAngHook = function(self)
+--     local attached = self:GetElements()
+--     if attached["fcg_bst"] then
+--         return Angle(90,0,0)
+--     end
+-- end
 
 SWEP.BarrelLength = 0 -- = 9
 
@@ -348,21 +354,31 @@ SWEP.Attachments = {
         Scale = Vector(1, 1, 1),
         -- Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(3.4, 0.225, 0.3),
+        Icon_Offset = Vector(0, 0, -1),
         Ang = Angle(0, 0, 0),
         Category = {"cod_tactical_pistols"},
         ExcludeElements = {"raffica"},
     },
     {
-        PrintName = "Tactical",
-        DefaultCompactName = "TAC",
+        PrintName = "Pistol Rail",
+        DefaultCompactName = "RAIL",
         Bone = "j_gun",
         -- Scale = Vector(1, 1, 1),
         Scale = Vector(0.75,0.75,0.75),
         Pos = Vector(3.4, 0.225, 0.3),
+        Icon_Offset = Vector(0, 0, 1),
         Ang = Angle(0, 0, 0),
         Category = {"cod_pistol_rail"},
         CorrectiveAng = Angle(-1.525, -1.25, 0),
         ExcludeElements = {"raffica"}
+    },
+    {
+        PrintName = "Off-hand",
+        DefaultCompactName = "Two-Handed",
+        Bone = "j_gun",
+        Pos = Vector(3, 0, -4),
+        Ang = Angle(0, 0, 0),
+        Category = {"mwc_tac_knife"},
     },
     {
         PrintName = "Fire Control Group",
@@ -371,6 +387,7 @@ SWEP.Attachments = {
         Pos = Vector(2, 0, 0),
         Ang = Angle(0, 0, 0),
         Category = {"mwc_fcg_raffica"},
+        Icon_Offset = Vector(-3, 0, 0),
         CorrectiveAng = Angle(0, 0.25, 0),
         -- Installed = "mw2e_fcg_m9_burst",
     },

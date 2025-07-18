@@ -17,5 +17,4 @@ VertexlitGeneric
 	$envmaptint "[ .01 .01 .01 ]"
 
 	"$nocull" "1"
-
 }

@@ -261,6 +261,11 @@ SWEP.AttachmentElements = {
             {8,2},
         },
     },
+    ["stock_uh"] = {
+        Bodygroups = {
+            {8,3},
+        },
+    },
     ["barrel_mk18"] = {
         AttPosMods = {
             [3] = {
@@ -317,6 +322,10 @@ SWEP.AttachmentTableOverrides = {
         },
         RPMOverride = 500,
     }
+}
+
+SWEP.StandardPresets = {
+    "[Mk 12 SPR]XQAAAQAoAgAAAAAAAAA9iIIiM7tuo1AtT7XoJcfMnTqNz3q4LleZRKqtAW6CYNqHcBnMNEjPHJmStzP+duaUvUSXMJmRRQ/IWwVtM2FUhFkq5zV+0q+XfevEP9gOYMDflBg/RYZUM5/MD7Pw/RF5ZKaCcVsV79seK6lr4iNdOxRq88aK0Gh6F4+zwEhCoLBf7NTod/yKzyqCtR9NwvtCNnKwt2TFrzazGF1HGsog7/jZsVonlGbrxTTsv7eELFcvqT/1cRnFz6k8UkBgT9hh4mLgmeCxU6lhncWWr8T+CTMl9GJaQkNr6MN8qg==",
 }
 
 SWEP.Hook_ModifyBodygroups = function(self, data)
@@ -494,7 +503,7 @@ SWEP.Attachments = {
         Bone = "j_gun",
         Pos = Vector(-3, 0, 2.25),
         Ang = Angle(0, 0, 0),
-        Category = {"mwc_stock_mh"},
+        Category = {"mwc_stock_mh","mwc_stock_uh"},
         Installed = "mwc_stock_medium",
     },
     {
