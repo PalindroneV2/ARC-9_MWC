@@ -10,6 +10,6 @@ VertexlitGeneric
 	$phongalbedotint             "1"
 	$normalmapalphaphongmask    	1
 
-	"$nocull" "0"
+	"$nocull" "1"
 	"$translucent" "1"
 }

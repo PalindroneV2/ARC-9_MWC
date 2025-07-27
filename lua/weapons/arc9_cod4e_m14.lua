@@ -293,12 +293,6 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     if attached["m21_barrel"] then
         vm:SetBodygroup(2,1)
     end
-    if attached["m21_scope"] then
-        vm:SetBodygroup(5,1)
-    end
-    if attached["ghillie"] then
-        vm:SetBodygroup(4,1)
-    end
     vm:SetSkin(camo)
 
     if attached["mwc_bipod"] then

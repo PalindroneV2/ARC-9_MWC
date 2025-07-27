@@ -14,7 +14,7 @@ ATT.Folder = "SCOPE/MWC"
 ATT.ActivateElements = {"m21_scope"}
 ATT.Category = {"mwc_m21_scope"} --"cod_optic", "cod_optic_alt", 
 
-ATT.ModelBodygroups = "10"
+ATT.ModelBodygroups = "0"
 ATT.Model = "models/weapons/arc9/atts/cod4_m14scope.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0,0,0)
@@ -43,3 +43,12 @@ ATT.RTScopeReticleScale = 1.2
 ATT.RTScopeShadowIntensity = 1.5
 ATT.RTScopeNoPP = false
 ATT.RTScopeColorable = true
+
+ATT.DrawFunc = function(swep, model, wm)
+    local CUSTSTATE = swep:GetCustomize()
+    if CUSTSTATE then
+        model:SetBodygroup(0, 1)
+    else
+        model:SetBodygroup(0, 0)
+    end
+end

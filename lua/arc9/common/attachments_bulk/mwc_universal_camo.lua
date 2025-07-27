@@ -60,6 +60,21 @@ ARC9.LoadAttachment(ATT, "cod4_camo_commando_tiger")
 
 ATT = {}
 
+ATT.PrintName = "McMillan Brush"
+ATT.FullColorIcon = true
+ATT.CompactName = "MCMILLAN"
+ATT.Icon = Material("entities/mwc_camos/cod4/m14ghillie.png")
+ATT.Category = "universal_camo"
+ATT.Description = [[Only color this blends in with is the blood of your enemies.]]
+ATT.MenuCategory = "ARC9 - Camos"
+ATT.CustomCamoTexture = "models/weapons/arc9/cod4/camos/m14ghillie"
+ATT.Folder = "MWC CAMOS/COD4"
+ATT.CustomCamoScale = 1.9
+
+ARC9.LoadAttachment(ATT, "cod4_camo_commando_tiger")
+
+ATT = {}
+
 ATT.PrintName = "Arctic"
 ATT.FullColorIcon = true
 ATT.CompactName = "ARCTIC"
